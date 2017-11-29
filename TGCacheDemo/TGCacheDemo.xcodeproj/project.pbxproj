@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40FFB1C484E17C9883A04B1B /* libPods-TGCacheDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9997E2C1C1115F64F6AC4BD1 /* libPods-TGCacheDemo.a */; };
 		8EDEE1CF1FCEAEE50051EB1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE1CE1FCEAEE50051EB1D /* AppDelegate.m */; };
 		8EDEE1D21FCEAEE50051EB1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE1D11FCEAEE50051EB1D /* ViewController.m */; };
 		8EDEE1D51FCEAEE50051EB1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE1D31FCEAEE50051EB1D /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55939FE4262E321B58855C70 /* Pods-TGCacheDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGCacheDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGCacheDemo/Pods-TGCacheDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		872E4CEE62B4A50A1E8DE388 /* Pods-TGCacheDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGCacheDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TGCacheDemo/Pods-TGCacheDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8EDEE1CA1FCEAEE50051EB1D /* TGCacheDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGCacheDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDEE1CD1FCEAEE50051EB1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8EDEE1CE1FCEAEE50051EB1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		8EDEE1D91FCEAEE50051EB1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EDEE1DB1FCEAEE50051EB1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EDEE1DC1FCEAEE50051EB1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9997E2C1C1115F64F6AC4BD1 /* libPods-TGCacheDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TGCacheDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40FFB1C484E17C9883A04B1B /* libPods-TGCacheDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29FC2DB3199CC06F285C610F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55939FE4262E321B58855C70 /* Pods-TGCacheDemo.debug.xcconfig */,
+				872E4CEE62B4A50A1E8DE388 /* Pods-TGCacheDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8215AA88F6AF55AEA6CDCDB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9997E2C1C1115F64F6AC4BD1 /* libPods-TGCacheDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8EDEE1C11FCEAEE50051EB1D = {
 			isa = PBXGroup;
 			children = (
 				8EDEE1CC1FCEAEE50051EB1D /* TGCacheDemo */,
 				8EDEE1CB1FCEAEE50051EB1D /* Products */,
+				29FC2DB3199CC06F285C610F /* Pods */,
+				8215AA88F6AF55AEA6CDCDB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EDEE1E01FCEAEE50051EB1D /* Build configuration list for PBXNativeTarget "TGCacheDemo" */;
 			buildPhases = (
+				D6EAA13009ED1DC39198D35F /* [CP] Check Pods Manifest.lock */,
 				8EDEE1C61FCEAEE50051EB1D /* Sources */,
 				8EDEE1C71FCEAEE50051EB1D /* Frameworks */,
 				8EDEE1C81FCEAEE50051EB1D /* Resources */,
+				DC9F20E3FC225B1780287A1C /* [CP] Embed Pods Frameworks */,
+				900BA76EF887B31E11315B48 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		900BA76EF887B31E11315B48 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TGCacheDemo/Pods-TGCacheDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6EAA13009ED1DC39198D35F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TGCacheDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC9F20E3FC225B1780287A1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TGCacheDemo/Pods-TGCacheDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8EDEE1C61FCEAEE50051EB1D /* Sources */ = {
@@ -276,6 +354,7 @@
 		};
 		8EDEE1E11FCEAEE50051EB1D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55939FE4262E321B58855C70 /* Pods-TGCacheDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +369,7 @@
 		};
 		8EDEE1E21FCEAEE50051EB1D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 872E4CEE62B4A50A1E8DE388 /* Pods-TGCacheDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
