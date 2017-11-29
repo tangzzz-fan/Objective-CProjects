@@ -19,11 +19,12 @@
 //    [self testSycOnMainQueue];
 //    [self testChangedQueue];
 //    [self testAgain];
-    // 死锁
-    [self test1];
+//    [self test1];
 //    [self testAsyncSync];
-    
 //    [self dispatchBarrierAsyncDemo];
+//    [self deadLockCase2];
+//    [self deadLockCase3];
+//    [self deadLockCase5];
 }
 
 - (void)testSycOnMainQueue {
@@ -142,6 +143,48 @@
     dispatch_async(dataQueue, ^{
         NSLog(@"read data 4");
     });
+}
+
+// 不会死锁
+- (void)deadLockCase2 {
+    NSLog(@"1");
+    //3会等2，因为2在全局并行队列里，不需要等待3，这样2执行完回到主队列，3就开始执行
+    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        NSLog(@"2");
+    });
+    NSLog(@"3");
+}
+
+- (void)deadLockCase3 {
+    dispatch_queue_t serialQueue = dispatch_queue_create("com.tangzzz.serialqueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t serialQueue2 = dispatch_queue_create("com.tangzzz1.serialqueue", DISPATCH_QUEUE_SERIAL);
+    
+    NSLog(@"1");
+    dispatch_async(serialQueue, ^{
+        NSLog(@"2");
+        //串行队列里面同步一个串行队列就会死锁
+        dispatch_sync(serialQueue2, ^{
+            NSLog(@"3");
+        });
+        NSLog(@"4");
+    });
+    NSLog(@"5");
+}
+
+- (void)deadLockCase5 {
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"1");
+        //回到主线程发现死循环后面就没法执行了
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"2");
+        });
+        NSLog(@"3");
+    });
+    NSLog(@"4");
+    //死循环 主线程死循环,
+    while (1) {
+        //
+    }
 }
 
 @end
