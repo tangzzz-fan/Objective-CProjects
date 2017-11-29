@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  TGDownloader
+//  TGTestGCD
 //
 //  Created by MacPro on 2017/11/29.
 //  Copyright © 2017年 Centaline. All rights reserved.
@@ -10,6 +10,6 @@
 
 @interface ViewController : UIViewController
 
-- (void)update;
+
 @end
 
