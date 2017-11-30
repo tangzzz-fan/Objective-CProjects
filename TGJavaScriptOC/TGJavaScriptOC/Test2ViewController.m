@@ -9,7 +9,7 @@
 #import "Test2ViewController.h"
 #import <WebKit/WebKit.h>
 
-@interface Test2ViewController ()<WKScriptMessageHandler, WKNavigationDelegate>
+@interface Test2ViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>
 /** webView */
 @property (strong, nonatomic) WKWebView *webView;
 @end
@@ -41,7 +41,7 @@
     NSURL *fileURL = [NSURL fileURLWithPath:filePath];
     [self.webView loadRequest:[NSURLRequest requestWithURL:fileURL]];
     
-//    self.webView.UIDelegate = self;
+    self.webView.UIDelegate = self;
 //    self.webView.navigationDelegate = self;
     
 }
@@ -69,4 +69,36 @@
     NSLog(@"test2");
 }
 
+#pragma mark - WKUINavigationDelegate
+// 页面加载
+// 页面开始加载时调用
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+    
+}
+// 当内容开始返回时调用
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
+    
+}
+// 页面加载完成之后调用
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    
+}
+// 页面加载失败时调用
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation {
+    
+}
+
+// 页面跳转
+// 接收到服务器跳转请求之后调用
+- (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation {
+    
+}
+// 在收到响应后，决定是否跳转
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
+    decisionHandler(WKNavigationResponsePolicyAllow);
+}
+// 在发送请求之前，决定是否跳转
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
 @end
