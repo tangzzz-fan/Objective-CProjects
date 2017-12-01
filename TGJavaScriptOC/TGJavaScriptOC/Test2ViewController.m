@@ -42,10 +42,20 @@
     [self.webView loadRequest:[NSURLRequest requestWithURL:fileURL]];
     
     self.webView.UIDelegate = self;
-//    self.webView.navigationDelegate = self;
+    self.webView.navigationDelegate = self;
     
 }
 
+
+- (void)test1 {
+    NSLog(@"test1");
+}
+
+- (void)test2 {
+    NSLog(@"test2");
+}
+
+#pragma mark - MessageHandleDelegate
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     NSLog(@"asdasd");
     NSLog(@"name:%@ body:%@", message.name, message.body);
@@ -61,19 +71,12 @@
 
 }
 
-- (void)test1 {
-    NSLog(@"test1");
-}
-
-- (void)test2 {
-    NSLog(@"test2");
-}
 
 #pragma mark - WKUINavigationDelegate
 // 页面加载
 // 页面开始加载时调用
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
-    
+
 }
 // 当内容开始返回时调用
 - (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
@@ -81,7 +84,12 @@
 }
 // 页面加载完成之后调用
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    
+//    [webView evaluateJavaScript:@"showAlert('hello')" completionHandler:^(id _Nullable item, NSError * _Nullable error) {
+//        if (error) {
+//            NSLog(@"error %@", error.localizedDescription);
+//        }
+//        NSLog(@"alert");
+//    }];
 }
 // 页面加载失败时调用
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation {
@@ -101,4 +109,17 @@
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     decisionHandler(WKNavigationActionPolicyAllow);
 }
+
+#pragma mark - WKUIDelagate
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+        completionHandler();//此处的completionHandler()就是调用JS方法时，`evaluateJavaScript`方法中的completionHandler
+        
+    }];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 @end
