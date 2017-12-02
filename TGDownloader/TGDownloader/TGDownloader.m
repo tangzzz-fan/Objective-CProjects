@@ -29,6 +29,14 @@
 
 @end
 @implementation TGDownloader
+- (void)downloader:(NSURL *)url downloadInfo:(DownLoadInfoBlock)downloadInfo progress:(ProgressBlock)progress succeed:(SuccessBlock)succeed failed:(FailedBlock)failed {
+    self.downLoadInfo = downloadInfo;
+    self.progressChange = progress;
+    self.successBlock = succeed;
+    self.faildBlock = failed;
+    [self downloader:url];
+}
+
 - (void)downloader:(NSURL *)url {
     
     // 检查任务是否存在,如果存在, 且未完成,就继续下载, 如果没有任务 则从新开始下载
@@ -115,6 +123,7 @@
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSHTTPURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
     
     NSLog(@"返回的 response %@", response);
+    // 此处获取文件数据的还是有问题, 有的 Content-Range bytes <int> */<size>
     
     _totalSize = [response.allHeaderFields[@"Content-Length"] longLongValue];
     NSString *contentRangrStr = response.allHeaderFields[@"Content-Range"];
@@ -122,6 +131,9 @@
         _totalSize = [[contentRangrStr componentsSeparatedByString:@"/"].lastObject longLongValue];
     }
     
+    if (self.downLoadInfo) {
+        self.downLoadInfo(_totalSize);
+    }
     
     if (_tempSize == _totalSize) {
         // 移动到下载文件夹
@@ -150,6 +162,10 @@
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
     [self.outputStream write:data.bytes maxLength:data.length];
     NSLog(@"接受后续数据");
+    // 计算 progress
+    _tempSize += data.length;
+    self.progress = 1.0 * _tempSize / _totalSize;
+    
 }
 
 /** 请求完成时调用 此时的请求状态未知 */
@@ -187,11 +203,30 @@
     return _session;
 }
 
+- (void)setProgress:(float)progress {
+    _progress = progress;
+    if (self.progressChange) {
+        self.progressChange(progress);
+    }
+}
+
 - (void)setState:(TGDownloadState)state {
     if (_state == state) {
         return;
     }
     _state = state;
+    
+    if (self.stateChange) {
+        self.stateChange(_state);
+    }
+    
+    if (self.state == TGDownloadStatePauseSucced && self.successBlock) {
+        self.successBlock(self.downloadedPath);
+    }
+    
+    if (self.state == TGDownloadStatePauseFailed && self.faildBlock) {
+        self.faildBlock();
+    }
 }
 
 @end

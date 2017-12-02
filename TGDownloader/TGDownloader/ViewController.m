@@ -31,7 +31,20 @@
 //}
 - (IBAction)download:(id)sender {
     NSURL *url = [NSURL URLWithString:@"http://m2.pc6.com/xxj/ptgui.dmg"];
-    [self.downloader downloader:url];
+//    [self.downloader downloader:url];
+    [self.downloader downloader:url downloadInfo:^(long long totalSize) {
+        NSLog(@"download info %lld", totalSize);
+    } progress:^(float progress) {
+        NSLog(@"下载进度, %f", progress);
+    } succeed:^(NSString *filePath) {
+        NSLog(@"下载成功, 路径:%@", filePath);
+    } failed:^{
+        NSLog(@"失败");
+    }];
+    
+    [self.downloader setStateChange:^(TGDownloadState state) {
+       NSLog(@"----stateChanged, %zd", state);
+    }];
 }
 
 - (IBAction)pause:(id)sender {
