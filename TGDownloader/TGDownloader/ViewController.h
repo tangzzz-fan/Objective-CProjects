@@ -10,6 +10,5 @@
 
 @interface ViewController : UIViewController
 
-- (void)update;
 @end
 

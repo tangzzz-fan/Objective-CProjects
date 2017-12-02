@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E59AC971FD28A3300E7DACB /* TGDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E59AC961FD28A3300E7DACB /* TGDownloader.m */; };
+		8E59AC9A1FD28D4700E7DACB /* TGFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E59AC991FD28D4700E7DACB /* TGFileTool.m */; };
 		8EDEE1691FCE4BB00051EB1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE1681FCE4BB00051EB1D /* AppDelegate.m */; };
 		8EDEE16C1FCE4BB00051EB1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE16B1FCE4BB00051EB1D /* ViewController.m */; };
 		8EDEE16F1FCE4BB00051EB1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE16D1FCE4BB00051EB1D /* Main.storyboard */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E59AC951FD28A3300E7DACB /* TGDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGDownloader.h; sourceTree = "<group>"; };
+		8E59AC961FD28A3300E7DACB /* TGDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGDownloader.m; sourceTree = "<group>"; };
+		8E59AC981FD28D4700E7DACB /* TGFileTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGFileTool.h; sourceTree = "<group>"; };
+		8E59AC991FD28D4700E7DACB /* TGFileTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGFileTool.m; sourceTree = "<group>"; };
 		8EDEE1641FCE4BB00051EB1D /* TGDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDEE1671FCE4BB00051EB1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8EDEE1681FCE4BB00051EB1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +73,10 @@
 				8EDEE1721FCE4BB00051EB1D /* LaunchScreen.storyboard */,
 				8EDEE1751FCE4BB00051EB1D /* Info.plist */,
 				8EDEE1761FCE4BB00051EB1D /* main.m */,
+				8E59AC981FD28D4700E7DACB /* TGFileTool.h */,
+				8E59AC991FD28D4700E7DACB /* TGFileTool.m */,
+				8E59AC951FD28A3300E7DACB /* TGDownloader.h */,
+				8E59AC961FD28A3300E7DACB /* TGDownloader.m */,
 			);
 			path = TGDownloader;
 			sourceTree = "<group>";
@@ -143,8 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EDEE16C1FCE4BB00051EB1D /* ViewController.m in Sources */,
+				8E59AC9A1FD28D4700E7DACB /* TGFileTool.m in Sources */,
 				8EDEE1771FCE4BB00051EB1D /* main.m in Sources */,
 				8EDEE1691FCE4BB00051EB1D /* AppDelegate.m in Sources */,
+				8E59AC971FD28A3300E7DACB /* TGDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
