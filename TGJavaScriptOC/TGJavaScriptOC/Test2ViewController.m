@@ -23,6 +23,12 @@
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"test1"];
+    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"test2"];
+}
+
 - (void)dealloc {
     NSLog(@"delloc");
 }
@@ -30,9 +36,9 @@
 - (void)initWebView {
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     config.userContentController = [[WKUserContentController alloc] init];
-    
-    [config.userContentController addScriptMessageHandler:self name:@"test1"];
-    [config.userContentController addScriptMessageHandler:self name:@"test2"];
+    __weak typeof(self) wkSelf = self;
+    [config.userContentController addScriptMessageHandler:wkSelf name:@"test1"];
+    [config.userContentController addScriptMessageHandler:wkSelf name:@"test2"];
 
     WKPreferences *preferences = [WKPreferences new];
     preferences.javaScriptCanOpenWindowsAutomatically = YES;
