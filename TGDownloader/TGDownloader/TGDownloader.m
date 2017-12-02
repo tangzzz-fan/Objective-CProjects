@@ -23,6 +23,8 @@
 @property (copy, nonatomic) NSString *downloadingPath;
 /** 文件传输 */
 @property (strong, nonatomic) NSOutputStream *outputStream;
+@property (weak, nonatomic) NSURLSessionDataTask *dataTask;
+
 
 
 
@@ -30,11 +32,26 @@
 @end
 @implementation TGDownloader
 - (void)downloader:(NSURL *)url {
+    
+    // 检查任务是否存在,如果存在, 且未完成,就继续下载, 如果没有任务 则从新开始下载
+    if ([url isEqual:self.dataTask.originalRequest.URL]) {
+        // 任务已经存在, 检查任务状态
+//        if (self.dataTask.state == 3) {
+//            NSLog(@"任务已存在并完成");
+//            return;
+//        } else {
+//            [self resumeCurrentDataTask];
+//        }
+        [self resumeCurrentDataTask];
+
+        return;
+    }
+    
     // 文件的下载: 下载时, 放在 temp 中, 下载完成了放在 cache 中,
     NSString *fileName = url.lastPathComponent;
     
-    self.downloadedPath = [kCachePath stringByAppendingString:fileName];
-    self.downloadingPath = [kCachePath stringByAppendingString:fileName];
+    self.downloadedPath = [kCachePath stringByAppendingPathComponent:fileName];
+    self.downloadingPath = [kTmpPath stringByAppendingPathComponent:fileName];
     
     // 检查本地的数据是否存在, 如果存在相同文件名, 就比较文件数据的大小, 将消息告诉外界
     if ([TGFileTool fileExists:self.downloadedPath]) {
@@ -61,8 +78,26 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:0];
     [request setValue:[NSString stringWithFormat:@"bytes=%lld-", offset] forHTTPHeaderField:@"Range"];
     // session 分配 task
-    NSURLSessionTask *dataTask = [self.session dataTaskWithRequest:request];
-    [dataTask resume];
+    self.dataTask = [self.session dataTaskWithRequest:request];
+    [self.dataTask resume];
+}
+
+- (void)resumeCurrentDataTask {
+    [self.dataTask resume];
+}
+
+- (void)pauseCurrentTask {
+    [self.dataTask suspend];
+}
+
+- (void)cancelCurrentTask {
+    [self.session invalidateAndCancel];
+    self.session = nil;
+}
+
+- (void)cancelAndClean {
+    [self cancelCurrentTask];
+    [TGFileTool removeFile:self.downloadingPath];
 }
 
 #pragma mark - Setter & Getter
@@ -96,24 +131,20 @@
         // 移动到下载文件夹
         NSLog(@"文件已下载完成");
         [TGFileTool moveFile:self.downloadingPath toPath:self.downloadedPath];
-        // 取消本次请求
         completionHandler(NSURLSessionResponseCancel);
         return;
-    }
-    
-    if (_totalSize < _tempSize) {
+    } else if (_totalSize < _tempSize) {
         NSLog(@"清除本地缓存, 从新下载");
         [TGFileTool removeFile:self.downloadingPath];
         [self downloader:response.URL];
         completionHandler(NSURLSessionResponseCancel);
         return;
+    } else {
+        NSLog(@"继续接受数据");
+        self.outputStream = [NSOutputStream outputStreamToFileAtPath:self.downloadingPath append:YES];
+        [self.outputStream open];
+        completionHandler(NSURLSessionResponseAllow);
     }
-    
-    NSLog(@"继续接受数据");
-    self.outputStream = [NSOutputStream outputStreamToFileAtPath:self.downloadingPath append:YES];
-    [self.outputStream open];
-    completionHandler(NSURLSessionResponseAllow);
-    
     
 }
 
@@ -125,7 +156,7 @@
 
 /** 请求完成时调用 此时的请求状态未知 */
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-    NSLog(@"请求完成");
+    NSLog(@"下载 task 完成, 但是文件状态未知");
     if (!error) {
         // 不一定就是下载成功, 此只为 task 请求成功
         // 比较本地文件和下载的头文件中的数据大小, 就说明下载成功

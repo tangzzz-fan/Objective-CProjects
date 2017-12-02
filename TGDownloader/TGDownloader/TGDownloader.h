@@ -10,4 +10,10 @@
 
 @interface TGDownloader : NSObject
 - (void)downloader:(NSURL *)url;
+
+- (void)pauseCurrentTask;
+
+- (void)cancelCurrentTask;
+
+- (void)cancelAndClean;
 @end

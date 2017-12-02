@@ -25,11 +25,24 @@
 
 
 #pragma mark - Actions
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSURL *url = [NSURL URLWithString:@"http://m2.pc6.com/xxj/ptgui.dmg"];
+//    [self.downloader downloader:url];
+//}
+- (IBAction)download:(id)sender {
     NSURL *url = [NSURL URLWithString:@"http://m2.pc6.com/xxj/ptgui.dmg"];
     [self.downloader downloader:url];
 }
 
+- (IBAction)pause:(id)sender {
+    [self.downloader pauseCurrentTask];
+}
+- (IBAction)cancel:(id)sender {
+    [self.downloader cancelCurrentTask];
+}
+- (IBAction)cancelAndClean:(id)sender {
+    [self.downloader cancelAndClean];
+}
 #pragma mark - Getter && Setter
 - (TGDownloader *)downloader {
     if (!_downloader) {
