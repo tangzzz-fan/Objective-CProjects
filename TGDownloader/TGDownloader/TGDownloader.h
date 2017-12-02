@@ -11,8 +11,8 @@
 typedef NS_ENUM(NSUInteger, TGDownloadState) {
     TGDownloadStatePause,
     TGDownloadStateDownLoading,
-    TGDownloadStatePauseSucced,
-    TGDownloadStatePauseFailed
+    TGDownloadStateSucced,
+    TGDownloadStateFailed
 };
 
 typedef void(^DownLoadInfoBlock)(long long totalSize);

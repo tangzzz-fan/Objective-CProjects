@@ -63,7 +63,7 @@
     if ([TGFileTool fileExists:self.downloadedPath]) {
         // 下载完成, 不再重复下载
 //        NSLog(@"下载完成");
-        self.state = TGDownloadStatePauseSucced;
+        self.state = TGDownloadStateSucced;
         return;
     }
     
@@ -139,7 +139,7 @@
         // 移动到下载文件夹
         NSLog(@"文件已下载完成");
         [TGFileTool moveFile:self.downloadingPath toPath:self.downloadedPath];
-        self.state = TGDownloadStatePauseSucced;
+        self.state = TGDownloadStateSucced;
         completionHandler(NSURLSessionResponseCancel);
         return;
     } else if (_totalSize < _tempSize) {
@@ -177,14 +177,14 @@
         // 此处还要做文件重复校验.
         if (self.dataTask.state == 3 ) { // 任务完成
             [TGFileTool moveFile:self.downloadingPath toPath:self.downloadedPath];
-            self.state = TGDownloadStatePauseSucced;
+            self.state = TGDownloadStateSucced;
         }
     } else {
         
         if (error.code == -999) {
             self.state = TGDownloadStatePause;
         } else {
-            self.state = TGDownloadStatePauseFailed;
+            self.state = TGDownloadStateFailed;
         }
         
         NSLog(@"本次下载有问题, error code %zd, --reason %@", error.code, error.localizedDescription);
@@ -220,11 +220,11 @@
         self.stateChange(_state);
     }
     
-    if (self.state == TGDownloadStatePauseSucced && self.successBlock) {
+    if (self.state == TGDownloadStateSucced && self.successBlock) {
         self.successBlock(self.downloadedPath);
     }
     
-    if (self.state == TGDownloadStatePauseFailed && self.faildBlock) {
+    if (self.state == TGDownloadStateFailed && self.faildBlock) {
         self.faildBlock();
     }
 }

@@ -13,6 +13,8 @@
 @interface ViewController ()
 @property (strong, nonatomic) TGDownloader *downloader;
 
+@property (weak, nonatomic) NSTimer *timer;
+
 @end
 
 @implementation ViewController
@@ -29,6 +31,10 @@
 //    NSURL *url = [NSURL URLWithString:@"http://m2.pc6.com/xxj/ptgui.dmg"];
 //    [self.downloader downloader:url];
 //}
+- (void)update {
+//    NSLog(@"timer update, %lld", self.downloader.state);
+}
+
 - (IBAction)download:(id)sender {
     NSURL *url = [NSURL URLWithString:@"http://m2.pc6.com/xxj/ptgui.dmg"];
 //    [self.downloader downloader:url];
@@ -62,6 +68,16 @@
         _downloader = [[TGDownloader alloc] init];
     }
     return _downloader;
+}
+
+- (NSTimer *)timer {
+    if (!_timer) {
+        NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(update) userInfo:nil repeats:YES];
+        // 加入到 runloop 中
+        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+        _timer = timer;
+    }
+    return _timer;
 }
 
 
