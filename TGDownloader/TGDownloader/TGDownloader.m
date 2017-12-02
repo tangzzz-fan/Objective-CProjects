@@ -23,10 +23,8 @@
 @property (copy, nonatomic) NSString *downloadingPath;
 /** 文件传输 */
 @property (strong, nonatomic) NSOutputStream *outputStream;
+/** session 中包含了 dataTask, 这里使用 weak 修饰!!! */
 @property (weak, nonatomic) NSURLSessionDataTask *dataTask;
-
-
-
 
 
 @end
@@ -43,7 +41,7 @@
 //            [self resumeCurrentDataTask];
 //        }
         [self resumeCurrentDataTask];
-
+        
         return;
     }
     
@@ -57,6 +55,7 @@
     if ([TGFileTool fileExists:self.downloadedPath]) {
         // 下载完成, 不再重复下载
         NSLog(@"下载完成");
+        self.state = TGDownloadStatePauseSucced;
         return;
     }
     
@@ -82,15 +81,23 @@
     [self.dataTask resume];
 }
 
+/** 继续任务 判断之前的状态 */
 - (void)resumeCurrentDataTask {
-    [self.dataTask resume];
+    if (self.state == TGDownloadStatePause && self.dataTask) {
+        self.state = TGDownloadStateDownLoading;
+        [self.dataTask resume];
+    }
 }
 
 - (void)pauseCurrentTask {
-    [self.dataTask suspend];
+    if (self.state == TGDownloadStateDownLoading) {
+        self.state = TGDownloadStatePause;
+        [self.dataTask suspend];
+    }
 }
 
 - (void)cancelCurrentTask {
+    self.state = TGDownloadStatePause;
     [self.session invalidateAndCancel];
     self.session = nil;
 }
@@ -99,17 +106,6 @@
     [self cancelCurrentTask];
     [TGFileTool removeFile:self.downloadingPath];
 }
-
-#pragma mark - Setter & Getter
-- (NSURLSession *)session {
-    if (!_session) {
-        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-        // 使用一个配置文件配置, 并放在主队列中进行管理
-        _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
-    }
-    return _session;
-}
-
 
 #pragma mark - NSUrlSessionDataDelegate
 /** 第一次接收到服务器响应调用, 返回交互的头文件信息, 没有资源文件
@@ -131,6 +127,7 @@
         // 移动到下载文件夹
         NSLog(@"文件已下载完成");
         [TGFileTool moveFile:self.downloadingPath toPath:self.downloadedPath];
+        self.state = TGDownloadStatePauseSucced;
         completionHandler(NSURLSessionResponseCancel);
         return;
     } else if (_totalSize < _tempSize) {
@@ -160,10 +157,40 @@
     if (!error) {
         // 不一定就是下载成功, 此只为 task 请求成功
         // 比较本地文件和下载的头文件中的数据大小, 就说明下载成功
+        // 此处还要做文件重复校验.
+        if (self.dataTask.state == 3 ) { // 任务完成
+            [TGFileTool moveFile:self.downloadingPath toPath:self.downloadedPath];
+            self.state = TGDownloadStatePauseSucced;
+        }
     } else {
-        NSLog(@"本次下载有问题, 在网络数据和本地数据之间的大小问题上");
+        
+        if (error.code == -999) {
+            self.state = TGDownloadStatePause;
+        } else {
+            self.state = TGDownloadStatePauseFailed;
+        }
+        
+        NSLog(@"本次下载有问题, error code %zd, --reason %@", error.code, error.localizedDescription);
     }
     
     [self.outputStream close];
 }
+
+#pragma mark - Setter & Getter
+- (NSURLSession *)session {
+    if (!_session) {
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        // 使用一个配置文件配置, 并放在主队列中进行管理
+        _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    }
+    return _session;
+}
+
+- (void)setState:(TGDownloadState)state {
+    if (_state == state) {
+        return;
+    }
+    _state = state;
+}
+
 @end

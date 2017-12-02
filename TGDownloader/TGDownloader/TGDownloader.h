@@ -8,7 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, TGDownloadState) {
+    TGDownloadStatePause,
+    TGDownloadStateDownLoading,
+    TGDownloadStatePauseSucced,
+    TGDownloadStatePauseFailed
+};
+
+
 @interface TGDownloader : NSObject
+
+@property (assign, nonatomic) TGDownloadState state;
+
+
 - (void)downloader:(NSURL *)url;
 
 - (void)pauseCurrentTask;
