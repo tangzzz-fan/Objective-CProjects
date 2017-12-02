@@ -54,7 +54,7 @@
     // 检查本地的数据是否存在, 如果存在相同文件名, 就比较文件数据的大小, 将消息告诉外界
     if ([TGFileTool fileExists:self.downloadedPath]) {
         // 下载完成, 不再重复下载
-        NSLog(@"下载完成");
+//        NSLog(@"下载完成");
         self.state = TGDownloadStatePauseSucced;
         return;
     }
@@ -138,6 +138,7 @@
         return;
     } else {
         NSLog(@"继续接受数据");
+        self.state = TGDownloadStateDownLoading;
         self.outputStream = [NSOutputStream outputStreamToFileAtPath:self.downloadingPath append:YES];
         [self.outputStream open];
         completionHandler(NSURLSessionResponseAllow);
