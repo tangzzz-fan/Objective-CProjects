@@ -22,6 +22,10 @@
     [self initWebView];
     
 }
+
+- (void)dealloc {
+    NSLog(@"delloc");
+}
      
 - (void)initWebView {
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
@@ -84,12 +88,12 @@
 }
 // 页面加载完成之后调用
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-//    [webView evaluateJavaScript:@"showAlert('hello')" completionHandler:^(id _Nullable item, NSError * _Nullable error) {
-//        if (error) {
-//            NSLog(@"error %@", error.localizedDescription);
-//        }
-//        NSLog(@"alert");
-//    }];
+    [webView evaluateJavaScript:@"AppInit()" completionHandler:^(id _Nullable item, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"error %@", error.localizedDescription);
+        }
+        NSLog(@"alert");
+    }];
 }
 // 页面加载失败时调用
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation {

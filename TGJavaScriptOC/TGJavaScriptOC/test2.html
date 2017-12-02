@@ -7,7 +7,7 @@
         function secondClick() {
 <!--                share('分享的标题','分享的内容','图片地址');-->
 
-            window.webkit.messageHandlers.test1.postMessage('remove navigationBar');
+            window.webkit.messageHandlers.test1.postMessage('');
 
         }
 
@@ -16,8 +16,12 @@
         }
 
         function thirdClick(){
-            window.webkit.messageHandlers.test2.postMessage('add navigationBar');
+            window.webkit.messageHandlers.test2.postMessage('');
         }
+    
+    function AppInit(){
+
+    }
 
     </script>
 </header>
@@ -25,6 +29,8 @@
 <body bgcolor="green">
     <h2> 这里是第二种方式 </h2>
     <br/>
+    <br/>
+    <a id='test1' herf="www.baidu.com">testasdasdadsadas</a>
     <br/>
     <button type="button" onclick="showAlert()">AlertClick!</button>
     <button type="button" onclick="secondClick()">Click Me!</button>
