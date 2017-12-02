@@ -9,6 +9,8 @@
 #import "Test2ViewController.h"
 #import <WebKit/WebKit.h>
 
+#import "WeakScriptMessageDelegate.h"
+
 @interface Test2ViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>
 /** webView */
 @property (strong, nonatomic) WKWebView *webView;
@@ -25,20 +27,22 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"test1"];
-    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"test2"];
+//    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"test1"];
+//    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"test2"];
 }
 
 - (void)dealloc {
+    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"test1"];
+    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"test2"];
     NSLog(@"delloc");
 }
      
 - (void)initWebView {
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     config.userContentController = [[WKUserContentController alloc] init];
-    __weak typeof(self) wkSelf = self;
-    [config.userContentController addScriptMessageHandler:wkSelf name:@"test1"];
-    [config.userContentController addScriptMessageHandler:wkSelf name:@"test2"];
+    
+    [config.userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"test1"];
+    [config.userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"test2"];
 
     WKPreferences *preferences = [WKPreferences new];
     preferences.javaScriptCanOpenWindowsAutomatically = YES;
