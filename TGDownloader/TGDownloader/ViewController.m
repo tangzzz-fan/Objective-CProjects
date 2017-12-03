@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self timer];
+//    [self timer];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -35,7 +35,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    [self.timer invalidate];
+//    [self.timer invalidate];
 }
 
 - (void)dealloc {
