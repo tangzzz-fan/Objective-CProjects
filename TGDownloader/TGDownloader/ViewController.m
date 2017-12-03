@@ -23,15 +23,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self timer];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+//    [self.timer invalidate];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.timer invalidate];
+}
+
+- (void)dealloc {
+    NSLog(@"dealloc");
+}
 #pragma mark - Actions
 //- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    NSURL *url = [NSURL URLWithString:@"http://m2.pc6.com/xxj/ptgui.dmg"];
 //    [self.downloader downloader:url];
 //}
 - (void)update {
+    NSLog(@"执行 update 方法");
 //    NSLog(@"timer update, %lld", self.downloader.state);
 }
 
