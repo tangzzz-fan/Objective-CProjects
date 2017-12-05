@@ -48,7 +48,7 @@
 //        } else {
 //            [self resumeCurrentDataTask];
 //        }
-        [self resumeCurrentDataTask];
+        [self resumeCurrentTask];
         
         return;
     }
@@ -90,7 +90,7 @@
 }
 
 /** 继续任务 判断之前的状态 */
-- (void)resumeCurrentDataTask {
+- (void)resumeCurrentTask {
     if (self.state == TGDownloadStatePause && self.dataTask) {
         self.state = TGDownloadStateDownLoading;
         [self.dataTask resume];

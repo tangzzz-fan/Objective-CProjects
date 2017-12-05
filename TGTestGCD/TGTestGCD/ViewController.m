@@ -38,6 +38,15 @@
 //    [self testDispatchTimer];
 //    [self testDispatchIO];
 //    [self testDispatchSource];
+//    [self testANewDeadLock];
+}
+
+- (void)testANewDeadLock {
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"task 1 start");
+        [NSThread sleepForTimeInterval:1.0];
+        NSLog(@"task 1 over");
+    });
 }
 
 /** 使用 dispatchSource 实现一个定时器 */

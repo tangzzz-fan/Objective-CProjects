@@ -37,6 +37,8 @@ typedef void(^StateChangeBlock)(TGDownloadState state);
 
 - (void)downloader:(NSURL *)url;
 
+- (void)resumeCurrentTask;
+
 - (void)pauseCurrentTask;
 
 - (void)cancelCurrentTask;
