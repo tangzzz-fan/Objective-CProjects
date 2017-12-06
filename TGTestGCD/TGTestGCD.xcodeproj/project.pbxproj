@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E64FF041FD7C31C00C0122D /* TestRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E64FF031FD7C31C00C0122D /* TestRunLoopViewController.m */; };
+		8E64FF071FD7E4C000C0122D /* TGThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E64FF061FD7E4C000C0122D /* TGThread.m */; };
 		8EDEE18B1FCE555D0051EB1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE18A1FCE555D0051EB1D /* AppDelegate.m */; };
 		8EDEE18E1FCE555D0051EB1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE18D1FCE555D0051EB1D /* ViewController.m */; };
 		8EDEE1911FCE555D0051EB1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE18F1FCE555D0051EB1D /* Main.storyboard */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E64FF021FD7C31C00C0122D /* TestRunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRunLoopViewController.h; sourceTree = "<group>"; };
+		8E64FF031FD7C31C00C0122D /* TestRunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRunLoopViewController.m; sourceTree = "<group>"; };
+		8E64FF051FD7E4C000C0122D /* TGThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGThread.h; sourceTree = "<group>"; };
+		8E64FF061FD7E4C000C0122D /* TGThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGThread.m; sourceTree = "<group>"; };
 		8EDEE1861FCE555D0051EB1D /* TGTestGCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGTestGCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDEE1891FCE555D0051EB1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8EDEE18A1FCE555D0051EB1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +68,10 @@
 				8EDEE18A1FCE555D0051EB1D /* AppDelegate.m */,
 				8EDEE18C1FCE555D0051EB1D /* ViewController.h */,
 				8EDEE18D1FCE555D0051EB1D /* ViewController.m */,
+				8E64FF021FD7C31C00C0122D /* TestRunLoopViewController.h */,
+				8E64FF031FD7C31C00C0122D /* TestRunLoopViewController.m */,
+				8E64FF051FD7E4C000C0122D /* TGThread.h */,
+				8E64FF061FD7E4C000C0122D /* TGThread.m */,
 				8EDEE18F1FCE555D0051EB1D /* Main.storyboard */,
 				8EDEE1921FCE555D0051EB1D /* Assets.xcassets */,
 				8EDEE1941FCE555D0051EB1D /* LaunchScreen.storyboard */,
@@ -142,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E64FF071FD7E4C000C0122D /* TGThread.m in Sources */,
+				8E64FF041FD7C31C00C0122D /* TestRunLoopViewController.m in Sources */,
 				8EDEE18E1FCE555D0051EB1D /* ViewController.m in Sources */,
 				8EDEE1991FCE555D0051EB1D /* main.m in Sources */,
 				8EDEE18B1FCE555D0051EB1D /* AppDelegate.m in Sources */,
