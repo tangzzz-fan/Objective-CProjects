@@ -35,6 +35,9 @@
         // 开启 runloop
         NSRunLoop *runloop = [NSRunLoop currentRunLoop];
         // 注册 runloop 需要监听的事件端口号
+        // 此处如果将添加 port 注释掉, 因为 mode 中没有 item 任务
+        // 向 mode 中添加两类 item 任务: NSPort: source1, NSTimer.
+        // 如果使用 CFRunloopRef 则可以使用 C 语言的 API 添加 source timer, observer
         [runloop addPort:[NSPort port] forMode:NSRunLoopCommonModes];
         NSLog(@"before runloop start, %@", runloop.currentMode);
         [runloop run];
@@ -57,6 +60,8 @@
     [self performSelector:@selector(subThreadOperation) onThread:self.subThread withObject:nil waitUntilDone:NO];
 }
 
+// AFNetworking 2.6.x 中使用 runloop 的例子
+// 将任务添加到后台线程中,
 
 
 @end
