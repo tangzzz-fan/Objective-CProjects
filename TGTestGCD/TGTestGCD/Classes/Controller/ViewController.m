@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "JavaScript.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self testForObjectType];
+    
 //    [self testSycOnMainQueue];
 //    [self testChangedQueue];
 //    [self testAgain];
@@ -25,6 +28,15 @@
 //    [self deadLockCase2];
 //    [self deadLockCase3];
 //    [self deadLockCase5];
+}
+
+- (void)testForObjectType {
+    Person *p = [[Person alloc] init];
+    p.language = [[Language alloc] init];
+    
+    // 声明一个 student 的泛型对象
+    Student<JavaScript *> *stud = [[Student alloc] init];
+    stud.programLanguage = [[JavaScript alloc] init];
 }
 
 - (void)testSycOnMainQueue {

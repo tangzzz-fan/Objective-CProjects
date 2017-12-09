@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Person.h"
+#import "Student.h"
 
 @interface ViewController : UIViewController
-
 
 @end
 
