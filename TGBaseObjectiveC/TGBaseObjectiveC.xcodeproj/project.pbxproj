@@ -19,6 +19,8 @@
 		8E4445FD1FDD173800CC23B1 /* UIImage+ImageExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4445FC1FDD173800CC23B1 /* UIImage+ImageExtension.m */; };
 		8E4446001FDD175200CC23B1 /* Person+PersonExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4445FF1FDD175200CC23B1 /* Person+PersonExtension.m */; };
 		8E4446031FDD2E7A00CC23B1 /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4446021FDD2E7A00CC23B1 /* Student+Extension.m */; };
+		8E4446061FDD32B500CC23B1 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4446051FDD32B500CC23B1 /* NSObject+Extension.m */; };
+		8E4446091FDD36D100CC23B1 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4446081FDD36D100CC23B1 /* Status.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,10 @@
 		8E4445FF1FDD175200CC23B1 /* Person+PersonExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+PersonExtension.m"; sourceTree = "<group>"; };
 		8E4446011FDD2E7A00CC23B1 /* Student+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+Extension.h"; sourceTree = "<group>"; };
 		8E4446021FDD2E7A00CC23B1 /* Student+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
+		8E4446041FDD32B500CC23B1 /* NSObject+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		8E4446051FDD32B500CC23B1 /* NSObject+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		8E4446071FDD36D100CC23B1 /* Status.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		8E4446081FDD36D100CC23B1 /* Status.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,8 @@
 				8E4445F21FDD0B0100CC23B1 /* Person.m */,
 				8E4445F71FDD117700CC23B1 /* Student.h */,
 				8E4445F81FDD117700CC23B1 /* Student.m */,
+				8E4446071FDD36D100CC23B1 /* Status.h */,
+				8E4446081FDD36D100CC23B1 /* Status.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +159,8 @@
 				8E4445FF1FDD175200CC23B1 /* Person+PersonExtension.m */,
 				8E4446011FDD2E7A00CC23B1 /* Student+Extension.h */,
 				8E4446021FDD2E7A00CC23B1 /* Student+Extension.m */,
+				8E4446041FDD32B500CC23B1 /* NSObject+Extension.h */,
+				8E4446051FDD32B500CC23B1 /* NSObject+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -229,6 +239,8 @@
 			files = (
 				8E4445EE1FDD075700CC23B1 /* ViewController.m in Sources */,
 				8E4445ED1FDD075700CC23B1 /* AppDelegate.m in Sources */,
+				8E4446061FDD32B500CC23B1 /* NSObject+Extension.m in Sources */,
+				8E4446091FDD36D100CC23B1 /* Status.m in Sources */,
 				8E4445F31FDD0B0100CC23B1 /* Person.m in Sources */,
 				8E4446001FDD175200CC23B1 /* Person+PersonExtension.m in Sources */,
 				8E4445FD1FDD173800CC23B1 /* UIImage+ImageExtension.m in Sources */,

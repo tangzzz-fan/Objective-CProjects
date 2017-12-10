@@ -10,6 +10,9 @@
 
 #import "Person.h"
 #import "Student.h"
+#import "Status.h"
+
+#import "NSObject+Extension.h"
 
 #import <objc/message.h>
 
@@ -111,18 +114,40 @@
  *  在类的分类中声明属性的 set get 方法, 本质并不是真的生成成员变量(属性) 而是 提供 get set 方法 供外界调用(伴随着在分类中的属性声明)
  */
 - (IBAction)addPropertyInCatrgoryAction:(id)sender {
-    Student *stu = [[Student alloc] init];
-    stu.name = @"a default name";
-    NSLog(@"name, %@", stu.name);
+//    Student *stu = [[Student alloc] init];
+//    stu.name = @"a default name";
+//    NSLog(@"name, %@", stu.name);
     
 }
 
 /** 根据字典自动生成属性声明描述符 */
 - (IBAction)autoGeneratePropertyDisAction:(id)sender {
+    // 加载 plist
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil];
+//    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+//    NSArray *dictArr = dict[@"statuses"];
+    
+    // 根据字典关键字 创建对应的属性声明
+//    [NSObject createPropertyDisWithDict:dictArr[0]];
+    
+    
 }
 
-/** 使用 KVC 字典转模型 */
+/** 使用 KVC 字典转模型 从字典中找到对应的 key, 然后生成对应的属性 容易生成多余的属性声明*/
 - (IBAction)dictToModelInKVCAction:(id)sender {
+    // 加载 plist
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    NSArray *dictArr = dict[@"statuses"];
+    
+    NSMutableArray *statusArray = [NSMutableArray array];
+    // KVC 转换
+    for (NSDictionary *dict  in dictArr) {
+        Status *status = [Status statusWithDict:dict];
+        [statusArray addObject:status];
+    }
+    
+    NSLog(@"statusArray: %@", statusArray);
 }
 
 /** 一阶字典转模型 */

@@ -7,6 +7,8 @@
 		<dict>
 			<key>attitudes_count</key>
 			<integer>3</integer>
+			<key>floaaat</key>
+			<real>30.231252</real>
 			<key>comments_count</key>
 			<integer>0</integer>
 			<key>created_at</key>
