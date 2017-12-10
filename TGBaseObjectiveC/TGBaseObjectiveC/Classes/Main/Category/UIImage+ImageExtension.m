@@ -33,8 +33,9 @@
     
 }
 
+/** 此处不能再次调用 imageNamed: 方法, 会引起循环调用 */
 + (instancetype)imageWithImageName:(NSString *)name {
-    // 图片能加载的原因, 在这个地方, load 之后, 已经交换了方法实现, 已经实现了 imageNamed: 方法
+    // 图片能加载的原因, 在这个地方, load 之后, 已经交换了方法实现, 调用了 imageNamed: 方法
     UIImage *image = [self imageWithImageName:name];
     if (!image) {
         NSLog(@"加载空的图片");
