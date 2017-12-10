@@ -85,8 +85,8 @@
 //    [self.view addSubview:imageView];
     
 //    [Person running];
-    Person *person = [[Person alloc] init];
-    [person working];
+//    Person *person = [[Person alloc] init];
+//    [person working];
 }
 
 /** 动态添加方法
@@ -100,13 +100,21 @@
  *  需求: 向对象发送一个没有实现的方法
  */
 - (IBAction)dymaticAddFunctionsAction:(id)sender {
-    Person *person = [[Person alloc] init];
+//    Person *person = [[Person alloc] init];
 //    [person performSelector:@selector(buy)];
-    [person performSelector:@selector(workhard:) withObject:@(10000)];
+//    [person performSelector:@selector(workhard:) withObject:@(10000)];
 }
 
-/** 分类中添加属性 */
+/** 分类中添加属性
+ *  设置关联对象的属性, 将要添加的属性添加到关联对象中
+ *  UIView+Extension 中的方法使用:
+ *  在类的分类中声明属性的 set get 方法, 本质并不是真的生成成员变量(属性) 而是 提供 get set 方法 供外界调用(伴随着在分类中的属性声明)
+ */
 - (IBAction)addPropertyInCatrgoryAction:(id)sender {
+    Student *stu = [[Student alloc] init];
+    stu.name = @"a default name";
+    NSLog(@"name, %@", stu.name);
+    
 }
 
 /** 根据字典自动生成属性声明描述符 */

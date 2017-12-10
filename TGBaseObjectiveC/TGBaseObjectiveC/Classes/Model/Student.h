@@ -9,5 +9,6 @@
 #import "Person.h"
 
 @interface Student : Person
+@property (strong, nonatomic) NSString *name;
 
 @end

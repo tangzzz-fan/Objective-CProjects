@@ -18,6 +18,7 @@
 		8E4445F91FDD117700CC23B1 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4445F81FDD117700CC23B1 /* Student.m */; };
 		8E4445FD1FDD173800CC23B1 /* UIImage+ImageExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4445FC1FDD173800CC23B1 /* UIImage+ImageExtension.m */; };
 		8E4446001FDD175200CC23B1 /* Person+PersonExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4445FF1FDD175200CC23B1 /* Person+PersonExtension.m */; };
+		8E4446031FDD2E7A00CC23B1 /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4446021FDD2E7A00CC23B1 /* Student+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		8E4445FC1FDD173800CC23B1 /* UIImage+ImageExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageExtension.m"; sourceTree = "<group>"; };
 		8E4445FE1FDD175200CC23B1 /* Person+PersonExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+PersonExtension.h"; sourceTree = "<group>"; };
 		8E4445FF1FDD175200CC23B1 /* Person+PersonExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+PersonExtension.m"; sourceTree = "<group>"; };
+		8E4446011FDD2E7A00CC23B1 /* Student+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+Extension.h"; sourceTree = "<group>"; };
+		8E4446021FDD2E7A00CC23B1 /* Student+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				8E4445FC1FDD173800CC23B1 /* UIImage+ImageExtension.m */,
 				8E4445FE1FDD175200CC23B1 /* Person+PersonExtension.h */,
 				8E4445FF1FDD175200CC23B1 /* Person+PersonExtension.m */,
+				8E4446011FDD2E7A00CC23B1 /* Student+Extension.h */,
+				8E4446021FDD2E7A00CC23B1 /* Student+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 				8E4445F31FDD0B0100CC23B1 /* Person.m in Sources */,
 				8E4446001FDD175200CC23B1 /* Person+PersonExtension.m in Sources */,
 				8E4445FD1FDD173800CC23B1 /* UIImage+ImageExtension.m in Sources */,
+				8E4446031FDD2E7A00CC23B1 /* Student+Extension.m in Sources */,
 				8E4445DD1FDD071B00CC23B1 /* main.m in Sources */,
 				8E4445F91FDD117700CC23B1 /* Student.m in Sources */,
 			);

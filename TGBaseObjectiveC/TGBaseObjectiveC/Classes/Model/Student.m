@@ -8,6 +8,8 @@
 
 #import "Student.h"
 
+
+
 @implementation Student
 //+ (void)load {
 //    NSLog(@"load in a subClass");
@@ -16,4 +18,6 @@
 //+ (void)initialize {
 //    NSLog(@"initialize in a subClass");
 //}
+
+
 @end
