@@ -153,6 +153,24 @@
 /** 一阶字典转模型 */
 - (IBAction)dictToModelRunTimeAction1:(id)sender {
     // 加载 plist
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil];
+//    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+//    NSArray *dictArr = dict[@"statuses"];
+//
+//    NSMutableArray *statusArray = [NSMutableArray array];
+//    // KVC 转换
+//    for (NSDictionary *dict  in dictArr) {
+//        Status *status = [Status modelWithDict:dict];
+//        [statusArray addObject:status];
+//    }
+//
+//    NSLog(@"statusArray: %@", statusArray);
+    
+}
+
+/** 二阶字典转模型 */
+- (IBAction)dictToModelRuntimeActione2:(id)sender {
+    // 加载 plist
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
     NSArray *dictArr = dict[@"statuses"];
@@ -165,11 +183,6 @@
     }
     
     NSLog(@"statusArray: %@", statusArray);
-    
-}
-
-/** 二阶字典转模型 */
-- (IBAction)dictToModelRuntimeActione2:(id)sender {
 }
 
 /** class super class */

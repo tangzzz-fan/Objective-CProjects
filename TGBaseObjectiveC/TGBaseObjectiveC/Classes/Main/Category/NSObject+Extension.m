@@ -77,6 +77,20 @@
         id value = dict[key];
         
         // 使用 kvc 赋值
+        // 二阶字典转模型 如果模型中的属性定义就是字典就不用转换
+        if ([value isKindOfClass:[NSDictionary class]] && ![propertyType hasPrefix:@"NS"]) {
+            
+            // 此时 propertyType 中为 @"User" 不是想要的 User 类型
+            propertyType = [propertyType stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+            propertyType = [propertyType substringFromIndex:1];
+            NSLog(@"propertyName: %@ propertyType: %@, value: %@", propertyName, propertyType, value);
+
+            Class subModelClass = NSClassFromString(propertyType);
+            if (subModelClass) {
+                value = [subModelClass modelWithDict:value];
+            }
+        }
+        
         if (value) {
             [objc setValue:value forKey:key];
         }

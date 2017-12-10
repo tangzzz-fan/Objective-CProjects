@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+@class User;
 
 @interface Status : NSObject
+
 @property (nonatomic, strong) NSString *source;
 
 @property (nonatomic, assign) int reposts_count;
@@ -27,7 +29,7 @@
 
 @property (nonatomic, assign) int floaaat;
 
-@property (nonatomic, strong) NSDictionary *user;
+@property (nonatomic, strong) User *user;
 
 + (instancetype)statusWithDict:(NSDictionary *)dict;
 
