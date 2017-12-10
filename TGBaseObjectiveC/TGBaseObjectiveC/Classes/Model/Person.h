@@ -17,4 +17,7 @@
 
 + (instancetype)running;
 - (void)working;
+
+//- (void)buy;
+
 @end

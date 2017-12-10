@@ -88,18 +88,44 @@
     Person *person = [[Person alloc] init];
     [person working];
 }
+
+/** 动态添加方法
+ *  实质: 向一个对象发送一个不能识别的方法时, 通过拦截消息转发中的几个阶段, 实现不同的目的
+ *  消息转发的三个阶段:
+    0 消息解析(msgSend)
+    1 动态方法处理: 询问对象是否能够处理接受到的实例方法, 类方法
+    2 备援接收者处理(找能处理消息的对象 forwardTarget, 找其他对象 forwordInvocation)
+    3 实质消息转发阶段:
+ 
+ *  需求: 向对象发送一个没有实现的方法
+ */
 - (IBAction)dymaticAddFunctionsAction:(id)sender {
+    Person *person = [[Person alloc] init];
+//    [person performSelector:@selector(buy)];
+    [person performSelector:@selector(workhard:) withObject:@(10000)];
 }
+
+/** 分类中添加属性 */
 - (IBAction)addPropertyInCatrgoryAction:(id)sender {
 }
+
+/** 根据字典自动生成属性声明描述符 */
 - (IBAction)autoGeneratePropertyDisAction:(id)sender {
 }
+
+/** 使用 KVC 字典转模型 */
 - (IBAction)dictToModelInKVCAction:(id)sender {
 }
+
+/** 一阶字典转模型 */
 - (IBAction)dictToModelRunTimeAction1:(id)sender {
 }
+
+/** 二阶字典转模型 */
 - (IBAction)dictToModelRuntimeActione2:(id)sender {
 }
+
+/** class super class */
 - (IBAction)differenceBetweenSuperAction:(id)sender {
 }
 
