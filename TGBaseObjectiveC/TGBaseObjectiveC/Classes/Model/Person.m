@@ -47,7 +47,13 @@
     NSLog(@"this is a method called in instance method");
 }
 
+- (void)test {
+    NSLog(@"in a SuperClass instance method called:===== self:%@, [self class]: %@, [super class]: %@, [self superClass]: %@, [[self class] class]: %@, [[self class] superclass]: %@", self, [self class], [super class], [self superclass], [[self class] class], [[self class] superclass]);
+}
 
++ (void)test {
+    NSLog(@"in a SuperClass Class method called:===== self:%@, [self class]: %@, [super class]: %@, [self superClass]: %@, [[self class] class]: %@, [[self class] superclass]: %@", self, [self class], [super class], [self superclass], [[self class] class], [[self class] superclass]);
+}
 
 /** 处理未实现的方法
  *  重写系统的 resolveInstanceMethod/resolveClassMethod 方法,

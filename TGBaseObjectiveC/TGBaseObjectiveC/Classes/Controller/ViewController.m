@@ -187,6 +187,14 @@
 
 /** class super class */
 - (IBAction)differenceBetweenSuperAction:(id)sender {
+    Person *p = [[Person alloc] init];
+    [p test];
+    [Person test];
+    
+    Student *stu = [[Student alloc] init];
+    [stu test];
+    [Student test];
+    
 }
 
 

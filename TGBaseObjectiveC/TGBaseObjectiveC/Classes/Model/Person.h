@@ -20,4 +20,7 @@
 
 //- (void)buy;
 
+// subClass superClass
+- (void)test;
++ (void)test;
 @end

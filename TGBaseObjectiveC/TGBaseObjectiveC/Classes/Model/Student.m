@@ -18,6 +18,12 @@
 //+ (void)initialize {
 //    NSLog(@"initialize in a subClass");
 //}
+- (void)test {
+    NSLog(@"in a SubClass instance method called:===== self:%@, [self class]: %@, [super class]: %@, [self superClass]: %@, [[self class] class]: %@, [[self class] superclass]: %@", self, [self class], [super class], [self superclass], [[self class] class], [[self class] superclass]);
+}
 
++ (void)test {
+    NSLog(@"in a SuperClass Class method called:===== self:%@, [self class]: %@, [super class]: %@, [self superClass]: %@, [[self class] class]: %@, [[self class] superclass]: %@", self, [self class], [super class], [self superclass], [[self class] class], [[self class] superclass]);
+}
 
 @end

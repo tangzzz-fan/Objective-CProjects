@@ -10,5 +10,7 @@
 
 @interface Student : Person
 @property (strong, nonatomic) NSString *name;
+- (void)test;
 
++ (void)test;
 @end
