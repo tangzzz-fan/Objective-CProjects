@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "JavaScript.h"
 @interface ViewController ()
 @property (nonatomic) dispatch_source_t timerSource;
 @end
@@ -20,6 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self testForObjectType];
+    
 //    [self testSycOnMainQueue];
 //    [self testChangedQueue];
 //    [self testAgain];
@@ -228,6 +231,15 @@
     dispatch_block_cancel(block2);
 }
 
+- (void)testForObjectType {
+    Person *p = [[Person alloc] init];
+    p.language = [[Language alloc] init];
+    
+    // 声明一个 student 的泛型对象
+    Student<JavaScript *> *stud = [[Student alloc] init];
+    stud.programLanguage = [[JavaScript alloc] init];
+}
+
 - (void)testWaitBlock {
     dispatch_queue_t queue = dispatch_queue_create("queue", DISPATCH_QUEUE_SERIAL);
     dispatch_block_t block = dispatch_block_create(0, ^{
@@ -269,7 +281,6 @@
  *  FMDB 中的 queue 中的一个 block 在线程中执行, block 中调用了 inDataBase, 这时要检查是否是在同一个 queue 中, 本质上还是
  *  避免在一个现行队列中执行串行任务 (因为对现行队列的使用会形成一个竞争死锁)
  */
-
 - (void)testSycOnMainQueue {
     dispatch_queue_t queue = dispatch_queue_create("com.tangzzz.queue", nil);
     dispatch_sync(queue, ^{
