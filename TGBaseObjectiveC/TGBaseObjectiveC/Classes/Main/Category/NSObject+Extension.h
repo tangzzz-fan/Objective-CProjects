@@ -10,4 +10,6 @@
 
 @interface NSObject (Extension)
 + (void)createPropertyDisWithDict:(NSDictionary *)dict;
+
++ (instancetype)modelWithDict:(NSDictionary *)dict;
 @end

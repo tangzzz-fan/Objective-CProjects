@@ -8,6 +8,8 @@
 
 #import "NSObject+Extension.h"
 
+#import <objc/message.h>
+
 @implementation NSObject (Extension)
 + (void)createPropertyDisWithDict:(NSDictionary *)dict {
     NSMutableString *strM = [NSMutableString string];
@@ -27,6 +29,8 @@
             type = @"NSArray";
         } else if ([value isKindOfClass:NSClassFromString(@"__NSCFDictionary")]) {
             type = @"NSDictionary";
+        } else if ([value isKindOfClass:NSClassFromString(@"__NSCFBoolean")]) {
+            type = @"BOOL";
         }
         
         NSString *str = @"";
@@ -40,5 +44,44 @@
     }];
     
     NSLog(@"%@", strM);
+}
+
+/** runtime 遍历模型中的所有成员变量, 去字典中查找
+ *  ivar 成员变量
+ *  class_copyIvarList
+ *  Ivar *: 指向 一个成员变量数组
+ *  class :  获取类的成员变量列表
+ *  count : 成员变量的个数
+ */
++ (instancetype)modelWithDict:(NSDictionary *)dict {
+    id objc = [[[self class] alloc] init];
+    
+    unsigned int count = 0;
+    // 获取成员变量列表
+    Ivar *ivarList = class_copyIvarList(self, &count);
+    
+    for (NSInteger i = 0; i < count; i++) {
+        
+        Ivar ivar = ivarList[i];
+        
+        // 将 char * 字符串转换成 string
+        NSString *propertyName = [NSString stringWithUTF8String:ivar_getName(ivar)];
+        // 获取成员变量类型
+        NSString *propertyType = [NSString stringWithUTF8String:ivar_getTypeEncoding(ivar)];
+        
+//        NSLog(@"propertyName: %@ propertyType: %@", propertyName, propertyType);
+        // 获取 key
+        NSString *key = [propertyName substringFromIndex:1];
+    
+        // 获取字典的 value
+        id value = dict[key];
+        
+        // 使用 kvc 赋值
+        if (value) {
+            [objc setValue:value forKey:key];
+        }
+    }
+    
+    return objc;
 }
 @end

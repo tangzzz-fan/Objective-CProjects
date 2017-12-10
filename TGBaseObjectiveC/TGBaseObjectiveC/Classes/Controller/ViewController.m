@@ -123,18 +123,35 @@
 /** 根据字典自动生成属性声明描述符 */
 - (IBAction)autoGeneratePropertyDisAction:(id)sender {
     // 加载 plist
-//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil];
-//    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
-//    NSArray *dictArr = dict[@"statuses"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    NSArray *dictArr = dict[@"statuses"];
     
     // 根据字典关键字 创建对应的属性声明
-//    [NSObject createPropertyDisWithDict:dictArr[0]];
+    [NSObject createPropertyDisWithDict:dictArr[0][@"user"]];
     
     
 }
 
 /** 使用 KVC 字典转模型 从字典中找到对应的 key, 然后生成对应的属性 容易生成多余的属性声明*/
 - (IBAction)dictToModelInKVCAction:(id)sender {
+//    // 加载 plist
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil];
+//    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+//    NSArray *dictArr = dict[@"statuses"];
+//
+//    NSMutableArray *statusArray = [NSMutableArray array];
+//    // KVC 转换
+//    for (NSDictionary *dict  in dictArr) {
+//        Status *status = [Status statusWithDict:dict];
+//        [statusArray addObject:status];
+//    }
+//
+//    NSLog(@"statusArray: %@", statusArray);
+}
+
+/** 一阶字典转模型 */
+- (IBAction)dictToModelRunTimeAction1:(id)sender {
     // 加载 plist
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"status.plist" ofType:nil];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
@@ -143,15 +160,12 @@
     NSMutableArray *statusArray = [NSMutableArray array];
     // KVC 转换
     for (NSDictionary *dict  in dictArr) {
-        Status *status = [Status statusWithDict:dict];
+        Status *status = [Status modelWithDict:dict];
         [statusArray addObject:status];
     }
     
     NSLog(@"statusArray: %@", statusArray);
-}
-
-/** 一阶字典转模型 */
-- (IBAction)dictToModelRunTimeAction1:(id)sender {
+    
 }
 
 /** 二阶字典转模型 */
