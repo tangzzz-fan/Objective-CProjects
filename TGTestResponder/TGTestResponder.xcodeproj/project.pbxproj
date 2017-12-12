@@ -15,6 +15,7 @@
 		8E874DD61FDF695E00C994F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874DD51FDF695E00C994F2 /* main.m */; };
 		8E874DDE1FDF766D00C994F2 /* TGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874DDD1FDF766D00C994F2 /* TGButton.m */; };
 		8E874DE11FDF784600C994F2 /* UIButton+TGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874DE01FDF784600C994F2 /* UIButton+TGExtension.m */; };
+		8E874DE41FDF7A9400C994F2 /* TGTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874DE31FDF7A9400C994F2 /* TGTagButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		8E874DDD1FDF766D00C994F2 /* TGButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGButton.m; sourceTree = "<group>"; };
 		8E874DDF1FDF784600C994F2 /* UIButton+TGExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+TGExtension.h"; sourceTree = "<group>"; };
 		8E874DE01FDF784600C994F2 /* UIButton+TGExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TGExtension.m"; sourceTree = "<group>"; };
+		8E874DE21FDF7A9400C994F2 /* TGTagButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTagButton.h; sourceTree = "<group>"; };
+		8E874DE31FDF7A9400C994F2 /* TGTagButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTagButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				8E874DC71FDF695E00C994F2 /* AppDelegate.m */,
 				8E874DDC1FDF766D00C994F2 /* TGButton.h */,
 				8E874DDD1FDF766D00C994F2 /* TGButton.m */,
+				8E874DE21FDF7A9400C994F2 /* TGTagButton.h */,
+				8E874DE31FDF7A9400C994F2 /* TGTagButton.m */,
 				8E874DDF1FDF784600C994F2 /* UIButton+TGExtension.h */,
 				8E874DE01FDF784600C994F2 /* UIButton+TGExtension.m */,
 				8E874DC91FDF695E00C994F2 /* ViewController.h */,
@@ -158,6 +163,7 @@
 				8E874DCB1FDF695E00C994F2 /* ViewController.m in Sources */,
 				8E874DD61FDF695E00C994F2 /* main.m in Sources */,
 				8E874DC81FDF695E00C994F2 /* AppDelegate.m in Sources */,
+				8E874DE41FDF7A9400C994F2 /* TGTagButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

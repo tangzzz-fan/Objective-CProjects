@@ -10,32 +10,17 @@
 
 @implementation TGButton
 /** 放大热区 */
-//- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
-//    CGRect bounds = self.bounds;
-//    // 若点击区域小于 44*44 就放大热区
-//    CGFloat widthDelta = MAX(44.0 - bounds.size.width, 0);
-//    CGFloat heightDelta = MAX(44.0 - bounds.size.height, 0);
-//    bounds = CGRectInset(bounds, -0.5 * widthDelta, -0.5 * heightDelta);
-//    NSLog(@"FlyElephant---被点击了:%@----点击的点:%@",NSStringFromCGRect(bounds), NSStringFromCGPoint(point));
-//    return CGRectContainsPoint(bounds, point);
-//}
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    CGRect bounds = self.bounds;
+    // 若点击区域小于 44*44 就放大热区
+    CGFloat widthDelta = MAX(44.0 - bounds.size.width, 0);
+    CGFloat heightDelta = MAX(44.0 - bounds.size.height, 0);
+    bounds = CGRectInset(bounds, -0.5 * widthDelta, -0.5 * heightDelta);
+    NSLog(@"FlyElephant---被点击了:%@----点击的点:%@",NSStringFromCGRect(bounds), NSStringFromCGPoint(point));
+    return CGRectContainsPoint(bounds, point);
+}
 
-/** 只点击圆形区域内的按钮 */
-//- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
-//    
-//    CGFloat halfWidth = self.bounds.size.width / 2;
-//    
-//    CGFloat xDistance = point.x - halfWidth;
-//    
-//    CGFloat yDistance = point.y - halfWidth;
-//    
-//    CGFloat radius = sqrt(xDistance * xDistance + yDistance * yDistance);
-//    
-//    NSLog(@"HaldWidth:%f---point:%@---x轴距离:%f---y轴距离:%f--半径:%f",halfWidth,NSStringFromCGPoint(point),xDistance,yDistance,radius);
-//    
-//    return radius <= halfWidth;
-//
-//}
+
 
 
 
