@@ -19,6 +19,7 @@
 		8EDEE1931FCE555D0051EB1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE1921FCE555D0051EB1D /* Assets.xcassets */; };
 		8EDEE1961FCE555D0051EB1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE1941FCE555D0051EB1D /* LaunchScreen.storyboard */; };
 		8EDEE1991FCE555D0051EB1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE1981FCE555D0051EB1D /* main.m */; };
+		8EF348ED1FE3C2D3008C234F /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF348EC1FE3C2D3008C234F /* TimerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		8EDEE1951FCE555D0051EB1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EDEE1971FCE555D0051EB1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EDEE1981FCE555D0051EB1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8EF348EB1FE3C2D3008C234F /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		8EF348EC1FE3C2D3008C234F /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 			children = (
 				87F095831FDBD15700CFA869 /* ViewController.m */,
 				87F095841FDBD15700CFA869 /* ViewController.h */,
+				8EF348EB1FE3C2D3008C234F /* TimerViewController.h */,
+				8EF348EC1FE3C2D3008C234F /* TimerViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			files = (
 				87F0958C1FDBD15700CFA869 /* ViewController.m in Sources */,
 				87F095891FDBD15700CFA869 /* Person.m in Sources */,
+				8EF348ED1FE3C2D3008C234F /* TimerViewController.m in Sources */,
 				87F095861FDBD15700CFA869 /* Swift.m in Sources */,
 				87F095871FDBD15700CFA869 /* ObjectiveC.m in Sources */,
 				87F095881FDBD15700CFA869 /* Student.m in Sources */,
