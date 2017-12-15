@@ -56,6 +56,21 @@
             </objects>
             <point key="canvasLocation" x="2318" y="-23"/>
         </scene>
+        <!--Timer2 View Controller-->
+        <scene sceneID="qVi-sp-uek">
+            <objects>
+                <viewController id="8z1-14-Llf" customClass="Timer2ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qbr-mP-277">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mJD-ic-Z99"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wr9-Tr-SEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2959" y="-26"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="tvo-mM-zmr">
             <objects>
@@ -104,6 +119,14 @@
                                 <state key="normal" title="TestNSTimer"/>
                                 <connections>
                                     <segue destination="1LT-5q-GyM" kind="show" id="Agg-NF-8Ty"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4y-6q-ojn">
+                                <rect key="frame" x="42" y="227" width="148" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="TestNSTimer2 非实时"/>
+                                <connections>
+                                    <segue destination="8z1-14-Llf" kind="presentation" id="yaf-9g-0fh"/>
                                 </connections>
                             </button>
                         </subviews>

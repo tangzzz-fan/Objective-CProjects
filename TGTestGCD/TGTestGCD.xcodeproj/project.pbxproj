@@ -21,6 +21,7 @@
 		8EDEE1991FCE555D0051EB1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE1981FCE555D0051EB1D /* main.m */; };
 		8EF348ED1FE3C2D3008C234F /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF348EC1FE3C2D3008C234F /* TimerViewController.m */; };
 		8EF348F01FE3C4B1008C234F /* TestRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF348EF1FE3C4B1008C234F /* TestRunLoopViewController.m */; };
+		8EF348F31FE3C910008C234F /* Timer2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF348F21FE3C910008C234F /* Timer2ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		8EF348EC1FE3C2D3008C234F /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		8EF348EE1FE3C4B1008C234F /* TestRunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRunLoopViewController.h; sourceTree = "<group>"; };
 		8EF348EF1FE3C4B1008C234F /* TestRunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRunLoopViewController.m; sourceTree = "<group>"; };
+		8EF348F11FE3C910008C234F /* Timer2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Timer2ViewController.h; sourceTree = "<group>"; };
+		8EF348F21FE3C910008C234F /* Timer2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Timer2ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				87F095831FDBD15700CFA869 /* ViewController.m */,
 				8EF348EB1FE3C2D3008C234F /* TimerViewController.h */,
 				8EF348EC1FE3C2D3008C234F /* TimerViewController.m */,
+				8EF348F11FE3C910008C234F /* Timer2ViewController.h */,
+				8EF348F21FE3C910008C234F /* Timer2ViewController.m */,
 				8EF348EE1FE3C4B1008C234F /* TestRunLoopViewController.h */,
 				8EF348EF1FE3C4B1008C234F /* TestRunLoopViewController.m */,
 			);
@@ -225,6 +230,7 @@
 				87F095851FDBD15700CFA869 /* JavaScript.m in Sources */,
 				8EDEE1991FCE555D0051EB1D /* main.m in Sources */,
 				87F0958A1FDBD15700CFA869 /* Language.m in Sources */,
+				8EF348F31FE3C910008C234F /* Timer2ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
