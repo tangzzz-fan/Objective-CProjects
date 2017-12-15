@@ -20,6 +20,7 @@
 		8EDEE1961FCE555D0051EB1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE1941FCE555D0051EB1D /* LaunchScreen.storyboard */; };
 		8EDEE1991FCE555D0051EB1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE1981FCE555D0051EB1D /* main.m */; };
 		8EF348ED1FE3C2D3008C234F /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF348EC1FE3C2D3008C234F /* TimerViewController.m */; };
+		8EF348F01FE3C4B1008C234F /* TestRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF348EF1FE3C4B1008C234F /* TestRunLoopViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		8EDEE1981FCE555D0051EB1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EF348EB1FE3C2D3008C234F /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		8EF348EC1FE3C2D3008C234F /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		8EF348EE1FE3C4B1008C234F /* TestRunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRunLoopViewController.h; sourceTree = "<group>"; };
+		8EF348EF1FE3C4B1008C234F /* TestRunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRunLoopViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +104,12 @@
 		87F095821FDBD15700CFA869 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				87F095831FDBD15700CFA869 /* ViewController.m */,
 				87F095841FDBD15700CFA869 /* ViewController.h */,
+				87F095831FDBD15700CFA869 /* ViewController.m */,
 				8EF348EB1FE3C2D3008C234F /* TimerViewController.h */,
 				8EF348EC1FE3C2D3008C234F /* TimerViewController.m */,
+				8EF348EE1FE3C4B1008C234F /* TestRunLoopViewController.h */,
+				8EF348EF1FE3C4B1008C234F /* TestRunLoopViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			files = (
 				87F0958C1FDBD15700CFA869 /* ViewController.m in Sources */,
 				87F095891FDBD15700CFA869 /* Person.m in Sources */,
+				8EF348F01FE3C4B1008C234F /* TestRunLoopViewController.m in Sources */,
 				8EF348ED1FE3C2D3008C234F /* TimerViewController.m in Sources */,
 				87F095861FDBD15700CFA869 /* Swift.m in Sources */,
 				87F095871FDBD15700CFA869 /* ObjectiveC.m in Sources */,
