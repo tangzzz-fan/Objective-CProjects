@@ -17,8 +17,6 @@ typedef enum : NSUInteger {
 // 定义一个枚举类型, 表示是行类型 还是 组类型
 @property (assign, nonatomic) PropagationMode propagationMode;
 
-@property (assign, nonatomic) NSInteger index;
-
 @property (strong, nonatomic) NSMutableArray *childDelegates;
 
 @property (weak, nonatomic) TGBaseDelegate *parentDelegate;

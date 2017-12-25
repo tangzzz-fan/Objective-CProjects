@@ -21,6 +21,9 @@
 		8E75A7381FECB7940021F02E /* DestinationHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A7371FECB7940021F02E /* DestinationHeaderCell.m */; };
 		8EB101551FF08FCB00866C21 /* TGBaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB101541FF08FCB00866C21 /* TGBaseDelegate.m */; };
 		8EB101581FF094D400866C21 /* PropagatingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB101571FF094D400866C21 /* PropagatingDelegate.m */; };
+		8EB1015B1FF0DAFC00866C21 /* TGBareDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1015A1FF0DAFC00866C21 /* TGBareDelegate.m */; };
+		8EB1015E1FF0DC6100866C21 /* TGRootDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1015D1FF0DC6100866C21 /* TGRootDelegate.m */; };
+		8EB101611FF0DF3B00866C21 /* TGSectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB101601FF0DF3B00866C21 /* TGSectionDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,12 @@
 		8EB101541FF08FCB00866C21 /* TGBaseDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseDelegate.m; sourceTree = "<group>"; };
 		8EB101561FF094D400866C21 /* PropagatingDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropagatingDelegate.h; sourceTree = "<group>"; };
 		8EB101571FF094D400866C21 /* PropagatingDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropagatingDelegate.m; sourceTree = "<group>"; };
+		8EB101591FF0DAFC00866C21 /* TGBareDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBareDelegate.h; sourceTree = "<group>"; };
+		8EB1015A1FF0DAFC00866C21 /* TGBareDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBareDelegate.m; sourceTree = "<group>"; };
+		8EB1015C1FF0DC6100866C21 /* TGRootDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGRootDelegate.h; sourceTree = "<group>"; };
+		8EB1015D1FF0DC6100866C21 /* TGRootDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGRootDelegate.m; sourceTree = "<group>"; };
+		8EB1015F1FF0DF3B00866C21 /* TGSectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGSectionDelegate.h; sourceTree = "<group>"; };
+		8EB101601FF0DF3B00866C21 /* TGSectionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGSectionDelegate.m; sourceTree = "<group>"; };
 		F2CEF0B4BDF6AF068A9EBAF7 /* libPods-TGTestKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TGTestKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -217,6 +226,12 @@
 				8EB101541FF08FCB00866C21 /* TGBaseDelegate.m */,
 				8EB101561FF094D400866C21 /* PropagatingDelegate.h */,
 				8EB101571FF094D400866C21 /* PropagatingDelegate.m */,
+				8EB101591FF0DAFC00866C21 /* TGBareDelegate.h */,
+				8EB1015A1FF0DAFC00866C21 /* TGBareDelegate.m */,
+				8EB1015C1FF0DC6100866C21 /* TGRootDelegate.h */,
+				8EB1015D1FF0DC6100866C21 /* TGRootDelegate.m */,
+				8EB1015F1FF0DF3B00866C21 /* TGSectionDelegate.h */,
+				8EB101601FF0DF3B00866C21 /* TGSectionDelegate.m */,
 			);
 			path = BaseDelegates;
 			sourceTree = "<group>";
@@ -355,10 +370,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB1015B1FF0DAFC00866C21 /* TGBareDelegate.m in Sources */,
 				8E75A72F1FECA92A0021F02E /* DestinationHeaderSectionDelegate.m in Sources */,
 				8E1937231FEBD71E0080E4CC /* PKProtocolExtension.m in Sources */,
+				8EB101611FF0DF3B00866C21 /* TGSectionDelegate.m in Sources */,
 				8E75A7351FECB7170021F02E /* UITableViewCell+Extension.m in Sources */,
 				8EB101551FF08FCB00866C21 /* TGBaseDelegate.m in Sources */,
+				8EB1015E1FF0DC6100866C21 /* TGRootDelegate.m in Sources */,
 				8E1936E11FEBA6DB0080E4CC /* main.m in Sources */,
 				8E1937251FEBD71E0080E4CC /* ViewController.m in Sources */,
 				8E75A7381FECB7940021F02E /* DestinationHeaderCell.m in Sources */,
