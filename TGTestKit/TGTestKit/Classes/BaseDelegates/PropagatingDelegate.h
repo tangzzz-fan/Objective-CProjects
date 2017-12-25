@@ -9,7 +9,7 @@
 #import "TGBaseDelegate.h"
 
 typedef enum : NSUInteger {
-    section,
+    section = 0,
     row
 } PropagationMode;
 

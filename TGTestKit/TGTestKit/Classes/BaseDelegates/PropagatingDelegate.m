@@ -16,6 +16,7 @@
 @implementation PropagatingDelegate
 
 @synthesize childDelegates = _childDelegates;
+@synthesize parentDelegate = _parentDelegate;
 
 - (instancetype)initWithIndex:(NSInteger)index ChildDelegates:(NSMutableArray *)childDelegates PropagationMode:(PropagationMode )propagationMode {
     if (self = [super initWithIndex:index ChildDelegates:childDelegates]) {
@@ -434,5 +435,8 @@
     [self validateChildDelegates];
 }
 
+- (void)setParentDelegate:(TGBaseDelegate *)parentDelegate {
+    _parentDelegate = parentDelegate;
+}
 
 @end
