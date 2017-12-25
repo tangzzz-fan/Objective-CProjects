@@ -35,6 +35,10 @@
     return self;
 }
 
+- (void)prepareForTableView:(UITableView *)tableView {
+    
+}
+
 #pragma mark - PrivateFunctions
 // 验证子代理
 - (void)validateChildDelegates {

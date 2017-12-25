@@ -10,6 +10,7 @@
 
 @implementation TGRootDelegate
 @synthesize childDelegates = _childDelegates;
+@synthesize propagationMode = _propagationMode;
 
 - (instancetype)initWithIndex:(NSInteger)index ChildDelegates:(NSMutableArray *)childDelegates {
     if (self = [super init]) {
@@ -21,6 +22,10 @@
 }
 
 #pragma mark - Setter && Getter
+- (PropagationMode)propagationMode {
+    return _propagationMode;
+}
+
 - (void)setPropagationMode:(PropagationMode)propagationMode {
     if (self.propagationMode != section) {
         self.propagationMode = section;
