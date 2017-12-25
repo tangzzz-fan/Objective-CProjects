@@ -8,13 +8,8 @@
 
 #import "ViewController.h"
 
-#import "CascadingTableDelegate.h"
-
-#import "DestinationHeaderSectionDelegate.h"
-
 @interface ViewController ()
-@property (strong, nonatomic) id<CascadingTableDelegate> parentDelegate;
-@property (strong, nonatomic) NSMutableArray<id<CascadingTableDelegate>> *childDelegates;
+
 
 @end
 
@@ -22,12 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createRootDelegates];
-}
-
-- (void)createRootDelegates {
-    self.childDelegates = [NSMutableArray array];
-    DestinationHeaderSectionDelegate *headerDelegate;
+    
     
 }
 

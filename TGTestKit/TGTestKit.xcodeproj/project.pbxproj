@@ -40,10 +40,8 @@
 		8E19371E1FEBD71E0080E4CC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8E1937201FEBD71E0080E4CC /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		8E1937211FEBD71E0080E4CC /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
-		8E75A72B1FECA72E0021F02E /* CascadingTableDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CascadingTableDelegate.h; sourceTree = "<group>"; };
 		8E75A72D1FECA92A0021F02E /* DestinationHeaderSectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationHeaderSectionDelegate.h; sourceTree = "<group>"; };
 		8E75A72E1FECA92A0021F02E /* DestinationHeaderSectionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationHeaderSectionDelegate.m; sourceTree = "<group>"; };
-		8E75A7311FECAFCA0021F02E /* DestinationHeaderSectionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationHeaderSectionViewModel.h; sourceTree = "<group>"; };
 		8E75A7331FECB7170021F02E /* UITableViewCell+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extension.h"; sourceTree = "<group>"; };
 		8E75A7341FECB7170021F02E /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extension.m"; sourceTree = "<group>"; };
 		8E75A7361FECB7940021F02E /* DestinationHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationHeaderCell.h; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				8E19371B1FEBD71E0080E4CC /* TestProtocol.h */,
-				8E75A72B1FECA72E0021F02E /* CascadingTableDelegate.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -193,7 +190,6 @@
 		8E75A7301FECAF810021F02E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8E75A7311FECAFCA0021F02E /* DestinationHeaderSectionViewModel.h */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
