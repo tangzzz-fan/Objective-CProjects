@@ -7,16 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import <EXTConcreteProtocol.h>
 #import "PKProtocolExtension.h"
 
-
-@protocol TestProtocol <NSObject>
+@protocol TestProtocol
 @optional
 - (void)changed;
 @end
 
-@defs(TestProtocol)
-- (void)changed {
-    NSLog(@"Update");
-}
-@end
+// 实现协议扩展
+//@defs(TestProtocol)
+//- (void)changed {
+//    NSLog(@"Update");
+//}
+//@end
+

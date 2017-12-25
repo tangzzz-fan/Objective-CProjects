@@ -6,5 +6,5 @@ target 'TGTestKit' do
   # use_frameworks!
 
   # Pods for TGTestKit
-   pod 'libextobjc', '~> 0.4.1'
+#   pod 'libextobjc', '~> 0.4.1'
 end

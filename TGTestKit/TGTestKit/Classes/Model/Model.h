@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "TestProtocol.h"
-
 @interface Model : NSObject<TestProtocol>
 
 @end
