@@ -19,6 +19,8 @@
 		8E75A72F1FECA92A0021F02E /* DestinationHeaderSectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A72E1FECA92A0021F02E /* DestinationHeaderSectionDelegate.m */; };
 		8E75A7351FECB7170021F02E /* UITableViewCell+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A7341FECB7170021F02E /* UITableViewCell+Extension.m */; };
 		8E75A7381FECB7940021F02E /* DestinationHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E75A7371FECB7940021F02E /* DestinationHeaderCell.m */; };
+		8EB101551FF08FCB00866C21 /* TGBaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB101541FF08FCB00866C21 /* TGBaseDelegate.m */; };
+		8EB101581FF094D400866C21 /* PropagatingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB101571FF094D400866C21 /* PropagatingDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,10 @@
 		8E75A7341FECB7170021F02E /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extension.m"; sourceTree = "<group>"; };
 		8E75A7361FECB7940021F02E /* DestinationHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationHeaderCell.h; sourceTree = "<group>"; };
 		8E75A7371FECB7940021F02E /* DestinationHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationHeaderCell.m; sourceTree = "<group>"; };
+		8EB101531FF08FCB00866C21 /* TGBaseDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseDelegate.h; sourceTree = "<group>"; };
+		8EB101541FF08FCB00866C21 /* TGBaseDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseDelegate.m; sourceTree = "<group>"; };
+		8EB101561FF094D400866C21 /* PropagatingDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropagatingDelegate.h; sourceTree = "<group>"; };
+		8EB101571FF094D400866C21 /* PropagatingDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropagatingDelegate.m; sourceTree = "<group>"; };
 		F2CEF0B4BDF6AF068A9EBAF7 /* libPods-TGTestKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TGTestKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +109,7 @@
 		8E1937111FEBD71E0080E4CC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8EB101521FF08FB400866C21 /* BaseDelegates */,
 				8E75A7321FECB6F80021F02E /* Category */,
 				8E75A7301FECAF810021F02E /* ViewModel */,
 				8E75A72C1FECA9090021F02E /* SectionDelegates */,
@@ -201,6 +208,17 @@
 				8E75A7341FECB7170021F02E /* UITableViewCell+Extension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		8EB101521FF08FB400866C21 /* BaseDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				8EB101531FF08FCB00866C21 /* TGBaseDelegate.h */,
+				8EB101541FF08FCB00866C21 /* TGBaseDelegate.m */,
+				8EB101561FF094D400866C21 /* PropagatingDelegate.h */,
+				8EB101571FF094D400866C21 /* PropagatingDelegate.m */,
+			);
+			path = BaseDelegates;
 			sourceTree = "<group>";
 		};
 		C98756B03017540A1F0E2FC0 /* Pods */ = {
@@ -340,9 +358,11 @@
 				8E75A72F1FECA92A0021F02E /* DestinationHeaderSectionDelegate.m in Sources */,
 				8E1937231FEBD71E0080E4CC /* PKProtocolExtension.m in Sources */,
 				8E75A7351FECB7170021F02E /* UITableViewCell+Extension.m in Sources */,
+				8EB101551FF08FCB00866C21 /* TGBaseDelegate.m in Sources */,
 				8E1936E11FEBA6DB0080E4CC /* main.m in Sources */,
 				8E1937251FEBD71E0080E4CC /* ViewController.m in Sources */,
 				8E75A7381FECB7940021F02E /* DestinationHeaderCell.m in Sources */,
+				8EB101581FF094D400866C21 /* PropagatingDelegate.m in Sources */,
 				8E1937241FEBD71E0080E4CC /* AppDelegate.m in Sources */,
 				8E1937261FEBD71E0080E4CC /* Model.m in Sources */,
 			);
