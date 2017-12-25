@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Nhj-3a-X23" customClass="EmptyCOntentView">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="83"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGb-AY-Hrz">
+                    <rect key="frame" x="10" y="0.0" width="423" height="83"/>
+                    <color key="backgroundColor" red="0.24313725529999999" green="0.29019609089999998" blue="0.34509804840000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.180392161" green="0.2156862766" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="eGb-AY-Hrz" secondAttribute="bottom" id="4W9-L5-XHR"/>
+                <constraint firstItem="eGb-AY-Hrz" firstAttribute="top" secondItem="Nhj-3a-X23" secondAttribute="top" id="Fuu-hq-nQb"/>
+                <constraint firstAttribute="trailing" secondItem="eGb-AY-Hrz" secondAttribute="trailing" constant="10" id="JqF-bp-aYt"/>
+                <constraint firstItem="eGb-AY-Hrz" firstAttribute="leading" secondItem="Nhj-3a-X23" secondAttribute="leading" constant="10" id="yBI-hA-gID"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Owk-X7-SVY"/>
+            <point key="canvasLocation" x="60.5" y="558.5"/>
+        </view>
+    </objects>
+</document>
