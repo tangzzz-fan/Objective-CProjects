@@ -102,6 +102,7 @@
  
  *  需求: 向对象发送一个没有实现的方法
  */
+//
 - (IBAction)dymaticAddFunctionsAction:(id)sender {
 //    Person *person = [[Person alloc] init];
 //    [person performSelector:@selector(buy)];
