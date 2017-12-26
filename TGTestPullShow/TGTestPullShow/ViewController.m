@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIScrollView+Extension.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -23,7 +24,16 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     self.navigationController.navigationBarHidden = YES;
+    self.tableView.showPullPromotionView = YES;
+    self.tableView.pullPromotionView.promotionBlock = ^{
+        NSLog(@"执行全屏展示");
+    };
     
+    self.tableView.pullPromotionView.refreshBlock = ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.tableView.pullPromotionView stopAnimate];
+        });
+    };
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
