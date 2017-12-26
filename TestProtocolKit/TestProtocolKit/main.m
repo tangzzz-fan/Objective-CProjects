@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PKProtocolExtension.h"
+#import "TestModel.h"
 
 @protocol TestProtocol<NSObject>
 @required
@@ -25,18 +26,33 @@
     NSLog(@"Buzz");
 }
 
+- (void)fizz {
+    
+}
+
+
 @end
 @interface TestObject:NSObject<TestProtocol>
-
+- (void)fizz;
 @end
 
 @implementation TestObject
+- (void)fizz {
+    
+}
+
++ (void)load {
+    NSLog(@"class name %@", [self class]);
+}
+
 @end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         TestObject *object = [TestObject new];
         [object buzz];
+        
+        
     }
     return 0;
 }

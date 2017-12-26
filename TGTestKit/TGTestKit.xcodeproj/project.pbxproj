@@ -30,6 +30,8 @@
 		8EB101731FF0EF3E00866C21 /* ReviewSectionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB101721FF0EF3E00866C21 /* ReviewSectionFooterView.xib */; };
 		8EB101761FF0FBC000866C21 /* EmptyCOntentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB101751FF0FBC000866C21 /* EmptyCOntentView.m */; };
 		8EB101781FF0FBCE00866C21 /* EmptyContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB101771FF0FBCE00866C21 /* EmptyContentView.xib */; };
+		8EB1017B1FF0FC9A00866C21 /* DestinationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1017A1FF0FC9A00866C21 /* DestinationViewModel.m */; };
+		8EB1017E1FF104C300866C21 /* DestinationReviewUserRowViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB1017D1FF104C300866C21 /* DestinationReviewUserRowViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,10 @@
 		8EB101741FF0FBC000866C21 /* EmptyCOntentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyCOntentView.h; sourceTree = "<group>"; };
 		8EB101751FF0FBC000866C21 /* EmptyCOntentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyCOntentView.m; sourceTree = "<group>"; };
 		8EB101771FF0FBCE00866C21 /* EmptyContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyContentView.xib; sourceTree = "<group>"; };
+		8EB101791FF0FC9A00866C21 /* DestinationViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationViewModel.h; sourceTree = "<group>"; };
+		8EB1017A1FF0FC9A00866C21 /* DestinationViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationViewModel.m; sourceTree = "<group>"; };
+		8EB1017C1FF104C300866C21 /* DestinationReviewUserRowViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationReviewUserRowViewModel.h; sourceTree = "<group>"; };
+		8EB1017D1FF104C300866C21 /* DestinationReviewUserRowViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationReviewUserRowViewModel.m; sourceTree = "<group>"; };
 		F2CEF0B4BDF6AF068A9EBAF7 /* libPods-TGTestKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TGTestKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -230,6 +236,10 @@
 		8E75A7301FECAF810021F02E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8EB101791FF0FC9A00866C21 /* DestinationViewModel.h */,
+				8EB1017A1FF0FC9A00866C21 /* DestinationViewModel.m */,
+				8EB1017C1FF104C300866C21 /* DestinationReviewUserRowViewModel.h */,
+				8EB1017D1FF104C300866C21 /* DestinationReviewUserRowViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -405,12 +415,14 @@
 				8E75A7351FECB7170021F02E /* UITableViewCell+Extension.m in Sources */,
 				8EB1016C1FF0E96D00866C21 /* SectionHeaderView.m in Sources */,
 				8EB101551FF08FCB00866C21 /* TGBaseDelegate.m in Sources */,
+				8EB1017B1FF0FC9A00866C21 /* DestinationViewModel.m in Sources */,
 				8EB1015E1FF0DC6100866C21 /* TGRootDelegate.m in Sources */,
 				8E1936E11FEBA6DB0080E4CC /* main.m in Sources */,
 				8E1937251FEBD71E0080E4CC /* ViewController.m in Sources */,
 				8EB101711FF0EF2900866C21 /* ReviewSectionFooterView.m in Sources */,
 				8EB101581FF094D400866C21 /* PropagatingDelegate.m in Sources */,
 				8E1937241FEBD71E0080E4CC /* AppDelegate.m in Sources */,
+				8EB1017E1FF104C300866C21 /* DestinationReviewUserRowViewModel.m in Sources */,
 				8E1937261FEBD71E0080E4CC /* Model.m in Sources */,
 				8EB101641FF0E74A00866C21 /* DetailViewController.m in Sources */,
 			);

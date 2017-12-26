@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E1936B91FEBA1820080E4CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1936B81FEBA1820080E4CC /* main.m */; };
 		8E1936C41FEBA2E50080E4CC /* PKProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1936C11FEBA2E50080E4CC /* PKProtocolExtension.m */; };
+		8EB101811FF10F9F00866C21 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB101801FF10F9F00866C21 /* TestModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,9 @@
 		8E1936C11FEBA2E50080E4CC /* PKProtocolExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKProtocolExtension.m; sourceTree = "<group>"; };
 		8E1936C21FEBA2E50080E4CC /* PKProtocolExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKProtocolExtension.h; sourceTree = "<group>"; };
 		8E1936C31FEBA2E50080E4CC /* ProtocolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolKit.h; sourceTree = "<group>"; };
+		8EB1017F1FF10F9F00866C21 /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		8EB101801FF10F9F00866C21 /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		8EB101821FF1103000866C21 /* TestPro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,9 @@
 			children = (
 				8E1936C01FEBA2E50080E4CC /* ProtocolKit */,
 				8E1936B81FEBA1820080E4CC /* main.m */,
+				8EB1017F1FF10F9F00866C21 /* TestModel.h */,
+				8EB101801FF10F9F00866C21 /* TestModel.m */,
+				8EB101821FF1103000866C21 /* TestPro.h */,
 			);
 			path = TestProtocolKit;
 			sourceTree = "<group>";
@@ -134,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB101811FF10F9F00866C21 /* TestModel.m in Sources */,
 				8E1936C41FEBA2E50080E4CC /* PKProtocolExtension.m in Sources */,
 				8E1936B91FEBA1820080E4CC /* main.m in Sources */,
 			);

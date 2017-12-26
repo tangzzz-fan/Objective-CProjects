@@ -41,7 +41,13 @@
 // Get container class name by counter
 #define _pk_get_container_class($protocol) _pk_get_container_class_imp($protocol, __COUNTER__)
 #define _pk_get_container_class_imp($protocol, $counter) _pk_get_container_class_imp_concat(__PKContainer_, $protocol, $counter)
+// 最终执行这一句
 #define _pk_get_container_class_imp_concat($a, $b, $c) $a ## $b ## _ ## $c
 
 void _pk_extension_load(Protocol *protocol, Class containerClass);
 
+/**
+ * _pk_get_container_class 根据传入的参数生成一个类名: __PKContainer_TestProtocol_0
+ * _pk_pk_extension_imp 以传入的类名生成一个遵循当前 $protocol 协议的类
+ * 在 +(load) 执行 _pk_extesnion_load 加载扩展协议
+ */
