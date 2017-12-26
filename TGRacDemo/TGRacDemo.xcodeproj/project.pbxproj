@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7038B3707A2322A55753F481 /* libPods-TGRacDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A58E28F95E6C98A31FC4639A /* libPods-TGRacDemo.a */; };
-		8EB101931FF2193200866C21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB101921FF2193200866C21 /* AppDelegate.m */; };
-		8EB101961FF2193200866C21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB101951FF2193200866C21 /* ViewController.m */; };
+		87D718FA1FF29EA5009FEC09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D718F41FF29EA5009FEC09 /* AppDelegate.m */; };
+		87D718FB1FF29EA5009FEC09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D718F61FF29EA5009FEC09 /* ViewController.m */; };
+		87D718FE1FF29F21009FEC09 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D718FD1FF29F21009FEC09 /* LoginViewModel.m */; };
+		87D719011FF29F41009FEC09 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D719001FF29F41009FEC09 /* UserModel.m */; };
 		8EB101991FF2193200866C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB101971FF2193200866C21 /* Main.storyboard */; };
 		8EB1019B1FF2193200866C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EB1019A1FF2193200866C21 /* Assets.xcassets */; };
 		8EB1019E1FF2193200866C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB1019C1FF2193200866C21 /* LaunchScreen.storyboard */; };
@@ -18,11 +20,15 @@
 
 /* Begin PBXFileReference section */
 		059EC42F522A8CCFBB6ACFB8 /* Pods-TGRacDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGRacDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGRacDemo/Pods-TGRacDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		87D718F31FF29EA5009FEC09 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		87D718F41FF29EA5009FEC09 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		87D718F61FF29EA5009FEC09 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		87D718F71FF29EA5009FEC09 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		87D718FC1FF29F21009FEC09 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		87D718FD1FF29F21009FEC09 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		87D718FF1FF29F41009FEC09 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		87D719001FF29F41009FEC09 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		8EB1018E1FF2193200866C21 /* TGRacDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGRacDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EB101911FF2193200866C21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8EB101921FF2193200866C21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8EB101941FF2193200866C21 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8EB101951FF2193200866C21 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8EB101981FF2193200866C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EB1019A1FF2193200866C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EB1019D1FF2193200866C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +59,61 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		87D718F01FF29EA5009FEC09 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				87D718F11FF29EA5009FEC09 /* ViewModel */,
+				87D718F21FF29EA5009FEC09 /* Other */,
+				87D718F51FF29EA5009FEC09 /* Controller */,
+				87D718F81FF29EA5009FEC09 /* Model */,
+				87D718F91FF29EA5009FEC09 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		87D718F11FF29EA5009FEC09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				87D718FC1FF29F21009FEC09 /* LoginViewModel.h */,
+				87D718FD1FF29F21009FEC09 /* LoginViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		87D718F21FF29EA5009FEC09 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				87D718F31FF29EA5009FEC09 /* AppDelegate.h */,
+				87D718F41FF29EA5009FEC09 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		87D718F51FF29EA5009FEC09 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				87D718F71FF29EA5009FEC09 /* ViewController.h */,
+				87D718F61FF29EA5009FEC09 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		87D718F81FF29EA5009FEC09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87D718FF1FF29F41009FEC09 /* UserModel.h */,
+				87D719001FF29F41009FEC09 /* UserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87D718F91FF29EA5009FEC09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8EB101851FF2193200866C21 = {
 			isa = PBXGroup;
 			children = (
@@ -74,10 +135,7 @@
 		8EB101901FF2193200866C21 /* TGRacDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8EB101911FF2193200866C21 /* AppDelegate.h */,
-				8EB101921FF2193200866C21 /* AppDelegate.m */,
-				8EB101941FF2193200866C21 /* ViewController.h */,
-				8EB101951FF2193200866C21 /* ViewController.m */,
+				87D718F01FF29EA5009FEC09 /* Classes */,
 				8EB101971FF2193200866C21 /* Main.storyboard */,
 				8EB1019A1FF2193200866C21 /* Assets.xcassets */,
 				8EB1019C1FF2193200866C21 /* LaunchScreen.storyboard */,
@@ -186,9 +244,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TGRacDemo/Pods-TGRacDemo-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -220,9 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EB101961FF2193200866C21 /* ViewController.m in Sources */,
+				87D718FE1FF29F21009FEC09 /* LoginViewModel.m in Sources */,
+				87D719011FF29F41009FEC09 /* UserModel.m in Sources */,
+				87D718FB1FF29EA5009FEC09 /* ViewController.m in Sources */,
+				87D718FA1FF29EA5009FEC09 /* AppDelegate.m in Sources */,
 				8EB101A11FF2193200866C21 /* main.m in Sources */,
-				8EB101931FF2193200866C21 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
