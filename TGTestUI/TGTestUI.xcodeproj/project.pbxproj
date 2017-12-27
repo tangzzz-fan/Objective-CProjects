@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0887F1FA9CBEF975696D4267 /* libPods-TGTestUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBCAF8A3B02D90E08516746 /* libPods-TGTestUI.a */; };
+		8E63E2C41FF25AD900C7E9AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63E2C31FF25AD900C7E9AC /* AppDelegate.m */; };
+		8E63E2C71FF25AD900C7E9AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63E2C61FF25AD900C7E9AC /* ViewController.m */; };
+		8E63E2CA1FF25AD900C7E9AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E63E2C81FF25AD900C7E9AC /* Main.storyboard */; };
+		8E63E2CC1FF25AD900C7E9AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E63E2CB1FF25AD900C7E9AC /* Assets.xcassets */; };
+		8E63E2CF1FF25AD900C7E9AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E63E2CD1FF25AD900C7E9AC /* LaunchScreen.storyboard */; };
+		8E63E2D21FF25AD900C7E9AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63E2D11FF25AD900C7E9AC /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1BBCAF8A3B02D90E08516746 /* libPods-TGTestUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TGTestUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		473021A7DCA228D776476A52 /* Pods-TGTestUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGTestUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGTestUI/Pods-TGTestUI.debug.xcconfig"; sourceTree = "<group>"; };
+		8E63E2BF1FF25AD900C7E9AC /* TGTestUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGTestUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E63E2C21FF25AD900C7E9AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8E63E2C31FF25AD900C7E9AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8E63E2C51FF25AD900C7E9AC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8E63E2C61FF25AD900C7E9AC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8E63E2C91FF25AD900C7E9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E63E2CB1FF25AD900C7E9AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E63E2CE1FF25AD900C7E9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E63E2D01FF25AD900C7E9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E63E2D11FF25AD900C7E9AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E11C9F4A56FC64AA77E53001 /* Pods-TGTestUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGTestUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TGTestUI/Pods-TGTestUI.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E63E2BC1FF25AD900C7E9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0887F1FA9CBEF975696D4267 /* libPods-TGTestUI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E39F47C6DDEC85C7B9CC51F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BBCAF8A3B02D90E08516746 /* libPods-TGTestUI.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E63E2B61FF25AD900C7E9AC = {
+			isa = PBXGroup;
+			children = (
+				8E63E2C11FF25AD900C7E9AC /* TGTestUI */,
+				8E63E2C01FF25AD900C7E9AC /* Products */,
+				F3209C50FD026A8D987FDC57 /* Pods */,
+				4E39F47C6DDEC85C7B9CC51F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8E63E2C01FF25AD900C7E9AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E63E2BF1FF25AD900C7E9AC /* TGTestUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E63E2C11FF25AD900C7E9AC /* TGTestUI */ = {
+			isa = PBXGroup;
+			children = (
+				8E63E2C21FF25AD900C7E9AC /* AppDelegate.h */,
+				8E63E2C31FF25AD900C7E9AC /* AppDelegate.m */,
+				8E63E2C51FF25AD900C7E9AC /* ViewController.h */,
+				8E63E2C61FF25AD900C7E9AC /* ViewController.m */,
+				8E63E2C81FF25AD900C7E9AC /* Main.storyboard */,
+				8E63E2CB1FF25AD900C7E9AC /* Assets.xcassets */,
+				8E63E2CD1FF25AD900C7E9AC /* LaunchScreen.storyboard */,
+				8E63E2D01FF25AD900C7E9AC /* Info.plist */,
+				8E63E2D11FF25AD900C7E9AC /* main.m */,
+			);
+			path = TGTestUI;
+			sourceTree = "<group>";
+		};
+		F3209C50FD026A8D987FDC57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				473021A7DCA228D776476A52 /* Pods-TGTestUI.debug.xcconfig */,
+				E11C9F4A56FC64AA77E53001 /* Pods-TGTestUI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E63E2BE1FF25AD900C7E9AC /* TGTestUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E63E2D51FF25AD900C7E9AC /* Build configuration list for PBXNativeTarget "TGTestUI" */;
+			buildPhases = (
+				45DE3E8B78644B59A4DBB3D0 /* [CP] Check Pods Manifest.lock */,
+				8E63E2BB1FF25AD900C7E9AC /* Sources */,
+				8E63E2BC1FF25AD900C7E9AC /* Frameworks */,
+				8E63E2BD1FF25AD900C7E9AC /* Resources */,
+				0EEE732E0859D292C2A56342 /* [CP] Embed Pods Frameworks */,
+				8962C4161DE646560D83B1D7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TGTestUI;
+			productName = TGTestUI;
+			productReference = 8E63E2BF1FF25AD900C7E9AC /* TGTestUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E63E2B71FF25AD900C7E9AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Centaline;
+				TargetAttributes = {
+					8E63E2BE1FF25AD900C7E9AC = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8E63E2BA1FF25AD900C7E9AC /* Build configuration list for PBXProject "TGTestUI" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E63E2B61FF25AD900C7E9AC;
+			productRefGroup = 8E63E2C01FF25AD900C7E9AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E63E2BE1FF25AD900C7E9AC /* TGTestUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E63E2BD1FF25AD900C7E9AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E63E2CF1FF25AD900C7E9AC /* LaunchScreen.storyboard in Resources */,
+				8E63E2CC1FF25AD900C7E9AC /* Assets.xcassets in Resources */,
+				8E63E2CA1FF25AD900C7E9AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EEE732E0859D292C2A56342 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TGTestUI/Pods-TGTestUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45DE3E8B78644B59A4DBB3D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TGTestUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8962C4161DE646560D83B1D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TGTestUI/Pods-TGTestUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E63E2BB1FF25AD900C7E9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E63E2C71FF25AD900C7E9AC /* ViewController.m in Sources */,
+				8E63E2D21FF25AD900C7E9AC /* main.m in Sources */,
+				8E63E2C41FF25AD900C7E9AC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8E63E2C81FF25AD900C7E9AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E63E2C91FF25AD900C7E9AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E63E2CD1FF25AD900C7E9AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E63E2CE1FF25AD900C7E9AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E63E2D31FF25AD900C7E9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8E63E2D41FF25AD900C7E9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E63E2D61FF25AD900C7E9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 473021A7DCA228D776476A52 /* Pods-TGTestUI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WT44JA8HJ5;
+				INFOPLIST_FILE = TGTestUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.centaline.TGTestUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E63E2D71FF25AD900C7E9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E11C9F4A56FC64AA77E53001 /* Pods-TGTestUI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WT44JA8HJ5;
+				INFOPLIST_FILE = TGTestUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.centaline.TGTestUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E63E2BA1FF25AD900C7E9AC /* Build configuration list for PBXProject "TGTestUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E63E2D31FF25AD900C7E9AC /* Debug */,
+				8E63E2D41FF25AD900C7E9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E63E2D51FF25AD900C7E9AC /* Build configuration list for PBXNativeTarget "TGTestUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E63E2D61FF25AD900C7E9AC /* Debug */,
+				8E63E2D71FF25AD900C7E9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E63E2B71FF25AD900C7E9AC /* Project object */;
+}
