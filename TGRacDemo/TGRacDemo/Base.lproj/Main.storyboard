@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="00o-WZ-ZtM">
             <objects>
-                <viewController id="aZe-YL-qAz" sceneMemberID="viewController">
+                <viewController id="aZe-YL-qAz" customClass="TGViewController" customModule="TGRacDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bal-sm-ZQw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,6 +26,14 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="lpv-7a-ftL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acl-Yw-89q">
+                                <rect key="frame" x="10" y="113" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="FlickrSearch"/>
+                                <connections>
+                                    <action selector="flickrSearchAction:" destination="aZe-YL-qAz" eventType="touchUpInside" id="KUE-P7-8RA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lXD-wX-ncX"/>
@@ -34,12 +42,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a28-cO-TYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="117"/>
+            <point key="canvasLocation" x="-212" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--Flickr Search View Controller-->
+        <scene sceneID="38E-kn-YxP">
+            <objects>
+                <viewController id="vTi-2K-dck" customClass="TGFlickrSearchViewController" customModule="TGRacDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VKC-ms-WeW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="klQ-Vd-ymU">
+                                <rect key="frame" x="16" y="40" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="QNT-FF-ZrS"/>
+                                    <constraint firstAttribute="height" constant="30" id="e90-Pv-HBl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IP-3V-7LF">
+                                <rect key="frame" x="328" y="40" width="31" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hjp-Vw-wGD"/>
+                                </constraints>
+                                <state key="normal" title="搜索"/>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="E4V-Ty-imT">
+                                <rect key="frame" x="224" y="45" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gEp-xy-Xxe">
+                                <rect key="frame" x="16" y="90" width="343" height="557"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vTi-2K-dck" id="jF9-DZ-461"/>
+                                    <outlet property="delegate" destination="vTi-2K-dck" id="bSy-AU-ebd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9IP-3V-7LF" firstAttribute="top" secondItem="X48-q5-amc" secondAttribute="top" constant="20" id="2tp-CP-N0g"/>
+                            <constraint firstItem="X48-q5-amc" firstAttribute="trailing" secondItem="9IP-3V-7LF" secondAttribute="trailing" constant="16" id="EzI-Yt-Jcu"/>
+                            <constraint firstItem="9IP-3V-7LF" firstAttribute="leading" relation="lessThanOrEqual" secondItem="X48-q5-amc" secondAttribute="leading" constant="328" id="FBi-w1-hx9"/>
+                            <constraint firstItem="klQ-Vd-ymU" firstAttribute="top" secondItem="X48-q5-amc" secondAttribute="top" constant="20" id="FRu-Xx-xFH"/>
+                            <constraint firstItem="X48-q5-amc" firstAttribute="trailing" secondItem="gEp-xy-Xxe" secondAttribute="trailing" constant="16" id="J16-VJ-Xef"/>
+                            <constraint firstItem="X48-q5-amc" firstAttribute="bottom" secondItem="gEp-xy-Xxe" secondAttribute="bottom" constant="20" id="Kea-tX-B8Z"/>
+                            <constraint firstItem="gEp-xy-Xxe" firstAttribute="top" secondItem="klQ-Vd-ymU" secondAttribute="bottom" constant="20" id="RFD-A0-pwm"/>
+                            <constraint firstItem="E4V-Ty-imT" firstAttribute="leading" secondItem="klQ-Vd-ymU" secondAttribute="trailing" constant="8" id="VES-2a-bLd"/>
+                            <constraint firstItem="gEp-xy-Xxe" firstAttribute="leading" secondItem="X48-q5-amc" secondAttribute="leading" constant="16" id="anF-ia-CCD"/>
+                            <constraint firstItem="klQ-Vd-ymU" firstAttribute="leading" secondItem="X48-q5-amc" secondAttribute="leading" constant="16" id="ifw-tH-hJ9"/>
+                            <constraint firstItem="E4V-Ty-imT" firstAttribute="centerY" secondItem="klQ-Vd-ymU" secondAttribute="centerY" id="nQe-Fs-7rn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X48-q5-amc"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndictor" destination="E4V-Ty-imT" id="HLN-aA-bNX"/>
+                        <outlet property="searchBtn" destination="9IP-3V-7LF" id="Jkx-IY-S9f"/>
+                        <outlet property="searchTextField" destination="klQ-Vd-ymU" id="ZGV-Z9-3xE"/>
+                        <outlet property="tableView" destination="gEp-xy-Xxe" id="YPf-iG-Lzv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4R6-gl-NAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536.79999999999995" y="109.29535232383809"/>
+        </scene>
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="455.19999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="537" y="-569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JtZ-7w-KPL">

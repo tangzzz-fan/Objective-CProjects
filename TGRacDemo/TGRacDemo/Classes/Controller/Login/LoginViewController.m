@@ -6,13 +6,13 @@
 //  Copyright © 2017年 Centaline. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LoginViewController.h"
 
 #import "LoginViewModel.h"
 
 #import "UserModel.h"
 
-@interface ViewController ()
+@interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userNameText;
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation ViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +34,6 @@
 - (void)bindViewModel {
     RAC(self.loginViewModel, userName) = self.userNameText.rac_textSignal;
     RAC(self.loginViewModel, password) = self.passwordText.rac_textSignal;
-//    self.loginViewModel.loginBtnEnableSignal = RACObserve(self.loginBtn, enabled);
     RAC(self.loginBtn, enabled) = self.loginViewModel.loginBtnEnableSignal;
 }
 
