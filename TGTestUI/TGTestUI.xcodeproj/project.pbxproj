@@ -8,30 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		0887F1FA9CBEF975696D4267 /* libPods-TGTestUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBCAF8A3B02D90E08516746 /* libPods-TGTestUI.a */; };
-		8E63E2C41FF25AD900C7E9AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63E2C31FF25AD900C7E9AC /* AppDelegate.m */; };
-		8E63E2C71FF25AD900C7E9AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63E2C61FF25AD900C7E9AC /* ViewController.m */; };
 		8E63E2CA1FF25AD900C7E9AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E63E2C81FF25AD900C7E9AC /* Main.storyboard */; };
 		8E63E2CC1FF25AD900C7E9AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E63E2CB1FF25AD900C7E9AC /* Assets.xcassets */; };
 		8E63E2CF1FF25AD900C7E9AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E63E2CD1FF25AD900C7E9AC /* LaunchScreen.storyboard */; };
 		8E63E2D21FF25AD900C7E9AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63E2D11FF25AD900C7E9AC /* main.m */; };
-		8EE0C7AD1FF49B850066F95E /* BesizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0C7AC1FF49B850066F95E /* BesizerViewController.m */; };
+		8EE0C7BC1FF4DC540066F95E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0C7B41FF4DC540066F95E /* AppDelegate.m */; };
+		8EE0C7BD1FF4DC540066F95E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0C7B71FF4DC540066F95E /* ViewController.m */; };
+		8EE0C7BE1FF4DC540066F95E /* BesizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0C7B81FF4DC540066F95E /* BesizerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1BBCAF8A3B02D90E08516746 /* libPods-TGTestUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TGTestUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		473021A7DCA228D776476A52 /* Pods-TGTestUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGTestUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGTestUI/Pods-TGTestUI.debug.xcconfig"; sourceTree = "<group>"; };
 		8E63E2BF1FF25AD900C7E9AC /* TGTestUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGTestUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E63E2C21FF25AD900C7E9AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8E63E2C31FF25AD900C7E9AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8E63E2C51FF25AD900C7E9AC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8E63E2C61FF25AD900C7E9AC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8E63E2C91FF25AD900C7E9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E63E2CB1FF25AD900C7E9AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E63E2CE1FF25AD900C7E9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E63E2D01FF25AD900C7E9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E63E2D11FF25AD900C7E9AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8EE0C7AB1FF49B850066F95E /* BesizerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BesizerViewController.h; sourceTree = "<group>"; };
-		8EE0C7AC1FF49B850066F95E /* BesizerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BesizerViewController.m; sourceTree = "<group>"; };
+		8EE0C7B31FF4DC540066F95E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8EE0C7B41FF4DC540066F95E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8EE0C7B61FF4DC540066F95E /* BesizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BesizerViewController.h; sourceTree = "<group>"; };
+		8EE0C7B71FF4DC540066F95E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8EE0C7B81FF4DC540066F95E /* BesizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BesizerViewController.m; sourceTree = "<group>"; };
+		8EE0C7B91FF4DC540066F95E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E11C9F4A56FC64AA77E53001 /* Pods-TGTestUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGTestUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TGTestUI/Pods-TGTestUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,12 +76,7 @@
 		8E63E2C11FF25AD900C7E9AC /* TGTestUI */ = {
 			isa = PBXGroup;
 			children = (
-				8E63E2C21FF25AD900C7E9AC /* AppDelegate.h */,
-				8E63E2C31FF25AD900C7E9AC /* AppDelegate.m */,
-				8E63E2C51FF25AD900C7E9AC /* ViewController.h */,
-				8E63E2C61FF25AD900C7E9AC /* ViewController.m */,
-				8EE0C7AB1FF49B850066F95E /* BesizerViewController.h */,
-				8EE0C7AC1FF49B850066F95E /* BesizerViewController.m */,
+				8EE0C7B11FF4DC540066F95E /* Classes */,
 				8E63E2C81FF25AD900C7E9AC /* Main.storyboard */,
 				8E63E2CB1FF25AD900C7E9AC /* Assets.xcassets */,
 				8E63E2CD1FF25AD900C7E9AC /* LaunchScreen.storyboard */,
@@ -89,6 +84,51 @@
 				8E63E2D11FF25AD900C7E9AC /* main.m */,
 			);
 			path = TGTestUI;
+			sourceTree = "<group>";
+		};
+		8EE0C7B11FF4DC540066F95E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8EE0C7B21FF4DC540066F95E /* Other */,
+				8EE0C7B51FF4DC540066F95E /* Controller */,
+				8EE0C7BA1FF4DC540066F95E /* Model */,
+				8EE0C7BB1FF4DC540066F95E /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8EE0C7B21FF4DC540066F95E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8EE0C7B31FF4DC540066F95E /* AppDelegate.h */,
+				8EE0C7B41FF4DC540066F95E /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		8EE0C7B51FF4DC540066F95E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8EE0C7B61FF4DC540066F95E /* BesizerViewController.h */,
+				8EE0C7B81FF4DC540066F95E /* BesizerViewController.m */,
+				8EE0C7B91FF4DC540066F95E /* ViewController.h */,
+				8EE0C7B71FF4DC540066F95E /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8EE0C7BA1FF4DC540066F95E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8EE0C7BB1FF4DC540066F95E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F3209C50FD026A8D987FDC57 /* Pods */ = {
@@ -225,10 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E63E2C71FF25AD900C7E9AC /* ViewController.m in Sources */,
-				8EE0C7AD1FF49B850066F95E /* BesizerViewController.m in Sources */,
+				8EE0C7BD1FF4DC540066F95E /* ViewController.m in Sources */,
+				8EE0C7BE1FF4DC540066F95E /* BesizerViewController.m in Sources */,
+				8EE0C7BC1FF4DC540066F95E /* AppDelegate.m in Sources */,
 				8E63E2D21FF25AD900C7E9AC /* main.m in Sources */,
-				8E63E2C41FF25AD900C7E9AC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
