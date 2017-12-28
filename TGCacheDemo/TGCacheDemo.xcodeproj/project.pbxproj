@@ -8,8 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		40FFB1C484E17C9883A04B1B /* libPods-TGCacheDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9997E2C1C1115F64F6AC4BD1 /* libPods-TGCacheDemo.a */; };
-		8EDEE1CF1FCEAEE50051EB1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE1CE1FCEAEE50051EB1D /* AppDelegate.m */; };
-		8EDEE1D21FCEAEE50051EB1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE1D11FCEAEE50051EB1D /* ViewController.m */; };
+		8E8EE3D71FF50E0B0034EC14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3BF1FF50E0B0034EC14 /* AppDelegate.m */; };
+		8E8EE3D81FF50E0B0034EC14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3C11FF50E0B0034EC14 /* ViewController.m */; };
+		8E8EE3D91FF50E0B0034EC14 /* YTKNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3C41FF50E0B0034EC14 /* YTKNetworkConfig.m */; };
+		8E8EE3DA1FF50E0B0034EC14 /* YTKChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3C61FF50E0B0034EC14 /* YTKChainRequest.m */; };
+		8E8EE3DB1FF50E0B0034EC14 /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3CA1FF50E0B0034EC14 /* YTKNetworkPrivate.m */; };
+		8E8EE3DC1FF50E0B0034EC14 /* YTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3CE1FF50E0B0034EC14 /* YTKBaseRequest.m */; };
+		8E8EE3DD1FF50E0B0034EC14 /* YTKBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3D11FF50E0B0034EC14 /* YTKBatchRequest.m */; };
+		8E8EE3DE1FF50E0B0034EC14 /* YTKNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3D21FF50E0B0034EC14 /* YTKNetworkAgent.m */; };
+		8E8EE3DF1FF50E0B0034EC14 /* YTKChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3D31FF50E0B0034EC14 /* YTKChainRequestAgent.m */; };
+		8E8EE3E01FF50E0B0034EC14 /* YTKBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3D41FF50E0B0034EC14 /* YTKBatchRequestAgent.m */; };
+		8E8EE3E11FF50E0B0034EC14 /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3D61FF50E0B0034EC14 /* YTKRequest.m */; };
 		8EDEE1D51FCEAEE50051EB1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE1D31FCEAEE50051EB1D /* Main.storyboard */; };
 		8EDEE1D71FCEAEE50051EB1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE1D61FCEAEE50051EB1D /* Assets.xcassets */; };
 		8EDEE1DA1FCEAEE50051EB1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE1D81FCEAEE50051EB1D /* LaunchScreen.storyboard */; };
@@ -19,11 +28,30 @@
 /* Begin PBXFileReference section */
 		55939FE4262E321B58855C70 /* Pods-TGCacheDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGCacheDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGCacheDemo/Pods-TGCacheDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		872E4CEE62B4A50A1E8DE388 /* Pods-TGCacheDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGCacheDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TGCacheDemo/Pods-TGCacheDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8E8EE3BE1FF50E0B0034EC14 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8E8EE3BF1FF50E0B0034EC14 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8E8EE3C11FF50E0B0034EC14 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8E8EE3C21FF50E0B0034EC14 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8E8EE3C41FF50E0B0034EC14 /* YTKNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkConfig.m; sourceTree = "<group>"; };
+		8E8EE3C51FF50E0B0034EC14 /* YTKBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBaseRequest.h; sourceTree = "<group>"; };
+		8E8EE3C61FF50E0B0034EC14 /* YTKChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequest.m; sourceTree = "<group>"; };
+		8E8EE3C71FF50E0B0034EC14 /* YTKNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetwork.h; sourceTree = "<group>"; };
+		8E8EE3C81FF50E0B0034EC14 /* YTKBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBatchRequest.h; sourceTree = "<group>"; };
+		8E8EE3C91FF50E0B0034EC14 /* YTKNetworkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkAgent.h; sourceTree = "<group>"; };
+		8E8EE3CA1FF50E0B0034EC14 /* YTKNetworkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkPrivate.m; sourceTree = "<group>"; };
+		8E8EE3CB1FF50E0B0034EC14 /* YTKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKRequest.h; sourceTree = "<group>"; };
+		8E8EE3CC1FF50E0B0034EC14 /* YTKBatchRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBatchRequestAgent.h; sourceTree = "<group>"; };
+		8E8EE3CD1FF50E0B0034EC14 /* YTKChainRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKChainRequestAgent.h; sourceTree = "<group>"; };
+		8E8EE3CE1FF50E0B0034EC14 /* YTKBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBaseRequest.m; sourceTree = "<group>"; };
+		8E8EE3CF1FF50E0B0034EC14 /* YTKNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkConfig.h; sourceTree = "<group>"; };
+		8E8EE3D01FF50E0B0034EC14 /* YTKChainRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKChainRequest.h; sourceTree = "<group>"; };
+		8E8EE3D11FF50E0B0034EC14 /* YTKBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequest.m; sourceTree = "<group>"; };
+		8E8EE3D21FF50E0B0034EC14 /* YTKNetworkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkAgent.m; sourceTree = "<group>"; };
+		8E8EE3D31FF50E0B0034EC14 /* YTKChainRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequestAgent.m; sourceTree = "<group>"; };
+		8E8EE3D41FF50E0B0034EC14 /* YTKBatchRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequestAgent.m; sourceTree = "<group>"; };
+		8E8EE3D51FF50E0B0034EC14 /* YTKNetworkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkPrivate.h; sourceTree = "<group>"; };
+		8E8EE3D61FF50E0B0034EC14 /* YTKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKRequest.m; sourceTree = "<group>"; };
 		8EDEE1CA1FCEAEE50051EB1D /* TGCacheDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGCacheDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EDEE1CD1FCEAEE50051EB1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8EDEE1CE1FCEAEE50051EB1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8EDEE1D01FCEAEE50051EB1D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8EDEE1D11FCEAEE50051EB1D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8EDEE1D41FCEAEE50051EB1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EDEE1D61FCEAEE50051EB1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EDEE1D91FCEAEE50051EB1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +89,60 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E8EE3BC1FF50E0B0034EC14 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E8EE3BD1FF50E0B0034EC14 /* Other */,
+				8E8EE3C01FF50E0B0034EC14 /* Controller */,
+				8E8EE3C31FF50E0B0034EC14 /* YTKNetwork */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8E8EE3BD1FF50E0B0034EC14 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8E8EE3BE1FF50E0B0034EC14 /* AppDelegate.h */,
+				8E8EE3BF1FF50E0B0034EC14 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		8E8EE3C01FF50E0B0034EC14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E8EE3C11FF50E0B0034EC14 /* ViewController.m */,
+				8E8EE3C21FF50E0B0034EC14 /* ViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E8EE3C31FF50E0B0034EC14 /* YTKNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				8E8EE3C71FF50E0B0034EC14 /* YTKNetwork.h */,
+				8E8EE3CB1FF50E0B0034EC14 /* YTKRequest.h */,
+				8E8EE3D61FF50E0B0034EC14 /* YTKRequest.m */,
+				8E8EE3CF1FF50E0B0034EC14 /* YTKNetworkConfig.h */,
+				8E8EE3C41FF50E0B0034EC14 /* YTKNetworkConfig.m */,
+				8E8EE3C51FF50E0B0034EC14 /* YTKBaseRequest.h */,
+				8E8EE3CE1FF50E0B0034EC14 /* YTKBaseRequest.m */,
+				8E8EE3CC1FF50E0B0034EC14 /* YTKBatchRequestAgent.h */,
+				8E8EE3D41FF50E0B0034EC14 /* YTKBatchRequestAgent.m */,
+				8E8EE3C81FF50E0B0034EC14 /* YTKBatchRequest.h */,
+				8E8EE3D11FF50E0B0034EC14 /* YTKBatchRequest.m */,
+				8E8EE3D01FF50E0B0034EC14 /* YTKChainRequest.h */,
+				8E8EE3C61FF50E0B0034EC14 /* YTKChainRequest.m */,
+				8E8EE3C91FF50E0B0034EC14 /* YTKNetworkAgent.h */,
+				8E8EE3D21FF50E0B0034EC14 /* YTKNetworkAgent.m */,
+				8E8EE3D51FF50E0B0034EC14 /* YTKNetworkPrivate.h */,
+				8E8EE3CA1FF50E0B0034EC14 /* YTKNetworkPrivate.m */,
+				8E8EE3CD1FF50E0B0034EC14 /* YTKChainRequestAgent.h */,
+				8E8EE3D31FF50E0B0034EC14 /* YTKChainRequestAgent.m */,
+			);
+			path = YTKNetwork;
+			sourceTree = "<group>";
+		};
 		8EDEE1C11FCEAEE50051EB1D = {
 			isa = PBXGroup;
 			children = (
@@ -82,10 +164,7 @@
 		8EDEE1CC1FCEAEE50051EB1D /* TGCacheDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8EDEE1CD1FCEAEE50051EB1D /* AppDelegate.h */,
-				8EDEE1CE1FCEAEE50051EB1D /* AppDelegate.m */,
-				8EDEE1D01FCEAEE50051EB1D /* ViewController.h */,
-				8EDEE1D11FCEAEE50051EB1D /* ViewController.m */,
+				8E8EE3BC1FF50E0B0034EC14 /* Classes */,
 				8EDEE1D31FCEAEE50051EB1D /* Main.storyboard */,
 				8EDEE1D61FCEAEE50051EB1D /* Assets.xcassets */,
 				8EDEE1D81FCEAEE50051EB1D /* LaunchScreen.storyboard */,
@@ -220,9 +299,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EDEE1D21FCEAEE50051EB1D /* ViewController.m in Sources */,
+				8E8EE3D81FF50E0B0034EC14 /* ViewController.m in Sources */,
+				8E8EE3DE1FF50E0B0034EC14 /* YTKNetworkAgent.m in Sources */,
+				8E8EE3DB1FF50E0B0034EC14 /* YTKNetworkPrivate.m in Sources */,
+				8E8EE3D91FF50E0B0034EC14 /* YTKNetworkConfig.m in Sources */,
+				8E8EE3E11FF50E0B0034EC14 /* YTKRequest.m in Sources */,
+				8E8EE3DF1FF50E0B0034EC14 /* YTKChainRequestAgent.m in Sources */,
+				8E8EE3DA1FF50E0B0034EC14 /* YTKChainRequest.m in Sources */,
+				8E8EE3DC1FF50E0B0034EC14 /* YTKBaseRequest.m in Sources */,
+				8E8EE3D71FF50E0B0034EC14 /* AppDelegate.m in Sources */,
 				8EDEE1DD1FCEAEE50051EB1D /* main.m in Sources */,
-				8EDEE1CF1FCEAEE50051EB1D /* AppDelegate.m in Sources */,
+				8E8EE3E01FF50E0B0034EC14 /* YTKBatchRequestAgent.m in Sources */,
+				8E8EE3DD1FF50E0B0034EC14 /* YTKBatchRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

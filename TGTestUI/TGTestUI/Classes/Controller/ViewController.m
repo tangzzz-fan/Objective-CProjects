@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "TGPageViewController.h"
+
 
 @interface ViewController ()
 
@@ -16,6 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+- (IBAction)showPageViewControllerAction:(id)sender {
+    TGPageViewController *tgVc = [[TGPageViewController alloc] init];
+    [self.navigationController pushViewController:tgVc animated:YES];
 }
 
 

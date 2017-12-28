@@ -12,6 +12,9 @@
 		8E63E2CC1FF25AD900C7E9AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E63E2CB1FF25AD900C7E9AC /* Assets.xcassets */; };
 		8E63E2CF1FF25AD900C7E9AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E63E2CD1FF25AD900C7E9AC /* LaunchScreen.storyboard */; };
 		8E63E2D21FF25AD900C7E9AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63E2D11FF25AD900C7E9AC /* main.m */; };
+		8E8EE39E1FF4EAC50034EC14 /* TGTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE39D1FF4EAC50034EC14 /* TGTitleView.m */; };
+		8E8EE3A11FF4F5F70034EC14 /* TGStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3A01FF4F5F70034EC14 /* TGStyle.m */; };
+		8E8EE3A41FF4FC380034EC14 /* TGPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3A31FF4FC380034EC14 /* TGPageViewController.m */; };
 		8EE0C7BC1FF4DC540066F95E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0C7B41FF4DC540066F95E /* AppDelegate.m */; };
 		8EE0C7BD1FF4DC540066F95E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0C7B71FF4DC540066F95E /* ViewController.m */; };
 		8EE0C7BE1FF4DC540066F95E /* BesizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0C7B81FF4DC540066F95E /* BesizerViewController.m */; };
@@ -26,6 +29,12 @@
 		8E63E2CE1FF25AD900C7E9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E63E2D01FF25AD900C7E9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E63E2D11FF25AD900C7E9AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8E8EE39C1FF4EAC50034EC14 /* TGTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTitleView.h; sourceTree = "<group>"; };
+		8E8EE39D1FF4EAC50034EC14 /* TGTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTitleView.m; sourceTree = "<group>"; };
+		8E8EE39F1FF4F5F70034EC14 /* TGStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGStyle.h; sourceTree = "<group>"; };
+		8E8EE3A01FF4F5F70034EC14 /* TGStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGStyle.m; sourceTree = "<group>"; };
+		8E8EE3A21FF4FC380034EC14 /* TGPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGPageViewController.h; sourceTree = "<group>"; };
+		8E8EE3A31FF4FC380034EC14 /* TGPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGPageViewController.m; sourceTree = "<group>"; };
 		8EE0C7B31FF4DC540066F95E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8EE0C7B41FF4DC540066F95E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8EE0C7B61FF4DC540066F95E /* BesizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BesizerViewController.h; sourceTree = "<group>"; };
@@ -113,6 +122,8 @@
 				8EE0C7B81FF4DC540066F95E /* BesizerViewController.m */,
 				8EE0C7B91FF4DC540066F95E /* ViewController.h */,
 				8EE0C7B71FF4DC540066F95E /* ViewController.m */,
+				8E8EE3A21FF4FC380034EC14 /* TGPageViewController.h */,
+				8E8EE3A31FF4FC380034EC14 /* TGPageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -127,6 +138,10 @@
 		8EE0C7BB1FF4DC540066F95E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E8EE39C1FF4EAC50034EC14 /* TGTitleView.h */,
+				8E8EE39D1FF4EAC50034EC14 /* TGTitleView.m */,
+				8E8EE39F1FF4F5F70034EC14 /* TGStyle.h */,
+				8E8EE3A01FF4F5F70034EC14 /* TGStyle.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,9 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8EE3A41FF4FC380034EC14 /* TGPageViewController.m in Sources */,
 				8EE0C7BD1FF4DC540066F95E /* ViewController.m in Sources */,
+				8E8EE39E1FF4EAC50034EC14 /* TGTitleView.m in Sources */,
 				8EE0C7BE1FF4DC540066F95E /* BesizerViewController.m in Sources */,
 				8EE0C7BC1FF4DC540066F95E /* AppDelegate.m in Sources */,
+				8E8EE3A11FF4F5F70034EC14 /* TGStyle.m in Sources */,
 				8E63E2D21FF25AD900C7E9AC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

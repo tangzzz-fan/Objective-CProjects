@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E59ACBB1FD6981A00E7DACB /* TGFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ACB91FD6981A00E7DACB /* TGFileTool.m */; };
-		8E59ACBC1FD6981A00E7DACB /* TGDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ACBA1FD6981A00E7DACB /* TGDownloader.m */; };
-		8E59ACBF1FD6983900E7DACB /* TGDownloaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ACBE1FD6983900E7DACB /* TGDownloaderManager.m */; };
-		8E59ACC21FD69BCC00E7DACB /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E59ACC11FD69BCC00E7DACB /* NSString+Extension.m */; };
-		8EDEE1691FCE4BB00051EB1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE1681FCE4BB00051EB1D /* AppDelegate.m */; };
-		8EDEE16C1FCE4BB00051EB1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE16B1FCE4BB00051EB1D /* ViewController.m */; };
+		8E8EE3B61FF50D600034EC14 /* TGDownloaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3A71FF50D5F0034EC14 /* TGDownloaderManager.m */; };
+		8E8EE3B71FF50D600034EC14 /* TGFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3AC1FF50D5F0034EC14 /* TGFileTool.m */; };
+		8E8EE3B81FF50D600034EC14 /* TGDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3AD1FF50D5F0034EC14 /* TGDownloader.m */; };
+		8E8EE3B91FF50D600034EC14 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3AE1FF50D5F0034EC14 /* NSString+Extension.m */; };
+		8E8EE3BA1FF50D600034EC14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3B01FF50D5F0034EC14 /* ViewController.m */; };
+		8E8EE3BB1FF50D600034EC14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8EE3B51FF50D600034EC14 /* AppDelegate.m */; };
 		8EDEE16F1FCE4BB00051EB1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE16D1FCE4BB00051EB1D /* Main.storyboard */; };
 		8EDEE1711FCE4BB00051EB1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE1701FCE4BB00051EB1D /* Assets.xcassets */; };
 		8EDEE1741FCE4BB00051EB1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE1721FCE4BB00051EB1D /* LaunchScreen.storyboard */; };
@@ -20,19 +20,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E59ACB71FD6981A00E7DACB /* TGDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGDownloader.h; sourceTree = "<group>"; };
-		8E59ACB81FD6981A00E7DACB /* TGFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGFileTool.h; sourceTree = "<group>"; };
-		8E59ACB91FD6981A00E7DACB /* TGFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGFileTool.m; sourceTree = "<group>"; };
-		8E59ACBA1FD6981A00E7DACB /* TGDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGDownloader.m; sourceTree = "<group>"; };
-		8E59ACBD1FD6983900E7DACB /* TGDownloaderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGDownloaderManager.h; sourceTree = "<group>"; };
-		8E59ACBE1FD6983900E7DACB /* TGDownloaderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGDownloaderManager.m; sourceTree = "<group>"; };
-		8E59ACC01FD69BCC00E7DACB /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
-		8E59ACC11FD69BCC00E7DACB /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		8E8EE3A71FF50D5F0034EC14 /* TGDownloaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGDownloaderManager.m; sourceTree = "<group>"; };
+		8E8EE3A81FF50D5F0034EC14 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		8E8EE3A91FF50D5F0034EC14 /* TGDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGDownloader.h; sourceTree = "<group>"; };
+		8E8EE3AA1FF50D5F0034EC14 /* TGFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGFileTool.h; sourceTree = "<group>"; };
+		8E8EE3AB1FF50D5F0034EC14 /* TGDownloaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGDownloaderManager.h; sourceTree = "<group>"; };
+		8E8EE3AC1FF50D5F0034EC14 /* TGFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGFileTool.m; sourceTree = "<group>"; };
+		8E8EE3AD1FF50D5F0034EC14 /* TGDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGDownloader.m; sourceTree = "<group>"; };
+		8E8EE3AE1FF50D5F0034EC14 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		8E8EE3B01FF50D5F0034EC14 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8E8EE3B11FF50D5F0034EC14 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8E8EE3B41FF50D600034EC14 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8E8EE3B51FF50D600034EC14 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8EDEE1641FCE4BB00051EB1D /* TGDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EDEE1671FCE4BB00051EB1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8EDEE1681FCE4BB00051EB1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8EDEE16A1FCE4BB00051EB1D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8EDEE16B1FCE4BB00051EB1D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8EDEE16E1FCE4BB00051EB1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EDEE1701FCE4BB00051EB1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EDEE1731FCE4BB00051EB1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,19 +51,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E59ACB61FD6981A00E7DACB /* Classes */ = {
+		8E8EE3A51FF50D5F0034EC14 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8E59ACB81FD6981A00E7DACB /* TGFileTool.h */,
-				8E59ACB91FD6981A00E7DACB /* TGFileTool.m */,
-				8E59ACB71FD6981A00E7DACB /* TGDownloader.h */,
-				8E59ACBA1FD6981A00E7DACB /* TGDownloader.m */,
-				8E59ACBD1FD6983900E7DACB /* TGDownloaderManager.h */,
-				8E59ACBE1FD6983900E7DACB /* TGDownloaderManager.m */,
-				8E59ACC01FD69BCC00E7DACB /* NSString+Extension.h */,
-				8E59ACC11FD69BCC00E7DACB /* NSString+Extension.m */,
+				8E8EE3A61FF50D5F0034EC14 /* Downloader */,
+				8E8EE3AF1FF50D5F0034EC14 /* Controller */,
+				8E8EE3B21FF50D5F0034EC14 /* Model */,
+				8E8EE3B31FF50D5F0034EC14 /* View */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		8E8EE3A61FF50D5F0034EC14 /* Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				8E8EE3A71FF50D5F0034EC14 /* TGDownloaderManager.m */,
+				8E8EE3A81FF50D5F0034EC14 /* NSString+Extension.h */,
+				8E8EE3A91FF50D5F0034EC14 /* TGDownloader.h */,
+				8E8EE3AA1FF50D5F0034EC14 /* TGFileTool.h */,
+				8E8EE3AB1FF50D5F0034EC14 /* TGDownloaderManager.h */,
+				8E8EE3AC1FF50D5F0034EC14 /* TGFileTool.m */,
+				8E8EE3AD1FF50D5F0034EC14 /* TGDownloader.m */,
+				8E8EE3AE1FF50D5F0034EC14 /* NSString+Extension.m */,
+			);
+			path = Downloader;
+			sourceTree = "<group>";
+		};
+		8E8EE3AF1FF50D5F0034EC14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E8EE3B01FF50D5F0034EC14 /* ViewController.m */,
+				8E8EE3B11FF50D5F0034EC14 /* ViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E8EE3B21FF50D5F0034EC14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E8EE3B31FF50D5F0034EC14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E8EE3B41FF50D600034EC14 /* AppDelegate.h */,
+				8E8EE3B51FF50D600034EC14 /* AppDelegate.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8EDEE15B1FCE4BB00051EB1D = {
@@ -85,11 +121,7 @@
 		8EDEE1661FCE4BB00051EB1D /* TGDownloader */ = {
 			isa = PBXGroup;
 			children = (
-				8E59ACB61FD6981A00E7DACB /* Classes */,
-				8EDEE1671FCE4BB00051EB1D /* AppDelegate.h */,
-				8EDEE1681FCE4BB00051EB1D /* AppDelegate.m */,
-				8EDEE16A1FCE4BB00051EB1D /* ViewController.h */,
-				8EDEE16B1FCE4BB00051EB1D /* ViewController.m */,
+				8E8EE3A51FF50D5F0034EC14 /* Classes */,
 				8EDEE16D1FCE4BB00051EB1D /* Main.storyboard */,
 				8EDEE1701FCE4BB00051EB1D /* Assets.xcassets */,
 				8EDEE1721FCE4BB00051EB1D /* LaunchScreen.storyboard */,
@@ -170,13 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E59ACBB1FD6981A00E7DACB /* TGFileTool.m in Sources */,
-				8E59ACBF1FD6983900E7DACB /* TGDownloaderManager.m in Sources */,
-				8E59ACBC1FD6981A00E7DACB /* TGDownloader.m in Sources */,
-				8EDEE16C1FCE4BB00051EB1D /* ViewController.m in Sources */,
+				8E8EE3BA1FF50D600034EC14 /* ViewController.m in Sources */,
+				8E8EE3B91FF50D600034EC14 /* NSString+Extension.m in Sources */,
 				8EDEE1771FCE4BB00051EB1D /* main.m in Sources */,
-				8EDEE1691FCE4BB00051EB1D /* AppDelegate.m in Sources */,
-				8E59ACC21FD69BCC00E7DACB /* NSString+Extension.m in Sources */,
+				8E8EE3B61FF50D600034EC14 /* TGDownloaderManager.m in Sources */,
+				8E8EE3B71FF50D600034EC14 /* TGFileTool.m in Sources */,
+				8E8EE3B81FF50D600034EC14 /* TGDownloader.m in Sources */,
+				8E8EE3BB1FF50D600034EC14 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

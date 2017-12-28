@@ -38,6 +38,9 @@
                                 <rect key="frame" x="15" y="197" width="135" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="PageViewController"/>
+                                <connections>
+                                    <action selector="showPageViewControllerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J5T-24-bQ0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
