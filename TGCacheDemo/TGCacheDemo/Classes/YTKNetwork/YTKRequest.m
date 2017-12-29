@@ -103,46 +103,59 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
 @implementation YTKRequest
 
 - (void)start {
+    // 如果设置忽略缓存, 直接开始网络请求
     if (self.ignoreCache) {
         [self startWithoutCache];
         return;
     }
 
     // Do not cache download request.
+    // 如果存在下载路径
     if (self.resumableDownloadPath) {
         [self startWithoutCache];
         return;
     }
 
+    // 如果加载缓存数据出错
     if (![self loadCacheWithError:nil]) {
         [self startWithoutCache];
         return;
     }
 
+    // 到这个地方, 说明已经拿到了缓存, 可以认为数据就是缓存数据
     _dataFromCache = YES;
 
+    // 获取主线程队列, 进入到请求完成的操作处理中
     dispatch_async(dispatch_get_main_queue(), ^{
+        // 调用请求完成
         [self requestCompletePreprocessor];
+        // 调用请求完成之后的过滤操作?
         [self requestCompleteFilter];
+        
         YTKRequest *strongSelf = self;
+        // 执行代理方法的请求完成
         [strongSelf.delegate requestFinished:strongSelf];
+        // 如果此处定义了请求完成的 block, 可以执行 block
         if (strongSelf.successCompletionBlock) {
             strongSelf.successCompletionBlock(strongSelf);
         }
+        // 清理 block, 防止出现引用环
         [strongSelf clearCompletionBlock];
     });
 }
 
+// 无缓存设置 请求, 先清理已经存在的缓存 调用父类的方法
 - (void)startWithoutCache {
     [self clearCacheVariables];
     [super start];
 }
 
 #pragma mark - Network Request Delegate
-
+// 请求完成的处理
 - (void)requestCompletePreprocessor {
     [super requestCompletePreprocessor];
 
+    // 是否开启异步写入缓存? 如果是, 就获取专门管理缓存写队列, 执行数据写入的操作
     if (self.writeCacheAsynchronously) {
         dispatch_async(ytkrequest_cache_writing_queue(), ^{
             [self saveResponseDataToCacheFile:[super responseData]];
@@ -154,18 +167,22 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
 
 #pragma mark - Subclass Override
 
+// 缓存有效时间 当过了多少秒之后, 缓存失效, 可以重新开始新的请求
 - (NSInteger)cacheTimeInSeconds {
     return -1;
 }
 
+// 缓存版本号
 - (long long)cacheVersion {
     return 0;
 }
 
+// 缓存敏感信息?
 - (id)cacheSensitiveData {
     return nil;
 }
 
+// 异步保存缓存数据
 - (BOOL)writeCacheAsynchronously {
     return YES;
 }
@@ -211,7 +228,7 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
 }
 
 #pragma mark -
-
+// 加载缓存出错
 - (BOOL)loadCacheWithError:(NSError * _Nullable __autoreleasing *)error {
     // Make sure cache time in valid.
     if ([self cacheTimeInSeconds] < 0) {
@@ -221,7 +238,7 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
         return NO;
     }
 
-    // Try load metadata.
+    // Try load metadata. 尝试加载缓存的元数据
     if (![self loadCacheMetadata]) {
         if (error) {
             *error = [NSError errorWithDomain:YTKRequestCacheErrorDomain code:YTKRequestCacheErrorInvalidMetadata userInfo:@{ NSLocalizedDescriptionKey:@"Invalid metadata. Cache may not exist"}];
@@ -230,6 +247,7 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
     }
 
     // Check if cache is still valid.
+    // 检查缓存是否有效 比如: 元数据的变化
     if (![self validateCacheWithError:error]) {
         return NO;
     }
@@ -245,6 +263,7 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
     return YES;
 }
 
+// 校验缓存是否有效 主要通过校验元数据是否仍然有效
 - (BOOL)validateCacheWithError:(NSError * _Nullable __autoreleasing *)error {
     // Date
     NSDate *creationDate = self.cacheMetadata.creationDate;
@@ -304,6 +323,7 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
     return NO;
 }
 
+// 加载缓存数据
 - (BOOL)loadCacheData {
     NSString *path = [self cacheFilePath];
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -328,6 +348,7 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
     return NO;
 }
 
+// 将缓存数据缓存到本地文件中
 - (void)saveResponseDataToCacheFile:(NSData *)data {
     if ([self cacheTimeInSeconds] > 0 && ![self isDataFromCache]) {
         if (data != nil) {
@@ -335,12 +356,14 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
                 // New data will always overwrite old data.
                 [data writeToFile:[self cacheFilePath] atomically:YES];
 
+                // 准备元数据
                 YTKCacheMetadata *metadata = [[YTKCacheMetadata alloc] init];
                 metadata.version = [self cacheVersion];
                 metadata.sensitiveDataString = ((NSObject *)[self cacheSensitiveData]).description;
                 metadata.stringEncoding = [YTKNetworkUtils stringEncodingWithRequest:self];
                 metadata.creationDate = [NSDate date];
                 metadata.appVersionString = [YTKNetworkUtils appVersionString];
+                // 使用 KeyArchiver 的方式保存元数据
                 [NSKeyedArchiver archiveRootObject:metadata toFile:[self cacheMetadataFilePath]];
             } @catch (NSException *exception) {
                 YTKLog(@"Save cache failed, reason = %@", exception.reason);

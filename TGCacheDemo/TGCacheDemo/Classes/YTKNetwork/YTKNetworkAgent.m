@@ -38,13 +38,20 @@
 #define kYTKNetworkIncompleteDownloadFolderName @"Incomplete"
 
 @implementation YTKNetworkAgent {
+    // agent 作为命令的承载方, 命令模式中的服务员的角色, 用于将命令及时交付给命令的执行者执行. 可能会做一个数据传递
+    // 会话管理者
     AFHTTPSessionManager *_manager;
+    // 配置信息
     YTKNetworkConfig *_config;
+    // JSON 解析器
     AFJSONResponseSerializer *_jsonResponseSerializer;
+    // XML 解析器
     AFXMLParserResponseSerializer *_xmlParserResponseSerialzier;
     NSMutableDictionary<NSNumber *, YTKBaseRequest *> *_requestsRecord;
 
+    // 事件处理队列
     dispatch_queue_t _processingQueue;
+    // 使用到的锁
     pthread_mutex_t _lock;
     NSIndexSet *_allStatusCodes;
 }
@@ -66,11 +73,14 @@
         _requestsRecord = [NSMutableDictionary dictionary];
         _processingQueue = dispatch_queue_create("com.yuantiku.networkagent.processing", DISPATCH_QUEUE_CONCURRENT);
         _allStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(100, 500)];
+        // 初始化锁
         pthread_mutex_init(&_lock, NULL);
 
         _manager.securityPolicy = _config.securityPolicy;
         _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        
         // Take over the status code validation
+        // 执行状态码校验
         _manager.responseSerializer.acceptableStatusCodes = _allStatusCodes;
         _manager.completionQueue = _processingQueue;
     }
@@ -95,7 +105,7 @@
 }
 
 #pragma mark -
-
+// 根据 request 创建对应的请求 url
 - (NSString *)buildRequestUrl:(YTKBaseRequest *)request {
     NSParameterAssert(request != nil);
 
@@ -106,6 +116,7 @@
         return detailUrl;
     }
     // Filter URL if needed
+    // 组件的方式将 url 过滤器放在 agent 中使用
     NSArray *filters = [_config urlFilters];
     for (id<YTKUrlFilterProtocol> f in filters) {
         detailUrl = [f filterUrl:detailUrl withRequest:request];
@@ -128,10 +139,12 @@
     // URL slash compability
     NSURL *url = [NSURL URLWithString:baseUrl];
 
+    // 如果 baseurl 没有 / 就添加一个
     if (baseUrl.length > 0 && ![baseUrl hasSuffix:@"/"]) {
         url = [url URLByAppendingPathComponent:@""];
     }
 
+    // 返回了一个根据 baseurl, 可能经过过滤的 url
     return [NSURL URLWithString:detailUrl relativeToURL:url].absoluteString;
 }
 
@@ -164,10 +177,12 @@
     return requestSerializer;
 }
 
+// 执行网络请求的地方
 - (NSURLSessionTask *)sessionTaskForRequest:(YTKBaseRequest *)request error:(NSError * _Nullable __autoreleasing *)error {
     YTKRequestMethod method = [request requestMethod];
     NSString *url = [self buildRequestUrl:request];
     id param = request.requestArgument;
+    // HTTPbody
     AFConstructingBlock constructingBlock = [request constructingBodyBlock];
     AFHTTPRequestSerializer *requestSerializer = [self requestSerializerForRequest:request];
 
@@ -196,10 +211,14 @@
 
     NSError * __autoreleasing requestSerializationError = nil;
 
+    // 如果用户自行定义了 url 请求
     NSURLRequest *customUrlRequest= [request buildCustomUrlRequest];
+    
+    // 自定义网络请求 和 使用 baseUrl 请求使用的方式不一样. customUrl 是直接走 dataTaskWithRequest
     if (customUrlRequest) {
         __block NSURLSessionDataTask *dataTask = nil;
         dataTask = [_manager dataTaskWithRequest:customUrlRequest completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+            // 完成之后, 根据 task 和返回数据执行统一操作
             [self handleRequestResult:dataTask responseObject:responseObject error:error];
         }];
         request.requestTask = dataTask;
@@ -234,6 +253,7 @@
 
     // Retain request
     YTKLog(@"Add request: %@", NSStringFromClass([request class]));
+    // 此处记录使用的 request 为了便于后面取消网络请求
     [self addRequestToRecord:request];
     [request.requestTask resume];
 }
@@ -272,6 +292,7 @@
     }
 }
 
+// 校验 request 的返回结果
 - (BOOL)validateResult:(YTKBaseRequest *)request error:(NSError * _Nullable __autoreleasing *)error {
     BOOL result = [request statusCodeValidator];
     if (!result) {
@@ -283,6 +304,7 @@
     id json = [request responseJSONObject];
     id validator = [request jsonValidator];
     if (json && validator) {
+        // 以插件的方式, 校验 json 格式
         result = [YTKNetworkUtils validateJSON:json withValidator:validator];
         if (!result) {
             if (error) {
@@ -294,6 +316,7 @@
     return YES;
 }
 
+// 处理网络请求的结果
 - (void)handleRequestResult:(NSURLSessionTask *)task responseObject:(id)responseObject error:(NSError *)error {
     Lock();
     YTKBaseRequest *request = _requestsRecord[@(task.taskIdentifier)];
@@ -317,6 +340,7 @@
     BOOL succeed = NO;
 
     request.responseObject = responseObject;
+    // 校验格式
     if ([request.responseObject isKindOfClass:[NSData class]]) {
         request.responseData = responseObject;
         request.responseString = [[NSString alloc] initWithData:responseObject encoding:[YTKNetworkUtils stringEncodingWithRequest:request]];
@@ -334,6 +358,8 @@
                 break;
         }
     }
+    
+    // 层层过滤, 拦截错误消息
     if (error) {
         succeed = NO;
         requestError = error;
@@ -357,6 +383,7 @@
     });
 }
 
+// 某次网络请求成功返回
 - (void)requestDidSucceedWithRequest:(YTKBaseRequest *)request {
     @autoreleasepool {
         [request requestCompletePreprocessor];
@@ -387,6 +414,7 @@
     }
 
     // Load response from file and clean up if download task failed.
+    //
     if ([request.responseObject isKindOfClass:[NSURL class]]) {
         NSURL *url = request.responseObject;
         if (url.isFileURL && [[NSFileManager defaultManager] fileExistsAtPath:url.path]) {

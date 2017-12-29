@@ -19,6 +19,9 @@
 @property (strong, nonatomic) NSMutableArray<UILabel *> *titleLabels;
 @property (strong, nonatomic) UIScrollView *scrollView;
 
+@property (assign, nonatomic) NSInteger currentIndex;
+
+
 @end
 
 @implementation TGTitleView
@@ -27,6 +30,8 @@
     if (self = [super initWithFrame:frame]) {
         _titles = titles;
         _tgStyle = tgStyle;
+        
+        _currentIndex = 0;
         [self setupUI];
     }
     return self;
@@ -103,9 +108,52 @@
     [self.scrollView setContentSize:CGSizeMake(maxX, 0)];
 }
 
-#pragma mark - Actions
-- (void)titleLabelClick:(UILabel *)titleLabel {
+/** 调整 label 的位置 */
+- (void)adjustPosition:(UILabel *)label {
+    if (!self.tgStyle.isScrollAble) return;
     
+    // 计算 scrollView 的偏移量
+    CGFloat offsetX = self.tgStyle.isScrollToMiddle ? label.center.x - self.scrollView.center.x : label.frame.origin.x - self.tgStyle.titleMarign * 0.5;
+    
+    // 处理边界情况
+    // 左边的边界
+    if (offsetX < 0) {
+        offsetX = 0;
+    }
+    
+    // 最大偏移距离
+    CGFloat maxOffsetX = self.scrollView.contentSize.width - self.bounds.size.width;
+    
+    if (offsetX > maxOffsetX) {
+        offsetX = maxOffsetX;
+    }
+    
+    [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+}
+
+#pragma mark - Actions
+- (void)titleLabelClick:(UITapGestureRecognizer *)tap {
+    // 1 取出点击的 label
+    UILabel *newLabel = [[UILabel alloc] init];
+    if (![tap.view isKindOfClass:[UILabel class]]) {
+        newLabel = nil;
+        return;
+    }
+    
+    newLabel = (UILabel *)tap.view;
+    
+    // 2 改变 label 的样式
+    UILabel *oldLabel = self.titleLabels[self.currentIndex];
+    oldLabel.textColor = self.tgStyle.normalColor;
+    newLabel.textColor = self.tgStyle.selectedColor;
+    self.currentIndex = newLabel.tag;
+    
+    // 3 通知 contentVIew 改变当前位置
+    // 使用代理向外传递 currentIndex 改变
+    // 4 调整bottomLine 和 缩放比例
+    // 5 调整位置
+    [self adjustPosition:newLabel];
+    // 6 调整 coverView 的位置
 }
 
 

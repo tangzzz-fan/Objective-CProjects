@@ -34,7 +34,7 @@
 NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validation";
 
 @interface YTKBaseRequest ()
-
+// 这里保存一个请求 task
 @property (nonatomic, strong, readwrite) NSURLSessionTask *requestTask;
 @property (nonatomic, strong, readwrite) NSData *responseData;
 @property (nonatomic, strong, readwrite) id responseJSONObject;
@@ -83,7 +83,7 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
 }
 
 #pragma mark - Request Configuration
-
+// 保存请求完成, 请求失败的 block, 便于后续调用
 - (void)setCompletionBlockWithSuccess:(YTKRequestCompletionBlock)success
                               failure:(YTKRequestCompletionBlock)failure {
     self.successCompletionBlock = success;
@@ -96,6 +96,7 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
     self.failureCompletionBlock = nil;
 }
 
+// 增加对网络请求的拦截器 一个拦截器监听一个网络请求的三个状态
 - (void)addAccessory:(id<YTKRequestAccessory>)accessory {
     if (!self.requestAccessories) {
         self.requestAccessories = [NSMutableArray array];
@@ -106,17 +107,22 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
 #pragma mark - Request Action
 
 - (void)start {
+    // 启动拦截器 告诉他 将要开始回调
     [self toggleAccessoriesWillStartCallBack];
+    // 将 self 加入到 sessionManager 中
     [[YTKNetworkAgent sharedAgent] addRequest:self];
 }
 
 - (void)stop {
+    // 主动告诉拦截器 将要结束回调
     [self toggleAccessoriesWillStopCallBack];
     self.delegate = nil;
     [[YTKNetworkAgent sharedAgent] cancelRequest:self];
+    // 告诉拦截器结束回调
     [self toggleAccessoriesDidStopCallBack];
 }
 
+// 使用完成和失败的两个 block 回调设置, 同时设置网络请求开始 执行 start 方法
 - (void)startWithCompletionBlockWithSuccess:(YTKRequestCompletionBlock)success
                                     failure:(YTKRequestCompletionBlock)failure {
     [self setCompletionBlockWithSuccess:success failure:failure];
@@ -165,6 +171,7 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
     return YTKRequestMethodGET;
 }
 
+// 默认 http 方法
 - (YTKRequestSerializerType)requestSerializerType {
     return YTKRequestSerializerTypeHTTP;
 }
@@ -197,13 +204,14 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
     return nil;
 }
 
+// 检查网络请求中的状态,
 - (BOOL)statusCodeValidator {
     NSInteger statusCode = [self responseStatusCode];
     return (statusCode >= 200 && statusCode <= 299);
 }
 
 #pragma mark - NSObject
-
+// 实现对象的 description 方法
 - (NSString *)description {
     return [NSString stringWithFormat:@"<%@: %p>{ URL: %@ } { method: %@ } { arguments: %@ }", NSStringFromClass([self class]), self, self.currentRequest.URL, self.currentRequest.HTTPMethod, self.requestArgument];
 }

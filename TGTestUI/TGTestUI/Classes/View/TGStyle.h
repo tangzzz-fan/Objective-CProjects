@@ -13,8 +13,17 @@
 
 // 是否可以滚动
 @property (assign, nonatomic) BOOL isScrollAble;
+@property (assign, nonatomic) BOOL isScrollToMiddle;
+
+
+
 @property (assign, nonatomic) float titleMarign;
 
 @property (strong, nonatomic) UIFont *titleFont;
+
+@property (strong, nonatomic) UIColor *normalColor;
+@property (strong, nonatomic) UIColor *selectedColor;
+
+
 
 @end
