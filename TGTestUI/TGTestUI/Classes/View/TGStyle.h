@@ -15,14 +15,28 @@
 @property (assign, nonatomic) BOOL isScrollAble;
 @property (assign, nonatomic) BOOL isScrollToMiddle;
 
+@property (assign, nonatomic) BOOL isShowBottomLine;
+@property (assign, nonatomic) BOOL isShowCoverView;
 
 
-@property (assign, nonatomic) float titleMarign;
+
+@property (assign, nonatomic) CGFloat titleMarign;
+@property (assign, nonatomic) CGFloat coverMargin;
+@property (assign, nonatomic) CGFloat coverHeight;
+
 
 @property (strong, nonatomic) UIFont *titleFont;
 
 @property (strong, nonatomic) UIColor *normalColor;
 @property (strong, nonatomic) UIColor *selectedColor;
+// coverView backgroundColor
+@property (strong, nonatomic) UIColor *coverViewBackgroundColor;
+// coverView alpha
+@property (assign, nonatomic) CGFloat coverViewAlpha;
+@property (strong, nonatomic) UIColor *bottomLineBackgroundColor;
+// buttomLine height
+@property (assign, nonatomic) CGFloat bottomLineHeight;
+
 
 
 

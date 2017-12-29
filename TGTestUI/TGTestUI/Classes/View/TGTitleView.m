@@ -10,6 +10,8 @@
 // UI 风格
 #import "TGStyle.h"
 
+#import "UIView+Category.h"
+
 @interface TGTitleView()
 // 标题数组
 @property (strong, nonatomic) NSArray <NSString *> *titles;
@@ -18,6 +20,11 @@
 // 存放 label 的数组
 @property (strong, nonatomic) NSMutableArray<UILabel *> *titleLabels;
 @property (strong, nonatomic) UIScrollView *scrollView;
+// label 下面的 view
+@property (strong, nonatomic) UIView *coverView;
+// label 下面的线
+@property (strong, nonatomic) UIView *bottomLine;
+
 
 @property (assign, nonatomic) NSInteger currentIndex;
 
@@ -45,6 +52,10 @@
     [self setupTitleLabels];
     // 3 调整 titleLabels frame
     [self setupTitleLabelFrame];
+    // 4 设置 bottomLine
+    [self setupBottomLine];
+    // 5 设置 coverView
+    [self setupCoverView];
 }
 
 // 根据 titles 创建对应的 titleLabel 添加到 scrollView 中
@@ -70,6 +81,10 @@
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleLabelClick:)];
         [titleLabel addGestureRecognizer:tap];
         titleLabel.userInteractionEnabled = YES;
+        
+        if (idx == 0) {
+            titleLabel.textColor = self.tgStyle.selectedColor;
+        }
         
     }];
 }
@@ -110,6 +125,7 @@
 
 /** 调整 label 的位置 */
 - (void)adjustPosition:(UILabel *)label {
+    
     if (!self.tgStyle.isScrollAble) return;
     
     // 计算 scrollView 的偏移量
@@ -131,6 +147,38 @@
     [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
 }
 
+- (void)setupBottomLine {
+    if (!self.tgStyle.isShowBottomLine) return;
+    
+    [self.scrollView addSubview:self.bottomLine];
+    
+    // 设置 bottomLine frame
+    self.bottomLine.originX = self.titleLabels.firstObject.originX;
+    self.bottomLine.originY = self.height - self.tgStyle.bottomLineHeight;
+    self.bottomLine.width = self.titleLabels.firstObject.width;
+}
+
+- (void)setupCoverView {
+    if (!self.tgStyle.isShowCoverView) return;
+    
+    [self.scrollView addSubview:self.coverView];
+    
+    // 设置 frame
+    CGFloat coverWidth = self.titleLabels.firstObject.width - 2 * self.tgStyle.coverMargin;
+    if (self.tgStyle.isScrollAble) {
+        coverWidth = self.titleLabels.firstObject.width + self.tgStyle.titleMarign * 0.5;
+    }
+    
+    CGFloat coverHeight = self.tgStyle.coverHeight;
+    
+    self.coverView.bounds = CGRectMake(0, 0, coverWidth, coverHeight);
+    self.coverView.center = self.titleLabels.firstObject.center;
+    
+    // 设置圆角
+    self.coverView.layer.cornerRadius = self.tgStyle.coverHeight * 0.5;
+    self.coverView.layer.masksToBounds = YES;
+}
+
 #pragma mark - Actions
 - (void)titleLabelClick:(UITapGestureRecognizer *)tap {
     // 1 取出点击的 label
@@ -150,10 +198,23 @@
     
     // 3 通知 contentVIew 改变当前位置
     // 使用代理向外传递 currentIndex 改变
+    
     // 4 调整bottomLine 和 缩放比例
+    if (self.tgStyle.isShowBottomLine) {
+        self.bottomLine.originX = newLabel.originX;
+        self.bottomLine.width = newLabel.width;
+    }
+    
     // 5 调整位置
     [self adjustPosition:newLabel];
+    
     // 6 调整 coverView 的位置
+    if (self.tgStyle.isShowCoverView) {
+        CGFloat coverWidth = self.tgStyle.isScrollAble ? (self.tgStyle.titleMarign + newLabel.width) : (newLabel.width - 2 * self.tgStyle.coverMargin);
+        self.coverView.width = coverWidth;
+        self.coverView.center = newLabel.center;
+    }
+    
 }
 
 
@@ -174,6 +235,24 @@
         _scrollView.scrollsToTop = NO;
     }
     return _scrollView;
+}
+
+- (UIView *)coverView {
+    if (!_coverView) {
+        _coverView = [[UIView alloc] init];
+        _coverView.backgroundColor = self.tgStyle.coverViewBackgroundColor;
+        _coverView.alpha = self.tgStyle.coverViewAlpha;
+    }
+    return _coverView;
+}
+
+- (UIView *)bottomLine {
+    if (!_bottomLine) {
+        _bottomLine = [[UIView alloc] init];
+        _bottomLine.backgroundColor = self.tgStyle.bottomLineBackgroundColor;
+        _bottomLine.height = self.tgStyle.bottomLineHeight;
+    }
+    return _bottomLine;
 }
 
 @end

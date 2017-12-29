@@ -9,13 +9,23 @@
 #import "TGStyle.h"
 
 @implementation TGStyle
-
-+ (instancetype)sharedInstance {
-    static TGStyle *style = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        style = [[TGStyle alloc] init];
-    });
-    return style;
+// 提供默认初始化方法
+- (instancetype)init {
+    if (self = [super init]) {
+        self.isScrollAble = NO;
+        self.isScrollToMiddle = NO;
+        self.isShowCoverView = YES;
+        self.isShowBottomLine = YES;
+        self.titleMarign = 16;
+        self.coverMargin = 16;
+        self.coverHeight = 30;
+        self.titleFont = [UIFont systemFontOfSize:15];
+        self.normalColor = [UIColor blackColor];
+        self.selectedColor = [UIColor redColor];
+        self.bottomLineBackgroundColor = [UIColor redColor];
+        self.bottomLineHeight = 2;
+        self.coverViewAlpha = 0;
+    }
+    return self;
 }
 @end
