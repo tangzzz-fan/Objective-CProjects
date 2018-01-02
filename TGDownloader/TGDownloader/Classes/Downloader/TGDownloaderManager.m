@@ -14,14 +14,15 @@
 
 @end
 @implementation TGDownloaderManager
-static TGDownloaderManager *_sharedInstance;
+static TGDownloaderManager *_sharedInstance = nil;
+
 
 + (instancetype)sharedInstance {
-    if (!_sharedInstance) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         _sharedInstance = [[self alloc] init];
-    }
+    });
     return _sharedInstance;
-        
 }
 
 #pragma mark - Actions
