@@ -67,8 +67,17 @@
                                     <action selector="dictToModelInKVCAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vci-eh-SaZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqt-HB-PB1">
+                                <rect key="frame" x="19" y="360" width="157" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="KVO 动态修改实例方法"/>
+                                <connections>
+                                    <action selector="differenceBetweenSuperAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1qq-ch-EjW"/>
+                                    <segue destination="BfB-KJ-2dU" kind="show" id="4UY-JF-9kC"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bH-o4-p6T">
-                                <rect key="frame" x="19" y="368" width="119" height="30"/>
+                                <rect key="frame" x="19" y="398" width="119" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="字典转模型(一层)"/>
                                 <connections>
@@ -76,7 +85,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QI-va-ulp">
-                                <rect key="frame" x="19" y="406" width="119" height="30"/>
+                                <rect key="frame" x="19" y="436" width="119" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="字典转模型(二层)"/>
                                 <connections>
@@ -84,7 +93,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0o-gN-iyi">
-                                <rect key="frame" x="16" y="444" width="124" height="30"/>
+                                <rect key="frame" x="16" y="474" width="124" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Class, SuperClass"/>
                                 <connections>
@@ -191,6 +200,21 @@
             </objects>
             <point key="canvasLocation" x="2456.8000000000002" y="-18.440779610194905"/>
         </scene>
+        <!--TsetKVO Controller-->
+        <scene sceneID="D7c-CV-FsO">
+            <objects>
+                <viewController id="BfB-KJ-2dU" customClass="TGTsetKVOController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p3j-ZC-6eh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="115-8T-4Yx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bH-yX-Q1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="650"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="0sN-D2-SYX">
             <objects>
@@ -214,6 +238,11 @@
                                 <connections>
                                     <segue destination="mxb-KF-XOj" kind="show" id="GF2-aH-pMV"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSB-ap-gJB">
+                                <rect key="frame" x="51" y="217" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="OC "/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

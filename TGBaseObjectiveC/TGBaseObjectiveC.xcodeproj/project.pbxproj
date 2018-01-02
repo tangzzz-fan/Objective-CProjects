@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		872D97BA1FFB2767004DBB65 /* TGTsetKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872D97B91FFB2767004DBB65 /* TGTsetKVOController.m */; };
+		872D97BE1FFB2896004DBB65 /* NSObject+TGHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 872D97BD1FFB2896004DBB65 /* NSObject+TGHook.m */; };
+		872D97C11FFB2DD2004DBB65 /* TGTsetKVOSubController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872D97C01FFB2DD2004DBB65 /* TGTsetKVOSubController.m */; };
 		8E4445D51FDD071B00CC23B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4445D31FDD071B00CC23B1 /* Main.storyboard */; };
 		8E4445D71FDD071B00CC23B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E4445D61FDD071B00CC23B1 /* Assets.xcassets */; };
 		8E4445DA1FDD071B00CC23B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4445D81FDD071B00CC23B1 /* LaunchScreen.storyboard */; };
@@ -30,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		872D97B81FFB2767004DBB65 /* TGTsetKVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTsetKVOController.h; sourceTree = "<group>"; };
+		872D97B91FFB2767004DBB65 /* TGTsetKVOController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTsetKVOController.m; sourceTree = "<group>"; };
+		872D97BC1FFB2896004DBB65 /* NSObject+TGHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TGHook.h"; sourceTree = "<group>"; };
+		872D97BD1FFB2896004DBB65 /* NSObject+TGHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TGHook.m"; sourceTree = "<group>"; };
+		872D97BF1FFB2DD2004DBB65 /* TGTsetKVOSubController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTsetKVOSubController.h; sourceTree = "<group>"; };
+		872D97C01FFB2DD2004DBB65 /* TGTsetKVOSubController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTsetKVOSubController.m; sourceTree = "<group>"; };
 		8E4445CA1FDD071B00CC23B1 /* TGBaseObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGBaseObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4445D41FDD071B00CC23B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E4445D61FDD071B00CC23B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		872D97BB1FFB287D004DBB65 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				872D97BC1FFB2896004DBB65 /* NSObject+TGHook.h */,
+				872D97BD1FFB2896004DBB65 /* NSObject+TGHook.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		8E4445C11FDD071B00CC23B1 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +131,7 @@
 		8E4445E31FDD075700CC23B1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				872D97BB1FFB287D004DBB65 /* Category */,
 				8E4445E41FDD075700CC23B1 /* Other */,
 				8E4445E71FDD075700CC23B1 /* Controller */,
 				8E4445EA1FDD075700CC23B1 /* Model */,
@@ -140,6 +159,10 @@
 				8E44461C1FDE701B00CC23B1 /* TGRunloopTestViewController.m */,
 				8E44461E1FDE705F00CC23B1 /* TGRunloop1TableViewController.h */,
 				8E44461F1FDE705F00CC23B1 /* TGRunloop1TableViewController.m */,
+				872D97B81FFB2767004DBB65 /* TGTsetKVOController.h */,
+				872D97B91FFB2767004DBB65 /* TGTsetKVOController.m */,
+				872D97BF1FFB2DD2004DBB65 /* TGTsetKVOSubController.h */,
+				872D97C01FFB2DD2004DBB65 /* TGTsetKVOSubController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -282,6 +305,9 @@
 				8E44461D1FDE701B00CC23B1 /* TGRunloopTestViewController.m in Sources */,
 				8E4445DD1FDD071B00CC23B1 /* main.m in Sources */,
 				8E4445F91FDD117700CC23B1 /* Student.m in Sources */,
+				872D97BE1FFB2896004DBB65 /* NSObject+TGHook.m in Sources */,
+				872D97C11FFB2DD2004DBB65 /* TGTsetKVOSubController.m in Sources */,
+				872D97BA1FFB2767004DBB65 /* TGTsetKVOController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

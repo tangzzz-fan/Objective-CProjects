@@ -16,6 +16,8 @@
 
 #import <objc/message.h>
 
+#import "TGTsetKVOController.h"
+
 @interface ViewController ()
 
 @end
