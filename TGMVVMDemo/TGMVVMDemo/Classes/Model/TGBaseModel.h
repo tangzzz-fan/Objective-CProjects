@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface TGBaseModel : NSObject
+- (instancetype)initWithName:(NSString *)name index:(NSInteger)index description:(NSString *)desc;
+
+@property (strong, nonatomic) NSString *desc;
 
 @end

@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class TGBaseModel;
 @interface TGBaseViewModel : NSObject
+
+@property (strong, nonatomic) NSMutableArray<TGBaseModel *> *modelArray;
+
 - (instancetype)initWithName:(NSString *)name index:(NSInteger)index;
+
+- (NSString *)headerTitle;
+
 @end

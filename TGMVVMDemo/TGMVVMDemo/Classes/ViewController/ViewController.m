@@ -12,11 +12,16 @@
 #import "TGTest2ViewModel.h"
 #import "TGTest3ViewModel.h"
 #import "TGTest4ViewModel.h"
+#import "TGBaseModel.h"
 
-#import "TGTestTableViewCell.h"
+#import "TGTest1TableViewCell.h"
+#import "TGTest2TableViewCell.h"
+#import "TGTest3TableViewCell.h"
+#import "TGTest4TableViewCell.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray<__kindof TGBaseViewModel *> *viewModelArray;
+@property (strong, nonatomic) NSDictionary *mapDict;
 
 @end
 
@@ -27,24 +32,58 @@
 }
 
 #pragma mark - Delegate
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.viewModelArray.count;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.viewModelArray[section].modelArray.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return self.viewModelArray[section].headerTitle;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TGTestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.TestLabel.text = self.viewModelArray[indexPath.row].description;
+    
+    TGBaseViewModel *viewModel = self.viewModelArray[indexPath.section];
+    
+    NSString *classString = self.mapDict[NSStringFromClass([viewModel class])];
+
+//    NSLog(@"viewModel class %@, tableViewCell %@", [viewModel class], classString);
+    
+    Class class = NSClassFromString(classString);
+    
+    TGBaseTableViewCell *cell = [[class alloc] init];
+    
+    NSInteger indexRow = indexPath.row;
+    
+    NSDictionary *dict = @{@"DataIndexPath":@(indexRow)};
+    
+    NSLog(@"dict %@", dict);
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:classString forIndexPath:indexPath];
+    
+    [cell bindViewModel:viewModel withParams:dict];
+    
     return cell;
 }
+
+- (__kindof TGBaseTableViewCell *)creatCellWithTableView:(UITableView *)tableView cellString:(NSString *)classString IndexPath:(NSIndexPath *)indexPath{
+//    Class cls = NSClassFromString(classString);
+    
+    return  [tableView dequeueReusableCellWithIdentifier:classString forIndexPath:indexPath];
+;
+}
+
 #pragma mark - DataSource
 
 
-
-
+#pragma mark - Setter && Getter
 - (NSMutableArray<TGBaseViewModel *> *)viewModelArray {
     if (!_viewModelArray) {
         _viewModelArray = [[NSMutableArray alloc] init];
@@ -60,5 +99,14 @@
 
     }
     return _viewModelArray;
+}
+
+- (NSDictionary *)mapDict {
+    return @{
+             @"TGTest1ViewModel":@"TGTest1TableViewCell",
+             @"TGTest2ViewModel":@"TGTest2TableViewCell",
+             @"TGTest3ViewModel":@"TGTest3TableViewCell",
+             @"TGTest4ViewModel":@"TGTest4TableViewCell"
+             };
 }
 @end

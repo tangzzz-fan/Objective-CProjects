@@ -7,6 +7,9 @@
 //
 
 #import "TGBaseViewModel.h"
+
+#import "TGBaseModel.h"
+
 @interface TGBaseViewModel()
 
 @property (strong, nonatomic) NSString *name;
@@ -25,6 +28,21 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"this is a %@ description %@ -- index : %zd", [self class], self.name, self.index];
+    return [NSString stringWithFormat:@"This is a %@ description %@ -- index : %zd", [self class], self.name, self.index];
+}
+
+- (NSString *)headerTitle {
+    return [NSString stringWithFormat:@"Test %zd -- name %@", self.index, self.name];
+}
+
+- (NSMutableArray<TGBaseModel *> *)modelArray {
+    if (!_modelArray) {
+        _modelArray = [NSMutableArray array];
+        for (NSInteger i = 0; i < self.index; i ++) {
+            TGBaseModel *model = [[TGBaseModel alloc] initWithName:@"TestModel" index:self.index description:[NSString stringWithFormat:@"is from %@", [self class]]];
+            [_modelArray addObject:model];
+        }
+    }
+    return _modelArray;
 }
 @end

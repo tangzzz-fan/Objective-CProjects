@@ -20,7 +20,11 @@
 		8E7B63571FFB738200689499 /* TGTest2ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63561FFB738200689499 /* TGTest2ViewModel.m */; };
 		8E7B635A1FFB739800689499 /* TGTest3ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63591FFB739800689499 /* TGTest3ViewModel.m */; };
 		8E7B635D1FFB748A00689499 /* TGTest4ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B635C1FFB748A00689499 /* TGTest4ViewModel.m */; };
-		8E7B63601FFB751B00689499 /* TGTestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B635F1FFB751B00689499 /* TGTestTableViewCell.m */; };
+		8E7B63601FFB751B00689499 /* TGTest1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B635F1FFB751B00689499 /* TGTest1TableViewCell.m */; };
+		8E7B63631FFB7E0B00689499 /* TGTest2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63621FFB7E0B00689499 /* TGTest2TableViewCell.m */; };
+		8E7B63661FFB7E4300689499 /* TGTest3TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63651FFB7E4300689499 /* TGTest3TableViewCell.m */; };
+		8E7B63691FFB7E4D00689499 /* TGTest4TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63681FFB7E4D00689499 /* TGTest4TableViewCell.m */; };
+		8E7B636C1FFB808200689499 /* TGBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B636B1FFB808200689499 /* TGBaseTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +52,16 @@
 		8E7B63591FFB739800689499 /* TGTest3ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest3ViewModel.m; sourceTree = "<group>"; };
 		8E7B635B1FFB748A00689499 /* TGTest4ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest4ViewModel.h; sourceTree = "<group>"; };
 		8E7B635C1FFB748A00689499 /* TGTest4ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest4ViewModel.m; sourceTree = "<group>"; };
-		8E7B635E1FFB751B00689499 /* TGTestTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTestTableViewCell.h; sourceTree = "<group>"; };
-		8E7B635F1FFB751B00689499 /* TGTestTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTestTableViewCell.m; sourceTree = "<group>"; };
+		8E7B635E1FFB751B00689499 /* TGTest1TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest1TableViewCell.h; sourceTree = "<group>"; };
+		8E7B635F1FFB751B00689499 /* TGTest1TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest1TableViewCell.m; sourceTree = "<group>"; };
+		8E7B63611FFB7E0B00689499 /* TGTest2TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest2TableViewCell.h; sourceTree = "<group>"; };
+		8E7B63621FFB7E0B00689499 /* TGTest2TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest2TableViewCell.m; sourceTree = "<group>"; };
+		8E7B63641FFB7E4300689499 /* TGTest3TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest3TableViewCell.h; sourceTree = "<group>"; };
+		8E7B63651FFB7E4300689499 /* TGTest3TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest3TableViewCell.m; sourceTree = "<group>"; };
+		8E7B63671FFB7E4D00689499 /* TGTest4TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest4TableViewCell.h; sourceTree = "<group>"; };
+		8E7B63681FFB7E4D00689499 /* TGTest4TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest4TableViewCell.m; sourceTree = "<group>"; };
+		8E7B636A1FFB808200689499 /* TGBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseTableViewCell.h; sourceTree = "<group>"; };
+		8E7B636B1FFB808200689499 /* TGBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +156,16 @@
 			children = (
 				8E7B634F1FFB6BDA00689499 /* TGBaseView.h */,
 				8E7B63501FFB6BDA00689499 /* TGBaseView.m */,
-				8E7B635E1FFB751B00689499 /* TGTestTableViewCell.h */,
-				8E7B635F1FFB751B00689499 /* TGTestTableViewCell.m */,
+				8E7B636A1FFB808200689499 /* TGBaseTableViewCell.h */,
+				8E7B636B1FFB808200689499 /* TGBaseTableViewCell.m */,
+				8E7B635E1FFB751B00689499 /* TGTest1TableViewCell.h */,
+				8E7B635F1FFB751B00689499 /* TGTest1TableViewCell.m */,
+				8E7B63611FFB7E0B00689499 /* TGTest2TableViewCell.h */,
+				8E7B63621FFB7E0B00689499 /* TGTest2TableViewCell.m */,
+				8E7B63641FFB7E4300689499 /* TGTest3TableViewCell.h */,
+				8E7B63651FFB7E4300689499 /* TGTest3TableViewCell.m */,
+				8E7B63671FFB7E4D00689499 /* TGTest4TableViewCell.h */,
+				8E7B63681FFB7E4D00689499 /* TGTest4TableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,14 +251,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E7B63481FFB6B9300689499 /* ViewController.m in Sources */,
+				8E7B63691FFB7E4D00689499 /* TGTest4TableViewCell.m in Sources */,
+				8E7B63631FFB7E0B00689499 /* TGTest2TableViewCell.m in Sources */,
 				8E7B634E1FFB6BCC00689499 /* TGBaseModel.m in Sources */,
+				8E7B63661FFB7E4300689499 /* TGTest3TableViewCell.m in Sources */,
 				8E7B63511FFB6BDA00689499 /* TGBaseView.m in Sources */,
 				8E7B63471FFB6B9300689499 /* AppDelegate.m in Sources */,
 				8E7B635A1FFB739800689499 /* TGTest3ViewModel.m in Sources */,
 				8E7B63541FFB72C900689499 /* TGTest1ViewModel.m in Sources */,
 				8E7B634B1FFB6BA700689499 /* TGBaseViewModel.m in Sources */,
-				8E7B63601FFB751B00689499 /* TGTestTableViewCell.m in Sources */,
+				8E7B63601FFB751B00689499 /* TGTest1TableViewCell.m in Sources */,
 				8E7B63571FFB738200689499 /* TGTest2ViewModel.m in Sources */,
+				8E7B636C1FFB808200689499 /* TGBaseTableViewCell.m in Sources */,
 				8E7B635D1FFB748A00689499 /* TGTest4ViewModel.m in Sources */,
 				8E7B63371FFB6A8600689499 /* main.m in Sources */,
 			);

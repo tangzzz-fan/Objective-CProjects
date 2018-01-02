@@ -6,9 +6,9 @@
 //  Copyright © 2018年 Centaline. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TGBaseTableViewCell.h"
 
-@interface TGTestTableViewCell : UITableViewCell
+@interface TGTest1TableViewCell : TGBaseTableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *TestLabel;
 
