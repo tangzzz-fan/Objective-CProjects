@@ -7,7 +7,7 @@ target 'TGCacheDemo' do
   inhibit_all_warnings!
 
   # Pods for TGCacheDemo
-  pod 'SDWebImage', '~> 4.2.2'
+#  pod 'SDWebImage', '~> 4.2.2'
   pod 'AFNetworking', '~> 3.1.0'
   pod 'FMDB', '~> 2.6.2'
   pod 'GYDataCenter', '~> 0.1.1'
