@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TGBaseViewModel.h"
 
-typedef void(^ConfigureItemBlock)(void);
-
 @interface TGBaseTableViewCell : UITableViewCell
-@property (copy, nonatomic) ConfigureItemBlock configBlock;
 
 - (void)bindViewModel:(id)viewModel withParams:(NSDictionary *)params;
 @end

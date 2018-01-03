@@ -8,13 +8,15 @@
 
 #import "TGBaseTableViewCell.h"
 
+@class TGBaseCellViewModel;
+
 @implementation TGBaseTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
 }
 
-- (void)bindViewModel:(id)viewModel withParams:(NSDictionary *)params {
+- (void)bindViewModel:(__kindof TGBaseCellViewModel *)viewModel withParams:(NSDictionary *)params {
 
 }
 @end

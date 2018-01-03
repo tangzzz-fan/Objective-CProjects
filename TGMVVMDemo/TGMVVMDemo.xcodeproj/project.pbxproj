@@ -19,6 +19,7 @@
 		8E54E4981FFCF600009E4986 /* TGTest3TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E4901FFCF600009E4986 /* TGTest3TableViewCell.m */; };
 		8E54E49B1FFCF61A009E4986 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E49A1FFCF61A009E4986 /* RootViewController.m */; };
 		8E54E49F1FFCF631009E4986 /* Demo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E49D1FFCF630009E4986 /* Demo1ViewController.m */; };
+		8E54E4A31FFCF729009E4986 /* TGBaseCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E4A21FFCF729009E4986 /* TGBaseCellViewModel.m */; };
 		8E7B632F1FFB6A8600689499 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7B632D1FFB6A8600689499 /* Main.storyboard */; };
 		8E7B63311FFB6A8600689499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E7B63301FFB6A8600689499 /* Assets.xcassets */; };
 		8E7B63341FFB6A8600689499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7B63321FFB6A8600689499 /* LaunchScreen.storyboard */; };
@@ -54,6 +55,8 @@
 		8E54E49A1FFCF61A009E4986 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		8E54E49D1FFCF630009E4986 /* Demo1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo1ViewController.m; sourceTree = "<group>"; };
 		8E54E49E1FFCF630009E4986 /* Demo1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo1ViewController.h; sourceTree = "<group>"; };
+		8E54E4A11FFCF729009E4986 /* TGBaseCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseCellViewModel.h; sourceTree = "<group>"; };
+		8E54E4A21FFCF729009E4986 /* TGBaseCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseCellViewModel.m; sourceTree = "<group>"; };
 		8E7B63241FFB6A8600689499 /* TGMVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGMVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7B632E1FFB6A8600689499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E7B63301FFB6A8600689499 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,13 +100,11 @@
 				8E54E47C1FFCF49E009E4986 /* TGTest2ViewModel.m */,
 				8E54E47D1FFCF49E009E4986 /* TGTest3ViewModel.h */,
 				8E54E47E1FFCF49E009E4986 /* TGTest4ViewModel.h */,
-				8E54E47F1FFCF49E009E4986 /* TGBaseViewModel.m */,
 				8E54E4801FFCF49E009E4986 /* TGTest1ViewModel.h */,
 				8E54E4811FFCF49E009E4986 /* TGTest2ViewModel.h */,
 				8E54E4821FFCF49E009E4986 /* TGTest3ViewModel.m */,
 				8E54E4831FFCF49E009E4986 /* TGTest4ViewModel.m */,
 				8E54E4841FFCF49E009E4986 /* TGTest1ViewModel.m */,
-				8E54E4851FFCF49E009E4986 /* TGBaseViewModel.h */,
 			);
 			path = Demo1;
 			sourceTree = "<group>";
@@ -137,6 +138,13 @@
 				8E54E49E1FFCF630009E4986 /* Demo1ViewController.h */,
 			);
 			path = Demo1;
+			sourceTree = "<group>";
+		};
+		8E54E4A01FFCF6B9009E4986 /* Demo2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Demo2;
 			sourceTree = "<group>";
 		};
 		8E7B631B1FFB6A8600689499 = {
@@ -185,6 +193,10 @@
 		8E7B633E1FFB6B9300689499 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8E54E4851FFCF49E009E4986 /* TGBaseViewModel.h */,
+				8E54E47F1FFCF49E009E4986 /* TGBaseViewModel.m */,
+				8E54E4A11FFCF729009E4986 /* TGBaseCellViewModel.h */,
+				8E54E4A21FFCF729009E4986 /* TGBaseCellViewModel.m */,
 				8E54E48B1FFCF4B1009E4986 /* Demo2 */,
 				8E54E47B1FFCF49E009E4986 /* Demo1 */,
 			);
@@ -224,6 +236,7 @@
 		8E7B63441FFB6B9300689499 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8E54E4A01FFCF6B9009E4986 /* Demo2 */,
 				8E54E49C1FFCF630009E4986 /* Demo1 */,
 				8E54E4991FFCF61A009E4986 /* RootViewController.h */,
 				8E54E49A1FFCF61A009E4986 /* RootViewController.m */,
@@ -379,6 +392,7 @@
 				8E54E4951FFCF600009E4986 /* TGTest1TableViewCell.m in Sources */,
 				8E7B63471FFB6B9300689499 /* AppDelegate.m in Sources */,
 				8E54E4981FFCF600009E4986 /* TGTest3TableViewCell.m in Sources */,
+				8E54E4A31FFCF729009E4986 /* TGBaseCellViewModel.m in Sources */,
 				8E7B636C1FFB808200689499 /* TGBaseTableViewCell.m in Sources */,
 				8E7B63371FFB6A8600689499 /* main.m in Sources */,
 			);
