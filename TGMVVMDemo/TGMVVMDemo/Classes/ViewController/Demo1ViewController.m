@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Centaline. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "Demo1ViewController.h"
 
 #import "TGTest1ViewModel.h"
 #import "TGTest2ViewModel.h"
@@ -19,13 +19,13 @@
 #import "TGTest3TableViewCell.h"
 #import "TGTest4TableViewCell.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface Demo1ViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray<__kindof TGBaseViewModel *> *viewModelArray;
 @property (strong, nonatomic) NSDictionary *mapDict;
 
 @end
 
-@implementation ViewController
+@implementation Demo1ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -71,13 +71,6 @@
     [cell bindViewModel:viewModel withParams:dict];
     
     return cell;
-}
-
-- (__kindof TGBaseTableViewCell *)creatCellWithTableView:(UITableView *)tableView cellString:(NSString *)classString IndexPath:(NSIndexPath *)indexPath{
-//    Class cls = NSClassFromString(classString);
-    
-    return  [tableView dequeueReusableCellWithIdentifier:classString forIndexPath:indexPath];
-;
 }
 
 #pragma mark - DataSource

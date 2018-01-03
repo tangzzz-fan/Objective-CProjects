@@ -12,12 +12,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    if (self.configBlock) {
-        self.configBlock();
-    }
 }
 
 - (void)bindViewModel:(id)viewModel withParams:(NSDictionary *)params {
-//    NSLog(@"viewModel Class %@, params :%@", [viewModel class], params);
+
 }
 @end

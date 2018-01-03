@@ -8,10 +8,9 @@
 
 #import "TGFlickrSearchViewController.h"
 
-@interface TGFlickrSearchViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
-@property (weak, nonatomic) IBOutlet UIButton *searchBtn;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndictor;
+#import "TGFlickrSearchCell.h"
+
+@interface TGFlickrSearchViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -20,7 +19,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TGFlickrSearchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TGFlickrSearchCell" forIndexPath:indexPath];
+    return cell;
 }
 
 @end

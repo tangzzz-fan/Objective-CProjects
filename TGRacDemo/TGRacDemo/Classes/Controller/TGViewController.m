@@ -20,15 +20,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
 }
+
 - (IBAction)flickrSearchAction:(id)sender {
-    self.navigationController = [UINavigationController new];
-    self.navigationController.navigationBar.barTintColor = [UIColor darkGrayColor];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    
+
 }
+
+
 
 /** 创建初始控制器 */
 - (void)createInitialViewController {

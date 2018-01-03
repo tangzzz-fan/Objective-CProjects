@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		437291CD257730771ECF54CD /* libPods-TGMVVMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336BE30D9D22586B004A7BAB /* libPods-TGMVVMDemo.a */; };
+		8E54E4861FFCF49E009E4986 /* TGTest2ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E47C1FFCF49E009E4986 /* TGTest2ViewModel.m */; };
+		8E54E4871FFCF49E009E4986 /* TGBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E47F1FFCF49E009E4986 /* TGBaseViewModel.m */; };
+		8E54E4881FFCF49E009E4986 /* TGTest3ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E4821FFCF49E009E4986 /* TGTest3ViewModel.m */; };
+		8E54E4891FFCF49E009E4986 /* TGTest4ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E4831FFCF49E009E4986 /* TGTest4ViewModel.m */; };
+		8E54E48A1FFCF49E009E4986 /* TGTest1ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E4841FFCF49E009E4986 /* TGTest1ViewModel.m */; };
 		8E7B632F1FFB6A8600689499 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7B632D1FFB6A8600689499 /* Main.storyboard */; };
 		8E7B63311FFB6A8600689499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E7B63301FFB6A8600689499 /* Assets.xcassets */; };
 		8E7B63341FFB6A8600689499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7B63321FFB6A8600689499 /* LaunchScreen.storyboard */; };
 		8E7B63371FFB6A8600689499 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63361FFB6A8600689499 /* main.m */; };
 		8E7B63471FFB6B9300689499 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63411FFB6B9300689499 /* AppDelegate.m */; };
-		8E7B63481FFB6B9300689499 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63451FFB6B9300689499 /* ViewController.m */; };
-		8E7B634B1FFB6BA700689499 /* TGBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B634A1FFB6BA700689499 /* TGBaseViewModel.m */; };
+		8E7B63481FFB6B9300689499 /* Demo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63451FFB6B9300689499 /* Demo1ViewController.m */; };
 		8E7B634E1FFB6BCC00689499 /* TGBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B634D1FFB6BCC00689499 /* TGBaseModel.m */; };
 		8E7B63511FFB6BDA00689499 /* TGBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63501FFB6BDA00689499 /* TGBaseView.m */; };
-		8E7B63541FFB72C900689499 /* TGTest1ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63531FFB72C900689499 /* TGTest1ViewModel.m */; };
-		8E7B63571FFB738200689499 /* TGTest2ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63561FFB738200689499 /* TGTest2ViewModel.m */; };
-		8E7B635A1FFB739800689499 /* TGTest3ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63591FFB739800689499 /* TGTest3ViewModel.m */; };
-		8E7B635D1FFB748A00689499 /* TGTest4ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B635C1FFB748A00689499 /* TGTest4ViewModel.m */; };
 		8E7B63601FFB751B00689499 /* TGTest1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B635F1FFB751B00689499 /* TGTest1TableViewCell.m */; };
 		8E7B63631FFB7E0B00689499 /* TGTest2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63621FFB7E0B00689499 /* TGTest2TableViewCell.m */; };
 		8E7B63661FFB7E4300689499 /* TGTest3TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63651FFB7E4300689499 /* TGTest3TableViewCell.m */; };
@@ -28,6 +29,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EA0025A225F1A9E8BA535C9 /* Pods-TGMVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGMVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGMVVMDemo/Pods-TGMVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		336BE30D9D22586B004A7BAB /* libPods-TGMVVMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TGMVVMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E54E47C1FFCF49E009E4986 /* TGTest2ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest2ViewModel.m; sourceTree = "<group>"; };
+		8E54E47D1FFCF49E009E4986 /* TGTest3ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest3ViewModel.h; sourceTree = "<group>"; };
+		8E54E47E1FFCF49E009E4986 /* TGTest4ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest4ViewModel.h; sourceTree = "<group>"; };
+		8E54E47F1FFCF49E009E4986 /* TGBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGBaseViewModel.m; sourceTree = "<group>"; };
+		8E54E4801FFCF49E009E4986 /* TGTest1ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest1ViewModel.h; sourceTree = "<group>"; };
+		8E54E4811FFCF49E009E4986 /* TGTest2ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest2ViewModel.h; sourceTree = "<group>"; };
+		8E54E4821FFCF49E009E4986 /* TGTest3ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest3ViewModel.m; sourceTree = "<group>"; };
+		8E54E4831FFCF49E009E4986 /* TGTest4ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest4ViewModel.m; sourceTree = "<group>"; };
+		8E54E4841FFCF49E009E4986 /* TGTest1ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest1ViewModel.m; sourceTree = "<group>"; };
+		8E54E4851FFCF49E009E4986 /* TGBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGBaseViewModel.h; sourceTree = "<group>"; };
 		8E7B63241FFB6A8600689499 /* TGMVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGMVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7B632E1FFB6A8600689499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E7B63301FFB6A8600689499 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,22 +49,12 @@
 		8E7B63361FFB6A8600689499 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E7B63401FFB6B9300689499 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E7B63411FFB6B9300689499 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8E7B63451FFB6B9300689499 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8E7B63461FFB6B9300689499 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8E7B63491FFB6BA700689499 /* TGBaseViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseViewModel.h; sourceTree = "<group>"; };
-		8E7B634A1FFB6BA700689499 /* TGBaseViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseViewModel.m; sourceTree = "<group>"; };
+		8E7B63451FFB6B9300689499 /* Demo1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo1ViewController.m; sourceTree = "<group>"; };
+		8E7B63461FFB6B9300689499 /* Demo1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo1ViewController.h; sourceTree = "<group>"; };
 		8E7B634C1FFB6BCC00689499 /* TGBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseModel.h; sourceTree = "<group>"; };
 		8E7B634D1FFB6BCC00689499 /* TGBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseModel.m; sourceTree = "<group>"; };
 		8E7B634F1FFB6BDA00689499 /* TGBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseView.h; sourceTree = "<group>"; };
 		8E7B63501FFB6BDA00689499 /* TGBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseView.m; sourceTree = "<group>"; };
-		8E7B63521FFB72C900689499 /* TGTest1ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest1ViewModel.h; sourceTree = "<group>"; };
-		8E7B63531FFB72C900689499 /* TGTest1ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest1ViewModel.m; sourceTree = "<group>"; };
-		8E7B63551FFB738200689499 /* TGTest2ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest2ViewModel.h; sourceTree = "<group>"; };
-		8E7B63561FFB738200689499 /* TGTest2ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest2ViewModel.m; sourceTree = "<group>"; };
-		8E7B63581FFB739800689499 /* TGTest3ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest3ViewModel.h; sourceTree = "<group>"; };
-		8E7B63591FFB739800689499 /* TGTest3ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest3ViewModel.m; sourceTree = "<group>"; };
-		8E7B635B1FFB748A00689499 /* TGTest4ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest4ViewModel.h; sourceTree = "<group>"; };
-		8E7B635C1FFB748A00689499 /* TGTest4ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest4ViewModel.m; sourceTree = "<group>"; };
 		8E7B635E1FFB751B00689499 /* TGTest1TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest1TableViewCell.h; sourceTree = "<group>"; };
 		8E7B635F1FFB751B00689499 /* TGTest1TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest1TableViewCell.m; sourceTree = "<group>"; };
 		8E7B63611FFB7E0B00689499 /* TGTest2TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest2TableViewCell.h; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		8E7B63681FFB7E4D00689499 /* TGTest4TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest4TableViewCell.m; sourceTree = "<group>"; };
 		8E7B636A1FFB808200689499 /* TGBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseTableViewCell.h; sourceTree = "<group>"; };
 		8E7B636B1FFB808200689499 /* TGBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseTableViewCell.m; sourceTree = "<group>"; };
+		C34EC9233E7DD4503CA664FA /* Pods-TGMVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGMVVMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TGMVVMDemo/Pods-TGMVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +73,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437291CD257730771ECF54CD /* libPods-TGMVVMDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6DFD4D8A1248482ED406C731 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				336BE30D9D22586B004A7BAB /* libPods-TGMVVMDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E54E47B1FFCF49E009E4986 /* Demo1 */ = {
+			isa = PBXGroup;
+			children = (
+				8E54E47C1FFCF49E009E4986 /* TGTest2ViewModel.m */,
+				8E54E47D1FFCF49E009E4986 /* TGTest3ViewModel.h */,
+				8E54E47E1FFCF49E009E4986 /* TGTest4ViewModel.h */,
+				8E54E47F1FFCF49E009E4986 /* TGBaseViewModel.m */,
+				8E54E4801FFCF49E009E4986 /* TGTest1ViewModel.h */,
+				8E54E4811FFCF49E009E4986 /* TGTest2ViewModel.h */,
+				8E54E4821FFCF49E009E4986 /* TGTest3ViewModel.m */,
+				8E54E4831FFCF49E009E4986 /* TGTest4ViewModel.m */,
+				8E54E4841FFCF49E009E4986 /* TGTest1ViewModel.m */,
+				8E54E4851FFCF49E009E4986 /* TGBaseViewModel.h */,
+			);
+			path = Demo1;
+			sourceTree = "<group>";
+		};
+		8E54E48B1FFCF4B1009E4986 /* Demo2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Demo2;
+			sourceTree = "<group>";
+		};
 		8E7B631B1FFB6A8600689499 = {
 			isa = PBXGroup;
 			children = (
 				8E7B63261FFB6A8600689499 /* TGMVVMDemo */,
 				8E7B63251FFB6A8600689499 /* Products */,
+				C6BA804EAFFAF926C562CF58 /* Pods */,
+				6DFD4D8A1248482ED406C731 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,16 +158,8 @@
 		8E7B633E1FFB6B9300689499 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8E7B63491FFB6BA700689499 /* TGBaseViewModel.h */,
-				8E7B634A1FFB6BA700689499 /* TGBaseViewModel.m */,
-				8E7B63521FFB72C900689499 /* TGTest1ViewModel.h */,
-				8E7B63531FFB72C900689499 /* TGTest1ViewModel.m */,
-				8E7B63551FFB738200689499 /* TGTest2ViewModel.h */,
-				8E7B63561FFB738200689499 /* TGTest2ViewModel.m */,
-				8E7B63581FFB739800689499 /* TGTest3ViewModel.h */,
-				8E7B63591FFB739800689499 /* TGTest3ViewModel.m */,
-				8E7B635B1FFB748A00689499 /* TGTest4ViewModel.h */,
-				8E7B635C1FFB748A00689499 /* TGTest4ViewModel.m */,
+				8E54E48B1FFCF4B1009E4986 /* Demo2 */,
+				8E54E47B1FFCF49E009E4986 /* Demo1 */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -173,10 +204,19 @@
 		8E7B63441FFB6B9300689499 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8E7B63461FFB6B9300689499 /* ViewController.h */,
-				8E7B63451FFB6B9300689499 /* ViewController.m */,
+				8E7B63461FFB6B9300689499 /* Demo1ViewController.h */,
+				8E7B63451FFB6B9300689499 /* Demo1ViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C6BA804EAFFAF926C562CF58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EA0025A225F1A9E8BA535C9 /* Pods-TGMVVMDemo.debug.xcconfig */,
+				C34EC9233E7DD4503CA664FA /* Pods-TGMVVMDemo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E7B633A1FFB6A8600689499 /* Build configuration list for PBXNativeTarget "TGMVVMDemo" */;
 			buildPhases = (
+				15D161A3DCA859FC86E54FC2 /* [CP] Check Pods Manifest.lock */,
 				8E7B63201FFB6A8600689499 /* Sources */,
 				8E7B63211FFB6A8600689499 /* Frameworks */,
 				8E7B63221FFB6A8600689499 /* Resources */,
+				5A6C8E8D209F27F1915DF15F /* [CP] Embed Pods Frameworks */,
+				0B919A546F86E5535A70A99B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,25 +288,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B919A546F86E5535A70A99B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TGMVVMDemo/Pods-TGMVVMDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15D161A3DCA859FC86E54FC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TGMVVMDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A6C8E8D209F27F1915DF15F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TGMVVMDemo/Pods-TGMVVMDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E7B63201FFB6A8600689499 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E7B63481FFB6B9300689499 /* ViewController.m in Sources */,
+				8E7B63481FFB6B9300689499 /* Demo1ViewController.m in Sources */,
+				8E54E4881FFCF49E009E4986 /* TGTest3ViewModel.m in Sources */,
+				8E54E4891FFCF49E009E4986 /* TGTest4ViewModel.m in Sources */,
+				8E54E4861FFCF49E009E4986 /* TGTest2ViewModel.m in Sources */,
 				8E7B63691FFB7E4D00689499 /* TGTest4TableViewCell.m in Sources */,
 				8E7B63631FFB7E0B00689499 /* TGTest2TableViewCell.m in Sources */,
 				8E7B634E1FFB6BCC00689499 /* TGBaseModel.m in Sources */,
+				8E54E48A1FFCF49E009E4986 /* TGTest1ViewModel.m in Sources */,
 				8E7B63661FFB7E4300689499 /* TGTest3TableViewCell.m in Sources */,
+				8E54E4871FFCF49E009E4986 /* TGBaseViewModel.m in Sources */,
 				8E7B63511FFB6BDA00689499 /* TGBaseView.m in Sources */,
 				8E7B63471FFB6B9300689499 /* AppDelegate.m in Sources */,
-				8E7B635A1FFB739800689499 /* TGTest3ViewModel.m in Sources */,
-				8E7B63541FFB72C900689499 /* TGTest1ViewModel.m in Sources */,
-				8E7B634B1FFB6BA700689499 /* TGBaseViewModel.m in Sources */,
 				8E7B63601FFB751B00689499 /* TGTest1TableViewCell.m in Sources */,
-				8E7B63571FFB738200689499 /* TGTest2ViewModel.m in Sources */,
 				8E7B636C1FFB808200689499 /* TGBaseTableViewCell.m in Sources */,
-				8E7B635D1FFB748A00689499 /* TGTest4ViewModel.m in Sources */,
 				8E7B63371FFB6A8600689499 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +490,7 @@
 		};
 		8E7B633B1FFB6A8600689499 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EA0025A225F1A9E8BA535C9 /* Pods-TGMVVMDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -410,6 +505,7 @@
 		};
 		8E7B633C1FFB6A8600689499 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C34EC9233E7DD4503CA664FA /* Pods-TGMVVMDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

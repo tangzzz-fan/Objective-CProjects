@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7038B3707A2322A55753F481 /* libPods-TGRacDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A58E28F95E6C98A31FC4639A /* libPods-TGRacDemo.a */; };
 		87D718FA1FF29EA5009FEC09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D718F41FF29EA5009FEC09 /* AppDelegate.m */; };
+		8E54E47A1FFCED28009E4986 /* TGFlickrSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E4791FFCED28009E4986 /* TGFlickrSearchCell.m */; };
 		8EB101991FF2193200866C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB101971FF2193200866C21 /* Main.storyboard */; };
 		8EB1019B1FF2193200866C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EB1019A1FF2193200866C21 /* Assets.xcassets */; };
 		8EB1019E1FF2193200866C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB1019C1FF2193200866C21 /* LaunchScreen.storyboard */; };
@@ -27,6 +28,8 @@
 		059EC42F522A8CCFBB6ACFB8 /* Pods-TGRacDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGRacDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGRacDemo/Pods-TGRacDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		87D718F31FF29EA5009FEC09 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		87D718F41FF29EA5009FEC09 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8E54E4781FFCED28009E4986 /* TGFlickrSearchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGFlickrSearchCell.h; sourceTree = "<group>"; };
+		8E54E4791FFCED28009E4986 /* TGFlickrSearchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGFlickrSearchCell.m; sourceTree = "<group>"; };
 		8EB1018E1FF2193200866C21 /* TGRacDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGRacDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB101981FF2193200866C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EB1019A1FF2193200866C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 		8EE0C76C1FF3703F0066F95E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E54E4781FFCED28009E4986 /* TGFlickrSearchCell.h */,
+				8E54E4791FFCED28009E4986 /* TGFlickrSearchCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				8EE0C7711FF371730066F95E /* CETableViewBindingHelper.m in Sources */,
 				8EE0C7751FF373D30066F95E /* LoginViewController.m in Sources */,
 				8EE0C78D1FF37AAF0066F95E /* TGViewModelServiceImpl.m in Sources */,
+				8E54E47A1FFCED28009E4986 /* TGFlickrSearchCell.m in Sources */,
 				8EE0C77D1FF373FF0066F95E /* UserModel.m in Sources */,
 				8EE0C7791FF373EB0066F95E /* LoginViewModel.m in Sources */,
 				8EE0C7951FF37D380066F95E /* TGFlickrSearchImpl.m in Sources */,
