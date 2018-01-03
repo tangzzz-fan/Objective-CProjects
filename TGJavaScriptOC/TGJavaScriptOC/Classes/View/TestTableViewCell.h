@@ -7,8 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
-@interface TestTableViewCell : UITableViewCell
+typedef void(^Block_WebCellChangeHeight)(float);
+
+@interface TestTableViewCell : UITableViewCell<WKNavigationDelegate, WKUIDelegate, WKNavigationDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *TestLabel;
 
+@property (copy, nonatomic) Block_WebCellChangeHeight Block_WebCellChangeHeight;
+
+@property (strong, nonatomic)  WKWebView                 *webView;
+@property (strong, nonatomic) UIScrollView                  *scrollView;
+@property (assign, nonatomic) float                      webHeight;
+
+- (void)setModel:(NSString *)model;
 @end

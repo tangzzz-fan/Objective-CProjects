@@ -9,7 +9,12 @@
 #import "TestWKWebViewController.h"
 #import "TestTableViewCell.h"
 
+#define WeakSelf(weakSelf)  __weak __typeof(self)weakSelf = self;
+
 @interface TestWKWebViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (assign, nonatomic) CGFloat webHeight;
+@property (nonatomic, strong) WKWebView *webView;
 
 
 @end
@@ -20,6 +25,10 @@
     [super viewDidLoad];
 }
 
+- (void)dealloc {
+    [self.webView.scrollView removeObserver:self forKeyPath:@"contentSize"];
+}
+
 #pragma mark - Delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -27,7 +36,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 300;
+    return _webHeight;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -37,6 +46,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TestTableViewCell" forIndexPath:indexPath];
     cell.TestLabel.text = [NSString stringWithFormat:@"test %zd", indexPath.row];
+    
+    WeakSelf(weakSelf);
+    
+    cell.Block_WebCellChangeHeight = ^(float height) {
+        weakSelf.webHeight = height;
+        weakSelf.webView.frame = CGRectMake(0, 0, self.view.frame.size.width, height);
+        [weakSelf.tableView reloadData];
+    };
+    
     return cell;
 }
 

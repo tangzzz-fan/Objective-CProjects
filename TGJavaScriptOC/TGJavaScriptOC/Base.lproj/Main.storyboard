@@ -107,6 +107,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0mD-5x-cTQ"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="aZG-ZZ-XIM" id="h6Z-lP-jLi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yc-lI-Yuh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
