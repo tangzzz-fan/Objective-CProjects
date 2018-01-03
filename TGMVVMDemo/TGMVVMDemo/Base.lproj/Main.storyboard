@@ -156,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="1226" y="-551"/>
         </scene>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="DsL-D4-bqf">
             <objects>
-                <viewController id="Zh6-CX-0yY" sceneMemberID="viewController">
+                <viewController id="Zh6-CX-0yY" customClass="RootViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Yx-zw-vg1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

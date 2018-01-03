@@ -13,18 +13,19 @@
 		8E54E4881FFCF49E009E4986 /* TGTest3ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E4821FFCF49E009E4986 /* TGTest3ViewModel.m */; };
 		8E54E4891FFCF49E009E4986 /* TGTest4ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E4831FFCF49E009E4986 /* TGTest4ViewModel.m */; };
 		8E54E48A1FFCF49E009E4986 /* TGTest1ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E4841FFCF49E009E4986 /* TGTest1ViewModel.m */; };
+		8E54E4951FFCF600009E4986 /* TGTest1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E48D1FFCF600009E4986 /* TGTest1TableViewCell.m */; };
+		8E54E4961FFCF600009E4986 /* TGTest2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E48E1FFCF600009E4986 /* TGTest2TableViewCell.m */; };
+		8E54E4971FFCF600009E4986 /* TGTest4TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E48F1FFCF600009E4986 /* TGTest4TableViewCell.m */; };
+		8E54E4981FFCF600009E4986 /* TGTest3TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E4901FFCF600009E4986 /* TGTest3TableViewCell.m */; };
+		8E54E49B1FFCF61A009E4986 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E49A1FFCF61A009E4986 /* RootViewController.m */; };
+		8E54E49F1FFCF631009E4986 /* Demo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E49D1FFCF630009E4986 /* Demo1ViewController.m */; };
 		8E7B632F1FFB6A8600689499 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7B632D1FFB6A8600689499 /* Main.storyboard */; };
 		8E7B63311FFB6A8600689499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E7B63301FFB6A8600689499 /* Assets.xcassets */; };
 		8E7B63341FFB6A8600689499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7B63321FFB6A8600689499 /* LaunchScreen.storyboard */; };
 		8E7B63371FFB6A8600689499 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63361FFB6A8600689499 /* main.m */; };
 		8E7B63471FFB6B9300689499 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63411FFB6B9300689499 /* AppDelegate.m */; };
-		8E7B63481FFB6B9300689499 /* Demo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63451FFB6B9300689499 /* Demo1ViewController.m */; };
 		8E7B634E1FFB6BCC00689499 /* TGBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B634D1FFB6BCC00689499 /* TGBaseModel.m */; };
 		8E7B63511FFB6BDA00689499 /* TGBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63501FFB6BDA00689499 /* TGBaseView.m */; };
-		8E7B63601FFB751B00689499 /* TGTest1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B635F1FFB751B00689499 /* TGTest1TableViewCell.m */; };
-		8E7B63631FFB7E0B00689499 /* TGTest2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63621FFB7E0B00689499 /* TGTest2TableViewCell.m */; };
-		8E7B63661FFB7E4300689499 /* TGTest3TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63651FFB7E4300689499 /* TGTest3TableViewCell.m */; };
-		8E7B63691FFB7E4D00689499 /* TGTest4TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63681FFB7E4D00689499 /* TGTest4TableViewCell.m */; };
 		8E7B636C1FFB808200689499 /* TGBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B636B1FFB808200689499 /* TGBaseTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,18 @@
 		8E54E4831FFCF49E009E4986 /* TGTest4ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest4ViewModel.m; sourceTree = "<group>"; };
 		8E54E4841FFCF49E009E4986 /* TGTest1ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest1ViewModel.m; sourceTree = "<group>"; };
 		8E54E4851FFCF49E009E4986 /* TGBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGBaseViewModel.h; sourceTree = "<group>"; };
+		8E54E48D1FFCF600009E4986 /* TGTest1TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest1TableViewCell.m; sourceTree = "<group>"; };
+		8E54E48E1FFCF600009E4986 /* TGTest2TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest2TableViewCell.m; sourceTree = "<group>"; };
+		8E54E48F1FFCF600009E4986 /* TGTest4TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest4TableViewCell.m; sourceTree = "<group>"; };
+		8E54E4901FFCF600009E4986 /* TGTest3TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest3TableViewCell.m; sourceTree = "<group>"; };
+		8E54E4911FFCF600009E4986 /* TGTest1TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest1TableViewCell.h; sourceTree = "<group>"; };
+		8E54E4921FFCF600009E4986 /* TGTest2TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest2TableViewCell.h; sourceTree = "<group>"; };
+		8E54E4931FFCF600009E4986 /* TGTest3TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest3TableViewCell.h; sourceTree = "<group>"; };
+		8E54E4941FFCF600009E4986 /* TGTest4TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest4TableViewCell.h; sourceTree = "<group>"; };
+		8E54E4991FFCF61A009E4986 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		8E54E49A1FFCF61A009E4986 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		8E54E49D1FFCF630009E4986 /* Demo1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo1ViewController.m; sourceTree = "<group>"; };
+		8E54E49E1FFCF630009E4986 /* Demo1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo1ViewController.h; sourceTree = "<group>"; };
 		8E7B63241FFB6A8600689499 /* TGMVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGMVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7B632E1FFB6A8600689499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E7B63301FFB6A8600689499 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,20 +62,10 @@
 		8E7B63361FFB6A8600689499 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E7B63401FFB6B9300689499 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E7B63411FFB6B9300689499 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8E7B63451FFB6B9300689499 /* Demo1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo1ViewController.m; sourceTree = "<group>"; };
-		8E7B63461FFB6B9300689499 /* Demo1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo1ViewController.h; sourceTree = "<group>"; };
 		8E7B634C1FFB6BCC00689499 /* TGBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseModel.h; sourceTree = "<group>"; };
 		8E7B634D1FFB6BCC00689499 /* TGBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseModel.m; sourceTree = "<group>"; };
 		8E7B634F1FFB6BDA00689499 /* TGBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseView.h; sourceTree = "<group>"; };
 		8E7B63501FFB6BDA00689499 /* TGBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseView.m; sourceTree = "<group>"; };
-		8E7B635E1FFB751B00689499 /* TGTest1TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest1TableViewCell.h; sourceTree = "<group>"; };
-		8E7B635F1FFB751B00689499 /* TGTest1TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest1TableViewCell.m; sourceTree = "<group>"; };
-		8E7B63611FFB7E0B00689499 /* TGTest2TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest2TableViewCell.h; sourceTree = "<group>"; };
-		8E7B63621FFB7E0B00689499 /* TGTest2TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest2TableViewCell.m; sourceTree = "<group>"; };
-		8E7B63641FFB7E4300689499 /* TGTest3TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest3TableViewCell.h; sourceTree = "<group>"; };
-		8E7B63651FFB7E4300689499 /* TGTest3TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest3TableViewCell.m; sourceTree = "<group>"; };
-		8E7B63671FFB7E4D00689499 /* TGTest4TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest4TableViewCell.h; sourceTree = "<group>"; };
-		8E7B63681FFB7E4D00689499 /* TGTest4TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest4TableViewCell.m; sourceTree = "<group>"; };
 		8E7B636A1FFB808200689499 /* TGBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseTableViewCell.h; sourceTree = "<group>"; };
 		8E7B636B1FFB808200689499 /* TGBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseTableViewCell.m; sourceTree = "<group>"; };
 		C34EC9233E7DD4503CA664FA /* Pods-TGMVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGMVVMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TGMVVMDemo/Pods-TGMVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +113,30 @@
 			children = (
 			);
 			path = Demo2;
+			sourceTree = "<group>";
+		};
+		8E54E48C1FFCF600009E4986 /* Demo1 */ = {
+			isa = PBXGroup;
+			children = (
+				8E54E48D1FFCF600009E4986 /* TGTest1TableViewCell.m */,
+				8E54E48E1FFCF600009E4986 /* TGTest2TableViewCell.m */,
+				8E54E48F1FFCF600009E4986 /* TGTest4TableViewCell.m */,
+				8E54E4901FFCF600009E4986 /* TGTest3TableViewCell.m */,
+				8E54E4911FFCF600009E4986 /* TGTest1TableViewCell.h */,
+				8E54E4921FFCF600009E4986 /* TGTest2TableViewCell.h */,
+				8E54E4931FFCF600009E4986 /* TGTest3TableViewCell.h */,
+				8E54E4941FFCF600009E4986 /* TGTest4TableViewCell.h */,
+			);
+			path = Demo1;
+			sourceTree = "<group>";
+		};
+		8E54E49C1FFCF630009E4986 /* Demo1 */ = {
+			isa = PBXGroup;
+			children = (
+				8E54E49D1FFCF630009E4986 /* Demo1ViewController.m */,
+				8E54E49E1FFCF630009E4986 /* Demo1ViewController.h */,
+			);
+			path = Demo1;
 			sourceTree = "<group>";
 		};
 		8E7B631B1FFB6A8600689499 = {
@@ -185,18 +212,11 @@
 		8E7B63431FFB6B9300689499 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E54E48C1FFCF600009E4986 /* Demo1 */,
 				8E7B634F1FFB6BDA00689499 /* TGBaseView.h */,
 				8E7B63501FFB6BDA00689499 /* TGBaseView.m */,
 				8E7B636A1FFB808200689499 /* TGBaseTableViewCell.h */,
 				8E7B636B1FFB808200689499 /* TGBaseTableViewCell.m */,
-				8E7B635E1FFB751B00689499 /* TGTest1TableViewCell.h */,
-				8E7B635F1FFB751B00689499 /* TGTest1TableViewCell.m */,
-				8E7B63611FFB7E0B00689499 /* TGTest2TableViewCell.h */,
-				8E7B63621FFB7E0B00689499 /* TGTest2TableViewCell.m */,
-				8E7B63641FFB7E4300689499 /* TGTest3TableViewCell.h */,
-				8E7B63651FFB7E4300689499 /* TGTest3TableViewCell.m */,
-				8E7B63671FFB7E4D00689499 /* TGTest4TableViewCell.h */,
-				8E7B63681FFB7E4D00689499 /* TGTest4TableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,8 +224,9 @@
 		8E7B63441FFB6B9300689499 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8E7B63461FFB6B9300689499 /* Demo1ViewController.h */,
-				8E7B63451FFB6B9300689499 /* Demo1ViewController.m */,
+				8E54E49C1FFCF630009E4986 /* Demo1 */,
+				8E54E4991FFCF61A009E4986 /* RootViewController.h */,
+				8E54E49A1FFCF61A009E4986 /* RootViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -344,19 +365,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E7B63481FFB6B9300689499 /* Demo1ViewController.m in Sources */,
+				8E54E4971FFCF600009E4986 /* TGTest4TableViewCell.m in Sources */,
+				8E54E49B1FFCF61A009E4986 /* RootViewController.m in Sources */,
 				8E54E4881FFCF49E009E4986 /* TGTest3ViewModel.m in Sources */,
 				8E54E4891FFCF49E009E4986 /* TGTest4ViewModel.m in Sources */,
 				8E54E4861FFCF49E009E4986 /* TGTest2ViewModel.m in Sources */,
-				8E7B63691FFB7E4D00689499 /* TGTest4TableViewCell.m in Sources */,
-				8E7B63631FFB7E0B00689499 /* TGTest2TableViewCell.m in Sources */,
+				8E54E49F1FFCF631009E4986 /* Demo1ViewController.m in Sources */,
 				8E7B634E1FFB6BCC00689499 /* TGBaseModel.m in Sources */,
 				8E54E48A1FFCF49E009E4986 /* TGTest1ViewModel.m in Sources */,
-				8E7B63661FFB7E4300689499 /* TGTest3TableViewCell.m in Sources */,
 				8E54E4871FFCF49E009E4986 /* TGBaseViewModel.m in Sources */,
 				8E7B63511FFB6BDA00689499 /* TGBaseView.m in Sources */,
+				8E54E4961FFCF600009E4986 /* TGTest2TableViewCell.m in Sources */,
+				8E54E4951FFCF600009E4986 /* TGTest1TableViewCell.m in Sources */,
 				8E7B63471FFB6B9300689499 /* AppDelegate.m in Sources */,
-				8E7B63601FFB751B00689499 /* TGTest1TableViewCell.m in Sources */,
+				8E54E4981FFCF600009E4986 /* TGTest3TableViewCell.m in Sources */,
 				8E7B636C1FFB808200689499 /* TGBaseTableViewCell.m in Sources */,
 				8E7B63371FFB6A8600689499 /* main.m in Sources */,
 			);
