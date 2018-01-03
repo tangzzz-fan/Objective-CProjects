@@ -7,38 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		879D01261FD0652D00430757 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 879D01251FD0652D00430757 /* AppDelegate.m */; };
-		879D01291FD0652E00430757 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879D01281FD0652E00430757 /* ViewController.m */; };
 		879D012C1FD0652E00430757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879D012A1FD0652E00430757 /* Main.storyboard */; };
 		879D012E1FD0652E00430757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879D012D1FD0652E00430757 /* Assets.xcassets */; };
 		879D01311FD0652E00430757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879D012F1FD0652E00430757 /* LaunchScreen.storyboard */; };
 		879D01341FD0652E00430757 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879D01331FD0652E00430757 /* main.m */; };
-		879D013C1FD068C600430757 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879D013B1FD068C600430757 /* Test1ViewController.m */; };
-		879D013F1FD068F500430757 /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879D013E1FD068F500430757 /* Test2ViewController.m */; };
-		879D01421FD06B4D00430757 /* test2.html in Resources */ = {isa = PBXBuildFile; fileRef = 879D01401FD06B4D00430757 /* test2.html */; };
-		879D01431FD06B4D00430757 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 879D01411FD06B4D00430757 /* test.html */; };
-		87B8012B1FD301DF0011AE88 /* WeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B8012A1FD301DF0011AE88 /* WeakScriptMessageDelegate.m */; };
+		8E8AD7811FFC81F600F7B02B /* WeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD7741FFC81F600F7B02B /* WeakScriptMessageDelegate.m */; };
+		8E8AD7821FFC81F600F7B02B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD7771FFC81F600F7B02B /* AppDelegate.m */; };
+		8E8AD7831FFC81F600F7B02B /* test2.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E8AD7791FFC81F600F7B02B /* test2.html */; };
+		8E8AD7841FFC81F600F7B02B /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD77A1FFC81F600F7B02B /* Test1ViewController.m */; };
+		8E8AD7851FFC81F600F7B02B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD77C1FFC81F600F7B02B /* ViewController.m */; };
+		8E8AD7861FFC81F600F7B02B /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E8AD77D1FFC81F600F7B02B /* test.html */; };
+		8E8AD7871FFC81F600F7B02B /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD7801FFC81F600F7B02B /* Test2ViewController.m */; };
+		8E8AD78B1FFC828C00F7B02B /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD78A1FFC828C00F7B02B /* TestTableViewCell.m */; };
+		8E8AD78E1FFC82C000F7B02B /* TestWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD78D1FFC82C000F7B02B /* TestWKWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		879D01211FD0652D00430757 /* TGJavaScriptOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGJavaScriptOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		879D01241FD0652D00430757 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		879D01251FD0652D00430757 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		879D01271FD0652E00430757 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		879D01281FD0652E00430757 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		879D012B1FD0652E00430757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		879D012D1FD0652E00430757 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		879D01301FD0652E00430757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		879D01321FD0652E00430757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		879D01331FD0652E00430757 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		879D013A1FD068C600430757 /* Test1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
-		879D013B1FD068C600430757 /* Test1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
-		879D013D1FD068F500430757 /* Test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
-		879D013E1FD068F500430757 /* Test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
-		879D01401FD06B4D00430757 /* test2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test2.html; sourceTree = "<group>"; };
-		879D01411FD06B4D00430757 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		87B801291FD301DF0011AE88 /* WeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakScriptMessageDelegate.h; sourceTree = "<group>"; };
-		87B8012A1FD301DF0011AE88 /* WeakScriptMessageDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		8E8AD7731FFC81F600F7B02B /* WeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		8E8AD7741FFC81F600F7B02B /* WeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		8E8AD7761FFC81F600F7B02B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8E8AD7771FFC81F600F7B02B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8E8AD7791FFC81F600F7B02B /* test2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test2.html; sourceTree = "<group>"; };
+		8E8AD77A1FFC81F600F7B02B /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
+		8E8AD77B1FFC81F600F7B02B /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
+		8E8AD77C1FFC81F600F7B02B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8E8AD77D1FFC81F600F7B02B /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		8E8AD77E1FFC81F600F7B02B /* Test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
+		8E8AD77F1FFC81F600F7B02B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8E8AD7801FFC81F600F7B02B /* Test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
+		8E8AD7891FFC828C00F7B02B /* TestTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
+		8E8AD78A1FFC828C00F7B02B /* TestTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
+		8E8AD78C1FFC82C000F7B02B /* TestWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestWKWebViewController.h; sourceTree = "<group>"; };
+		8E8AD78D1FFC82C000F7B02B /* TestWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestWKWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,18 +77,7 @@
 		879D01231FD0652D00430757 /* TGJavaScriptOC */ = {
 			isa = PBXGroup;
 			children = (
-				879D01241FD0652D00430757 /* AppDelegate.h */,
-				879D01251FD0652D00430757 /* AppDelegate.m */,
-				879D01271FD0652E00430757 /* ViewController.h */,
-				879D01281FD0652E00430757 /* ViewController.m */,
-				87B801291FD301DF0011AE88 /* WeakScriptMessageDelegate.h */,
-				87B8012A1FD301DF0011AE88 /* WeakScriptMessageDelegate.m */,
-				879D013A1FD068C600430757 /* Test1ViewController.h */,
-				879D013B1FD068C600430757 /* Test1ViewController.m */,
-				879D013D1FD068F500430757 /* Test2ViewController.h */,
-				879D013E1FD068F500430757 /* Test2ViewController.m */,
-				879D01411FD06B4D00430757 /* test.html */,
-				879D01401FD06B4D00430757 /* test2.html */,
+				8E8AD7711FFC81F600F7B02B /* Classes */,
 				879D012A1FD0652E00430757 /* Main.storyboard */,
 				879D012D1FD0652E00430757 /* Assets.xcassets */,
 				879D012F1FD0652E00430757 /* LaunchScreen.storyboard */,
@@ -90,6 +85,61 @@
 				879D01331FD0652E00430757 /* main.m */,
 			);
 			path = TGJavaScriptOC;
+			sourceTree = "<group>";
+		};
+		8E8AD7711FFC81F600F7B02B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E8AD7881FFC827E00F7B02B /* View */,
+				8E8AD7721FFC81F600F7B02B /* WeakDelegate */,
+				8E8AD7751FFC81F600F7B02B /* Other */,
+				8E8AD7781FFC81F600F7B02B /* ViewController */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8E8AD7721FFC81F600F7B02B /* WeakDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8E8AD7731FFC81F600F7B02B /* WeakScriptMessageDelegate.h */,
+				8E8AD7741FFC81F600F7B02B /* WeakScriptMessageDelegate.m */,
+			);
+			path = WeakDelegate;
+			sourceTree = "<group>";
+		};
+		8E8AD7751FFC81F600F7B02B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8E8AD7761FFC81F600F7B02B /* AppDelegate.h */,
+				8E8AD7771FFC81F600F7B02B /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		8E8AD7781FFC81F600F7B02B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E8AD7791FFC81F600F7B02B /* test2.html */,
+				8E8AD77A1FFC81F600F7B02B /* Test1ViewController.m */,
+				8E8AD77B1FFC81F600F7B02B /* Test2ViewController.h */,
+				8E8AD77C1FFC81F600F7B02B /* ViewController.m */,
+				8E8AD77D1FFC81F600F7B02B /* test.html */,
+				8E8AD77E1FFC81F600F7B02B /* Test1ViewController.h */,
+				8E8AD77F1FFC81F600F7B02B /* ViewController.h */,
+				8E8AD7801FFC81F600F7B02B /* Test2ViewController.m */,
+				8E8AD78C1FFC82C000F7B02B /* TestWKWebViewController.h */,
+				8E8AD78D1FFC82C000F7B02B /* TestWKWebViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8E8AD7881FFC827E00F7B02B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E8AD7891FFC828C00F7B02B /* TestTableViewCell.h */,
+				8E8AD78A1FFC828C00F7B02B /* TestTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +203,8 @@
 				879D01311FD0652E00430757 /* LaunchScreen.storyboard in Resources */,
 				879D012E1FD0652E00430757 /* Assets.xcassets in Resources */,
 				879D012C1FD0652E00430757 /* Main.storyboard in Resources */,
-				879D01431FD06B4D00430757 /* test.html in Resources */,
-				879D01421FD06B4D00430757 /* test2.html in Resources */,
+				8E8AD7861FFC81F600F7B02B /* test.html in Resources */,
+				8E8AD7831FFC81F600F7B02B /* test2.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,12 +215,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879D013F1FD068F500430757 /* Test2ViewController.m in Sources */,
-				87B8012B1FD301DF0011AE88 /* WeakScriptMessageDelegate.m in Sources */,
-				879D013C1FD068C600430757 /* Test1ViewController.m in Sources */,
-				879D01291FD0652E00430757 /* ViewController.m in Sources */,
+				8E8AD78B1FFC828C00F7B02B /* TestTableViewCell.m in Sources */,
+				8E8AD7841FFC81F600F7B02B /* Test1ViewController.m in Sources */,
 				879D01341FD0652E00430757 /* main.m in Sources */,
-				879D01261FD0652D00430757 /* AppDelegate.m in Sources */,
+				8E8AD78E1FFC82C000F7B02B /* TestWKWebViewController.m in Sources */,
+				8E8AD7811FFC81F600F7B02B /* WeakScriptMessageDelegate.m in Sources */,
+				8E8AD7871FFC81F600F7B02B /* Test2ViewController.m in Sources */,
+				8E8AD7821FFC81F600F7B02B /* AppDelegate.m in Sources */,
+				8E8AD7851FFC81F600F7B02B /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
