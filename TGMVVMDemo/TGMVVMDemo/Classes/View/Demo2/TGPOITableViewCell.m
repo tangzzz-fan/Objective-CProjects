@@ -22,6 +22,7 @@
 
 // 重载父类方法
 - (void)bindViewModel:(TGPOICellViewModel *)viewModel {
+    // 当需要进行重用时, 就更新 titleLabel.text
     RAC(_titleLabel, text) = [viewModel.titleSignal takeUntil:self.rac_prepareForReuseSignal];
     RAC(_priceLabel, attributedText) = [viewModel.priceSignal takeUntil:self.rac_prepareForReuseSignal];
     RAC(_rightFooterLabel, text) = [viewModel.rightFooterSignal takeUntil:self.rac_prepareForReuseSignal];

@@ -58,17 +58,19 @@
 }
 
 - (void)showError:(NSError *)error {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.refreshControl endRefreshing];
+        self.cellViewModelArray = nil;
+        [self.tableView reloadData];
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:error.description preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
+        }]];
+        
+        [self presentViewController:alertController animated:YES completion:^{
+        }];
+    });
     
-    [self.refreshControl endRefreshing];
-    self.cellViewModelArray = nil;
-    [self.tableView reloadData];
-    
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:error.description preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
-    }]];
-    
-    [self presentViewController:alertController animated:YES completion:^{
-    }];
 }
 
 #pragma mark - Table view data source
@@ -84,16 +86,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TGBaseCellViewModel *cellViewModel = self.cellViewModelArray[indexPath.row];
     NSString *cellClassName = cellViewModel.cellName;
-    TGBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellClassName];
+    TGBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellClassName forIndexPath:indexPath];
     [cell bindViewModel:cellViewModel];
     return cell;
 }
 
-- (NSArray *)cellViewModelArray {
-    if (!_cellViewModelArray) {
-        _cellViewModelArray = [[NSArray alloc] init];
-    }
-    return _cellViewModelArray;
-}
+//- (NSArray *)cellViewModelArray {
+//    if (!_cellViewModelArray) {
+//        _cellViewModelArray = [[NSArray alloc] init];
+//    }
+//    return _cellViewModelArray;
+//}
 
 @end
