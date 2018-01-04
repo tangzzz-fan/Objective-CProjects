@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface TGBaseCellViewModel : NSObject
+/** cellName */
+@property (nonatomic, strong) NSString *cellName;
 
 @end

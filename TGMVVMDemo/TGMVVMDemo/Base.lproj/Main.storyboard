@@ -176,6 +176,9 @@
                                 <rect key="frame" x="40" y="141" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Demo2"/>
+                                <connections>
+                                    <segue destination="xEJ-8B-UFq" kind="show" id="wE4-v4-qaU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxu-bg-3Oz">
                                 <rect key="frame" x="40" y="193" width="50" height="30"/>
@@ -191,6 +194,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7O-wK-0aW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="399" y="172"/>
+        </scene>
+        <!--Demo2 View Controller-->
+        <scene sceneID="EMd-pj-QTM">
+            <objects>
+                <tableViewController id="xEJ-8B-UFq" customClass="TGDemo2ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aPm-K4-dk6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="xEJ-8B-UFq" id="oeW-h0-Rc6"/>
+                            <outlet property="delegate" destination="xEJ-8B-UFq" id="52Y-fN-Yb6"/>
+                        </connections>
+                    </tableView>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="t7o-py-DMB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXA-C6-CE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="luU-G1-AxV">

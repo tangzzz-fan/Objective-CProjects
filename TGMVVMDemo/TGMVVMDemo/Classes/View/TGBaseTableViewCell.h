@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TGBaseViewModel.h"
+@class TGBaseCellViewModel;
+@class TGBaseViewModel;
 
 @interface TGBaseTableViewCell : UITableViewCell
+// 使用 viewModel 绑定 cell
+- (void)bindViewModel:(__kindof TGBaseCellViewModel *)viewModel;
 
-- (void)bindViewModel:(id)viewModel withParams:(NSDictionary *)params;
+// Demo1
+- (void)bindViewModel:(__kindof TGBaseViewModel *)viewModel withParams:(NSDictionary *)params;
 @end
