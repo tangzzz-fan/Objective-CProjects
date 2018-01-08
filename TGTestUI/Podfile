@@ -7,4 +7,10 @@ target 'TGTestUI' do
 
   # Pods for TGTestUI
 pod 'FDFullscreenPopGesture', '1.1'
+pod 'BaiduMapKit', '3.3.0'
+  pod 'AFNetworking', '~> 3.1.0'
+  pod 'FMDB', '~> 2.6.2'
+  pod 'GYDataCenter', '~> 0.1.1'
+  pod 'YYCache', '~> 1.0.4'
+
 end

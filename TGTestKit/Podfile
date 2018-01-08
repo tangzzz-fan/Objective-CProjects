@@ -7,4 +7,5 @@ target 'TGTestKit' do
 
   # Pods for TGTestKit
 #   pod 'libextobjc', '~> 0.4.1'
+	pod 'AFNetworking', '3.1.0'
 end

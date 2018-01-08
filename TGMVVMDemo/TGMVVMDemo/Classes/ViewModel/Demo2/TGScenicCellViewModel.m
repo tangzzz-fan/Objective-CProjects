@@ -14,7 +14,9 @@
 @interface TGScenicCellViewModel()
 /** scnic */
 @property (nonatomic, strong) TGScenic *scenic;
+
 @end
+
 @implementation TGScenicCellViewModel
 - (instancetype)initWithScenic:(TGScenic *)scenic {
     if (self = [super init]) {
