@@ -7,34 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E874DC81FDF695E00C994F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874DC71FDF695E00C994F2 /* AppDelegate.m */; };
-		8E874DCB1FDF695E00C994F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874DCA1FDF695E00C994F2 /* ViewController.m */; };
+		8E80123F20088061005054BC /* UIButton+TGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80123220088061005054BC /* UIButton+TGExtension.m */; };
+		8E80124020088061005054BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80123620088061005054BC /* AppDelegate.m */; };
+		8E80124120088061005054BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80123820088061005054BC /* ViewController.m */; };
+		8E80124220088061005054BC /* TGTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80123D20088061005054BC /* TGTagButton.m */; };
+		8E80124320088061005054BC /* TGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80123E20088061005054BC /* TGButton.m */; };
+		8E80124620088086005054BC /* AppDelegate+TGLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80124520088086005054BC /* AppDelegate+TGLocation.m */; };
 		8E874DCE1FDF695E00C994F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E874DCC1FDF695E00C994F2 /* Main.storyboard */; };
 		8E874DD01FDF695E00C994F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E874DCF1FDF695E00C994F2 /* Assets.xcassets */; };
 		8E874DD31FDF695E00C994F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E874DD11FDF695E00C994F2 /* LaunchScreen.storyboard */; };
 		8E874DD61FDF695E00C994F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874DD51FDF695E00C994F2 /* main.m */; };
-		8E874DDE1FDF766D00C994F2 /* TGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874DDD1FDF766D00C994F2 /* TGButton.m */; };
-		8E874DE11FDF784600C994F2 /* UIButton+TGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874DE01FDF784600C994F2 /* UIButton+TGExtension.m */; };
-		8E874DE41FDF7A9400C994F2 /* TGTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874DE31FDF7A9400C994F2 /* TGTagButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E80123220088061005054BC /* UIButton+TGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TGExtension.m"; sourceTree = "<group>"; };
+		8E80123320088061005054BC /* UIButton+TGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TGExtension.h"; sourceTree = "<group>"; };
+		8E80123520088061005054BC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8E80123620088061005054BC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8E80123820088061005054BC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8E80123920088061005054BC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8E80123B20088061005054BC /* TGTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTagButton.h; sourceTree = "<group>"; };
+		8E80123C20088061005054BC /* TGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGButton.h; sourceTree = "<group>"; };
+		8E80123D20088061005054BC /* TGTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTagButton.m; sourceTree = "<group>"; };
+		8E80123E20088061005054BC /* TGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGButton.m; sourceTree = "<group>"; };
+		8E80124420088086005054BC /* AppDelegate+TGLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+TGLocation.h"; sourceTree = "<group>"; };
+		8E80124520088086005054BC /* AppDelegate+TGLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+TGLocation.m"; sourceTree = "<group>"; };
 		8E874DC31FDF695E00C994F2 /* TGTestResponder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGTestResponder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E874DC61FDF695E00C994F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8E874DC71FDF695E00C994F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8E874DC91FDF695E00C994F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8E874DCA1FDF695E00C994F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8E874DCD1FDF695E00C994F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E874DCF1FDF695E00C994F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E874DD21FDF695E00C994F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E874DD41FDF695E00C994F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E874DD51FDF695E00C994F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8E874DDC1FDF766D00C994F2 /* TGButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGButton.h; sourceTree = "<group>"; };
-		8E874DDD1FDF766D00C994F2 /* TGButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGButton.m; sourceTree = "<group>"; };
-		8E874DDF1FDF784600C994F2 /* UIButton+TGExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+TGExtension.h"; sourceTree = "<group>"; };
-		8E874DE01FDF784600C994F2 /* UIButton+TGExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TGExtension.m"; sourceTree = "<group>"; };
-		8E874DE21FDF7A9400C994F2 /* TGTagButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTagButton.h; sourceTree = "<group>"; };
-		8E874DE31FDF7A9400C994F2 /* TGTagButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTagButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +51,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E80123020088061005054BC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E80123120088061005054BC /* Category */,
+				8E80123420088061005054BC /* Other */,
+				8E80123720088061005054BC /* Controller */,
+				8E80123A20088061005054BC /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8E80123120088061005054BC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8E80123220088061005054BC /* UIButton+TGExtension.m */,
+				8E80123320088061005054BC /* UIButton+TGExtension.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8E80123420088061005054BC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8E80123520088061005054BC /* AppDelegate.h */,
+				8E80123620088061005054BC /* AppDelegate.m */,
+				8E80124420088086005054BC /* AppDelegate+TGLocation.h */,
+				8E80124520088086005054BC /* AppDelegate+TGLocation.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		8E80123720088061005054BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E80123820088061005054BC /* ViewController.m */,
+				8E80123920088061005054BC /* ViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E80123A20088061005054BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E80123B20088061005054BC /* TGTagButton.h */,
+				8E80123C20088061005054BC /* TGButton.h */,
+				8E80123D20088061005054BC /* TGTagButton.m */,
+				8E80123E20088061005054BC /* TGButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8E874DBA1FDF695D00C994F2 = {
 			isa = PBXGroup;
 			children = (
@@ -67,16 +121,7 @@
 		8E874DC51FDF695E00C994F2 /* TGTestResponder */ = {
 			isa = PBXGroup;
 			children = (
-				8E874DC61FDF695E00C994F2 /* AppDelegate.h */,
-				8E874DC71FDF695E00C994F2 /* AppDelegate.m */,
-				8E874DDC1FDF766D00C994F2 /* TGButton.h */,
-				8E874DDD1FDF766D00C994F2 /* TGButton.m */,
-				8E874DE21FDF7A9400C994F2 /* TGTagButton.h */,
-				8E874DE31FDF7A9400C994F2 /* TGTagButton.m */,
-				8E874DDF1FDF784600C994F2 /* UIButton+TGExtension.h */,
-				8E874DE01FDF784600C994F2 /* UIButton+TGExtension.m */,
-				8E874DC91FDF695E00C994F2 /* ViewController.h */,
-				8E874DCA1FDF695E00C994F2 /* ViewController.m */,
+				8E80123020088061005054BC /* Classes */,
 				8E874DCC1FDF695E00C994F2 /* Main.storyboard */,
 				8E874DCF1FDF695E00C994F2 /* Assets.xcassets */,
 				8E874DD11FDF695E00C994F2 /* LaunchScreen.storyboard */,
@@ -158,12 +203,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E874DDE1FDF766D00C994F2 /* TGButton.m in Sources */,
-				8E874DE11FDF784600C994F2 /* UIButton+TGExtension.m in Sources */,
-				8E874DCB1FDF695E00C994F2 /* ViewController.m in Sources */,
+				8E80124620088086005054BC /* AppDelegate+TGLocation.m in Sources */,
+				8E80123F20088061005054BC /* UIButton+TGExtension.m in Sources */,
 				8E874DD61FDF695E00C994F2 /* main.m in Sources */,
-				8E874DC81FDF695E00C994F2 /* AppDelegate.m in Sources */,
-				8E874DE41FDF7A9400C994F2 /* TGTagButton.m in Sources */,
+				8E80124320088061005054BC /* TGButton.m in Sources */,
+				8E80124120088061005054BC /* ViewController.m in Sources */,
+				8E80124020088061005054BC /* AppDelegate.m in Sources */,
+				8E80124220088061005054BC /* TGTagButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

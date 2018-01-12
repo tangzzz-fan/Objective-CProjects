@@ -31,6 +31,8 @@
 - (void)bindSignals {
     // 创建一个直接返回 scenic 数据的信号
     // 这里使用的 RACReturnSignal 信号, 会直接返回一个信号
+    // 这里就是将数组模型作为一个信号源, 产生一个信号, 后续对这个信号的操作, 就是对这个模型数据的操作
+    
     RACSignal *scenicSignal = [RACSignal return:self.scenic];
     
     // titleSignal 返回 title, 这里使用 map 从源信号中转换
@@ -39,6 +41,7 @@
     }];
     
     // 返回回价格信号
+    
     self.priceSignal = [scenicSignal map:^id(TGScenic *scenic) {
         NSString *priceString = [NSString stringWithFormat:@"¥%.2f起", scenic.lowestPrice];
         NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:priceString
