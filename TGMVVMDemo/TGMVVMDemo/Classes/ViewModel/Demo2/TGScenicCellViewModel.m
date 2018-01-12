@@ -15,6 +15,7 @@
 /** scnic */
 @property (nonatomic, strong) TGScenic *scenic;
 
+
 @end
 
 @implementation TGScenicCellViewModel
