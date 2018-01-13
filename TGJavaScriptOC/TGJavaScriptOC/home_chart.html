@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>ECharts</title>
+</head>
+<body>
+<div id="main" style="width:100%;height:200px"></div>
+<!-- ECharts单文件引入 -->
+<script src="../echarts.min.js"></script>
+<script type="text/javascript">
+    var lineXAxisArray = new Array();
+    var lineDataArray = new Array();
+    var lineMax,lineMin;
+    var barXAxisArray = new Array();
+    var barDataArray = new Array();
+    var barGap,barMax,barMin;
+
+    function GetQueryString(name){
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+
+    function setLineData(data) {
+        var tmpArr = data.split("|");
+        lineMax=-1;
+        lineMin=-1;
+        for (var i=0;i<tmpArr.length;i++) {
+            var itemArr = tmpArr[i].split(",");
+            lineXAxisArray[i] = itemArr[0];
+            lineDataArray[i] = parseFloat(itemArr[1])/10000.0;
+            if (lineMax < lineDataArray[i] || lineMax < 0) {
+                lineMax =  lineDataArray[i];
+            }
+            if (lineMin > lineDataArray[i] || lineMin < 0) {
+                lineMin = lineDataArray[i];
+            }
+        }
+        lineMax = parseInt(lineMax + 1);
+        if(lineMin > 1) {
+            lineMin = parseInt(lineMin);
+        } else {
+            lineMin = 0;
+        }
+
+        if (GetQueryString("type") == "line") {
+            myChart.setOption(option);
+        } else {
+            myChart.setOption(option1);
+        }
+    }
+
+    function setBarData(data) {
+        var tmpArr = data.split("|");
+        barMax=-1;
+        barMin=-1;
+        for (var i=0;i<tmpArr.length;i++) {
+            var itemArr = tmpArr[i].split(",");
+            barXAxisArray[i] = itemArr[0];
+            barDataArray[i] = parseFloat(itemArr[1]);
+            if (barMax < barDataArray[i] || barMax < 0) {
+                barMax =  barDataArray[i];
+            }
+            if (barMin > barDataArray[i] || barMin < 0) {
+                barMin = barDataArray[i];
+            }
+        }
+        barMax = (parseInt(barMax/10)+1)*10;
+        if(barMin > 10) {
+            barMin = parseInt(barMin/10)*10;
+        } else {
+            barMin = 0;
+        }
+        barGap = (barMax - barMin)/5;
+        if (GetQueryString("type") == "line") {
+            myChart.setOption(option);
+        } else {
+            myChart.setOption(option1);
+        }
+    }
+
+    var option = {
+        title: {
+            show:false
+        },
+        tooltip: {
+            position: 'inside',
+            trigger: 'item',
+            formatter: '{a} <br/>{b} : {c}'
+        },
+        xAxis: {
+            type : 'category',
+            boundaryGap: false,
+            data:lineXAxisArray,
+            axisLine :{
+                lineStyle: {
+                    color: '#5e5e5e'
+                },
+                show:false
+            },
+            axisTick :{
+                show:false
+            }
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                formatter: '{value} 万/平'
+            },
+            min: function(){
+                return lineMin;
+            },
+            max: function(){
+                return lineMax;
+            },
+            minInterval:1,
+            maxInterval:2,
+            axisLine :{
+				lineStyle: {
+                    color: '#5e5e5e'
+                },
+                show:false
+            },
+            axisTick :{
+                show:false
+            },
+            splitLine: {
+                show: false
+            }
+        },
+        grid: {
+            top:5,
+            left:5,
+            right:10,
+            bottom:25,
+            containLabel: true
+        },
+        series: [
+            {
+                smooth:true,
+                type: 'line',
+                data: lineDataArray,
+                lineStyle: {
+                    normal:{
+                        color : '#fb2727',
+                        width: 3,
+                        shadowColor : 'rgba(200, 200, 200, 0.5)',
+                        shadowBlur: 10,
+                        shadowOffsetX :10,
+                        shadowOffsetY :10
+                    }
+                }
+            }
+        ]
+    };
+
+    var option1 = {
+        title: {
+            show:false
+        },
+        grid: {
+            top:5,
+            left:5,
+            right:10,
+            bottom:25,
+            containLabel: true
+        },
+        xAxis: {
+            data: barXAxisArray,
+            axisTick: {
+                show: false
+            },
+            axisLine: {
+            	lineStyle: {
+                    color: '#5e5e5e'
+                },
+                show: false
+            },
+            z: 10
+        },
+        tooltip: {
+            position: 'inside',
+            trigger: 'item',
+            formatter: function(params, ticket, callback) {
+                return "hello<br/> "+name;
+            }
+        },
+        yAxis: {
+            axisLine: {
+                lineStyle: {
+                    color: '#5e5e5e'
+                },
+                show: false
+            },
+            axisTick: {
+                show: false
+            },
+            splitLine: {
+                show: false
+            },
+            min: function(){
+                return barMin;
+            },
+            max: function(){
+                return barMax;
+            },
+            minInterval:function(){
+                return barGap;
+            },
+            maxInterval:function(){
+                return barGap*2;
+            },
+            axisLabel: {
+                formatter: '{value} 套',
+                textStyle: {
+                    color: '#999'
+                }
+            }
+        },
+        dataZoom: [
+            {
+                type: 'inside'
+            }
+        ],
+        series: [
+            {
+                type: 'bar',
+                barWidth:10,
+                itemStyle: {
+                    normal: {
+                        barBorderRadius:5,
+                        shadowColor : 'rgba(200, 200, 200, 0.5)',
+                        shadowBlur: 10,
+                        shadowOffsetX :10,
+                        shadowOffsetY :10,
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#f17471'},
+                                {offset: 1, color: '#e44358'}
+                            ]
+                        )
+                    },
+                    emphasis: {
+                        barBorderRadius:5,
+                        shadowColor : 'rgba(200, 200, 200, 0.5)',
+                        shadowBlur: 10,
+                        shadowOffsetX :10,
+                        shadowOffsetY :10,
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#f17471'},
+                                {offset: 1, color: '#e44358'}
+                            ]
+                        )
+                    }
+                },
+                data: barDataArray
+            }
+        ]
+    };
+
+    var myChart = echarts.init(document.getElementById('main'));
+    var name;
+    myChart.on("mousedown",function(param){
+        name = param.dataIndex;
+    });
+    </script>
+</body>
