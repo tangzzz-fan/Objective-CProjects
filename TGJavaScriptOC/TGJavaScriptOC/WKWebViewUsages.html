@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 7]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-title" content="简书">
+
+    <!--  Meta for Smart App Banner -->
+  <meta name="apple-itunes-app" content="app-id=888237539, app-argument=jianshu://notes/2856794">
+  <!-- End -->
+
+
+    <title>WKWebView使用遇到的坑 - 简书</title>
+</head>
+
+  <body lang="zh-CN" class="reader-night-mode reader-black-font">
+
+    
+<div class="note">
+  <a target="_blank" href="/apps/download?utm_source=sbc" id="web-note-ad-fixed"><span class="close">&times;</span></a>
+  <div class="post">
+    <div class="article">
+        <h1 class="title">WKWebView使用遇到的坑</h1>
+
+        <!-- 文章内容 -->
+        <div data-note-content class="show-content">
+          <h1>1. ios9以前版本读取本地HTML的问题</h1>
+<blockquote>
+<p>当使用loadRequest来读取本地的HTML时，WKWebView是无法读取成功的，后台会出现如下的提示：<br>
+<code>Could not create a sandbox extension for /</code><br>
+<em>原因是WKWebView是不允许通过loadRequest的方法来加载本地根目录的HTML文件</em>。<br>
+而在iOS9的SDK中加入了以下方法来加载本地的HTML文件：<br>
+<code>[WKWebView loadFileURL:allowingReadAccessToURL:]</code><br>
+但是在iOS9以下的版本是没提供这个便利的方法的。以下为解决方案的思路，就是在iOS9以下版本时，先将本地HTML文件的数据copy到tmp目录中，然后再使用loadRequest来加载。但是如果在HTML中加入了其他资源文件，例如js，css，image等必须一同copy到temp中。这个是最蛋疼的事情了。</p>
+</blockquote>
+<h3>解决方法如下</h3>
+<p>1.Objective-C：</p>
+<pre><code class="Objective-c">//将文件copy到tmp目录
+- (NSURL *)fileURLForBuggyWKWebView8:(NSURL *)fileURL {
+    NSError *error = nil;
+    if (!fileURL.fileURL || ![fileURL checkResourceIsReachableAndReturnError:&amp;error]) {
+        return nil;
+    }
+    // Create "/temp/www" directory
+    NSFileManager *fileManager= [NSFileManager defaultManager];
+    NSURL *temDirURL = [[NSURL fileURLWithPath:NSTemporaryDirectory()] URLByAppendingPathComponent:@"www"];
+    [fileManager createDirectoryAtURL:temDirURL withIntermediateDirectories:YES attributes:nil error:&amp;error];
+    
+    NSURL *dstURL = [temDirURL URLByAppendingPathComponent:fileURL.lastPathComponent];
+    // Now copy given file to the temp directory
+    [fileManager removeItemAtURL:dstURL error:&amp;error];
+    [fileManager copyItemAtURL:fileURL toURL:dstURL error:&amp;error];
+    // Files in "/temp/www" load flawlesly :)
+    return dstURL;
+}
+
+//调用逻辑
+ NSString *path = [[NSBundle mainBundle] pathForResource:@"indexoff" ofType:@"html"];
+    if(path){
+        if ([[UIDevice currentDevice].systemVersion floatValue] &gt;= 9.0) {
+            // iOS9. One year later things are OK.
+            NSURL *fileURL = [NSURL fileURLWithPath:path];
+            [self.webView loadFileURL:fileURL allowingReadAccessToURL:fileURL];
+        } else {
+            // iOS8. Things can be workaround-ed
+            //   Brave people can do just this
+            //   fileURL = try! pathForBuggyWKWebView8(fileURL)
+            //   webView.loadRequest(NSURLRequest(URL: fileURL))
+            
+            NSURL *fileURL = [self.fileHelper fileURLForBuggyWKWebView8:[NSURL fileURLWithPath:path]];
+            NSURLRequest *request = [NSURLRequest requestWithURL:fileURL];
+            [self.webView loadRequest:request];
+        }
+    }
+</code></pre>
+<p>2.Swift</p>
+<pre><code class="Swift">//将文件copy到tmp目录
+func fileURLForBuggyWKWebView8(fileURL: NSURL) throws -&gt; NSURL {
+    // Some safety checks
+    var error:NSError? = nil;
+    if (!fileURL.fileURL || !fileURL.checkResourceIsReachableAndReturnError(&amp;error)) {
+        throw error ?? NSError(
+            domain: "BuggyWKWebViewDomain",
+            code: 1001,
+            userInfo: [NSLocalizedDescriptionKey: NSLocalizedString("URL must be a file URL.", comment:"")])
+    }
+
+    // Create "/temp/www" directory
+    let fm = NSFileManager.defaultManager()
+    let tmpDirURL = NSURL.fileURLWithPath(NSTemporaryDirectory()).URLByAppendingPathComponent("www")
+    try! fm.createDirectoryAtURL(tmpDirURL, withIntermediateDirectories: true, attributes: nil)
+
+    // Now copy given file to the temp directory
+    let dstURL = tmpDirURL.URLByAppendingPathComponent(fileURL.lastPathComponent!)
+    let _ = try? fileMgr.removeItemAtURL(dstURL)
+    try! fm.copyItemAtURL(fileURL, toURL: dstURL)
+
+    // Files in "/temp/www" load flawlesly :)
+    return dstURL
+}
+
+//方法调用
+
+    var filePath = NSBundle.mainBundle().pathForResource("file", ofType: "pdf")
+
+    if #available(iOS 9.0, *) {
+        // iOS9. One year later things are OK.
+        webView.loadFileURL(fileURL, allowingReadAccessToURL: fileURL)
+    } else {
+        // iOS8. Things can be workaround-ed
+        //   Brave people can do just this
+        //   fileURL = try! pathForBuggyWKWebView8(fileURL)
+        //   webView.loadRequest(NSURLRequest(URL: fileURL))
+        do {
+            fileURL = try fileURLForBuggyWKWebView8(fileURL)
+            webView.loadRequest(NSURLRequest(URL: fileURL))
+        } catch let error as NSError {
+            print("Error: " + error.debugDescription)
+        }
+    }
+</code></pre>
+<h1>2. WKWebView - WKNavigationDelegate使用</h1>
+<blockquote>
+<p>特别提醒一点，在使用以下delegate的方法时</p>
+</blockquote>
+<pre><code>- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+</code></pre>
+<p>需执行decisionHandler的block。</p>
+<p>例如：</p>
+<pre><code>- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    
+    NSURLRequest *request = navigationAction.request;
+    WMPageActionType actionType = ActionTypeNone;
+    WKNavigationActionPolicy actionPolicy = WKNavigationActionPolicyAllow;
+    if([request.URL.absoluteString hasPrefix:OC_CLOSE_REQUEST]){
+        actionType = ActionTypeClose;
+        actionPolicy = WKNavigationActionPolicyCancel;
+    }
+    if(self.actionDelegate &amp;&amp; [self.actionDelegate respondsToSelector:@selector(webView:action:type:)]) {
+        [self.actionDelegate webView:webView action:navigationAction type:actionType];
+    }
+   //这句是必须加上的，不然会异常
+    decisionHandler(actionPolicy);
+}
+</code></pre>
+<p>3.WKWebView-JS执行方法</p>
+<blockquote>
+<p>WKWebView JS执行方法与UIWebView不一样了。</p>
+</blockquote>
+<pre><code>- (void)evaluateJavaScript:(NSString *)javaScriptString completionHandler:(void (^)(id, NSError *))completionHandler;  
+</code></pre>
+<p>completionHandler 拥有两个参数，一个是返回错误，一个可以返回执行脚本后的返回值</p>
+
+        </div>
+    </div>
+
+  </body>
+</html>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		877AFBCF200B300900D1AF8C /* TGTest1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 877AFBCE200B300900D1AF8C /* TGTest1TableViewCell.m */; };
+		877AFBD2200B302E00D1AF8C /* TGTest1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 877AFBD1200B302E00D1AF8C /* TGTest1TableViewController.m */; };
+		877AFBD4200B330D00D1AF8C /* WKWebViewUsages.html in Resources */ = {isa = PBXBuildFile; fileRef = 877AFBD3200B330D00D1AF8C /* WKWebViewUsages.html */; };
 		879D012C1FD0652E00430757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879D012A1FD0652E00430757 /* Main.storyboard */; };
 		879D012E1FD0652E00430757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879D012D1FD0652E00430757 /* Assets.xcassets */; };
 		879D01311FD0652E00430757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879D012F1FD0652E00430757 /* LaunchScreen.storyboard */; };
@@ -23,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		877AFBCD200B300900D1AF8C /* TGTest1TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest1TableViewCell.h; sourceTree = "<group>"; };
+		877AFBCE200B300900D1AF8C /* TGTest1TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest1TableViewCell.m; sourceTree = "<group>"; };
+		877AFBD0200B302E00D1AF8C /* TGTest1TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest1TableViewController.h; sourceTree = "<group>"; };
+		877AFBD1200B302E00D1AF8C /* TGTest1TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest1TableViewController.m; sourceTree = "<group>"; };
+		877AFBD3200B330D00D1AF8C /* WKWebViewUsages.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WKWebViewUsages.html; sourceTree = "<group>"; };
 		879D01211FD0652D00430757 /* TGJavaScriptOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGJavaScriptOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879D012B1FD0652E00430757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		879D012D1FD0652E00430757 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +88,7 @@
 				8E8AD7711FFC81F600F7B02B /* Classes */,
 				879D012A1FD0652E00430757 /* Main.storyboard */,
 				879D012D1FD0652E00430757 /* Assets.xcassets */,
+				877AFBD3200B330D00D1AF8C /* WKWebViewUsages.html */,
 				879D012F1FD0652E00430757 /* LaunchScreen.storyboard */,
 				879D01321FD0652E00430757 /* Info.plist */,
 				879D01331FD0652E00430757 /* main.m */,
@@ -120,15 +129,17 @@
 			isa = PBXGroup;
 			children = (
 				8E8AD7791FFC81F600F7B02B /* test2.html */,
+				8E8AD77E1FFC81F600F7B02B /* Test1ViewController.h */,
 				8E8AD77A1FFC81F600F7B02B /* Test1ViewController.m */,
-				8E8AD77B1FFC81F600F7B02B /* Test2ViewController.h */,
+				8E8AD77F1FFC81F600F7B02B /* ViewController.h */,
 				8E8AD77C1FFC81F600F7B02B /* ViewController.m */,
 				8E8AD77D1FFC81F600F7B02B /* test.html */,
-				8E8AD77E1FFC81F600F7B02B /* Test1ViewController.h */,
-				8E8AD77F1FFC81F600F7B02B /* ViewController.h */,
+				8E8AD77B1FFC81F600F7B02B /* Test2ViewController.h */,
 				8E8AD7801FFC81F600F7B02B /* Test2ViewController.m */,
 				8E8AD78C1FFC82C000F7B02B /* TestWKWebViewController.h */,
 				8E8AD78D1FFC82C000F7B02B /* TestWKWebViewController.m */,
+				877AFBD0200B302E00D1AF8C /* TGTest1TableViewController.h */,
+				877AFBD1200B302E00D1AF8C /* TGTest1TableViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -138,6 +149,8 @@
 			children = (
 				8E8AD7891FFC828C00F7B02B /* TestTableViewCell.h */,
 				8E8AD78A1FFC828C00F7B02B /* TestTableViewCell.m */,
+				877AFBCD200B300900D1AF8C /* TGTest1TableViewCell.h */,
+				877AFBCE200B300900D1AF8C /* TGTest1TableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +215,7 @@
 			files = (
 				879D01311FD0652E00430757 /* LaunchScreen.storyboard in Resources */,
 				879D012E1FD0652E00430757 /* Assets.xcassets in Resources */,
+				877AFBD4200B330D00D1AF8C /* WKWebViewUsages.html in Resources */,
 				879D012C1FD0652E00430757 /* Main.storyboard in Resources */,
 				8E8AD7861FFC81F600F7B02B /* test.html in Resources */,
 				8E8AD7831FFC81F600F7B02B /* test2.html in Resources */,
@@ -219,7 +233,9 @@
 				8E8AD7841FFC81F600F7B02B /* Test1ViewController.m in Sources */,
 				879D01341FD0652E00430757 /* main.m in Sources */,
 				8E8AD78E1FFC82C000F7B02B /* TestWKWebViewController.m in Sources */,
+				877AFBD2200B302E00D1AF8C /* TGTest1TableViewController.m in Sources */,
 				8E8AD7811FFC81F600F7B02B /* WeakScriptMessageDelegate.m in Sources */,
+				877AFBCF200B300900D1AF8C /* TGTest1TableViewCell.m in Sources */,
 				8E8AD7871FFC81F600F7B02B /* Test2ViewController.m in Sources */,
 				8E8AD7821FFC81F600F7B02B /* AppDelegate.m in Sources */,
 				8E8AD7851FFC81F600F7B02B /* ViewController.m in Sources */,
