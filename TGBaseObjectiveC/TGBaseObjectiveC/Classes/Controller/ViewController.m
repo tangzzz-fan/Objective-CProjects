@@ -22,12 +22,73 @@
 
 @end
 
+
+
+@implementation ViewController (AssociatedObjects)
+
+- (NSString *)associatedObject_assign {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setAssociatedObject_assign:(NSString *)associatedObject_assign {
+    
+    /**
+    为对象设置关联属性
+
+     @param self
+     @param 这里使用 @selector(getter) 名称作为关键字 便于查找. 不需要额外创建一个变量 static String
+     @param associatedObject_assign 关联属性修饰符
+     @return
+     */
+    objc_setAssociatedObject(self, @selector(associatedObject_assign), associatedObject_assign, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSString *)associatedObject_retain {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setAssociatedObject_retain:(NSString *)associatedObject_retain {
+    objc_setAssociatedObject(self, @selector(associatedObject_retain), associatedObject_retain, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSString *)associatedObject_copy {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setAssociatedObject_copy:(NSString *)associatedObject_copy {
+    objc_setAssociatedObject(self, @selector(associatedObject_copy), associatedObject_copy, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+@end
+
+__weak NSString *string_weak_assign = nil;
+__weak NSString *string_weak_retain = nil;
+__weak NSString *string_weak_copy   = nil;
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.associatedObject_assign = [NSString stringWithFormat:@"test1"];
+    self.associatedObject_retain = [NSString stringWithFormat:@"test2"];
+    self.associatedObject_copy   = [NSString stringWithFormat:@"test3"];
+    
+    string_weak_assign = self.associatedObject_assign;
+    string_weak_retain = self.associatedObject_retain;
+    string_weak_copy   = self.associatedObject_copy;
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    //    NSLog(@"self.associatedObject_assign: %@", self.associatedObject_assign); // Will Crash
+    NSLog(@"self.associatedObject_retain: %@", self.associatedObject_retain);
+    NSLog(@"self.associatedObject_copy:   %@", self.associatedObject_copy);
+}
+
+- (void)dealloc {
+    NSLog(@"delloc");
+}
+
 #pragma mark - Actions
 /** 消息转发 */
 - (IBAction)msgSendAction:(id)sender {
@@ -117,9 +178,11 @@
  *  在类的分类中声明属性的 set get 方法, 本质并不是真的生成成员变量(属性) 而是 提供 get set 方法 供外界调用(伴随着在分类中的属性声明)
  */
 - (IBAction)addPropertyInCatrgoryAction:(id)sender {
-//    Student *stu = [[Student alloc] init];
-//    stu.name = @"a default name";
-//    NSLog(@"name, %@", stu.name);
+    Student *stu = [[Student alloc] init];
+    stu.name = @"a default name";
+    stu.grandle = @"this is a changed grandle";
+    
+    NSLog(@"name :%@, grandle: %@", stu.name, stu.grandle);
     
 }
 

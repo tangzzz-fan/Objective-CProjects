@@ -8,7 +8,17 @@
 
 #import "Student.h"
 
+@implementation Student(Category)
 
+- (NSString *)grandle {
+    return @"grandle";
+}
+
+- (void)setGrandle:(NSString *)grandle {
+    self.name = grandle;
+}
+
+@end
 
 @implementation Student
 //+ (void)load {

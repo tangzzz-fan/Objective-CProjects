@@ -7,10 +7,13 @@
 //
 
 #import "Person.h"
-
 @interface Student : Person
 @property (strong, nonatomic) NSString *name;
 - (void)test;
 
 + (void)test;
+@end
+@interface Student(Category)
+/**  */
+@property (nonatomic, strong) NSString *grandle;
 @end
