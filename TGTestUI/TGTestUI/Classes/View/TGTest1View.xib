@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TGTest1View"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti3-bN-NPq">
+                    <rect key="frame" x="16" y="20" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUy-nX-M7D">
+                    <rect key="frame" x="258" y="150" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEO-fc-yD9">
+                    <rect key="frame" x="16" y="149" width="51" height="31"/>
+                </switch>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8D8-dB-dod">
+                    <rect key="frame" x="183" y="20" width="121" height="29"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="0.8683411593" green="0.68473527190000005" blue="0.28653842829999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LUy-nX-M7D" secondAttribute="trailing" constant="16" id="FQk-Rt-lyD"/>
+                <constraint firstItem="ti3-bN-NPq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Ktg-0X-icg"/>
+                <constraint firstItem="8D8-dB-dod" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Oms-0b-M2g"/>
+                <constraint firstItem="dEO-fc-yD9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Z8W-py-Yjo"/>
+                <constraint firstItem="ti3-bN-NPq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="fhU-dZ-Su8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dEO-fc-yD9" secondAttribute="bottom" constant="20" id="kVf-3E-8vI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LUy-nX-M7D" secondAttribute="bottom" constant="20" id="rES-5t-kyL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8D8-dB-dod" secondAttribute="trailing" constant="16" id="yQb-47-rtp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="23" y="-176"/>
+        </view>
+    </objects>
+</document>

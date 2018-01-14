@@ -19,7 +19,6 @@
 @property (assign, nonatomic) BOOL isShowCoverView;
 
 
-
 @property (assign, nonatomic) CGFloat titleMarign;
 @property (assign, nonatomic) CGFloat coverMargin;
 @property (assign, nonatomic) CGFloat coverHeight;

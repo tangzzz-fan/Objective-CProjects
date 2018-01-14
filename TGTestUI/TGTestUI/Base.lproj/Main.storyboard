@@ -42,6 +42,14 @@
                                     <action selector="showPageViewControllerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J5T-24-bQ0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlQ-uv-RyR">
+                                <rect key="frame" x="54" y="235" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="加载 xib"/>
+                                <connections>
+                                    <segue destination="Yer-5g-tKL" kind="show" id="Z2H-gh-qec"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -51,6 +59,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="756" y="115"/>
+        </scene>
+        <!--Test Table View Controller-->
+        <scene sceneID="n00-lE-n5N">
+            <objects>
+                <tableViewController id="Yer-5g-tKL" customClass="TGTestTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="irv-Z7-6Ap">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TGTest1TableViewCell" rowHeight="240" id="YfQ-Nv-lLj" customClass="TGTest1TableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="240"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YfQ-Nv-lLj" id="YdP-Eb-ljq">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="239.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pde-wW-Q1L">
+                                            <rect key="frame" x="16" y="4" width="343" height="231.5"/>
+                                            <color key="backgroundColor" red="0.27177254099999998" green="0.56146620420000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pde-wW-Q1L" firstAttribute="leading" secondItem="YdP-Eb-ljq" secondAttribute="leading" constant="16" id="2qC-eX-Mej"/>
+                                        <constraint firstItem="pde-wW-Q1L" firstAttribute="top" secondItem="YdP-Eb-ljq" secondAttribute="top" constant="4" id="J1f-CC-G1n"/>
+                                        <constraint firstAttribute="bottom" secondItem="pde-wW-Q1L" secondAttribute="bottom" constant="4" id="SMP-rG-4wL"/>
+                                        <constraint firstAttribute="trailing" secondItem="pde-wW-Q1L" secondAttribute="trailing" constant="16" id="pMW-E6-OIh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="container" destination="pde-wW-Q1L" id="igq-Np-gjc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Yer-5g-tKL" id="qaN-GK-sZF"/>
+                            <outlet property="delegate" destination="Yer-5g-tKL" id="W7p-DD-pub"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZ9-8M-IqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1572" y="407.0464767616192"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zXH-zm-QNa">
@@ -91,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfB-xD-iJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="115"/>
+            <point key="canvasLocation" x="1572" y="-260"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Onv-9E-82R">
