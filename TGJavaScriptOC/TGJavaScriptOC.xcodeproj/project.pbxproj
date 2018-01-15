@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		877AFBCF200B300900D1AF8C /* TGTest1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 877AFBCE200B300900D1AF8C /* TGTest1TableViewCell.m */; };
-		877AFBD2200B302E00D1AF8C /* TGTest1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 877AFBD1200B302E00D1AF8C /* TGTest1TableViewController.m */; };
 		877AFBD4200B330D00D1AF8C /* WKWebViewUsages.html in Resources */ = {isa = PBXBuildFile; fileRef = 877AFBD3200B330D00D1AF8C /* WKWebViewUsages.html */; };
 		879D012C1FD0652E00430757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879D012A1FD0652E00430757 /* Main.storyboard */; };
 		879D012E1FD0652E00430757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879D012D1FD0652E00430757 /* Assets.xcassets */; };
@@ -16,24 +14,20 @@
 		879D01341FD0652E00430757 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879D01331FD0652E00430757 /* main.m */; };
 		8E3EB270200A1A5000502BC4 /* Wechatecharts.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 8E3EB26E200A1A5000502BC4 /* Wechatecharts.min.js */; };
 		8E3EB271200A1A5000502BC4 /* home_chart.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E3EB26F200A1A5000502BC4 /* home_chart.html */; };
-		8E3EB274200A1ADB00502BC4 /* ZFTestWK2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB273200A1ADB00502BC4 /* ZFTestWK2TableViewController.m */; };
-		8E3EB277200A1B2C00502BC4 /* TGTest2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB276200A1B2C00502BC4 /* TGTest2TableViewCell.m */; };
-		8E8AD7811FFC81F600F7B02B /* WeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD7741FFC81F600F7B02B /* WeakScriptMessageDelegate.m */; };
-		8E8AD7821FFC81F600F7B02B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD7771FFC81F600F7B02B /* AppDelegate.m */; };
-		8E8AD7831FFC81F600F7B02B /* test2.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E8AD7791FFC81F600F7B02B /* test2.html */; };
-		8E8AD7841FFC81F600F7B02B /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD77A1FFC81F600F7B02B /* Test1ViewController.m */; };
-		8E8AD7851FFC81F600F7B02B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD77C1FFC81F600F7B02B /* ViewController.m */; };
-		8E8AD7861FFC81F600F7B02B /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E8AD77D1FFC81F600F7B02B /* test.html */; };
-		8E8AD7871FFC81F600F7B02B /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD7801FFC81F600F7B02B /* Test2ViewController.m */; };
-		8E8AD78B1FFC828C00F7B02B /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD78A1FFC828C00F7B02B /* TestTableViewCell.m */; };
-		8E8AD78E1FFC82C000F7B02B /* TestWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD78D1FFC82C000F7B02B /* TestWKWebViewController.m */; };
+		8E3EB29F200C4BCE00502BC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB289200C4BCD00502BC4 /* AppDelegate.m */; };
+		8E3EB2A0200C4BCE00502BC4 /* TGTest1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB28B200C4BCD00502BC4 /* TGTest1TableViewCell.m */; };
+		8E3EB2A1200C4BCE00502BC4 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB28C200C4BCD00502BC4 /* TestTableViewCell.m */; };
+		8E3EB2A2200C4BCE00502BC4 /* test2.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E3EB290200C4BCE00502BC4 /* test2.html */; };
+		8E3EB2A3200C4BCE00502BC4 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB291200C4BCE00502BC4 /* Test1ViewController.m */; };
+		8E3EB2A4200C4BCE00502BC4 /* TGTest1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB292200C4BCE00502BC4 /* TGTest1TableViewController.m */; };
+		8E3EB2A5200C4BCE00502BC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB294200C4BCE00502BC4 /* ViewController.m */; };
+		8E3EB2A6200C4BCE00502BC4 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E3EB296200C4BCE00502BC4 /* test.html */; };
+		8E3EB2A7200C4BCE00502BC4 /* TestWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB298200C4BCE00502BC4 /* TestWKWebViewController.m */; };
+		8E3EB2A8200C4BCE00502BC4 /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB29A200C4BCE00502BC4 /* Test2ViewController.m */; };
+		8E3EB2A9200C4BCE00502BC4 /* WeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB29E200C4BCE00502BC4 /* WeakScriptMessageDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		877AFBCD200B300900D1AF8C /* TGTest1TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest1TableViewCell.h; sourceTree = "<group>"; };
-		877AFBCE200B300900D1AF8C /* TGTest1TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest1TableViewCell.m; sourceTree = "<group>"; };
-		877AFBD0200B302E00D1AF8C /* TGTest1TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest1TableViewController.h; sourceTree = "<group>"; };
-		877AFBD1200B302E00D1AF8C /* TGTest1TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest1TableViewController.m; sourceTree = "<group>"; };
 		877AFBD3200B330D00D1AF8C /* WKWebViewUsages.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WKWebViewUsages.html; sourceTree = "<group>"; };
 		879D01211FD0652D00430757 /* TGJavaScriptOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGJavaScriptOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879D012B1FD0652E00430757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,26 +37,28 @@
 		879D01331FD0652E00430757 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E3EB26E200A1A5000502BC4 /* Wechatecharts.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Wechatecharts.min.js; sourceTree = "<group>"; };
 		8E3EB26F200A1A5000502BC4 /* home_chart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = home_chart.html; sourceTree = "<group>"; };
-		8E3EB272200A1ADB00502BC4 /* ZFTestWK2TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFTestWK2TableViewController.h; sourceTree = "<group>"; };
 		8E3EB273200A1ADB00502BC4 /* ZFTestWK2TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFTestWK2TableViewController.m; sourceTree = "<group>"; };
-		8E3EB275200A1B2C00502BC4 /* TGTest2TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest2TableViewCell.h; sourceTree = "<group>"; };
 		8E3EB276200A1B2C00502BC4 /* TGTest2TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest2TableViewCell.m; sourceTree = "<group>"; };
-		8E8AD7731FFC81F600F7B02B /* WeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakScriptMessageDelegate.h; sourceTree = "<group>"; };
-		8E8AD7741FFC81F600F7B02B /* WeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakScriptMessageDelegate.m; sourceTree = "<group>"; };
-		8E8AD7761FFC81F600F7B02B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8E8AD7771FFC81F600F7B02B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8E8AD7791FFC81F600F7B02B /* test2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test2.html; sourceTree = "<group>"; };
-		8E8AD77A1FFC81F600F7B02B /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
-		8E8AD77B1FFC81F600F7B02B /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
-		8E8AD77C1FFC81F600F7B02B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8E8AD77D1FFC81F600F7B02B /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		8E8AD77E1FFC81F600F7B02B /* Test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
-		8E8AD77F1FFC81F600F7B02B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8E8AD7801FFC81F600F7B02B /* Test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
-		8E8AD7891FFC828C00F7B02B /* TestTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
-		8E8AD78A1FFC828C00F7B02B /* TestTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
-		8E8AD78C1FFC82C000F7B02B /* TestWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestWKWebViewController.h; sourceTree = "<group>"; };
-		8E8AD78D1FFC82C000F7B02B /* TestWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestWKWebViewController.m; sourceTree = "<group>"; };
+		8E3EB288200C4BCD00502BC4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8E3EB289200C4BCD00502BC4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8E3EB28B200C4BCD00502BC4 /* TGTest1TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest1TableViewCell.m; sourceTree = "<group>"; };
+		8E3EB28C200C4BCD00502BC4 /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
+		8E3EB28D200C4BCD00502BC4 /* TGTest1TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest1TableViewCell.h; sourceTree = "<group>"; };
+		8E3EB28E200C4BCD00502BC4 /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
+		8E3EB290200C4BCE00502BC4 /* test2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test2.html; sourceTree = "<group>"; };
+		8E3EB291200C4BCE00502BC4 /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
+		8E3EB292200C4BCE00502BC4 /* TGTest1TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest1TableViewController.m; sourceTree = "<group>"; };
+		8E3EB293200C4BCE00502BC4 /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
+		8E3EB294200C4BCE00502BC4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8E3EB295200C4BCE00502BC4 /* TestWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWKWebViewController.h; sourceTree = "<group>"; };
+		8E3EB296200C4BCE00502BC4 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		8E3EB297200C4BCE00502BC4 /* Test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
+		8E3EB298200C4BCE00502BC4 /* TestWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWKWebViewController.m; sourceTree = "<group>"; };
+		8E3EB299200C4BCE00502BC4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8E3EB29A200C4BCE00502BC4 /* Test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
+		8E3EB29B200C4BCE00502BC4 /* TGTest1TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest1TableViewController.h; sourceTree = "<group>"; };
+		8E3EB29D200C4BCE00502BC4 /* WeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		8E3EB29E200C4BCE00502BC4 /* WeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakScriptMessageDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +77,7 @@
 			children = (
 				879D01231FD0652D00430757 /* TGJavaScriptOC */,
 				879D01221FD0652D00430757 /* Products */,
+				8E3EB27D200C4B0800502BC4 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,64 +105,72 @@
 			path = TGJavaScriptOC;
 			sourceTree = "<group>";
 		};
-		8E8AD7711FFC81F600F7B02B /* Classes */ = {
+		8E3EB27D200C4B0800502BC4 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				8E8AD7881FFC827E00F7B02B /* View */,
-				8E8AD7721FFC81F600F7B02B /* WeakDelegate */,
-				8E8AD7751FFC81F600F7B02B /* Other */,
-				8E8AD7781FFC81F600F7B02B /* ViewController */,
+				8E3EB273200A1ADB00502BC4 /* ZFTestWK2TableViewController.m */,
+				8E3EB276200A1B2C00502BC4 /* TGTest2TableViewCell.m */,
 			);
-			path = Classes;
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		8E8AD7721FFC81F600F7B02B /* WeakDelegate */ = {
+		8E3EB287200C4BCD00502BC4 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				8E8AD7731FFC81F600F7B02B /* WeakScriptMessageDelegate.h */,
-				8E8AD7741FFC81F600F7B02B /* WeakScriptMessageDelegate.m */,
-			);
-			path = WeakDelegate;
-			sourceTree = "<group>";
-		};
-		8E8AD7751FFC81F600F7B02B /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				8E8AD7761FFC81F600F7B02B /* AppDelegate.h */,
-				8E8AD7771FFC81F600F7B02B /* AppDelegate.m */,
+				8E3EB288200C4BCD00502BC4 /* AppDelegate.h */,
+				8E3EB289200C4BCD00502BC4 /* AppDelegate.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
 		};
-		8E8AD7781FFC81F600F7B02B /* ViewController */ = {
+		8E3EB28A200C4BCD00502BC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8E8AD7791FFC81F600F7B02B /* test2.html */,
-				8E8AD77E1FFC81F600F7B02B /* Test1ViewController.h */,
-				8E8AD77A1FFC81F600F7B02B /* Test1ViewController.m */,
-				8E8AD77F1FFC81F600F7B02B /* ViewController.h */,
-				8E8AD77C1FFC81F600F7B02B /* ViewController.m */,
-				8E8AD77D1FFC81F600F7B02B /* test.html */,
-				8E8AD77B1FFC81F600F7B02B /* Test2ViewController.h */,
-				8E8AD7801FFC81F600F7B02B /* Test2ViewController.m */,
-				8E8AD78C1FFC82C000F7B02B /* TestWKWebViewController.h */,
-				8E8AD78D1FFC82C000F7B02B /* TestWKWebViewController.m */,
-				877AFBD0200B302E00D1AF8C /* TGTest1TableViewController.h */,
-				877AFBD1200B302E00D1AF8C /* TGTest1TableViewController.m */,
-
+				8E3EB28B200C4BCD00502BC4 /* TGTest1TableViewCell.m */,
+				8E3EB28C200C4BCD00502BC4 /* TestTableViewCell.m */,
+				8E3EB28D200C4BCD00502BC4 /* TGTest1TableViewCell.h */,
+				8E3EB28E200C4BCD00502BC4 /* TestTableViewCell.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E3EB28F200C4BCE00502BC4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E3EB290200C4BCE00502BC4 /* test2.html */,
+				8E3EB291200C4BCE00502BC4 /* Test1ViewController.m */,
+				8E3EB292200C4BCE00502BC4 /* TGTest1TableViewController.m */,
+				8E3EB293200C4BCE00502BC4 /* Test2ViewController.h */,
+				8E3EB294200C4BCE00502BC4 /* ViewController.m */,
+				8E3EB295200C4BCE00502BC4 /* TestWKWebViewController.h */,
+				8E3EB296200C4BCE00502BC4 /* test.html */,
+				8E3EB297200C4BCE00502BC4 /* Test1ViewController.h */,
+				8E3EB298200C4BCE00502BC4 /* TestWKWebViewController.m */,
+				8E3EB299200C4BCE00502BC4 /* ViewController.h */,
+				8E3EB29A200C4BCE00502BC4 /* Test2ViewController.m */,
+				8E3EB29B200C4BCE00502BC4 /* TGTest1TableViewController.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		8E8AD7881FFC827E00F7B02B /* View */ = {
+		8E3EB29C200C4BCE00502BC4 /* WeakDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				8E8AD7891FFC828C00F7B02B /* TestTableViewCell.h */,
-				8E8AD78A1FFC828C00F7B02B /* TestTableViewCell.m */,
-				877AFBCD200B300900D1AF8C /* TGTest1TableViewCell.h */,
-				877AFBCE200B300900D1AF8C /* TGTest1TableViewCell.m */,
+				8E3EB29D200C4BCE00502BC4 /* WeakScriptMessageDelegate.h */,
+				8E3EB29E200C4BCE00502BC4 /* WeakScriptMessageDelegate.m */,
 			);
-			path = View;
+			path = WeakDelegate;
+			sourceTree = "<group>";
+		};
+		8E8AD7711FFC81F600F7B02B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E3EB287200C4BCD00502BC4 /* Other */,
+				8E3EB28A200C4BCD00502BC4 /* View */,
+				8E3EB28F200C4BCE00502BC4 /* ViewController */,
+				8E3EB29C200C4BCE00502BC4 /* WeakDelegate */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,10 +235,10 @@
 				8E3EB270200A1A5000502BC4 /* Wechatecharts.min.js in Resources */,
 				879D012E1FD0652E00430757 /* Assets.xcassets in Resources */,
 				877AFBD4200B330D00D1AF8C /* WKWebViewUsages.html in Resources */,
+				8E3EB2A6200C4BCE00502BC4 /* test.html in Resources */,
 				879D012C1FD0652E00430757 /* Main.storyboard in Resources */,
+				8E3EB2A2200C4BCE00502BC4 /* test2.html in Resources */,
 				8E3EB271200A1A5000502BC4 /* home_chart.html in Resources */,
-				8E8AD7861FFC81F600F7B02B /* test.html in Resources */,
-				8E8AD7831FFC81F600F7B02B /* test2.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,18 +249,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E8AD78B1FFC828C00F7B02B /* TestTableViewCell.m in Sources */,
-				8E8AD7841FFC81F600F7B02B /* Test1ViewController.m in Sources */,
+				8E3EB2A8200C4BCE00502BC4 /* Test2ViewController.m in Sources */,
+				8E3EB2A5200C4BCE00502BC4 /* ViewController.m in Sources */,
+				8E3EB29F200C4BCE00502BC4 /* AppDelegate.m in Sources */,
+				8E3EB2A1200C4BCE00502BC4 /* TestTableViewCell.m in Sources */,
+				8E3EB2A7200C4BCE00502BC4 /* TestWKWebViewController.m in Sources */,
+				8E3EB2A4200C4BCE00502BC4 /* TGTest1TableViewController.m in Sources */,
+				8E3EB2A0200C4BCE00502BC4 /* TGTest1TableViewCell.m in Sources */,
+				8E3EB2A9200C4BCE00502BC4 /* WeakScriptMessageDelegate.m in Sources */,
 				879D01341FD0652E00430757 /* main.m in Sources */,
-				8E3EB274200A1ADB00502BC4 /* ZFTestWK2TableViewController.m in Sources */,
-				8E8AD78E1FFC82C000F7B02B /* TestWKWebViewController.m in Sources */,
-				877AFBD2200B302E00D1AF8C /* TGTest1TableViewController.m in Sources */,
-				8E8AD7811FFC81F600F7B02B /* WeakScriptMessageDelegate.m in Sources */,
-				877AFBCF200B300900D1AF8C /* TGTest1TableViewCell.m in Sources */,
-				8E8AD7871FFC81F600F7B02B /* Test2ViewController.m in Sources */,
-				8E8AD7821FFC81F600F7B02B /* AppDelegate.m in Sources */,
-				8E8AD7851FFC81F600F7B02B /* ViewController.m in Sources */,
-				8E3EB277200A1B2C00502BC4 /* TGTest2TableViewCell.m in Sources */,
+				8E3EB2A3200C4BCE00502BC4 /* Test1ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
