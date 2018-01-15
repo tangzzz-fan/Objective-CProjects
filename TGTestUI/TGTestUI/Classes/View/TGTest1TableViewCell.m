@@ -20,20 +20,19 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    NSLog(@"awakeFromNib container frame %@", NSStringFromCGRect(self.container.frame));
-
+//    NSLog(@"awakeFromNib container frame %@", NSStringFromCGRect(self.container.frame));
+//    [self.contentView setNeedsLayout];
+//    [self.contentView layoutIfNeeded];
+//    NSLog(@"awakeFromNib container frame %@", NSStringFromCGRect(self.container.frame));
+    
 }
 
 - (void)layoutSubviews {
     
     [super layoutSubviews];
-//    NSLog(@"layoutSubviews container frame %@", NSStringFromCGRect(self.container.frame));
-//    [self.container setNeedsLayout];
-//    CGRect frame = self.container.frame;
-//    frame.size.width = self.contentView.frame.size.width - 32;
-//    self.container.frame = frame;
-    [self.container sizeToFit];
     self.container.backgroundColor = [UIColor redColor];
+    [self.container setNeedsLayout];
+    [self.container layoutIfNeeded];
     [self.container addSubview:self.containerView];
 
 }
