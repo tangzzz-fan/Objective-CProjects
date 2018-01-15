@@ -14,6 +14,10 @@
 		879D012E1FD0652E00430757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879D012D1FD0652E00430757 /* Assets.xcassets */; };
 		879D01311FD0652E00430757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879D012F1FD0652E00430757 /* LaunchScreen.storyboard */; };
 		879D01341FD0652E00430757 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879D01331FD0652E00430757 /* main.m */; };
+		8E3EB270200A1A5000502BC4 /* Wechatecharts.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 8E3EB26E200A1A5000502BC4 /* Wechatecharts.min.js */; };
+		8E3EB271200A1A5000502BC4 /* home_chart.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E3EB26F200A1A5000502BC4 /* home_chart.html */; };
+		8E3EB274200A1ADB00502BC4 /* ZFTestWK2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB273200A1ADB00502BC4 /* ZFTestWK2TableViewController.m */; };
+		8E3EB277200A1B2C00502BC4 /* TGTest2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EB276200A1B2C00502BC4 /* TGTest2TableViewCell.m */; };
 		8E8AD7811FFC81F600F7B02B /* WeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD7741FFC81F600F7B02B /* WeakScriptMessageDelegate.m */; };
 		8E8AD7821FFC81F600F7B02B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AD7771FFC81F600F7B02B /* AppDelegate.m */; };
 		8E8AD7831FFC81F600F7B02B /* test2.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E8AD7791FFC81F600F7B02B /* test2.html */; };
@@ -37,6 +41,12 @@
 		879D01301FD0652E00430757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		879D01321FD0652E00430757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		879D01331FD0652E00430757 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8E3EB26E200A1A5000502BC4 /* Wechatecharts.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Wechatecharts.min.js; sourceTree = "<group>"; };
+		8E3EB26F200A1A5000502BC4 /* home_chart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = home_chart.html; sourceTree = "<group>"; };
+		8E3EB272200A1ADB00502BC4 /* ZFTestWK2TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFTestWK2TableViewController.h; sourceTree = "<group>"; };
+		8E3EB273200A1ADB00502BC4 /* ZFTestWK2TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFTestWK2TableViewController.m; sourceTree = "<group>"; };
+		8E3EB275200A1B2C00502BC4 /* TGTest2TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest2TableViewCell.h; sourceTree = "<group>"; };
+		8E3EB276200A1B2C00502BC4 /* TGTest2TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest2TableViewCell.m; sourceTree = "<group>"; };
 		8E8AD7731FFC81F600F7B02B /* WeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakScriptMessageDelegate.h; sourceTree = "<group>"; };
 		8E8AD7741FFC81F600F7B02B /* WeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakScriptMessageDelegate.m; sourceTree = "<group>"; };
 		8E8AD7761FFC81F600F7B02B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,6 +102,8 @@
 				879D012F1FD0652E00430757 /* LaunchScreen.storyboard */,
 				879D01321FD0652E00430757 /* Info.plist */,
 				879D01331FD0652E00430757 /* main.m */,
+				8E3EB26F200A1A5000502BC4 /* home_chart.html */,
+				8E3EB26E200A1A5000502BC4 /* Wechatecharts.min.js */,
 			);
 			path = TGJavaScriptOC;
 			sourceTree = "<group>";
@@ -140,6 +152,7 @@
 				8E8AD78D1FFC82C000F7B02B /* TestWKWebViewController.m */,
 				877AFBD0200B302E00D1AF8C /* TGTest1TableViewController.h */,
 				877AFBD1200B302E00D1AF8C /* TGTest1TableViewController.m */,
+
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -214,9 +227,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				879D01311FD0652E00430757 /* LaunchScreen.storyboard in Resources */,
+				8E3EB270200A1A5000502BC4 /* Wechatecharts.min.js in Resources */,
 				879D012E1FD0652E00430757 /* Assets.xcassets in Resources */,
 				877AFBD4200B330D00D1AF8C /* WKWebViewUsages.html in Resources */,
 				879D012C1FD0652E00430757 /* Main.storyboard in Resources */,
+				8E3EB271200A1A5000502BC4 /* home_chart.html in Resources */,
 				8E8AD7861FFC81F600F7B02B /* test.html in Resources */,
 				8E8AD7831FFC81F600F7B02B /* test2.html in Resources */,
 			);
@@ -232,6 +247,7 @@
 				8E8AD78B1FFC828C00F7B02B /* TestTableViewCell.m in Sources */,
 				8E8AD7841FFC81F600F7B02B /* Test1ViewController.m in Sources */,
 				879D01341FD0652E00430757 /* main.m in Sources */,
+				8E3EB274200A1ADB00502BC4 /* ZFTestWK2TableViewController.m in Sources */,
 				8E8AD78E1FFC82C000F7B02B /* TestWKWebViewController.m in Sources */,
 				877AFBD2200B302E00D1AF8C /* TGTest1TableViewController.m in Sources */,
 				8E8AD7811FFC81F600F7B02B /* WeakScriptMessageDelegate.m in Sources */,
@@ -239,6 +255,7 @@
 				8E8AD7871FFC81F600F7B02B /* Test2ViewController.m in Sources */,
 				8E8AD7821FFC81F600F7B02B /* AppDelegate.m in Sources */,
 				8E8AD7851FFC81F600F7B02B /* ViewController.m in Sources */,
+				8E3EB277200A1B2C00502BC4 /* TGTest2TableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
