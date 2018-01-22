@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		437291CD257730771ECF54CD /* libPods-TGMVVMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336BE30D9D22586B004A7BAB /* libPods-TGMVVMDemo.a */; };
+		871FCC1F20162A6C00A8071F /* TGDemo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871FCC1D20162A6C00A8071F /* TGDemo3ViewController.m */; };
+		871FCC2320162CB300A8071F /* TGDemo3TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871FCC2220162CB300A8071F /* TGDemo3TableViewController.m */; };
+		871FCC2720162D8100A8071F /* TGDemo3TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 871FCC2620162D8100A8071F /* TGDemo3TableViewCell.m */; };
+		871FCC2B20162F2D00A8071F /* TGDemo3CellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 871FCC2A20162F2D00A8071F /* TGDemo3CellViewModel.m */; };
 		87C739B81FFE5DA000B33E3D /* TGHotel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C739B71FFE5DA000B33E3D /* TGHotel.m */; };
 		87C739BB1FFE5DAE00B33E3D /* TGScenic.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C739BA1FFE5DAE00B33E3D /* TGScenic.m */; };
 		87C739BE1FFE5E4600B33E3D /* TGScenicCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C739BD1FFE5E4600B33E3D /* TGScenicCellViewModel.m */; };
@@ -46,6 +50,14 @@
 /* Begin PBXFileReference section */
 		1EA0025A225F1A9E8BA535C9 /* Pods-TGMVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGMVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGMVVMDemo/Pods-TGMVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		336BE30D9D22586B004A7BAB /* libPods-TGMVVMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TGMVVMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		871FCC1C20162A6C00A8071F /* TGDemo3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGDemo3ViewController.h; sourceTree = "<group>"; };
+		871FCC1D20162A6C00A8071F /* TGDemo3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGDemo3ViewController.m; sourceTree = "<group>"; };
+		871FCC2120162CB300A8071F /* TGDemo3TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGDemo3TableViewController.h; sourceTree = "<group>"; };
+		871FCC2220162CB300A8071F /* TGDemo3TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGDemo3TableViewController.m; sourceTree = "<group>"; };
+		871FCC2520162D8100A8071F /* TGDemo3TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGDemo3TableViewCell.h; sourceTree = "<group>"; };
+		871FCC2620162D8100A8071F /* TGDemo3TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGDemo3TableViewCell.m; sourceTree = "<group>"; };
+		871FCC2920162F2D00A8071F /* TGDemo3CellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGDemo3CellViewModel.h; sourceTree = "<group>"; };
+		871FCC2A20162F2D00A8071F /* TGDemo3CellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGDemo3CellViewModel.m; sourceTree = "<group>"; };
 		87C739B61FFE5DA000B33E3D /* TGHotel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGHotel.h; sourceTree = "<group>"; };
 		87C739B71FFE5DA000B33E3D /* TGHotel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGHotel.m; sourceTree = "<group>"; };
 		87C739B91FFE5DAE00B33E3D /* TGScenic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGScenic.h; sourceTree = "<group>"; };
@@ -128,6 +140,35 @@
 				336BE30D9D22586B004A7BAB /* libPods-TGMVVMDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		871FCC1B20162A5800A8071F /* Demo3 */ = {
+			isa = PBXGroup;
+			children = (
+				871FCC1C20162A6C00A8071F /* TGDemo3ViewController.h */,
+				871FCC1D20162A6C00A8071F /* TGDemo3ViewController.m */,
+				871FCC2120162CB300A8071F /* TGDemo3TableViewController.h */,
+				871FCC2220162CB300A8071F /* TGDemo3TableViewController.m */,
+			);
+			path = Demo3;
+			sourceTree = "<group>";
+		};
+		871FCC2420162D5F00A8071F /* Demo3 */ = {
+			isa = PBXGroup;
+			children = (
+				871FCC2520162D8100A8071F /* TGDemo3TableViewCell.h */,
+				871FCC2620162D8100A8071F /* TGDemo3TableViewCell.m */,
+			);
+			path = Demo3;
+			sourceTree = "<group>";
+		};
+		871FCC2820162F1400A8071F /* Demo3 */ = {
+			isa = PBXGroup;
+			children = (
+				871FCC2920162F2D00A8071F /* TGDemo3CellViewModel.h */,
+				871FCC2A20162F2D00A8071F /* TGDemo3CellViewModel.m */,
+			);
+			path = Demo3;
 			sourceTree = "<group>";
 		};
 		87C739C61FFE657000B33E3D /* Demo2 */ = {
@@ -266,6 +307,7 @@
 				8E54E47F1FFCF49E009E4986 /* TGBaseViewModel.m */,
 				8E54E4A11FFCF729009E4986 /* TGBaseCellViewModel.h */,
 				8E54E4A21FFCF729009E4986 /* TGBaseCellViewModel.m */,
+				871FCC2820162F1400A8071F /* Demo3 */,
 				8E54E47B1FFCF49E009E4986 /* Demo1 */,
 				87D109FE1FFE54D500E7704B /* Demo2 */,
 			);
@@ -305,6 +347,7 @@
 				8E7B636B1FFB808200689499 /* TGBaseTableViewCell.m */,
 				8E54E48C1FFCF600009E4986 /* Demo1 */,
 				87C739C61FFE657000B33E3D /* Demo2 */,
+				871FCC2420162D5F00A8071F /* Demo3 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +355,7 @@
 		8E7B63441FFB6B9300689499 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				871FCC1B20162A5800A8071F /* Demo3 */,
 				87C739CC1FFE6E4B00B33E3D /* Demo2 */,
 				8E54E49C1FFCF630009E4986 /* Demo1 */,
 				8E54E4991FFCF61A009E4986 /* RootViewController.h */,
@@ -462,9 +506,12 @@
 				87C739CA1FFE659700B33E3D /* TGPOITableViewCell.m in Sources */,
 				8E54E4971FFCF600009E4986 /* TGTest4TableViewCell.m in Sources */,
 				87C739B81FFE5DA000B33E3D /* TGHotel.m in Sources */,
+				871FCC1F20162A6C00A8071F /* TGDemo3ViewController.m in Sources */,
 				8E54E49B1FFCF61A009E4986 /* RootViewController.m in Sources */,
+				871FCC2320162CB300A8071F /* TGDemo3TableViewController.m in Sources */,
 				87C739BE1FFE5E4600B33E3D /* TGScenicCellViewModel.m in Sources */,
 				8E54E4881FFCF49E009E4986 /* TGTest3ViewModel.m in Sources */,
+				871FCC2720162D8100A8071F /* TGDemo3TableViewCell.m in Sources */,
 				87C739D21FFE6FD300B33E3D /* TGDemo2ViewController.m in Sources */,
 				8E54E4891FFCF49E009E4986 /* TGTest4ViewModel.m in Sources */,
 				8E54E4861FFCF49E009E4986 /* TGTest2ViewModel.m in Sources */,
@@ -484,6 +531,7 @@
 				8E54E4A31FFCF729009E4986 /* TGBaseCellViewModel.m in Sources */,
 				8E7B636C1FFB808200689499 /* TGBaseTableViewCell.m in Sources */,
 				87C739C11FFE5E8D00B33E3D /* TGPOICellViewModel.m in Sources */,
+				871FCC2B20162F2D00A8071F /* TGDemo3CellViewModel.m in Sources */,
 				8E7B63371FFB6A8600689499 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
