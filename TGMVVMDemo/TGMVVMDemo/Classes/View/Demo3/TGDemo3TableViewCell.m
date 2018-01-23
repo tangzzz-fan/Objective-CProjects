@@ -15,6 +15,10 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 /** tempArrau */
 @property (nonatomic, strong) NSArray *tempArray;
+
+
+@property (copy, nonatomic) NSString *selectedID;
+
 @end
 @implementation TGDemo3TableViewCell
 
@@ -31,7 +35,7 @@
             [obj removeFromSuperview];
         }];
         for (NSInteger i = 0; i < self.tempArray.count; i ++) {
-            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(3 + i * 30, 8, 50, 40)];
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(3 + i * 50, 8, 40, 40)];
             label.text = self.tempArray[i];
             label.backgroundColor = [UIColor purpleColor];
             [self.containerView addSubview:label];
@@ -40,8 +44,11 @@
 }
 
 - (void)bindViewModel:(TGDemo3CellViewModel *)viewModel {
+
     RAC(self, tempArray) = [[RACSignal return:viewModel.dataSource] distinctUntilChanged];
+    
     [RACObserve(self, tempArray) subscribeNext:^(id x) {
+        
         [self createUI];
     }];
 }

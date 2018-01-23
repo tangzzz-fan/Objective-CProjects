@@ -21,17 +21,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initData];
+    [self initTableView];
+    [self initDataWithFingure:0];
 }
 
-- (void)initData {
+- (void)initTableView {
+    self.tableView.rowHeight = 105;
+    [self.tableView registerNib:[UINib nibWithNibName:@"TGDemo3TableViewCell" bundle:nil] forCellReuseIdentifier:@"TGDemo3TableViewCell"];
+}
+
+- (void)initDataWithFingure:(NSInteger)data {
     NSMutableArray *tempArray = [NSMutableArray array];
     for (NSInteger i = 0; i < 20; i++) {
         TGDemo3CellViewModel *cellViewModel = [[TGDemo3CellViewModel alloc] init];
         
         NSMutableArray *tempDataSource = [NSMutableArray array];
         for (NSInteger j = 0; j <= i; j ++) {
-            NSString *testString = [NSString stringWithFormat:@"-%zd", j];
+            NSString *testString = [NSString stringWithFormat:@"%zd-%zd", data, j];
             [tempDataSource addObject:testString];
         }
         cellViewModel.dataSource = tempDataSource.mutableCopy;
@@ -57,4 +63,9 @@
     return cell;
 }
 
+- (IBAction)changeDataSourceAction:(id)sender {
+    NSInteger temp = (arc4random() % 10);
+    [self initDataWithFingure:temp];
+    [self.tableView reloadData];
+}
 @end

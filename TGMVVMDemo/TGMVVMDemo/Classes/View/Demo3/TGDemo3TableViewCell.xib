@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TGDemo3TableViewCell" rowHeight="94" id="GGQ-ME-1gD" customClass="TGDemo3TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GGQ-ME-1gD" id="RNi-vI-WP3">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNf-aU-BBh">
+                        <rect key="frame" x="16" y="11" width="343" height="72"/>
+                        <color key="backgroundColor" red="0.73038370850000001" green="0.75380176679999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kNf-aU-BBh" firstAttribute="bottom" secondItem="RNi-vI-WP3" secondAttribute="bottomMargin" id="6FI-jC-fuw"/>
+                    <constraint firstItem="kNf-aU-BBh" firstAttribute="top" secondItem="RNi-vI-WP3" secondAttribute="topMargin" id="AHg-Wl-DFq"/>
+                    <constraint firstItem="kNf-aU-BBh" firstAttribute="leading" secondItem="RNi-vI-WP3" secondAttribute="leadingMargin" id="NaY-n6-NR3"/>
+                    <constraint firstItem="kNf-aU-BBh" firstAttribute="trailing" secondItem="RNi-vI-WP3" secondAttribute="trailingMargin" id="r7D-f5-Zcs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="kNf-aU-BBh" id="rlI-R5-uwC"/>
+            </connections>
+            <point key="canvasLocation" x="-76.5" y="-58"/>
+        </tableViewCell>
+    </objects>
+</document>

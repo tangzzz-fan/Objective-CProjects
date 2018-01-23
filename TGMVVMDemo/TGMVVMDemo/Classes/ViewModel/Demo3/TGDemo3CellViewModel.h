@@ -11,4 +11,8 @@
 @interface TGDemo3CellViewModel : TGBaseCellViewModel
 /** dataSource */
 @property (nonatomic, strong) NSArray *dataSource;
+
+@property (copy, nonatomic) NSString *selectedID;
+
+
 @end

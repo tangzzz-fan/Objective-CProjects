@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TGDemo3TableViewController : UITableViewController
+@interface TGDemo3TableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)changeDataSourceAction:(id)sender;
 
 @end

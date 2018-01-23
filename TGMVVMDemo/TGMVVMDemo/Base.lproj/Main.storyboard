@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hnJ-ws-Yaj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hnJ-ws-Yaj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -201,6 +201,7 @@
         <!--Demo2 View Controller-->
         <scene sceneID="EMd-pj-QTM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXA-C6-CE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="xEJ-8B-UFq" customClass="TGDemo2ViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aPm-K4-dk6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -217,7 +218,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fXA-C6-CE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1225" y="159"/>
         </scene>
@@ -234,7 +234,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="6ba-QT-vKv" kind="show" id="lo7-WE-gWz"/>
+                                    <segue destination="O3Z-y3-OSx" kind="show" id="ODA-lZ-aQM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -255,7 +255,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TGDemo3TableViewCell" rowHeight="90" id="EFR-pN-GFe" customClass="TGDemo3TableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TGDemo3TableViewCell" rowHeight="90" id="EFR-pN-GFe">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EFR-pN-GFe" id="fmy-RZ-Fba">
@@ -290,7 +290,50 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BF-rY-U1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="834.33283358320841"/>
+            <point key="canvasLocation" x="2855" y="859"/>
+        </scene>
+        <!--Demo3 Table View Controller-->
+        <scene sceneID="p0F-bg-wwm">
+            <objects>
+                <viewController id="O3Z-y3-OSx" customClass="TGDemo3TableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wL2-wE-27f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wfF-4D-hes">
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="O3Z-y3-OSx" id="cam-CU-wdA"/>
+                                    <outlet property="delegate" destination="O3Z-y3-OSx" id="xrF-5q-U9q"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4o-g3-WDH">
+                                <rect key="frame" x="299" y="617" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeDataSourceAction:" destination="O3Z-y3-OSx" eventType="touchUpInside" id="0qx-4e-HW2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wfF-4D-hes" firstAttribute="top" secondItem="bNf-hv-IaE" secondAttribute="top" id="6pT-AU-YfC"/>
+                            <constraint firstItem="wfF-4D-hes" firstAttribute="leading" secondItem="bNf-hv-IaE" secondAttribute="leading" id="Ks8-8f-MiB"/>
+                            <constraint firstItem="bNf-hv-IaE" firstAttribute="bottom" secondItem="wfF-4D-hes" secondAttribute="bottom" constant="64" id="Yah-uW-KkA"/>
+                            <constraint firstItem="wfF-4D-hes" firstAttribute="trailing" secondItem="bNf-hv-IaE" secondAttribute="trailing" id="o9Z-QA-UMQ"/>
+                            <constraint firstItem="bNf-hv-IaE" firstAttribute="bottom" secondItem="z4o-g3-WDH" secondAttribute="bottom" constant="20" id="ome-Uo-vS4"/>
+                            <constraint firstItem="bNf-hv-IaE" firstAttribute="trailing" secondItem="z4o-g3-WDH" secondAttribute="trailing" constant="30" id="ruT-zK-5BU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bNf-hv-IaE"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wfF-4D-hes" id="03Q-td-DH6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dyP-zl-7HE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940" y="834.33283358320841"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="luU-G1-AxV">
