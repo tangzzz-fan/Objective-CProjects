@@ -64,15 +64,19 @@
     layer.masksToBounds = YES;
     layer.borderColor = [UIColor whiteColor].CGColor;
     layer.borderWidth = borderWidth;
-    
+    ////
+    UIImage *image=[UIImage imageNamed:@"photo.jpg"];
+    // 设置设置 image 为 content
+    [layer setContents:(id)image.CGImage];
+    ////
     [self.view.layer addSublayer:layer];
     
-    layer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
+//    layer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
 
-    layer.delegate = self;
+//    layer.delegate = self;
     
     // 调用 setNeedsDisplay
-    [layer setNeedsDisplay];
+//    [layer setNeedsDisplay];
     
 }
 
