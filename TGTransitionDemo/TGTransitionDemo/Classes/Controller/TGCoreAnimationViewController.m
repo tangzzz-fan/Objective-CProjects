@@ -28,7 +28,7 @@
     
     //自定义一个图层
     self.layer = [[CALayer alloc] init];
-    self.layer.bounds = CGRectMake(0, 0, 10, 20);
+    self.layer.bounds = CGRectMake(0, 0, 100, 136);
     self.layer.position = CGPointMake(50, 150);
     self.layer.contents = (id)[UIImage imageNamed:@"patal.png"].CGImage;
     [self.view.layer addSublayer:self.layer];
@@ -53,11 +53,11 @@
     CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
     
     //2.设置动画属性初始值和结束值
-    //    basicAnimation.fromValue=[NSNumber numberWithInteger:50];//可以不设置，默认为图层初始状态
+//    basicAnimation.fromValue = [NSNumber numberWithInteger:50];//可以不设置，默认为图层初始状态
     basicAnimation.toValue = [NSValue valueWithCGPoint:location];
     
     //设置其他动画属性
-    basicAnimation.duration = 1.0;//动画时间5秒
+    basicAnimation.duration = 5.0;//动画时间5秒
     //basicAnimation.repeatCount=HUGE_VALF;//设置重复次数,HUGE_VALF可看做无穷大，起到循环动画的效果
     basicAnimation.removedOnCompletion = NO;//运行一次是否移除动画
     basicAnimation.delegate = self;
@@ -74,6 +74,26 @@
     CGPoint location = [touch locationInView:self.view];
     //创建并开始动画
     [self translatonAnimation:location];
+    // 旋转
+    [self rotationAnimation];
+}
+
+#pragma mark 旋转动画
+- (void)rotationAnimation {
+    //1.创建动画并指定动画属性
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    
+    //2.设置动画属性初始值、结束值
+    //    basicAnimation.fromValue=[NSNumber numberWithInt:M_PI_2];
+    basicAnimation.toValue = [NSNumber numberWithFloat:M_PI_2*3];
+    
+    //设置其他动画属性
+    basicAnimation.duration = 3.0;
+    basicAnimation.autoreverses = true;//旋转后再旋转到原来的位置
+    
+    
+    //4.添加动画到图层，注意key相当于给动画进行命名，以后获得该动画时可以使用此名称获取
+    [self.layer addAnimation:basicAnimation forKey:@"KCBasicAnimation_Rotation"];
 }
 
 #pragma mark - 动画代理方法
@@ -86,7 +106,15 @@
 #pragma mark 动画结束
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     NSLog(@"animation(%@) stop.\r_layer.frame=%@",anim,NSStringFromCGRect(self.layer.frame));
+    //开启事务
+    [CATransaction begin];
+    //禁用隐式动画
+    [CATransaction setDisableActions:YES];
+    
     self.layer.position = [[anim valueForKey:@"KCBasicAnimationLocation"] CGPointValue];
+    
+    // 关闭事务
+    [CATransaction commit];
 }
 
 @end
