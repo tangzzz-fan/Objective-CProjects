@@ -12,6 +12,7 @@
 		875CD4C7201781F800A38BE0 /* TGBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 875CD4C6201781F800A38BE0 /* TGBaseModel.m */; };
 		875CD4CA2017820D00A38BE0 /* TGBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 875CD4C92017820D00A38BE0 /* TGBaseView.m */; };
 		875CD4CD2017826600A38BE0 /* TGCALayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875CD4CC2017826600A38BE0 /* TGCALayerViewController.m */; };
+		875CD4D020178D6700A38BE0 /* TGCoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875CD4CF20178D6700A38BE0 /* TGCoreAnimationViewController.m */; };
 		8EE0C75E1FF36E3E0066F95E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0C75C1FF36E3E0066F95E /* Main.storyboard */; };
 		8EE0C7601FF36E3E0066F95E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0C75F1FF36E3E0066F95E /* Assets.xcassets */; };
 		8EE0C7631FF36E3E0066F95E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0C7611FF36E3E0066F95E /* LaunchScreen.storyboard */; };
@@ -29,6 +30,8 @@
 		875CD4C92017820D00A38BE0 /* TGBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseView.m; sourceTree = "<group>"; };
 		875CD4CB2017826600A38BE0 /* TGCALayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGCALayerViewController.h; sourceTree = "<group>"; };
 		875CD4CC2017826600A38BE0 /* TGCALayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGCALayerViewController.m; sourceTree = "<group>"; };
+		875CD4CE20178D6700A38BE0 /* TGCoreAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGCoreAnimationViewController.h; sourceTree = "<group>"; };
+		875CD4CF20178D6700A38BE0 /* TGCoreAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGCoreAnimationViewController.m; sourceTree = "<group>"; };
 		8EE0C7531FF36E3E0066F95E /* TGTransitionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGTransitionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE0C75D1FF36E3E0066F95E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EE0C75F1FF36E3E0066F95E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				875CD4BE201781D600A38BE0 /* ViewController.m */,
 				875CD4CB2017826600A38BE0 /* TGCALayerViewController.h */,
 				875CD4CC2017826600A38BE0 /* TGCALayerViewController.m */,
+				875CD4CE20178D6700A38BE0 /* TGCoreAnimationViewController.h */,
+				875CD4CF20178D6700A38BE0 /* TGCoreAnimationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				875CD4D020178D6700A38BE0 /* TGCoreAnimationViewController.m in Sources */,
 				875CD4C3201781D600A38BE0 /* ViewController.m in Sources */,
 				875CD4CA2017820D00A38BE0 /* TGBaseView.m in Sources */,
 				8EE0C7661FF36E3E0066F95E /* main.m in Sources */,

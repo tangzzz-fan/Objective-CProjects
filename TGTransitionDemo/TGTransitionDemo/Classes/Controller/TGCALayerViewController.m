@@ -68,6 +68,9 @@
     UIImage *image=[UIImage imageNamed:@"photo.jpg"];
     // 设置设置 image 为 content
     [layer setContents:(id)image.CGImage];
+    
+    // 位置形变
+    [layer setValue:@(2*M_PI) forKeyPath:@"transform.rotation.x"];
     ////
     [self.view.layer addSublayer:layer];
     
