@@ -188,6 +188,14 @@
                                     <segue destination="4et-kp-coP" kind="show" id="rhX-gl-4zd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6F-RP-ZZu">
+                                <rect key="frame" x="40" y="242" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Demo4"/>
+                                <connections>
+                                    <segue destination="7Zb-VQ-3ta" kind="show" id="wjA-fZ-iFf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="m3x-dF-zbs"/>
@@ -198,10 +206,24 @@
             </objects>
             <point key="canvasLocation" x="399" y="172"/>
         </scene>
+        <!--Demo4 View Controller-->
+        <scene sceneID="O3K-XR-1sp">
+            <objects>
+                <viewController id="7Zb-VQ-3ta" customClass="TGDemo4ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4YH-E2-Jqw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Q1O-eD-KR8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B7R-37-0GA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="834"/>
+        </scene>
         <!--Demo2 View Controller-->
         <scene sceneID="EMd-pj-QTM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fXA-C6-CE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="xEJ-8B-UFq" customClass="TGDemo2ViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aPm-K4-dk6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -218,6 +240,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXA-C6-CE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1225" y="159"/>
         </scene>

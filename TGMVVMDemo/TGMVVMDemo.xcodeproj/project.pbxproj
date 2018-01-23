@@ -23,6 +23,7 @@
 		87D10A011FFE5A8D00E7704B /* TGDemo2Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D10A001FFE5A8D00E7704B /* TGDemo2Model.m */; };
 		87D10A041FFE5B5800E7704B /* TGDemo2ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D10A031FFE5B5800E7704B /* TGDemo2ViewModel.m */; };
 		8E1F93C72016E09D00C398EC /* TGDemo3TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1F93C62016E09D00C398EC /* TGDemo3TableViewCell.xib */; };
+		8E1F93CB2016E6AC00C398EC /* TGDemo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F93CA2016E6AC00C398EC /* TGDemo4ViewController.m */; };
 		8E54E4861FFCF49E009E4986 /* TGTest2ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E47C1FFCF49E009E4986 /* TGTest2ViewModel.m */; };
 		8E54E4871FFCF49E009E4986 /* TGBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E47F1FFCF49E009E4986 /* TGBaseViewModel.m */; };
 		8E54E4881FFCF49E009E4986 /* TGTest3ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E54E4821FFCF49E009E4986 /* TGTest3ViewModel.m */; };
@@ -79,6 +80,8 @@
 		87D10A021FFE5B5800E7704B /* TGDemo2ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGDemo2ViewModel.h; sourceTree = "<group>"; };
 		87D10A031FFE5B5800E7704B /* TGDemo2ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGDemo2ViewModel.m; sourceTree = "<group>"; };
 		8E1F93C62016E09D00C398EC /* TGDemo3TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TGDemo3TableViewCell.xib; sourceTree = "<group>"; };
+		8E1F93C92016E6AC00C398EC /* TGDemo4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGDemo4ViewController.h; sourceTree = "<group>"; };
+		8E1F93CA2016E6AC00C398EC /* TGDemo4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGDemo4ViewController.m; sourceTree = "<group>"; };
 		8E54E47C1FFCF49E009E4986 /* TGTest2ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGTest2ViewModel.m; sourceTree = "<group>"; };
 		8E54E47D1FFCF49E009E4986 /* TGTest3ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest3ViewModel.h; sourceTree = "<group>"; };
 		8E54E47E1FFCF49E009E4986 /* TGTest4ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTest4ViewModel.h; sourceTree = "<group>"; };
@@ -207,6 +210,15 @@
 				87C739C31FFE641100B33E3D /* TGHotelCellViewModel.m */,
 			);
 			path = Demo2;
+			sourceTree = "<group>";
+		};
+		8E1F93C82016E69500C398EC /* Demo4 */ = {
+			isa = PBXGroup;
+			children = (
+				8E1F93C92016E6AC00C398EC /* TGDemo4ViewController.h */,
+				8E1F93CA2016E6AC00C398EC /* TGDemo4ViewController.m */,
+			);
+			path = Demo4;
 			sourceTree = "<group>";
 		};
 		8E54E47B1FFCF49E009E4986 /* Demo1 */ = {
@@ -358,6 +370,7 @@
 		8E7B63441FFB6B9300689499 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8E1F93C82016E69500C398EC /* Demo4 */,
 				871FCC1B20162A5800A8071F /* Demo3 */,
 				87C739CC1FFE6E4B00B33E3D /* Demo2 */,
 				8E54E49C1FFCF630009E4986 /* Demo1 */,
@@ -511,6 +524,7 @@
 				8E54E4971FFCF600009E4986 /* TGTest4TableViewCell.m in Sources */,
 				87C739B81FFE5DA000B33E3D /* TGHotel.m in Sources */,
 				871FCC1F20162A6C00A8071F /* TGDemo3ViewController.m in Sources */,
+				8E1F93CB2016E6AC00C398EC /* TGDemo4ViewController.m in Sources */,
 				8E54E49B1FFCF61A009E4986 /* RootViewController.m in Sources */,
 				871FCC2320162CB300A8071F /* TGDemo3TableViewController.m in Sources */,
 				87C739BE1FFE5E4600B33E3D /* TGScenicCellViewModel.m in Sources */,
