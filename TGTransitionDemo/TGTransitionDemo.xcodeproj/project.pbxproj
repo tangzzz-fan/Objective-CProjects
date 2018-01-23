@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8EE0C7581FF36E3E0066F95E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0C7571FF36E3E0066F95E /* AppDelegate.m */; };
-		8EE0C75B1FF36E3E0066F95E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0C75A1FF36E3E0066F95E /* ViewController.m */; };
+		875CD4C3201781D600A38BE0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875CD4BE201781D600A38BE0 /* ViewController.m */; };
+		875CD4C4201781D600A38BE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 875CD4C2201781D600A38BE0 /* AppDelegate.m */; };
+		875CD4C7201781F800A38BE0 /* TGBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 875CD4C6201781F800A38BE0 /* TGBaseModel.m */; };
+		875CD4CA2017820D00A38BE0 /* TGBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 875CD4C92017820D00A38BE0 /* TGBaseView.m */; };
+		875CD4CD2017826600A38BE0 /* TGCALayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875CD4CC2017826600A38BE0 /* TGCALayerViewController.m */; };
 		8EE0C75E1FF36E3E0066F95E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0C75C1FF36E3E0066F95E /* Main.storyboard */; };
 		8EE0C7601FF36E3E0066F95E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0C75F1FF36E3E0066F95E /* Assets.xcassets */; };
 		8EE0C7631FF36E3E0066F95E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0C7611FF36E3E0066F95E /* LaunchScreen.storyboard */; };
@@ -16,11 +19,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		875CD4BE201781D600A38BE0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		875CD4BF201781D600A38BE0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		875CD4C1201781D600A38BE0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		875CD4C2201781D600A38BE0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		875CD4C5201781F800A38BE0 /* TGBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseModel.h; sourceTree = "<group>"; };
+		875CD4C6201781F800A38BE0 /* TGBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseModel.m; sourceTree = "<group>"; };
+		875CD4C82017820D00A38BE0 /* TGBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseView.h; sourceTree = "<group>"; };
+		875CD4C92017820D00A38BE0 /* TGBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseView.m; sourceTree = "<group>"; };
+		875CD4CB2017826600A38BE0 /* TGCALayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGCALayerViewController.h; sourceTree = "<group>"; };
+		875CD4CC2017826600A38BE0 /* TGCALayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGCALayerViewController.m; sourceTree = "<group>"; };
 		8EE0C7531FF36E3E0066F95E /* TGTransitionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGTransitionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EE0C7561FF36E3E0066F95E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8EE0C7571FF36E3E0066F95E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8EE0C7591FF36E3E0066F95E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8EE0C75A1FF36E3E0066F95E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8EE0C75D1FF36E3E0066F95E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EE0C75F1FF36E3E0066F95E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EE0C7621FF36E3E0066F95E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +48,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		875CD4B4201781A900A38BE0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				875CD4BD201781D600A38BE0 /* Controller */,
+				875CD4BB201781D600A38BE0 /* Model */,
+				875CD4C0201781D600A38BE0 /* Other */,
+				875CD4BC201781D600A38BE0 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		875CD4BB201781D600A38BE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				875CD4C5201781F800A38BE0 /* TGBaseModel.h */,
+				875CD4C6201781F800A38BE0 /* TGBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		875CD4BC201781D600A38BE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				875CD4C82017820D00A38BE0 /* TGBaseView.h */,
+				875CD4C92017820D00A38BE0 /* TGBaseView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		875CD4BD201781D600A38BE0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				875CD4BF201781D600A38BE0 /* ViewController.h */,
+				875CD4BE201781D600A38BE0 /* ViewController.m */,
+				875CD4CB2017826600A38BE0 /* TGCALayerViewController.h */,
+				875CD4CC2017826600A38BE0 /* TGCALayerViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		875CD4C0201781D600A38BE0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				875CD4C1201781D600A38BE0 /* AppDelegate.h */,
+				875CD4C2201781D600A38BE0 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		8EE0C74A1FF36E3E0066F95E = {
 			isa = PBXGroup;
 			children = (
@@ -58,15 +116,12 @@
 		8EE0C7551FF36E3E0066F95E /* TGTransitionDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8EE0C7561FF36E3E0066F95E /* AppDelegate.h */,
-				8EE0C7571FF36E3E0066F95E /* AppDelegate.m */,
-				8EE0C7591FF36E3E0066F95E /* ViewController.h */,
-				8EE0C75A1FF36E3E0066F95E /* ViewController.m */,
+				875CD4B4201781A900A38BE0 /* Classes */,
 				8EE0C75C1FF36E3E0066F95E /* Main.storyboard */,
-				8EE0C75F1FF36E3E0066F95E /* Assets.xcassets */,
-				8EE0C7611FF36E3E0066F95E /* LaunchScreen.storyboard */,
 				8EE0C7641FF36E3E0066F95E /* Info.plist */,
+				8EE0C7611FF36E3E0066F95E /* LaunchScreen.storyboard */,
 				8EE0C7651FF36E3E0066F95E /* main.m */,
+				8EE0C75F1FF36E3E0066F95E /* Assets.xcassets */,
 			);
 			path = TGTransitionDemo;
 			sourceTree = "<group>";
@@ -97,6 +152,7 @@
 		8EE0C74B1FF36E3E0066F95E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TG;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = Centaline;
 				TargetAttributes = {
@@ -142,9 +198,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EE0C75B1FF36E3E0066F95E /* ViewController.m in Sources */,
+				875CD4C3201781D600A38BE0 /* ViewController.m in Sources */,
+				875CD4CA2017820D00A38BE0 /* TGBaseView.m in Sources */,
 				8EE0C7661FF36E3E0066F95E /* main.m in Sources */,
-				8EE0C7581FF36E3E0066F95E /* AppDelegate.m in Sources */,
+				875CD4C4201781D600A38BE0 /* AppDelegate.m in Sources */,
+				875CD4C7201781F800A38BE0 /* TGBaseModel.m in Sources */,
+				875CD4CD2017826600A38BE0 /* TGCALayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
