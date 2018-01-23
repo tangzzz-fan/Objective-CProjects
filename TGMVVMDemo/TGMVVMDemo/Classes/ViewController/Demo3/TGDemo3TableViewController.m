@@ -30,8 +30,8 @@
         TGDemo3CellViewModel *cellViewModel = [[TGDemo3CellViewModel alloc] init];
         
         NSMutableArray *tempDataSource = [NSMutableArray array];
-        for (NSInteger j = 0; j < i; j ++) {
-            NSString *testString = [NSString stringWithFormat:@"-%zd",j];
+        for (NSInteger j = 0; j <= i; j ++) {
+            NSString *testString = [NSString stringWithFormat:@"-%zd", j];
             [tempDataSource addObject:testString];
         }
         cellViewModel.dataSource = tempDataSource.mutableCopy;
