@@ -196,6 +196,14 @@
                                     <segue destination="7Zb-VQ-3ta" kind="show" id="wjA-fZ-iFf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vm8-JB-yO3">
+                                <rect key="frame" x="40" y="280" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Demo5"/>
+                                <connections>
+                                    <segue destination="3rb-eS-5LP" kind="show" id="7U0-sS-8wT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="m3x-dF-zbs"/>
@@ -219,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B7R-37-0GA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="834"/>
+            <point key="canvasLocation" x="-66" y="836"/>
         </scene>
         <!--Demo2 View Controller-->
         <scene sceneID="EMd-pj-QTM">
@@ -375,6 +383,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LID-Jq-gAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-260.80000000000001" y="172.71364317841082"/>
+        </scene>
+        <!--Demo5 View Controller-->
+        <scene sceneID="alP-Yo-Irh">
+            <objects>
+                <viewController id="3rb-eS-5LP" customClass="TGDemo5ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YUJ-gW-5yl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ruF-Zk-P0l">
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3rb-eS-5LP" id="vPs-Rc-lSg"/>
+                                    <outlet property="delegate" destination="3rb-eS-5LP" id="EZt-VD-RK9"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwz-Sv-XeZ">
+                                <rect key="frame" x="228" y="617" width="131" height="30"/>
+                                <state key="normal" title="UpdateDataSource"/>
+                                <connections>
+                                    <action selector="updateDataSource:" destination="3rb-eS-5LP" eventType="touchUpInside" id="owa-gf-eXr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ruF-Zk-P0l" firstAttribute="leading" secondItem="a6M-z5-Rmi" secondAttribute="leading" id="25Z-kq-8YW"/>
+                            <constraint firstItem="a6M-z5-Rmi" firstAttribute="bottom" secondItem="ruF-Zk-P0l" secondAttribute="bottom" constant="64" id="A5n-DO-A6z"/>
+                            <constraint firstItem="a6M-z5-Rmi" firstAttribute="bottom" secondItem="zwz-Sv-XeZ" secondAttribute="bottom" constant="20" id="FHi-rw-fyi"/>
+                            <constraint firstItem="a6M-z5-Rmi" firstAttribute="trailing" secondItem="zwz-Sv-XeZ" secondAttribute="trailing" constant="16" id="KMy-pm-BIT"/>
+                            <constraint firstItem="ruF-Zk-P0l" firstAttribute="top" secondItem="a6M-z5-Rmi" secondAttribute="top" id="LUt-Xp-9PK"/>
+                            <constraint firstItem="ruF-Zk-P0l" firstAttribute="trailing" secondItem="a6M-z5-Rmi" secondAttribute="trailing" id="lfp-Em-fRa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a6M-z5-Rmi"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ruF-Zk-P0l" id="IWm-jW-eaP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZU-Gr-mjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576.79999999999995" y="833.43328335832086"/>
         </scene>
     </scenes>
 </document>

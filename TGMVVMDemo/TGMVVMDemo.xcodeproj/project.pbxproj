@@ -47,6 +47,10 @@
 		8E7B634E1FFB6BCC00689499 /* TGBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B634D1FFB6BCC00689499 /* TGBaseModel.m */; };
 		8E7B63511FFB6BDA00689499 /* TGBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B63501FFB6BDA00689499 /* TGBaseView.m */; };
 		8E7B636C1FFB808200689499 /* TGBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B636B1FFB808200689499 /* TGBaseTableViewCell.m */; };
+		8EC16244201893D900D2DB90 /* TGDemo5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC16243201893D900D2DB90 /* TGDemo5ViewController.m */; };
+		8EC16248201893F700D2DB90 /* TGDemo5TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC16246201893F700D2DB90 /* TGDemo5TableViewCell.m */; };
+		8EC16249201893F700D2DB90 /* TGDemo5TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC16247201893F700D2DB90 /* TGDemo5TableViewCell.xib */; };
+		8EC1624C2018941300D2DB90 /* TGDemo5CellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1624B2018941300D2DB90 /* TGDemo5CellViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +128,13 @@
 		8E7B63501FFB6BDA00689499 /* TGBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseView.m; sourceTree = "<group>"; };
 		8E7B636A1FFB808200689499 /* TGBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBaseTableViewCell.h; sourceTree = "<group>"; };
 		8E7B636B1FFB808200689499 /* TGBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBaseTableViewCell.m; sourceTree = "<group>"; };
+		8EC16242201893D900D2DB90 /* TGDemo5ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGDemo5ViewController.h; sourceTree = "<group>"; };
+		8EC16243201893D900D2DB90 /* TGDemo5ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGDemo5ViewController.m; sourceTree = "<group>"; };
+		8EC16245201893F700D2DB90 /* TGDemo5TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGDemo5TableViewCell.h; sourceTree = "<group>"; };
+		8EC16246201893F700D2DB90 /* TGDemo5TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGDemo5TableViewCell.m; sourceTree = "<group>"; };
+		8EC16247201893F700D2DB90 /* TGDemo5TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TGDemo5TableViewCell.xib; sourceTree = "<group>"; };
+		8EC1624A2018941300D2DB90 /* TGDemo5CellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGDemo5CellViewModel.h; sourceTree = "<group>"; };
+		8EC1624B2018941300D2DB90 /* TGDemo5CellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGDemo5CellViewModel.m; sourceTree = "<group>"; };
 		C34EC9233E7DD4503CA664FA /* Pods-TGMVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGMVVMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TGMVVMDemo/Pods-TGMVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -318,6 +329,7 @@
 		8E7B633E1FFB6B9300689499 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8EC16241201893AD00D2DB90 /* Demo5 */,
 				8E54E4851FFCF49E009E4986 /* TGBaseViewModel.h */,
 				8E54E47F1FFCF49E009E4986 /* TGBaseViewModel.m */,
 				8E54E4A11FFCF729009E4986 /* TGBaseCellViewModel.h */,
@@ -356,6 +368,7 @@
 		8E7B63431FFB6B9300689499 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8EC162402018939500D2DB90 /* Demo5 */,
 				8E7B634F1FFB6BDA00689499 /* TGBaseView.h */,
 				8E7B63501FFB6BDA00689499 /* TGBaseView.m */,
 				8E7B636A1FFB808200689499 /* TGBaseTableViewCell.h */,
@@ -370,6 +383,7 @@
 		8E7B63441FFB6B9300689499 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8EC1623F2018937F00D2DB90 /* Demo5 */,
 				8E1F93C82016E69500C398EC /* Demo4 */,
 				871FCC1B20162A5800A8071F /* Demo3 */,
 				87C739CC1FFE6E4B00B33E3D /* Demo2 */,
@@ -378,6 +392,34 @@
 				8E54E49A1FFCF61A009E4986 /* RootViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8EC1623F2018937F00D2DB90 /* Demo5 */ = {
+			isa = PBXGroup;
+			children = (
+				8EC16242201893D900D2DB90 /* TGDemo5ViewController.h */,
+				8EC16243201893D900D2DB90 /* TGDemo5ViewController.m */,
+			);
+			path = Demo5;
+			sourceTree = "<group>";
+		};
+		8EC162402018939500D2DB90 /* Demo5 */ = {
+			isa = PBXGroup;
+			children = (
+				8EC16245201893F700D2DB90 /* TGDemo5TableViewCell.h */,
+				8EC16246201893F700D2DB90 /* TGDemo5TableViewCell.m */,
+				8EC16247201893F700D2DB90 /* TGDemo5TableViewCell.xib */,
+			);
+			path = Demo5;
+			sourceTree = "<group>";
+		};
+		8EC16241201893AD00D2DB90 /* Demo5 */ = {
+			isa = PBXGroup;
+			children = (
+				8EC1624A2018941300D2DB90 /* TGDemo5CellViewModel.h */,
+				8EC1624B2018941300D2DB90 /* TGDemo5CellViewModel.m */,
+			);
+			path = Demo5;
 			sourceTree = "<group>";
 		};
 		C6BA804EAFFAF926C562CF58 /* Pods */ = {
@@ -452,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E7B63341FFB6A8600689499 /* LaunchScreen.storyboard in Resources */,
+				8EC16249201893F700D2DB90 /* TGDemo5TableViewCell.xib in Resources */,
 				8E7B63311FFB6A8600689499 /* Assets.xcassets in Resources */,
 				8E7B632F1FFB6A8600689499 /* Main.storyboard in Resources */,
 				8E54E4AA1FFCF958009E4986 /* Demo2TravelData.json in Resources */,
@@ -520,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87C739C41FFE641100B33E3D /* TGHotelCellViewModel.m in Sources */,
+				8EC16248201893F700D2DB90 /* TGDemo5TableViewCell.m in Sources */,
 				87C739CA1FFE659700B33E3D /* TGPOITableViewCell.m in Sources */,
 				8E54E4971FFCF600009E4986 /* TGTest4TableViewCell.m in Sources */,
 				87C739B81FFE5DA000B33E3D /* TGHotel.m in Sources */,
@@ -536,6 +580,7 @@
 				8E54E49F1FFCF631009E4986 /* Demo1ViewController.m in Sources */,
 				87C739BB1FFE5DAE00B33E3D /* TGScenic.m in Sources */,
 				87D10A041FFE5B5800E7704B /* TGDemo2ViewModel.m in Sources */,
+				8EC16244201893D900D2DB90 /* TGDemo5ViewController.m in Sources */,
 				8E7B634E1FFB6BCC00689499 /* TGBaseModel.m in Sources */,
 				8E54E48A1FFCF49E009E4986 /* TGTest1ViewModel.m in Sources */,
 				8E54E4871FFCF49E009E4986 /* TGBaseViewModel.m in Sources */,
@@ -543,6 +588,7 @@
 				8E54E4961FFCF600009E4986 /* TGTest2TableViewCell.m in Sources */,
 				8E54E4951FFCF600009E4986 /* TGTest1TableViewCell.m in Sources */,
 				8E54E4A71FFCF8BE009E4986 /* LocationManager.m in Sources */,
+				8EC1624C2018941300D2DB90 /* TGDemo5CellViewModel.m in Sources */,
 				8E7B63471FFB6B9300689499 /* AppDelegate.m in Sources */,
 				87D10A011FFE5A8D00E7704B /* TGDemo2Model.m in Sources */,
 				8E54E4981FFCF600009E4986 /* TGTest3TableViewCell.m in Sources */,

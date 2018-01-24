@@ -11,6 +11,9 @@
 #import <ReactiveCocoa.h>
 
 @interface TGDemo4ViewController ()
+@property (strong, nonatomic) NSString *test1;
+@property (strong, nonatomic) NSString *test2;
+
 
 @end
 
@@ -19,8 +22,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self testCollectSignalCombineLatestOrZip];
-    [self testArray];
+    [self testChanged];
+    
+}
+
+- (void)testChanged {
+    self.test1 = @"test1";
+    RACChannelTo(self, test1) = RACChannelTo(self, test2);
+    
 }
 
 - (void)testArray {
