@@ -113,6 +113,7 @@
 		83F550E0155E030800E95D3B /* objc-cache-old.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83F550DF155E030800E95D3B /* objc-cache-old.mm */; };
 		87BB4EA70EC39854005D08E1 /* objc-probes.d in Sources */ = {isa = PBXBuildFile; fileRef = 87BB4E900EC39633005D08E1 /* objc-probes.d */; };
 		8EE2DDA820CA536D00D476A9 /* XXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2DDA720CA536D00D476A9 /* XXObject.m */; };
+		8EE2DDAB20CA5CD300D476A9 /* NSObject+Sark.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2DDAA20CA5CD300D476A9 /* NSObject+Sark.m */; };
 		9672F7EE14D5F488007CEC96 /* NSObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9672F7ED14D5F488007CEC96 /* NSObject.mm */; };
 		E8923DA1116AB2820071B552 /* a1a2-blocktramps-i386.s in Sources */ = {isa = PBXBuildFile; fileRef = E8923D9C116AB2820071B552 /* a1a2-blocktramps-i386.s */; };
 		E8923DA2116AB2820071B552 /* a1a2-blocktramps-x86_64.s in Sources */ = {isa = PBXBuildFile; fileRef = E8923D9D116AB2820071B552 /* a1a2-blocktramps-x86_64.s */; };
@@ -249,6 +250,8 @@
 		87BB4E900EC39633005D08E1 /* objc-probes.d */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.dtrace; name = "objc-probes.d"; path = "runtime/objc-probes.d"; sourceTree = "<group>"; };
 		8EE2DDA620CA536D00D476A9 /* XXObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXObject.h; sourceTree = "<group>"; };
 		8EE2DDA720CA536D00D476A9 /* XXObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXObject.m; sourceTree = "<group>"; };
+		8EE2DDA920CA5CD300D476A9 /* NSObject+Sark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Sark.h"; sourceTree = "<group>"; };
+		8EE2DDAA20CA5CD300D476A9 /* NSObject+Sark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Sark.m"; sourceTree = "<group>"; };
 		9672F7ED14D5F488007CEC96 /* NSObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NSObject.mm; path = runtime/NSObject.mm; sourceTree = "<group>"; };
 		BC8B5D1212D3D48100C78A5B /* libauto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libauto.dylib; path = /usr/lib/libauto.dylib; sourceTree = "<absolute>"; };
 		D2AAC0630554660B00DB518D /* libobjc.A.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libobjc.A.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -364,6 +367,8 @@
 				5E1E1CFC1E374D1B005091E2 /* main.m */,
 				8EE2DDA620CA536D00D476A9 /* XXObject.h */,
 				8EE2DDA720CA536D00D476A9 /* XXObject.m */,
+				8EE2DDA920CA5CD300D476A9 /* NSObject+Sark.h */,
+				8EE2DDAA20CA5CD300D476A9 /* NSObject+Sark.m */,
 			);
 			path = "debug-objc";
 			sourceTree = "<group>";
@@ -692,6 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EE2DDA820CA536D00D476A9 /* XXObject.m in Sources */,
+				8EE2DDAB20CA5CD300D476A9 /* NSObject+Sark.m in Sources */,
 				5E1E1CFD1E374D1B005091E2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

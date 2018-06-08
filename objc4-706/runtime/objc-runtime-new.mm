@@ -4449,7 +4449,7 @@ getMethodNoSuper_nolock(Class cls, SEL sel)
          ++mlists)
     {
         method_t *m = search_method_list(*mlists, sel);
-        if (m) return m;
+        if (m) return m; // 返回查找到的 method_list
     }
 
     return nil;

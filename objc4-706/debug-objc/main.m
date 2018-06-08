@@ -7,14 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XXObject.h"
+//#import "XXObject.h"
+//#import "NSObject+Sark.h"
 
+@interface NSObject (Sark)
++ (void)foo;
+@end
+
+@implementation NSObject (Sark)
+- (void)foo {
+    NSLog(@"IMP: -[NSObject foo]");
+}
+@end
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        XXObject *object = [[XXObject alloc] init];
-        [object hello];
-        [object hello];
+        [NSObject foo];
+        [[NSObject new] foo];
     }
     return 0;
 }
