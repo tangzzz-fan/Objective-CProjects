@@ -30,10 +30,7 @@
 
 /** 创建初始控制器 */
 - (void)createInitialViewController {
-    // 使用 navigationcontroller 创建 MVVM 需要使用的服务总线
-    
-    
-    // 使用 服务总线初始化 总的 viewModel
+   
 }
 
 @end

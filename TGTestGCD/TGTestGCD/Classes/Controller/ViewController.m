@@ -416,7 +416,7 @@
     NSLog(@"1");
     dispatch_async(serialQueue, ^{
         NSLog(@"2");
-        //串行队列里面同步一个串行队列就会死锁
+        //串行队列里面派发同步任务就会死锁
         dispatch_sync(serialQueue2, ^{
             NSLog(@"3");
         });
