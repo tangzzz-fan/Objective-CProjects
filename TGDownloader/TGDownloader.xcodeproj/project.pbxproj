@@ -17,6 +17,7 @@
 		8EDEE1711FCE4BB00051EB1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE1701FCE4BB00051EB1D /* Assets.xcassets */; };
 		8EDEE1741FCE4BB00051EB1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDEE1721FCE4BB00051EB1D /* LaunchScreen.storyboard */; };
 		8EDEE1771FCE4BB00051EB1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDEE1761FCE4BB00051EB1D /* main.m */; };
+		8EE2DDAE20CA7A3A00D476A9 /* TestNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2DDAD20CA7A3A00D476A9 /* TestNavViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		8EDEE1731FCE4BB00051EB1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EDEE1751FCE4BB00051EB1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EDEE1761FCE4BB00051EB1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8EE2DDAC20CA7A3A00D476A9 /* TestNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNavViewController.h; sourceTree = "<group>"; };
+		8EE2DDAD20CA7A3A00D476A9 /* TestNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNavViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +83,10 @@
 		8E8EE3AF1FF50D5F0034EC14 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8E8EE3B01FF50D5F0034EC14 /* ViewController.m */,
 				8E8EE3B11FF50D5F0034EC14 /* ViewController.h */,
+				8E8EE3B01FF50D5F0034EC14 /* ViewController.m */,
+				8EE2DDAC20CA7A3A00D476A9 /* TestNavViewController.h */,
+				8EE2DDAD20CA7A3A00D476A9 /* TestNavViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				8E8EE3B61FF50D600034EC14 /* TGDownloaderManager.m in Sources */,
 				8E8EE3B71FF50D600034EC14 /* TGFileTool.m in Sources */,
 				8E8EE3B81FF50D600034EC14 /* TGDownloader.m in Sources */,
+				8EE2DDAE20CA7A3A00D476A9 /* TestNavViewController.m in Sources */,
 				8E8EE3BB1FF50D600034EC14 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.centaline.TGDownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -363,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.centaline.TGDownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
