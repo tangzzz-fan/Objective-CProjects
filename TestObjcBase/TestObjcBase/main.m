@@ -28,6 +28,11 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%zd", class_getInstanceSize([XXObject class]));
         // 实际分配的对象的内存大小(内存分配方式 16 的倍数)
         NSLog(@"%zd", malloc_size((__bridge const void *)(object)));
+        
+        Class objectClass = [object class];
+        Class objectClass2 = [XXObject class];
+        Class objectClass3 = object_getClass(object);
+        NSLog(@"asdsa");
     }
     return 0;
 }
