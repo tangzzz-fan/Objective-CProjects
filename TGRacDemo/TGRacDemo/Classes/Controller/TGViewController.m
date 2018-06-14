@@ -9,6 +9,8 @@
 #import "TGViewController.h"
 #import "TGFlickrSearchViewController.h"
 
+#import <ReactiveCocoa.h>
+
 @interface TGViewController ()
 
 @property (strong, nonatomic) UINavigationController *navigationController;
@@ -20,6 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    RACSignal *tempSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        return nil;
+    }];
+    
 }
 
 - (IBAction)flickrSearchAction:(id)sender {

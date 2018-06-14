@@ -9,5 +9,4 @@
 #import <Foundation/Foundation.h>
 
 @interface XXObject : NSObject
-- (void)hello;
 @end

@@ -9,7 +9,6 @@
 #import "XXObject.h"
 
 @implementation XXObject
-- (void)hello {
-    NSLog(@"Hello World");
-}
+
+
 @end
