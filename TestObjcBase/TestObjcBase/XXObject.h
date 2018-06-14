@@ -19,4 +19,5 @@
 @property (assign, nonatomic) int height;
 
 - (void)hello;
++ (void)hellolnClass;
 @end

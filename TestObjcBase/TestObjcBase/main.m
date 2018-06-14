@@ -29,10 +29,17 @@ int main(int argc, const char * argv[]) {
         // 实际分配的对象的内存大小(内存分配方式 16 的倍数)
         NSLog(@"%zd", malloc_size((__bridge const void *)(object)));
         
-        Class objectClass = [object class];
+        Class objectClass1 = [object class];
         Class objectClass2 = [XXObject class];
         Class objectClass3 = object_getClass(object);
-        NSLog(@"asdsa");
+        NSLog(@"%p -- %p -- %p", objectClass1, objectClass2, objectClass3);
+        
+        // 元类对象 对类对象获取 class 对象
+        Class objMetaClass = object_getClass([NSObject class]);
+        //
+        Class objMetaClass1 = object_getClass([[NSObject class] class]);
+
+        NSLog(@"%p -- %p", objMetaClass, objMetaClass1);
     }
     return 0;
 }
