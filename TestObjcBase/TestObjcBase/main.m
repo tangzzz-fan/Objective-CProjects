@@ -10,6 +10,9 @@
 #import "XXObject.h"
 #import <malloc/malloc.h>
 #import <objc/runtime.h>
+
+#import "NSObject+Test.h"
+
 struct XXObject_IMPL {
     Class isa;
     int _no;
@@ -40,6 +43,8 @@ int main(int argc, const char * argv[]) {
         Class objMetaClass1 = object_getClass([[NSObject class] class]);
 
         NSLog(@"%p -- %p", objMetaClass, objMetaClass1);
+     
+        [NSObject test];
     }
     return 0;
 }
