@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E0CEFDC20D2992900957C33 /* NSObject+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CEFDB20D2992900957C33 /* NSObject+Test.m */; };
+		8E0CEFDF20D29A6C00957C33 /* XXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CEFDE20D29A6C00957C33 /* XXPerson.m */; };
 		8EE2DD4320C7844700D476A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2DD4220C7844700D476A9 /* main.m */; };
 		8EE2DDA520CA4D6400D476A9 /* XXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2DDA420CA4D6400D476A9 /* XXObject.m */; };
 /* End PBXBuildFile section */
@@ -25,9 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8E0CEFD920D2738500957C33 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		8E0CEFDA20D2992900957C33 /* NSObject+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Test.h"; sourceTree = "<group>"; };
-		8E0CEFDB20D2992900957C33 /* NSObject+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Test.m"; sourceTree = "<group>"; };
+		8E0CEFDD20D29A6C00957C33 /* XXPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXPerson.h; sourceTree = "<group>"; };
+		8E0CEFDE20D29A6C00957C33 /* XXPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXPerson.m; sourceTree = "<group>"; };
 		8EE2DD3F20C7844700D476A9 /* TestObjcBase */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestObjcBase; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE2DD4220C7844700D476A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EE2DDA320CA4D6400D476A9 /* XXObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXObject.h; sourceTree = "<group>"; };
@@ -67,9 +66,8 @@
 				8EE2DD4220C7844700D476A9 /* main.m */,
 				8EE2DDA320CA4D6400D476A9 /* XXObject.h */,
 				8EE2DDA420CA4D6400D476A9 /* XXObject.m */,
-				8E0CEFDA20D2992900957C33 /* NSObject+Test.h */,
-				8E0CEFDB20D2992900957C33 /* NSObject+Test.m */,
-				8E0CEFD920D2738500957C33 /* main.cpp */,
+				8E0CEFDD20D29A6C00957C33 /* XXPerson.h */,
+				8E0CEFDE20D29A6C00957C33 /* XXPerson.m */,
 			);
 			path = TestObjcBase;
 			sourceTree = "<group>";
@@ -132,7 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EE2DDA520CA4D6400D476A9 /* XXObject.m in Sources */,
-				8E0CEFDC20D2992900957C33 /* NSObject+Test.m in Sources */,
+				8E0CEFDF20D29A6C00957C33 /* XXPerson.m in Sources */,
 				8EE2DD4320C7844700D476A9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

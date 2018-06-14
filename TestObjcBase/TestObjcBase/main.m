@@ -8,43 +8,30 @@
 
 #import <Foundation/Foundation.h>
 #import "XXObject.h"
+#import "XXPerson.h"
+
 #import <malloc/malloc.h>
 #import <objc/runtime.h>
 
-#import "NSObject+Test.h"
-
-struct XXObject_IMPL {
-    Class isa;
-    int _no;
-    int _age;
-};
-
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        XXObject *object = [[XXObject alloc] init];
-        object -> _no = 4;
-        object -> _age = 5;
-        [object hello];
-        
-        NSLog(@"%zd", sizeof(struct XXObject_IMPL));
-        // 类中存储的实例对象至少需要的内存大小
-        NSLog(@"%zd", class_getInstanceSize([XXObject class]));
-        // 实际分配的对象的内存大小(内存分配方式 16 的倍数)
-        NSLog(@"%zd", malloc_size((__bridge const void *)(object)));
-        
-        Class objectClass1 = [object class];
-        Class objectClass2 = [XXObject class];
-        Class objectClass3 = object_getClass(object);
-        NSLog(@"%p -- %p -- %p", objectClass1, objectClass2, objectClass3);
-        
-        // 元类对象 对类对象获取 class 对象
-        Class objMetaClass = object_getClass([NSObject class]);
-        //
-        Class objMetaClass1 = object_getClass([[NSObject class] class]);
 
-        NSLog(@"%p -- %p", objMetaClass, objMetaClass1);
-     
-        [NSObject test];
+        XXPerson *person = [[XXPerson alloc] init];
+        
+        Class personClass = [XXPerson class];
+        Class personMetaClass = object_getClass(personClass);
+        
+        // p/x personClass -> isa
+        // error: member reference base type 'Class' is not a structure or union
+        // 尝试找出 类对象的 isa
+        // 1 isa 指针在 64 位系统下, 为了表示更多的内容, 进行了 ISA_MASK 位运算,
+        // 2 系统没有开放 class->isa 指针, 此时可以使用桥接的方式查看 class->isa 的内容
+        // 原因: 此时已经知道 class->isa 里面有什么东西
+        // 因此可以自定义一个与之结构类似的结构体或者类 然后进行强转, 就可以看到里面的内容.
+
+        
+        NSLog(@"%p %p %p", person, personClass, personMetaClass);
+        
     }
     return 0;
 }
