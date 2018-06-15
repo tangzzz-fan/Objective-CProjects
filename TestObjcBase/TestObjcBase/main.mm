@@ -39,8 +39,7 @@ int main(int argc, const char * argv[]) {
         [person sayHello];
         [person sayMethods];
         
-        [XXObject getAllMethods];
-//        [XXPerson getAllProperties];
+        
         
         NSLog(@"1111");
       
