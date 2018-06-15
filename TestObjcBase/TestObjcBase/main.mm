@@ -22,26 +22,12 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        struct mj_objc_class *xxobjectClass = (__bridge struct mj_objc_class *)([XXObject class]);
-        struct mj_objc_class *xxpersonClass = (__bridge struct mj_objc_class *)([XXPerson class]);
-        
-        class_rw_t *xxobjectClassData = xxobjectClass->data();
-        class_rw_t *xxpersonClassData = xxpersonClass->data();
-        
-        // 查看类方法位置 -> metaClass
-        // object_getClass([XXObject class]);
-        
-        
+    
         XXObject *object = [[XXObject alloc] init];
-        [object sayHello];
-        
-        XXPerson *person = [[XXPerson alloc] init];
-        [person sayHello];
-        [person sayMethods];
+        [object setValue:@10 forKey:@"age"];
         
         
-        
-        NSLog(@"1111");
+        NSLog(@"%zd", object->_age);
       
     }
     return 0;
