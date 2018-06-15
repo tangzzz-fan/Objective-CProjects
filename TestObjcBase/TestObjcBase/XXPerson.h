@@ -7,7 +7,12 @@
 //
 
 #import "XXObject.h"
+@protocol PersonProtocol<NSObject>
+- (void)sayMethods;
+@end
+@interface XXPerson : XXObject<PersonProtocol>
+@property (strong, nonatomic) NSArray *testArray;
 
-@interface XXPerson : XXObject
 
++ (void)update;
 @end

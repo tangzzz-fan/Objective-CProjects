@@ -8,6 +8,15 @@
 
 #import "XXPerson.h"
 
-@implementation XXPerson
+@interface XXPerson()
 
+@end
+@implementation XXPerson
++ (void)update {
+    NSLog(@"This is called from update class method");
+}
+
+- (void)sayMethods {
+    NSLog(@"This is say from XXPerson");
+}
 @end

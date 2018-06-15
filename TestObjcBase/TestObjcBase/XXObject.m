@@ -13,4 +13,13 @@
     NSLog(@"hello");
 }
 
++ (void)hellolnClass {
+    
+}
+
+// protocol
+- (void)sayHello {
+    NSLog(@"This is say from Protocol");
+}
+
 @end

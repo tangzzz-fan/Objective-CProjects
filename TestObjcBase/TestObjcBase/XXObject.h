@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XXObject : NSObject
+@protocol XXProtocol<NSObject>
+- (void)sayHello;
+@end
+
+@interface XXObject : NSObject<XXProtocol>
 {
     // 声明成员变量
     @public
@@ -17,6 +21,7 @@
     int _age; // 4
 }
 @property (assign, nonatomic) int height;
+@property (strong, nonatomic) NSString *testStr;
 
 - (void)hello;
 + (void)hellolnClass;
