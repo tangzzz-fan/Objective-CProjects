@@ -28,8 +28,11 @@ int main(int argc, const char * argv[]) {
         // 三种 block 类型: melloc, stack, global
         // 1 是否访问了 auto 变量
         // 2 存放的位置: 堆还是栈
+        
+        int age = 0;
         void (^block)() = ^(void){
             NSLog(@"this is a global block");
+            NSLog(@"age %d", age); // 访问 auto 变量
         };
         
         block();
