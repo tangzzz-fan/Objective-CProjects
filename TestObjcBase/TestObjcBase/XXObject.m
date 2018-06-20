@@ -17,6 +17,20 @@
     
 }
 
+- (instancetype)init {
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
+- initWithName:(NSString *)name {
+    if (self = [super init]) {
+        // self.name = name
+    }
+    return self;
+}
+
 // protocol
 - (void)sayHello {
     NSLog(@"This is say from Protocol");

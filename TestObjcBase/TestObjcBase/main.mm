@@ -24,9 +24,15 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-    
-      // 在分类中添加属性, 只是会生成对应的 get set 方法, 没有生成对应的成员变量
-        // 调用 get set 方法时将传递进来的数据保存起来, 然后让他能使用,就好
+        // MRC 环境下
+        // 三种 block 类型: melloc, stack, global
+        // 1 是否访问了 auto 变量
+        // 2 存放的位置: 堆还是栈
+        void (^block)() = ^(void){
+            NSLog(@"this is a global block");
+        };
+        
+        block();
       
     }
     return 0;
