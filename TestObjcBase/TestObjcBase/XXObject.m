@@ -36,4 +36,8 @@
     NSLog(@"This is say from Protocol");
 }
 
+- (void)delloc {
+    NSLog(@"%s", __func__);
+}
+
 @end

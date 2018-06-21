@@ -35,6 +35,7 @@
 		8E0CEFE420D3E08300957C33 /* XXObject+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XXObject+Test.h"; sourceTree = "<group>"; };
 		8E0CEFE520D3E08300957C33 /* XXObject+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XXObject+Test.m"; sourceTree = "<group>"; };
 		8EB4B7EA20DA1D48008674D8 /* main_block.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_block.cpp; sourceTree = "<group>"; };
+		8ED8A34C20DBADBD00B5786E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8EE2DD3F20C7844700D476A9 /* TestObjcBase */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestObjcBase; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE2DD4220C7844700D476A9 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		8EE2DDA320CA4D6400D476A9 /* XXObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXObject.h; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 				8E0CEFE020D39B3F00957C33 /* MJClassInfo.h */,
 				8E0CEFE120D3A99600957C33 /* NSObject+runtime.h */,
 				8E0CEFE220D3A99600957C33 /* NSObject+runtime.m */,
+				8ED8A34C20DBADBD00B5786E /* main.cpp */,
 				8EE2DD4220C7844700D476A9 /* main.mm */,
 				8EB4B7EA20DA1D48008674D8 /* main_block.cpp */,
 				8EE2DDA320CA4D6400D476A9 /* XXObject.h */,
