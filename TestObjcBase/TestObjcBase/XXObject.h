@@ -13,7 +13,7 @@
 @end
 
 @interface XXObject : NSObject<XXProtocol>
-
+@property (assign, nonatomic) int age;
 @property (assign, nonatomic) int height;
 @property (strong, nonatomic) NSString *testStr;
 
