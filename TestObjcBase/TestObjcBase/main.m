@@ -44,16 +44,17 @@ int main(int argc, const char * argv[]) {
         
         // __block 会根据实际的类型确定使用的引用指针类型, 默认使用 __strong, 如果指定使用 __weak, 则使用 __weak
         {
-        XXObject *object = [[XXObject alloc] init];
-        object.age = 10;
-        
-//        __block XXObject *weakO = object;
-//
-//        object.block = ^{
-//            weakO.age = 20;
-//            NSLog(@"block -- %d", weakO.age);
-//        };
-//        object.block();
+            XXObject *object = [[XXObject alloc] init];
+            object.age = 10;
+            
+            __block XXObject *weakO = object;
+            
+            object.block = ^{
+                weakO.age = 20;
+                NSLog(@"block -- %d", weakO.age);
+                weakO = nil;
+            };
+            object.block();
         }
     } // person 释放
     
