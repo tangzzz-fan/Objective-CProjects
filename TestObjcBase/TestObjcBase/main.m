@@ -12,20 +12,12 @@
 #import <malloc/malloc.h>
 #import <objc/runtime.h>
 
-typedef void(^TestBlock)(void);
 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+
         
-        __block XXObject *object = [[XXObject alloc] init];
-        
-        void (^VBlock)(void) = ^{
-            NSLog(@"----- %@", object);
-        };
-        VBlock();
-        
-        NSLog(@"----- %p", &object);
     }
     return 0;
 }

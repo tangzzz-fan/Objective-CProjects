@@ -33,7 +33,7 @@
 
 // protocol
 - (void)sayHello {
-    NSLog(@"This is say from Protocol");
+ 
 }
 
 - (void)delloc {
