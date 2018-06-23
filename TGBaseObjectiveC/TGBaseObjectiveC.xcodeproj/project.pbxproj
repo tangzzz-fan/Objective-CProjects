@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871CFFF3202711B3003EAF04 /* TGBasic1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871CFFF2202711B3003EAF04 /* TGBasic1ViewController.m */; };
 		872D97BA1FFB2767004DBB65 /* TGTsetKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872D97B91FFB2767004DBB65 /* TGTsetKVOController.m */; };
 		872D97BE1FFB2896004DBB65 /* NSObject+TGHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 872D97BD1FFB2896004DBB65 /* NSObject+TGHook.m */; };
 		872D97C11FFB2DD2004DBB65 /* TGTsetKVOSubController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872D97C01FFB2DD2004DBB65 /* TGTsetKVOSubController.m */; };
@@ -33,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		871CFFF1202711B3003EAF04 /* TGBasic1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGBasic1ViewController.h; sourceTree = "<group>"; };
+		871CFFF2202711B3003EAF04 /* TGBasic1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGBasic1ViewController.m; sourceTree = "<group>"; };
 		872D97B81FFB2767004DBB65 /* TGTsetKVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTsetKVOController.h; sourceTree = "<group>"; };
 		872D97B91FFB2767004DBB65 /* TGTsetKVOController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTsetKVOController.m; sourceTree = "<group>"; };
 		872D97BC1FFB2896004DBB65 /* NSObject+TGHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TGHook.h"; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				872D97B91FFB2767004DBB65 /* TGTsetKVOController.m */,
 				872D97BF1FFB2DD2004DBB65 /* TGTsetKVOSubController.h */,
 				872D97C01FFB2DD2004DBB65 /* TGTsetKVOSubController.m */,
+				871CFFF1202711B3003EAF04 /* TGBasic1ViewController.h */,
+				871CFFF2202711B3003EAF04 /* TGBasic1ViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				8E4445ED1FDD075700CC23B1 /* AppDelegate.m in Sources */,
 				8E4446061FDD32B500CC23B1 /* NSObject+Extension.m in Sources */,
 				8E4446091FDD36D100CC23B1 /* Status.m in Sources */,
+				871CFFF3202711B3003EAF04 /* TGBasic1ViewController.m in Sources */,
 				8E4445F31FDD0B0100CC23B1 /* Person.m in Sources */,
 				8E4446251FDE726300CC23B1 /* TGImageModel.m in Sources */,
 				8E4446001FDD175200CC23B1 /* Person+PersonExtension.m in Sources */,

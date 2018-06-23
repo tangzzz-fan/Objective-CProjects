@@ -200,6 +200,21 @@
             </objects>
             <point key="canvasLocation" x="2456.8000000000002" y="-18.440779610194905"/>
         </scene>
+        <!--Basic1 View Controller-->
+        <scene sceneID="g6F-sO-Zw1">
+            <objects>
+                <viewController id="m84-D4-riA" customClass="TGBasic1ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pz0-xe-3C8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cVw-GH-TQT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l1m-42-NN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="679"/>
+        </scene>
         <!--TsetKVO Controller-->
         <scene sceneID="D7c-CV-FsO">
             <objects>
@@ -243,6 +258,9 @@
                                 <rect key="frame" x="51" y="217" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="OC "/>
+                                <connections>
+                                    <segue destination="m84-D4-riA" kind="show" id="gVu-kZ-tVD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
