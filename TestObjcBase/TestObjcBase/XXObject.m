@@ -36,8 +36,8 @@
  
 }
 
-- (void)delloc {
-    NSLog(@"%s", __func__);
+- (void)dealloc {
+    NSLog(@"-------- %s", __func__);
 }
 
 @end

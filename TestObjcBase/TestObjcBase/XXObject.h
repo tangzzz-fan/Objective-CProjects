@@ -11,11 +11,13 @@
 @protocol XXProtocol<NSObject>
 - (void)sayHello;
 @end
+typedef void (^Block)(void);
 
 @interface XXObject : NSObject<XXProtocol>
 @property (assign, nonatomic) int age;
 @property (assign, nonatomic) int height;
 @property (strong, nonatomic) NSString *testStr;
+@property (strong, nonatomic) Block block;
 
 - (void)hello;
 + (void)hellolnClass;
