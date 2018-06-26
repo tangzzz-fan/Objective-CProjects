@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8ED8A34E20DBAF2600B5786E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A34D20DBAF2600B5786E /* main.m */; };
+		8ED8A46320E2187A00B5786E /* TestBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A46220E2187A00B5786E /* TestBlock.m */; };
+		8ED8A46620E218FF00B5786E /* TestRunloop.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A46520E218FF00B5786E /* TestRunloop.m */; };
 		8EE2DDA520CA4D6400D476A9 /* XXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2DDA420CA4D6400D476A9 /* XXObject.m */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,10 @@
 
 /* Begin PBXFileReference section */
 		8ED8A34D20DBAF2600B5786E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8ED8A46120E2187A00B5786E /* TestBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBlock.h; sourceTree = "<group>"; };
+		8ED8A46220E2187A00B5786E /* TestBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBlock.m; sourceTree = "<group>"; };
+		8ED8A46420E218FF00B5786E /* TestRunloop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRunloop.h; sourceTree = "<group>"; };
+		8ED8A46520E218FF00B5786E /* TestRunloop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRunloop.m; sourceTree = "<group>"; };
 		8EE2DD3F20C7844700D476A9 /* TestObjcBase */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestObjcBase; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE2DDA320CA4D6400D476A9 /* XXObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXObject.h; sourceTree = "<group>"; };
 		8EE2DDA420CA4D6400D476A9 /* XXObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXObject.m; sourceTree = "<group>"; };
@@ -61,6 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				8ED8A34D20DBAF2600B5786E /* main.m */,
+				8ED8A46120E2187A00B5786E /* TestBlock.h */,
+				8ED8A46220E2187A00B5786E /* TestBlock.m */,
+				8ED8A46420E218FF00B5786E /* TestRunloop.h */,
+				8ED8A46520E218FF00B5786E /* TestRunloop.m */,
 				8EE2DDA320CA4D6400D476A9 /* XXObject.h */,
 				8EE2DDA420CA4D6400D476A9 /* XXObject.m */,
 			);
@@ -124,8 +134,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED8A46320E2187A00B5786E /* TestBlock.m in Sources */,
 				8ED8A34E20DBAF2600B5786E /* main.m in Sources */,
 				8EE2DDA520CA4D6400D476A9 /* XXObject.m in Sources */,
+				8ED8A46620E218FF00B5786E /* TestRunloop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
