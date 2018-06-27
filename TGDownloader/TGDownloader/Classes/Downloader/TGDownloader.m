@@ -118,6 +118,10 @@
 #pragma mark - NSUrlSessionDataDelegate
 /** 第一次接收到服务器响应调用, 返回交互的头文件信息, 没有资源文件
  *  根据返回的信息决定是否继续请求, 还是取消本次请求
+ *
+ *  使用 NSURLSessionDataTask 实现大文件断电续传, 使用head 请求, 获取文件大小, 保存在本地沙盒中
+ *  当再次进入程序时, 可以先检查沙盒中是否存在对应的临时文件, 如果存在则再获取文件大小, 或者偏移量继续进行下载, 如果没有则重新进行下载.
+ *
  */
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSHTTPURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
@@ -203,6 +207,7 @@
     return _session;
 }
 
+// 进度改变时 及时通知外界
 - (void)setProgress:(float)progress {
     _progress = progress;
     if (self.progressChange) {

@@ -54,9 +54,11 @@
 - (IBAction)download:(id)sender {
     NSURL *url = [NSURL URLWithString:@"http://m2.pc6.com/xxj/ptgui.dmg"];
 //    [self.downloader downloader:url];
+    // 将获取到的总大小传递出来, 然后可以保存在沙盒中
     [self.downloader downloader:url downloadInfo:^(long long totalSize) {
+        // 这个总的size 会根据head 请求获取到
         NSLog(@"download info %lld", totalSize);
-    } progress:^(float progress) {
+    } progress:^(float progress) { // 重写了 progress 的setter方法, 每次变化都会通知
         NSLog(@"下载进度, %f", progress);
     } succeed:^(NSString *filePath) {
         NSLog(@"下载成功, 路径:%@", filePath);
@@ -64,6 +66,7 @@
         NSLog(@"失败");
     }];
     
+    // 监听下载状态的变化
     [self.downloader setStateChange:^(TGDownloadState state) {
        NSLog(@"----stateChanged, %zd", state);
     }];

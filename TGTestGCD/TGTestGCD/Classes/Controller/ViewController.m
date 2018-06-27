@@ -21,7 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self testForObjectType];
+    [self testGCD_semaphore];
+    
+//    [self testForObjectType];
     
 //    [self testSycOnMainQueue];
 //    [self testChangedQueue];
@@ -42,6 +44,27 @@
 //    [self testDispatchIO];
 //    [self testDispatchSource];
 //    [self testANewDeadLock];
+}
+
+- (void)testGCD_semaphore {
+    dispatch_semaphore_t signal = dispatch_semaphore_create(1);
+    dispatch_time_t overTime = dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC);
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_semaphore_wait(signal, overTime); // wait 信号量 减1 signal 信号量 加1. 信号量大于0 可以继续访问, 否则就需要等待释放对应的信号, 信号值加1, 因此此处如果设置 signal 为其他的值, 输出的结果也不一样.
+        NSLog(@"需要线程同步的操作1 开始");
+        sleep(2);
+        NSLog(@"需要线程同步的操作1 结束");
+        dispatch_semaphore_signal(signal);
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        sleep(1);
+        dispatch_semaphore_wait(signal, overTime);
+        NSLog(@"需要线程同步的操作2");
+        dispatch_semaphore_signal(signal);
+    });
+    
 }
 
 - (void)testANewDeadLock {

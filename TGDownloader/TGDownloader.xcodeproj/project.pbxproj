@@ -68,14 +68,14 @@
 		8E8EE3A61FF50D5F0034EC14 /* Downloader */ = {
 			isa = PBXGroup;
 			children = (
-				8E8EE3A71FF50D5F0034EC14 /* TGDownloaderManager.m */,
 				8E8EE3A81FF50D5F0034EC14 /* NSString+Extension.h */,
-				8E8EE3A91FF50D5F0034EC14 /* TGDownloader.h */,
-				8E8EE3AA1FF50D5F0034EC14 /* TGFileTool.h */,
-				8E8EE3AB1FF50D5F0034EC14 /* TGDownloaderManager.h */,
-				8E8EE3AC1FF50D5F0034EC14 /* TGFileTool.m */,
-				8E8EE3AD1FF50D5F0034EC14 /* TGDownloader.m */,
 				8E8EE3AE1FF50D5F0034EC14 /* NSString+Extension.m */,
+				8E8EE3A91FF50D5F0034EC14 /* TGDownloader.h */,
+				8E8EE3AD1FF50D5F0034EC14 /* TGDownloader.m */,
+				8E8EE3AB1FF50D5F0034EC14 /* TGDownloaderManager.h */,
+				8E8EE3A71FF50D5F0034EC14 /* TGDownloaderManager.m */,
+				8E8EE3AA1FF50D5F0034EC14 /* TGFileTool.h */,
+				8E8EE3AC1FF50D5F0034EC14 /* TGFileTool.m */,
 			);
 			path = Downloader;
 			sourceTree = "<group>";

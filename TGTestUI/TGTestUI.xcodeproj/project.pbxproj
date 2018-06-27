@@ -12,6 +12,7 @@
 		877AFBDA200B7FF000D1AF8C /* TGTest1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 877AFBD9200B7FF000D1AF8C /* TGTest1TableViewCell.m */; };
 		877AFBDD200B811B00D1AF8C /* TGTest1View.m in Sources */ = {isa = PBXBuildFile; fileRef = 877AFBDC200B811B00D1AF8C /* TGTest1View.m */; };
 		877AFBDF200B812B00D1AF8C /* TGTest1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 877AFBDE200B812B00D1AF8C /* TGTest1View.xib */; };
+		8E250CD720E372E1000BF86E /* TGTestThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E250CD620E372E1000BF86E /* TGTestThreadViewController.m */; };
 		8E4EBB4D1FF5E60000EA2540 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4EBB4C1FF5E60000EA2540 /* UIView+Category.m */; };
 		8E63E2CA1FF25AD900C7E9AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E63E2C81FF25AD900C7E9AC /* Main.storyboard */; };
 		8E63E2CC1FF25AD900C7E9AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E63E2CB1FF25AD900C7E9AC /* Assets.xcassets */; };
@@ -35,6 +36,8 @@
 		877AFBDB200B811B00D1AF8C /* TGTest1View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest1View.h; sourceTree = "<group>"; };
 		877AFBDC200B811B00D1AF8C /* TGTest1View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTest1View.m; sourceTree = "<group>"; };
 		877AFBDE200B812B00D1AF8C /* TGTest1View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TGTest1View.xib; sourceTree = "<group>"; };
+		8E250CD520E372E1000BF86E /* TGTestThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTestThreadViewController.h; sourceTree = "<group>"; };
+		8E250CD620E372E1000BF86E /* TGTestThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTestThreadViewController.m; sourceTree = "<group>"; };
 		8E4EBB4B1FF5E60000EA2540 /* UIView+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
 		8E4EBB4C1FF5E60000EA2540 /* UIView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		8E63E2BF1FF25AD900C7E9AC /* TGTestUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGTestUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +152,8 @@
 				8E8EE3A31FF4FC380034EC14 /* TGPageViewController.m */,
 				877AFBD5200B7F9A00D1AF8C /* TGTestTableViewController.h */,
 				877AFBD6200B7F9A00D1AF8C /* TGTestTableViewController.m */,
+				8E250CD520E372E1000BF86E /* TGTestThreadViewController.h */,
+				8E250CD620E372E1000BF86E /* TGTestThreadViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				8EE0C7BD1FF4DC540066F95E /* ViewController.m in Sources */,
 				8E8EE39E1FF4EAC50034EC14 /* TGTitleView.m in Sources */,
 				8EE0C7BE1FF4DC540066F95E /* BesizerViewController.m in Sources */,
+				8E250CD720E372E1000BF86E /* TGTestThreadViewController.m in Sources */,
 				8EE0C7BC1FF4DC540066F95E /* AppDelegate.m in Sources */,
 				877AFBDA200B7FF000D1AF8C /* TGTest1TableViewCell.m in Sources */,
 				8E8EE3A11FF4F5F70034EC14 /* TGStyle.m in Sources */,

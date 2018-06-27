@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E250CD420E3725D000BF86E /* TestNSThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E250CD320E3725D000BF86E /* TestNSThread.m */; };
 		8ED8A34E20DBAF2600B5786E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A34D20DBAF2600B5786E /* main.m */; };
 		8ED8A46320E2187A00B5786E /* TestBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A46220E2187A00B5786E /* TestBlock.m */; };
 		8ED8A46620E218FF00B5786E /* TestRunloop.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A46520E218FF00B5786E /* TestRunloop.m */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8E250CD220E3725D000BF86E /* TestNSThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNSThread.h; sourceTree = "<group>"; };
+		8E250CD320E3725D000BF86E /* TestNSThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNSThread.m; sourceTree = "<group>"; };
 		8ED8A34D20DBAF2600B5786E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8ED8A46120E2187A00B5786E /* TestBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBlock.h; sourceTree = "<group>"; };
 		8ED8A46220E2187A00B5786E /* TestBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBlock.m; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 				8ED8A46220E2187A00B5786E /* TestBlock.m */,
 				8ED8A46420E218FF00B5786E /* TestRunloop.h */,
 				8ED8A46520E218FF00B5786E /* TestRunloop.m */,
+				8E250CD220E3725D000BF86E /* TestNSThread.h */,
+				8E250CD320E3725D000BF86E /* TestNSThread.m */,
 				8EE2DDA320CA4D6400D476A9 /* XXObject.h */,
 				8EE2DDA420CA4D6400D476A9 /* XXObject.m */,
 			);
@@ -134,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E250CD420E3725D000BF86E /* TestNSThread.m in Sources */,
 				8ED8A46320E2187A00B5786E /* TestBlock.m in Sources */,
 				8ED8A34E20DBAF2600B5786E /* main.m in Sources */,
 				8EE2DDA520CA4D6400D476A9 /* XXObject.m in Sources */,

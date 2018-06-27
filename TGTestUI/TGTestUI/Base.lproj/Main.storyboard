@@ -50,6 +50,14 @@
                                     <segue destination="Yer-5g-tKL" kind="show" id="Z2H-gh-qec"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izt-7s-i3e">
+                                <rect key="frame" x="33" y="286" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="TestNSThread"/>
+                                <connections>
+                                    <segue destination="beG-N8-O4P" kind="show" id="DGu-Vs-ihR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,6 +67,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="756" y="115"/>
+        </scene>
+        <!--Test Thread View Controller-->
+        <scene sceneID="sfL-zc-tts">
+            <objects>
+                <viewController id="beG-N8-O4P" customClass="TGTestThreadViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L55-U1-fTj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHx-BM-dXg">
+                                <rect key="frame" x="35" y="130" width="289" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dnb-8q-suJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="gHx-BM-dXg" id="nDn-vE-RHo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fht-tY-DEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703.20000000000005" y="809.14542728635683"/>
         </scene>
         <!--Test Table View Controller-->
         <scene sceneID="n00-lE-n5N">
