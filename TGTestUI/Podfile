@@ -12,6 +12,6 @@ pod 'BaiduMapKit', '3.3.0'
   pod 'FMDB', '~> 2.6.2'
   pod 'GYDataCenter', '~> 0.1.1'
   pod 'YYCache', '~> 1.0.4'
-  pod 'FSCalendar', '2.7.1'
-
+#  pod 'FSCalendar', '2.7.1'
+#pod 'SDWebImage', '3.7.3'
 end

@@ -58,6 +58,14 @@
                                     <segue destination="beG-N8-O4P" kind="show" id="DGu-Vs-ihR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryv-43-8sR">
+                                <rect key="frame" x="35" y="332" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SDWebImage"/>
+                                <connections>
+                                    <segue destination="e2i-jf-8sI" kind="show" id="JTu-kG-SjB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -75,18 +83,9 @@
                     <view key="view" contentMode="scaleToFill" id="L55-U1-fTj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHx-BM-dXg">
-                                <rect key="frame" x="35" y="130" width="289" height="222"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dnb-8q-suJ"/>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="gHx-BM-dXg" id="nDn-vE-RHo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fht-tY-DEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,6 +208,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avD-fl-FYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.19999999999999" y="115.14242878560721"/>
+        </scene>
+        <!--TestSD Web View Controller-->
+        <scene sceneID="NQB-dG-Ag2">
+            <objects>
+                <viewController id="e2i-jf-8sI" customClass="TGTestSDWebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vxh-Sb-IbL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pqe-Xe-UNo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38C-Qa-f54" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146" y="780"/>
         </scene>
     </scenes>
 </document>
