@@ -744,7 +744,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WT44JA8HJ5;
+				DEVELOPMENT_TEAM = G9N4239924;
 				INFOPLIST_FILE = TGCacheDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.centaline.TGCacheDemo;
@@ -759,7 +759,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WT44JA8HJ5;
+				DEVELOPMENT_TEAM = G9N4239924;
 				INFOPLIST_FILE = TGCacheDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.centaline.TGCacheDemo;

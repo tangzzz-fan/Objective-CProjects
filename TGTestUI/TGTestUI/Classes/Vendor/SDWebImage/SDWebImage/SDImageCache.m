@@ -195,9 +195,11 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     }
 
     NSUInteger cost = SDCacheCostForImage(image);
+    // 内存缓存,将其存入 NSCache 中, 并传入图片的消耗值
     [self.memCache setObject:image forKey:key cost:cost];
 
     if (toDisk) {
+        // 如果需要做磁盘缓存, 则将缓存操作做为一个任务放在 ioQueue 中.
         dispatch_async(self.ioQueue, ^{
             NSData *data = imageData;
 
@@ -232,6 +234,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 #endif
             }
 
+            // 创建缓存文件并存储图片.
             if (data) {
                 if (![_fileManager fileExistsAtPath:_diskCachePath]) {
                     [_fileManager createDirectoryAtPath:_diskCachePath withIntermediateDirectories:YES attributes:nil error:NULL];
@@ -451,6 +454,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     [self cleanDiskWithCompletionBlock:nil];
 }
 
+// 清理缓存的操作
 - (void)cleanDiskWithCompletionBlock:(SDWebImageNoParamsBlock)completionBlock {
     dispatch_async(self.ioQueue, ^{
         NSURL *diskCacheURL = [NSURL fileURLWithPath:self.diskCachePath isDirectory:YES];
@@ -466,6 +470,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
         NSMutableDictionary *cacheFiles = [NSMutableDictionary dictionary];
         NSUInteger currentCacheSize = 0;
 
+        // 最近最少未使用, 先移除过期的, 然后按照时间排序
         // Enumerate all of the files in the cache directory.  This loop has two purposes:
         //
         //  1. Removing files that are older than the expiration date.

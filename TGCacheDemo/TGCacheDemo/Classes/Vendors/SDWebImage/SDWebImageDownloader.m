@@ -157,6 +157,7 @@
                                                  completed:(nullable SDWebImageDownloaderCompletedBlock)completedBlock {
     __weak SDWebImageDownloader *wself = self;
 
+    // 创建一个 DownloaderOperation
     return [self addProgressCallback:progressBlock completedBlock:completedBlock forURL:url createCallback:^SDWebImageDownloaderOperation *{
         __strong __typeof (wself) sself = wself;
         NSTimeInterval timeoutInterval = sself.downloadTimeout;
@@ -178,6 +179,7 @@
         else {
             request.allHTTPHeaderFields = sself.HTTPHeaders;
         }
+        
         SDWebImageDownloaderOperation *operation = [[sself.operationClass alloc] initWithRequest:request inSession:sself.session options:options];
         operation.shouldDecompressImages = sself.shouldDecompressImages;
         
@@ -205,6 +207,7 @@
 }
 
 - (void)cancel:(nullable SDWebImageDownloadToken *)token {
+    // 保证线程安全
     dispatch_barrier_async(self.barrierQueue, ^{
         SDWebImageDownloaderOperation *operation = self.URLOperations[token.url];
         BOOL canceled = [operation cancel:token.downloadOperationCancelToken];
@@ -229,12 +232,14 @@
     __block SDWebImageDownloadToken *token = nil;
 
     dispatch_barrier_sync(self.barrierQueue, ^{
+        // 使用url 在缓存的数组中获取 下载的操作,
         SDWebImageDownloaderOperation *operation = self.URLOperations[url];
         if (!operation) {
             operation = createCallback();
             self.URLOperations[url] = operation;
 
             __weak SDWebImageDownloaderOperation *woperation = operation;
+            // 这里处理 在 NSOperation 下载操作完成之后 执行什么操作, 这里: 是从下载操作的缓存中移除对应的 NSOperation
             operation.completionBlock = ^{
 				dispatch_barrier_sync(self.barrierQueue, ^{
 					SDWebImageDownloaderOperation *soperation = woperation;

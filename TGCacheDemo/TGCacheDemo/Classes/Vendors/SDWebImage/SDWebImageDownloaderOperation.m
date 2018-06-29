@@ -78,6 +78,7 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
     SDDispatchQueueRelease(_barrierQueue);
 }
 
+// 保证URL只被请求一次
 - (nullable id)addHandlersForProgress:(nullable SDWebImageDownloaderProgressBlock)progressBlock
                             completed:(nullable SDWebImageDownloaderCompletedBlock)completedBlock {
     SDCallbacksDictionary *callbacks = [NSMutableDictionary new];
@@ -124,6 +125,7 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
 #if SD_UIKIT
         Class UIApplicationClass = NSClassFromString(@"UIApplication");
         BOOL hasApplication = UIApplicationClass && [UIApplicationClass respondsToSelector:@selector(sharedApplication)];
+        // 判断是否开启了后台下载线程
         if (hasApplication && [self shouldContinueWhenAppEntersBackground]) {
             __weak __typeof__ (self) wself = self;
             UIApplication * app = [UIApplicationClass performSelector:@selector(sharedApplication)];
@@ -147,8 +149,10 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
             }
         }
         
+        // 获取使用的 session 对话
         NSURLSession *session = self.unownedSession;
         if (!self.unownedSession) {
+            // 没有session 就创建一个 使用 代理 queue 处理代理方法
             NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
             sessionConfig.timeoutIntervalForRequest = 15;
             
@@ -194,6 +198,7 @@ typedef NSMutableDictionary<NSString *, id> SDCallbacksDictionary;
 #endif
 }
 
+// 取消下载任务
 - (void)cancel {
     @synchronized (self) {
         [self cancelInternal];

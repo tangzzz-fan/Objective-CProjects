@@ -38,12 +38,15 @@ typedef NSMutableDictionary<NSString *, id> SDOperationsDictionary;
     }
 }
 
+// 根据url 取消一个下载操作
 - (void)sd_cancelImageLoadOperationWithKey:(nullable NSString *)key {
     // Cancel in progress downloader from queue
+    // 从队列中取消一个正在下载的操作.
     SDOperationsDictionary *operationDictionary = [self operationDictionary];
     id operations = operationDictionary[key];
     if (operations) {
         if ([operations isKindOfClass:[NSArray class]]) {
+            // operations 中就是遵守 协议的 combineOperations 数组
             for (id <SDWebImageOperation> operation in operations) {
                 if (operation) {
                     [operation cancel];

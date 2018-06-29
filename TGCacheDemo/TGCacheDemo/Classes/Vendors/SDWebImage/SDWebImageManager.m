@@ -10,10 +10,12 @@
 #import "NSImage+WebCache.h"
 #import <objc/message.h>
 
+// 组合的 operation, 只是遵守了imageOperation 协议, 并不是真的 NSOperation, 遵守协议, 实现取消操作的方法
 @interface SDWebImageCombinedOperation : NSObject <SDWebImageOperation>
 
 @property (assign, nonatomic, getter = isCancelled) BOOL cancelled;
 @property (copy, nonatomic, nullable) SDWebImageNoParamsBlock cancelBlock;
+// 缓存的操作.
 @property (strong, nonatomic, nullable) NSOperation *cacheOperation;
 
 @end
@@ -23,6 +25,7 @@
 @property (strong, nonatomic, readwrite, nonnull) SDImageCache *imageCache;
 @property (strong, nonatomic, readwrite, nonnull) SDWebImageDownloader *imageDownloader;
 @property (strong, nonatomic, nonnull) NSMutableSet<NSURL *> *failedURLs;
+// 保存正在运行的操作
 @property (strong, nonatomic, nonnull) NSMutableArray<SDWebImageCombinedOperation *> *runningOperations;
 
 @end
@@ -120,6 +123,7 @@
         url = nil;
     }
 
+    // 创建 SDWebImageCombinedOperation 
     __block SDWebImageCombinedOperation *operation = [SDWebImageCombinedOperation new];
     __weak SDWebImageCombinedOperation *weakOperation = operation;
 
@@ -135,12 +139,15 @@
         return operation;
     }
 
+    // 将操作缓存起来.这个操作不是 NSOperation
     @synchronized (self.runningOperations) {
         [self.runningOperations addObject:operation];
     }
     NSString *key = [self cacheKeyForURL:url];
 
+    // 使用 url 去查找是否存在 NSOperation 的缓存
     operation.cacheOperation = [self.imageCache queryCacheOperationForKey:key done:^(UIImage *cachedImage, NSData *cachedData, SDImageCacheType cacheType) {
+        // 如果 操作已经被取消 就从缓存的字典中移除掉
         if (operation.isCancelled) {
             [self safelyRemoveOperationFromRunning:operation];
             return;
@@ -170,9 +177,11 @@
                 // ignore image read from NSURLCache if image if cached but force refreshing
                 downloaderOptions |= SDWebImageDownloaderIgnoreCachedResponse;
             }
+            // 上面根据用户设置, 转变后面使用的参数
             
+            // 获取 token, 让downloader 去执行下载操作, 下载之后, 返回一个 token 回来.
             SDWebImageDownloadToken *subOperationToken = [self.imageDownloader downloadImageWithURL:url options:downloaderOptions progress:progressBlock completed:^(UIImage *downloadedImage, NSData *downloadedData, NSError *error, BOOL finished) {
-                __strong __typeof(weakOperation) strongOperation = weakOperation;
+                __strong __typeof(weakOperation) strongOperation = weakOperation; // 使用的包装的 operation
                 if (!strongOperation || strongOperation.isCancelled) {
                     // Do nothing if the operation was cancelled
                     // See #699 for more details
@@ -228,9 +237,13 @@
                     [self safelyRemoveOperationFromRunning:strongOperation];
                 }
             }];
+            
+            // token 主要用在 imageManager 中, 来取消整个操作. ==> 使用token 让 downloader 去取消下载操作
+            // 在 Downloader 获取到对应的token之后, 拿出对应的 url 然后在 urlcallback 中移除对应的数据
             @synchronized(operation) {
                 // Need same lock to ensure cancelBlock called because cancel method can be called in different queue
                 operation.cancelBlock = ^{
+                    // 同步锁在此时移除对应的operation
                     [self.imageDownloader cancel:subOperationToken];
                     __strong __typeof(weakOperation) strongOperation = weakOperation;
                     [self safelyRemoveOperationFromRunning:strongOperation];
@@ -274,6 +287,7 @@
     return isRunning;
 }
 
+// 从runningOperations 中移除 operation
 - (void)safelyRemoveOperationFromRunning:(nullable SDWebImageCombinedOperation*)operation {
     @synchronized (self.runningOperations) {
         if (operation) {
@@ -282,6 +296,7 @@
     }
 }
 
+// 主线程回调, 返回的是 conbimeOperation
 - (void)callCompletionBlockForOperation:(nullable SDWebImageCombinedOperation*)operation
                              completion:(nullable SDInternalCompletionBlock)completionBlock
                                   error:(nullable NSError *)error
@@ -321,9 +336,11 @@
     }
 }
 
+// 实现对应的 SDWebImageOperation 协议, 主要是为了便捷的进行 operation 的操作.
 - (void)cancel {
     @synchronized(self) {
         self.cancelled = YES;
+        // 从缓存中取出 取消
         if (self.cacheOperation) {
             [self.cacheOperation cancel];
             self.cacheOperation = nil;

@@ -223,6 +223,7 @@ typedef SDHTTPHeadersDictionary * _Nullable (^SDWebImageDownloaderHeadersFilterB
  * Cancels a download that was previously queued using -downloadImageWithURL:options:progress:completed:
  *
  * @param token The token received from -downloadImageWithURL:options:progress:completed: that should be canceled.
+ *  取消指定 token 的下载
  */
 - (void)cancel:(nullable SDWebImageDownloadToken *)token;
 

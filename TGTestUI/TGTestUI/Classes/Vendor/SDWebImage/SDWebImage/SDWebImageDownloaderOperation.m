@@ -65,6 +65,10 @@ NSString *const SDWebImageDownloadFinishNotification = @"SDWebImageDownloadFinis
     return self;
 }
 
+
+/**
+ 重写的 NSOperation 的start 的方法
+ */
 - (void)start {
     @synchronized (self) {
         if (self.isCancelled) {
@@ -74,15 +78,23 @@ NSString *const SDWebImageDownloadFinishNotification = @"SDWebImageDownloadFinis
         }
 
 #if TARGET_OS_IPHONE && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_4_0
+        
+        /**
+                APP 进入后台之后, 请求继续执行一段时间.(如果设置了在后台执行, 则进行后台执行.)
+         */
         Class UIApplicationClass = NSClassFromString(@"UIApplication");
         BOOL hasApplication = UIApplicationClass && [UIApplicationClass respondsToSelector:@selector(sharedApplication)];
+        // 检查是否进入后台下载
         if (hasApplication && [self shouldContinueWhenAppEntersBackground]) {
             __weak __typeof__ (self) wself = self;
             UIApplication * app = [UIApplicationClass performSelector:@selector(sharedApplication)];
+            // 当借用的时间耗尽, 就自动结束自己的任务
             self.backgroundTaskId = [app beginBackgroundTaskWithExpirationHandler:^{
                 __strong __typeof (wself) sself = wself;
 
                 if (sself) {
+                
+                    // 取消之前的任务
                     [sself cancel];
 
                     [app endBackgroundTask:sself.backgroundTaskId];
@@ -91,22 +103,25 @@ NSString *const SDWebImageDownloadFinishNotification = @"SDWebImageDownloadFinis
             }];
         }
 #endif
-
+        
+        // 标志下载任务执行的状态
         self.executing = YES;
         self.connection = [[NSURLConnection alloc] initWithRequest:self.request delegate:self startImmediately:NO];
         self.thread = [NSThread currentThread];
     }
 
-    [self.connection start];
+    [self.connection start]; // 开始网络连接请求
 
     if (self.connection) {
         if (self.progressBlock) {
             self.progressBlock(0, NSURLResponseUnknownLength);
         }
         dispatch_async(dispatch_get_main_queue(), ^{
+            // 告知外界开始下载
             [[NSNotificationCenter defaultCenter] postNotificationName:SDWebImageDownloadStartNotification object:self];
         });
 
+        // 启动 runloop
         if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_5_1) {
             // Make sure to run the runloop in our background thread so it can process downloaded data
             // Note: we use a timeout to work around an issue with NSURLConnection cancel under iOS 5
@@ -114,25 +129,34 @@ NSString *const SDWebImageDownloadFinishNotification = @"SDWebImageDownloadFinis
             CFRunLoopRunInMode(kCFRunLoopDefaultMode, 10, false);
         }
         else {
+            // 类似 AFN 的做法, 保证 urlConnection 不会被提前释放.
+            
+            // 下载完成或者出错, 使用 CFRunloopStop 来结束阻塞状态
             CFRunLoopRun();
         }
 
+        // 如果未完成 则取消连接
         if (!self.isFinished) {
+            // 取消下载链接
             [self.connection cancel];
+            // 报错
             [self connection:self.connection didFailWithError:[NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorTimedOut userInfo:@{NSURLErrorFailingURLErrorKey : self.request.URL}]];
         }
     }
     else {
+        // connection 创建失败的回调.
         if (self.completedBlock) {
             self.completedBlock(nil, nil, [NSError errorWithDomain:NSURLErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : @"Connection can't be initialized"}], YES);
         }
     }
 
+    // 下载操作已经完成了,需要停止后台的执行, 使用 endBackgroundTask
 #if TARGET_OS_IPHONE && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_4_0
     Class UIApplicationClass = NSClassFromString(@"UIApplication");
     if(!UIApplicationClass || ![UIApplicationClass respondsToSelector:@selector(sharedApplication)]) {
         return;
     }
+    
     if (self.backgroundTaskId != UIBackgroundTaskInvalid) {
         UIApplication * app = [UIApplication performSelector:@selector(sharedApplication)];
         [app endBackgroundTask:self.backgroundTaskId];
@@ -249,6 +273,9 @@ NSString *const SDWebImageDownloadFinishNotification = @"SDWebImageDownloadFinis
     }
 }
 
+/* connection Delegate 接收数据, 每次接收到数据, 使用现有的数据创建一个 CGImageSourceRef 对象进行处理,首次
+    首次获取数据是, 获取图片的基本信息, 在图片下载完成之前,使用 CGImageSourceRef 对象创建一个图像.经过缩放解压缩操作后生成一个 UIimageduixang gongwancheng huidao shiyong .
+ **/
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     [self.imageData appendData:data];
 
@@ -262,6 +289,7 @@ NSString *const SDWebImageDownloadFinishNotification = @"SDWebImageDownloadFinis
         // Update the data source, we must pass ALL the data, not just the new bytes
         CGImageSourceRef imageSource = CGImageSourceCreateWithData((__bridge CFDataRef)self.imageData, NULL);
 
+        // 首次获取到数据时, 获取图片的基本信息
         if (width + height == 0) {
             CFDictionaryRef properties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, NULL);
             if (properties) {
@@ -283,6 +311,7 @@ NSString *const SDWebImageDownloadFinishNotification = @"SDWebImageDownloadFinis
 
         }
 
+        // 图片未曾下载完成
         if (width + height > 0 && totalSize < self.expectedSize) {
             // Create the image
             CGImageRef partialImageRef = CGImageSourceCreateImageAtIndex(imageSource, 0, NULL);
@@ -307,6 +336,7 @@ NSString *const SDWebImageDownloadFinishNotification = @"SDWebImageDownloadFinis
             }
 #endif
 
+            // 对图片进行缩放解码操作.,
             if (partialImageRef) {
                 UIImage *image = [UIImage imageWithCGImage:partialImageRef scale:1 orientation:orientation];
                 NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:self.request.URL];
