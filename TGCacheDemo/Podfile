@@ -13,4 +13,5 @@ target 'TGCacheDemo' do
   pod 'GYDataCenter', '~> 0.1.1'
   pod 'YYCache', '~> 1.0.4'
 #  pod 'YTKNetwork', '~> 2.0.4'
+    pod 'MJExtension'
 end

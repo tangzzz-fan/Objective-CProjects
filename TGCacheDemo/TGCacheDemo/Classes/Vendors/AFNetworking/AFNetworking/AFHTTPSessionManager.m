@@ -79,7 +79,7 @@
     // 保存 url
     self.baseURL = url;
 
-    // 生成请求序列对象和响应徐立诶对象
+    // 生成请求序列对象和响应序列化对象
     self.requestSerializer = [AFHTTPRequestSerializer serializer];
     self.responseSerializer = [AFJSONResponseSerializer serializer];
 

@@ -533,12 +533,14 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     // session 配置信息
     self.sessionConfiguration = configuration;
 
-    // 操作队列
+    // 创建操作队列
     self.operationQueue = [[NSOperationQueue alloc] init];
+#warning
     // 设置 queue 的并发线程数为1
     self.operationQueue.maxConcurrentOperationCount = 1;
 
     // 设置 session 的代理为 self, 但是实际操作中, 真正的代理会是使用的子类对象
+    // 使用配置信息创建session, 并为session指定的处理操作队列
     self.session = [NSURLSession sessionWithConfiguration:self.sessionConfiguration delegate:self delegateQueue:self.operationQueue];
 
     // 获取响应的转码器
@@ -644,7 +646,7 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     [self.lock unlock];
 }
 
-// 为 task 设置代理
+// 为 task 设置代理, 然后设置监听task的方法回调
 - (void)addDelegateForDataTask:(NSURLSessionDataTask *)dataTask
                 uploadProgress:(nullable void (^)(NSProgress *uploadProgress)) uploadProgressBlock
               downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgressBlock
@@ -652,12 +654,13 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
 {
     // 创建一个 AFURTLSessionManagetTaskDelegate 这个就是 AF 中的自定义的代理. Request 中传来的参数, 都会被赋值给这个代理.
     AFURLSessionManagerTaskDelegate *delegate = [[AFURLSessionManagerTaskDelegate alloc] init];
+    // 此处
     delegate.manager = self;
     delegate.completionHandler = completionHandler;
 
     // 用来发送开始和挂起通知的时候使用, 作为 key, 可以被查找到.
     dataTask.taskDescription = self.taskDescriptionForSessionTasks;
-    // 为 task 绑定 delegate
+    // 为 task 绑定 delegate, 设置监听task 执行或者暂停的方法.
     [self setDelegate:delegate forTask:dataTask];
 
     delegate.uploadProgressBlock = uploadProgressBlock;
@@ -798,7 +801,7 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
 
     // 使用的 block 变量先置空
     __block NSURLSessionDataTask *dataTask = nil;
-    // 创建一个 nsurlsessiondataTask
+    // 创建一个安全的 nsurlsessiondataTask(解决 iOS 8 之前 taskID 不匹配的问题)
     url_session_manager_create_task_safely(^{
         // 将 session 传递给 Request, 然后获取一个 task
         dataTask = [self.session dataTaskWithRequest:request];

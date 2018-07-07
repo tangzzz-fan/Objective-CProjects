@@ -106,6 +106,10 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
 
 #pragma mark - Request Action
 
+/**
+ 在父类中定义公用的方法, 然后在子类中调用, 则最后加到单例中的数组中的数据,是子类自己, 而不是父类.
+ 这个 start 方法可以认为是父类的基因方法, 这样添加完了之后, 经历过继承之后, 使用传递的就是子类自己定义的东西
+ */
 - (void)start {
     // 启动拦截器 告诉他 将要开始回调
     [self toggleAccessoriesWillStartCallBack];

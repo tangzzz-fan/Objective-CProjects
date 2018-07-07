@@ -18,6 +18,12 @@ typedef void (^Block)(void);
 @property (assign, nonatomic) int height;
 @property (strong, nonatomic) NSString *testStr;
 @property (strong, nonatomic) Block block;
+@property (strong, nonatomic) NSString *name;
+
+
+- (instancetype)initWithName:(NSString *)name;
+
++ (instancetype)objectWithFormat:(NSString *)formater;
 
 - (void)hello;
 + (void)hellolnClass;

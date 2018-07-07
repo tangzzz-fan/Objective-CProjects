@@ -24,12 +24,20 @@
     return self;
 }
 
-- initWithName:(NSString *)name {
+- (instancetype)initWithName:(NSString *)name {
     if (self = [super init]) {
         // self.name = name
+        NSString *str = [NSString stringWithFormat:@"This is a %zd", 30];
+        self.name = str;
     }
     return self;
 }
+
++ (instancetype)objectWithFormat:(NSString *)formater {
+    XXObject *obj = [[XXObject alloc] initWithName:@"test"];
+    return obj;
+}
+
 
 // protocol
 - (void)sayHello {
@@ -37,6 +45,7 @@
 }
 
 - (void)dealloc {
+    [super dealloc];
     NSLog(@"-------- %s", __func__);
 }
 

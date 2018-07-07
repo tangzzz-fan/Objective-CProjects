@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "YTKNetwork.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+- (IBAction)touchAction:(id)sender {
+    ZFIndexDefaultRecEstatesApi *api = [[ZFIndexDefaultRecEstatesApi alloc] init];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSLog(@"responseObject %@", request.responseJSONObject);
+        
+        
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSLog(@"request error %@", request.error);
+    }];
 }
 
 

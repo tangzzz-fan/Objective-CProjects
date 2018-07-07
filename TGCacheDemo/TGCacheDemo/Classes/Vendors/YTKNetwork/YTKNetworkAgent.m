@@ -188,9 +188,11 @@
 
     switch (method) {
         case YTKRequestMethodGET:
+            // get 请求有下载路径, 需要继续进行下载
             if (request.resumableDownloadPath) {
                 return [self downloadTaskWithDownloadPath:request.resumableDownloadPath requestSerializer:requestSerializer URLString:url parameters:param progress:request.resumableDownloadProgressBlock error:error];
             } else {
+                // 设置 GET 初始化方法, 使用设置的 requestSerializer 初始化一个 dataTask
                 return [self dataTaskWithHTTPMethod:@"GET" requestSerializer:requestSerializer URLString:url parameters:param error:error];
             }
         case YTKRequestMethodPOST:
@@ -206,6 +208,13 @@
     }
 }
 
+/**
+ 0 将 YTKRequest 添加到agent 服务员 保存的订单册上, 这样 让服务员统一交给厨师 AFNetworking 实现.
+ 1 先检查是否用户自定义了请求, 如果自定义了请求, 则直接将创建的自定义请求交给 session 创建对应的 dataTask 然后复制给 request
+ 2 如果是正常模式下的请求, 需要根据传递过来的参数 设置对应的请求中使用的参数包装形式等, 比如 post get 方法的参数传递方式. 设置在 httpbody 中; 也会根据任务的优先级 设置对应的优先级 NSURLSessionTaskPriorityHigh
+ 3 将设置好后的请求添加到 agent 中保存的字典中, 这里使用 taskIdentifier 唯一标识使用的 request, 这里的 request 的保存的字典 在访问时 要注意线程控制, 加锁, 防止出现死锁等问题, 也便于取消添加的请求.
+ 3 添加完成之后就让 task 开始执行任务
+ */
 - (void)addRequest:(YTKBaseRequest *)request {
     NSParameterAssert(request != nil);
 
@@ -216,9 +225,12 @@
     
     // 自定义网络请求 和 使用 baseUrl 请求使用的方式不一样. customUrl 是直接走 dataTaskWithRequest
     if (customUrlRequest) {
+        NSString *str = [[NSString alloc] initWithData:customUrlRequest.HTTPBody encoding:NSUTF8StringEncoding];
+        NSLog(@"String : %@", str);
         __block NSURLSessionDataTask *dataTask = nil;
         dataTask = [_manager dataTaskWithRequest:customUrlRequest completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
             // 完成之后, 根据 task 和返回数据执行统一操作
+
             [self handleRequestResult:dataTask responseObject:responseObject error:error];
         }];
         request.requestTask = dataTask;
@@ -316,8 +328,10 @@
     return YES;
 }
 
-// 处理网络请求的结果
+// 处理网络请求的结果, 这里会将请求回来的结果进行一部分自定义处理, 然后返回给调用者
 - (void)handleRequestResult:(NSURLSessionTask *)task responseObject:(id)responseObject error:(NSError *)error {
+    
+    // 从保存的task 字典中
     Lock();
     YTKBaseRequest *request = _requestsRecord[@(task.taskIdentifier)];
     Unlock();
@@ -458,6 +472,9 @@
 
 #pragma mark -
 
+/**
+ 根据请求方法, 请求序列化对象, url 连接, 参数 返回一个 NSURLSessionDataTask,
+ */
 - (NSURLSessionDataTask *)dataTaskWithHTTPMethod:(NSString *)method
                                requestSerializer:(AFHTTPRequestSerializer *)requestSerializer
                                        URLString:(NSString *)URLString
@@ -466,6 +483,10 @@
     return [self dataTaskWithHTTPMethod:method requestSerializer:requestSerializer URLString:URLString parameters:parameters constructingBodyWithBlock:nil error:error];
 }
 
+
+/**
+ 方法扩充, 兼容了POST 请求, 调用请求序列化对象中的方法创建对应的 request.这里调用 AFN 的方法. 还没有发起网络请求调用
+ */
 - (NSURLSessionDataTask *)dataTaskWithHTTPMethod:(NSString *)method
                                requestSerializer:(AFHTTPRequestSerializer *)requestSerializer
                                        URLString:(NSString *)URLString
@@ -483,6 +504,7 @@
     __block NSURLSessionDataTask *dataTask = nil;
     dataTask = [_manager dataTaskWithRequest:request
                            completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *_error) {
+                               // 这里进行返回结果的处理, 处理完成之后 做什么事情
                                [self handleRequestResult:dataTask responseObject:responseObject error:_error];
                            }];
 

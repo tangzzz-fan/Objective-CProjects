@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E11C77A20EA274800E8155F /* XXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E11C77920EA274800E8155F /* XXPerson.m */; };
 		8E250CD420E3725D000BF86E /* TestNSThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E250CD320E3725D000BF86E /* TestNSThread.m */; };
-		8ED8A34E20DBAF2600B5786E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A34D20DBAF2600B5786E /* main.m */; };
+		8ED8A34E20DBAF2600B5786E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A34D20DBAF2600B5786E /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8ED8A46320E2187A00B5786E /* TestBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A46220E2187A00B5786E /* TestBlock.m */; };
 		8ED8A46620E218FF00B5786E /* TestRunloop.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A46520E218FF00B5786E /* TestRunloop.m */; };
-		8EE2DDA520CA4D6400D476A9 /* XXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2DDA420CA4D6400D476A9 /* XXObject.m */; };
+		8EE2DDA520CA4D6400D476A9 /* XXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2DDA420CA4D6400D476A9 /* XXObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8E11C77820EA274800E8155F /* XXPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXPerson.h; sourceTree = "<group>"; };
+		8E11C77920EA274800E8155F /* XXPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXPerson.m; sourceTree = "<group>"; };
 		8E250CD220E3725D000BF86E /* TestNSThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNSThread.h; sourceTree = "<group>"; };
 		8E250CD320E3725D000BF86E /* TestNSThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNSThread.m; sourceTree = "<group>"; };
 		8ED8A34D20DBAF2600B5786E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				8ED8A34D20DBAF2600B5786E /* main.m */,
+				8E11C77820EA274800E8155F /* XXPerson.h */,
+				8E11C77920EA274800E8155F /* XXPerson.m */,
 				8ED8A46120E2187A00B5786E /* TestBlock.h */,
 				8ED8A46220E2187A00B5786E /* TestBlock.m */,
 				8ED8A46420E218FF00B5786E /* TestRunloop.h */,
@@ -143,6 +148,7 @@
 				8ED8A46320E2187A00B5786E /* TestBlock.m in Sources */,
 				8ED8A34E20DBAF2600B5786E /* main.m in Sources */,
 				8EE2DDA520CA4D6400D476A9 /* XXObject.m in Sources */,
+				8E11C77A20EA274800E8155F /* XXPerson.m in Sources */,
 				8ED8A46620E218FF00B5786E /* TestRunloop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

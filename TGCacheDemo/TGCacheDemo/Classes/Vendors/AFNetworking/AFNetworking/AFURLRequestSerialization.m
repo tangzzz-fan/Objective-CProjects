@@ -309,9 +309,7 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
     return [NSDictionary dictionaryWithDictionary:self.mutableHTTPRequestHeaders];
 }
 
-- (void)setValue:(NSString *)value
-forHTTPHeaderField:(NSString *)field
-{
+- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field {
 	[self.mutableHTTPRequestHeaders setValue:value forKey:field];
 }
 
@@ -348,6 +346,10 @@ forHTTPHeaderField:(NSString *)field
  *  1 设置 RequestMethod
  *  2 往 Request 中添加一些参数设置, 使用 c 函数包装 Request 的属性, 然后使用 kvc 将值变化传递过去
  *  3 把需要传递的参数进行编码, 添加到 request 中
+ *  这里可以进行一些请求的基础设置, 这里将会使用的的方法包装在block中, 因为一些参数需要用户自己设置, 去调用一些用户实现的方法
+ *  所以, 通过执行 block 的方式, 动态的获取用户自定义的的内容
+ *  使用的block AFHTTPRequestSerializerObservedKeyPaths() block 执行之后, 返回使用的参数数据.
+ *  self.AFHTTPRequestSerializerObservedKeyPaths 用户自定义的请求序列化对象的参数.
  */
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method
                                  URLString:(NSString *)URLString
@@ -364,7 +366,7 @@ forHTTPHeaderField:(NSString *)field
     NSMutableURLRequest *mutableRequest = [[NSMutableURLRequest alloc] initWithURL:url];
     mutableRequest.HTTPMethod = method;
 
-    // 循环遍历 request 中的各种参数
+    // 循环遍历 request 中的各种参数 通过 AFHTTPRequestSerializer 观察者对象获取用户定义的对象
     for (NSString *keyPath in AFHTTPRequestSerializerObservedKeyPaths()) {
         if ([self.mutableObservedChangedKeyPaths containsObject:keyPath]) {
             [mutableRequest setValue:[self valueForKeyPath:keyPath] forKey:keyPath];
@@ -472,7 +474,7 @@ forHTTPHeaderField:(NSString *)field
 /**
  *  1 从 self.headerValues 中拿到设置的参数, 重新赋值到 Request 中
  *  2 把网络请求的参数从容器类类型转换成字符串类型
- *  3 根据使用的请求方式, 设置参数 quey 应该存放的位置
+ *  3 根据使用的请求方式, 设置参数 query 应该存放的位置
  */
 - (NSURLRequest *)requestBySerializingRequest:(NSURLRequest *)request
                                withParameters:(id)parameters
@@ -492,8 +494,10 @@ forHTTPHeaderField:(NSString *)field
     NSString *query = nil;
     if (parameters) {
         // 设置了自定义的解析方式
+        // 最后判断该request中是否包含了GET、HEAD、DELETE（都包含在HTTPMethodsEncodingParametersInURI）。因为这几个method的quey是拼接到url后面的。而POST、PUT是把query拼接到http body中的。
         if (self.queryStringSerialization) {
             NSError *serializationError;
+            // 生成一个查询结果对象
             query = self.queryStringSerialization(request, parameters, &serializationError);
 
             if (serializationError) {
@@ -513,12 +517,12 @@ forHTTPHeaderField:(NSString *)field
         }
     }
 
-    // 哦按段 Request 中是否包含了请求方法,--> get, head, delete等方法
+    // 判断 Request 中是否包含了请求方法,--> get, head, delete等方法
     if ([self.HTTPMethodsEncodingParametersInURI containsObject:[[request HTTPMethod] uppercaseString]]) {
         if (query && query.length > 0) {
             mutableRequest.URL = [NSURL URLWithString:[[mutableRequest.URL absoluteString] stringByAppendingFormat:mutableRequest.URL.query ? @"&%@" : @"?%@", query]];
         }
-    } else { // post, put 方法
+    } else { // post, put 方法 将数据包装在 body 中
         // #2864: an empty string is a valid x-www-form-urlencoded payload
         if (!query) {
             query = @"";
@@ -535,7 +539,7 @@ forHTTPHeaderField:(NSString *)field
 }
 
 #pragma mark - NSKeyValueObserving
-
+// 对当前类和 NSURlRequest 实现相关的属性的监听
 + (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
     if ([AFHTTPRequestSerializerObservedKeyPaths() containsObject:key]) {
         return NO;
