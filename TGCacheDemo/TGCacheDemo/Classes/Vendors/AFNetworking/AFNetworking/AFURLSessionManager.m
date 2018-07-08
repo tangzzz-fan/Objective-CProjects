@@ -654,8 +654,9 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
 {
     // 创建一个 AFURTLSessionManagetTaskDelegate 这个就是 AF 中的自定义的代理. Request 中传来的参数, 都会被赋值给这个代理.
     AFURLSessionManagerTaskDelegate *delegate = [[AFURLSessionManagerTaskDelegate alloc] init];
-    // 此处
+    // 代理的管理这
     delegate.manager = self;
+    // 完成的completionHandler
     delegate.completionHandler = completionHandler;
 
     // 用来发送开始和挂起通知的时候使用, 作为 key, 可以被查找到.
@@ -788,12 +789,34 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
 
 #pragma mark -
 
+/**
+ 根据request 返回datatask
+ 
+ 
+
+ 
+ 
+ */
 - (NSURLSessionDataTask *)dataTaskWithRequest:(NSURLRequest *)request
                             completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler
 {
     return [self dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:completionHandler];
 }
 
+
+/**
+ 有了 request, 就要监听这个request 的启动运行状态. 什么意思呢? 就是对请求过程的监听需要做进一步的处理
+ 比如用户比较关心上传进度, 下载进度, 请求完成, 这些状态, 则在 urlsessionmanager 中需要提前设置, 不能等到 task resume 之后, 再匆忙设置
+ 
+ 举个例子: 外界要监听上传下载的进度, 可以怎么实现: 则要在 task 的代理方法被执行的时候, 实时的将下载比例数据传递给感兴趣的人, 在 afn 中, 主要是通过执行block 的方式 实时传递.
+ 可以在 task 的代理中, 执行对应的block 这样因为 代理方法会在下载过程中执行多次, 则 这个 block 也会执行多次, 这样外界就能实时监听内部下载的状态.
+ 
+ 小技巧: 对 block 的处理, set block 的方式, 外界能及时看到block 的影响参数
+ 
+ 
+ 
+ 
+ */
 - (NSURLSessionDataTask *)dataTaskWithRequest:(NSURLRequest *)request
                                uploadProgress:(nullable void (^)(NSProgress *uploadProgress)) uploadProgressBlock
                              downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgressBlock
@@ -804,10 +827,11 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     // 创建一个安全的 nsurlsessiondataTask(解决 iOS 8 之前 taskID 不匹配的问题)
     url_session_manager_create_task_safely(^{
         // 将 session 传递给 Request, 然后获取一个 task
+        
         dataTask = [self.session dataTaskWithRequest:request];
     });
 
-    // 设置 task 的代理
+    // 设置 task 的代理 设置代理就是为了更好的监听进度
     [self addDelegateForDataTask:dataTask uploadProgress:uploadProgressBlock downloadProgress:downloadProgressBlock completionHandler:completionHandler];
 
     return dataTask;

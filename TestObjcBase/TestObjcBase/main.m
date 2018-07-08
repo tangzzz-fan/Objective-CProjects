@@ -21,14 +21,28 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // 获取实例占用大小. 8+1+1+1 = 11 => 16 内存对齐(16的倍数)
-//        NSLog(@"%zd", class_getInstanceSize([XXPerson class]));
-        XXPerson *person  = [[XXPerson alloc] init];
-        person.tall = YES;
-        person.rich = NO;
-        person.handsome = YES;
-        NSLog(@"tall : %d, rich : %d, handsome : %d", person.tall,person.rich,person.handsome);
-    
+        XXPerson *person = [[XXPerson alloc] init];
+        person.name = @"this is xiaoming";
+//        {
+//            __weak typeof(person) weakPerson;
+//            void (^testBlock)(void) = ^{
+//                __strong typeof(weakPerson) strongPerson;
+//                strongPerson.name = @"xiaoming";
+//                NSLog(@"a changed: %@", strongPerson.name);
+//            };
+//            testBlock();
+//            NSLog(@"ssss xiaoming changed: %@", person.name);
+//        }
+        {
+            __block XXPerson *bPerson = person;
+            void (^testBlock)(void) = ^{
+                bPerson.name = @"xiaoming";
+                NSLog(@"a changed: %@ -- %@", bPerson.name, bPerson);
+            };
+            testBlock();
+            NSLog(@"ssss xiaoming changed: %@", person.name);
+        }
+        NSLog(@"person: %@", person.name);
 
     }
     return 0;

@@ -40,6 +40,7 @@
 @implementation YTKNetworkAgent {
     // agent 作为命令的承载方, 命令模式中的服务员的角色, 用于将命令及时交付给命令的执行者执行. 可能会做一个数据传递
     // 会话管理者
+    // http session manager 这里为什么不使用 jsonsessionmanager?
     AFHTTPSessionManager *_manager;
     // 配置信息
     YTKNetworkConfig *_config;
@@ -148,15 +149,29 @@
     return [NSURL URLWithString:detailUrl relativeToURL:url].absoluteString;
 }
 
+// 根据请求获取使用的请求序列化器
+
+/**
+ 这里的请求序列化器 是干什么的?
+ 
+ 请求序列化器就是将请求的东西转换成一个字符串?
+ 
+ 用户可以在 api 中执行使用的 style 是什么类型的, 比如可选为 http json 两种
+ AFJSONRequestSerializer 是 AFHTTPRequestSerializer 的子类.
+ */
 - (AFHTTPRequestSerializer *)requestSerializerForRequest:(YTKBaseRequest *)request {
     AFHTTPRequestSerializer *requestSerializer = nil;
+    // 用户设置的请求序列化器类型的 http 的 则返回 AFHTTPRequestSerializer
+    // 如果是 JSON 的, 则返回 AFJSONRequestSerializer
     if (request.requestSerializerType == YTKRequestSerializerTypeHTTP) {
         requestSerializer = [AFHTTPRequestSerializer serializer];
     } else if (request.requestSerializerType == YTKRequestSerializerTypeJSON) {
         requestSerializer = [AFJSONRequestSerializer serializer];
     }
 
+    // 设置序列化器的超时时间
     requestSerializer.timeoutInterval = [request requestTimeoutInterval];
+    // 允许移动数据访问
     requestSerializer.allowsCellularAccess = [request allowsCellularAccess];
 
     // If api needs server username and password
@@ -167,6 +182,7 @@
     }
 
     // If api needs to add custom value to HTTPHeaderField
+    // 检查是否需要在请求头中添加用户自定义的信息
     NSDictionary<NSString *, NSString *> *headerFieldValueDictionary = [request requestHeaderFieldValueDictionary];
     if (headerFieldValueDictionary != nil) {
         for (NSString *httpHeaderField in headerFieldValueDictionary.allKeys) {
@@ -177,13 +193,17 @@
     return requestSerializer;
 }
 
-// 执行网络请求的地方
+// 根据 request 到 session 中申请对应 的 task, 然后同时进行序列化操作:
+// 根据 request 获取 task: 遍历request 中的数据,比如 方法名, 方法, 参数填写,
 - (NSURLSessionTask *)sessionTaskForRequest:(YTKBaseRequest *)request error:(NSError * _Nullable __autoreleasing *)error {
     YTKRequestMethod method = [request requestMethod];
     NSString *url = [self buildRequestUrl:request];
     id param = request.requestArgument;
     // HTTPbody
     AFConstructingBlock constructingBlock = [request constructingBodyBlock];
+    // 获取使用的请求序列化器, 如果用户自定义了则返回用户自定义的, 如果没有自定义, 则返回默认的
+    // 这里有两种:  http json
+    // 什么时候用 http , 什么时候用 json 如果发起请求的数据是 json 格式的, 则可以使用 json style
     AFHTTPRequestSerializer *requestSerializer = [self requestSerializerForRequest:request];
 
     switch (method) {
@@ -196,6 +216,7 @@
                 return [self dataTaskWithHTTPMethod:@"GET" requestSerializer:requestSerializer URLString:url parameters:param error:error];
             }
         case YTKRequestMethodPOST:
+            // 举例说明: 是post 方法, 则用 对应的请求序列化器, url 参数, 请求体给下一层去做事情
             return [self dataTaskWithHTTPMethod:@"POST" requestSerializer:requestSerializer URLString:url parameters:param constructingBodyWithBlock:constructingBlock error:error];
         case YTKRequestMethodHEAD:
             return [self dataTaskWithHTTPMethod:@"HEAD" requestSerializer:requestSerializer URLString:url parameters:param error:error];
@@ -229,16 +250,19 @@
         NSLog(@"String : %@", str);
         __block NSURLSessionDataTask *dataTask = nil;
         dataTask = [_manager dataTaskWithRequest:customUrlRequest completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-            // 完成之后, 根据 task 和返回数据执行统一操作
-
+            // 请求完成之后, 根据 task 和返回数据执行统一操作
+            // 这是用户自定义url 的处理
             [self handleRequestResult:dataTask responseObject:responseObject error:error];
         }];
         request.requestTask = dataTask;
     } else {
+        // 根据这个请求, 同时进行请求的序列化操作, 得到对应的 requestTask
         request.requestTask = [self sessionTaskForRequest:request error:&requestSerializationError];
     }
 
+    // 如果请求序列化失败, 则进行对应的处理
     if (requestSerializationError) {
+        // 序列化失败, 直接回调.
         [self requestDidFailWithRequest:request error:requestSerializationError];
         return;
     }
@@ -265,8 +289,10 @@
 
     // Retain request
     YTKLog(@"Add request: %@", NSStringFromClass([request class]));
-    // 此处记录使用的 request 为了便于后面取消网络请求
+    // 2 此处记录使用的 request 为了便于后面取消网络请求
     [self addRequestToRecord:request];
+    
+    // 3 启动task
     [request.requestTask resume];
 }
 
@@ -328,11 +354,17 @@
     return YES;
 }
 
-// 处理网络请求的结果, 这里会将请求回来的结果进行一部分自定义处理, 然后返回给调用者
+
+/**
+ 处理网络请求的结果, 这里会将请求回来的结果进行一部分自定义处理, 然后返回给调用者
+
+ responsObject 是调用者所在的回调处理返回的 就是在这个地方负责进行统一的回调分发处理.
+ */
 - (void)handleRequestResult:(NSURLSessionTask *)task responseObject:(id)responseObject error:(NSError *)error {
     
     // 从保存的task 字典中
     Lock();
+    // 根据task 获取对应的 request
     YTKBaseRequest *request = _requestsRecord[@(task.taskIdentifier)];
     Unlock();
 
@@ -347,23 +379,28 @@
 
     YTKLog(@"Finished Request: %@", NSStringFromClass([request class]));
 
+    // 进行序列化操作
     NSError * __autoreleasing serializationError = nil;
+    // 进行验证操作
     NSError * __autoreleasing validationError = nil;
 
     NSError *requestError = nil;
     BOOL succeed = NO;
 
+    // request 就是返回的原始数据
     request.responseObject = responseObject;
     // 校验格式
     if ([request.responseObject isKindOfClass:[NSData class]]) {
         request.responseData = responseObject;
         request.responseString = [[NSString alloc] initWithData:responseObject encoding:[YTKNetworkUtils stringEncodingWithRequest:request]];
 
+        // 根据请求中设置的 响应体的序列化烈性 进行对应的响应. 这里默认类型为 HTTP 类型, 也可以是 JSON 或者 xml 类型.
         switch (request.responseSerializerType) {
             case YTKResponseSerializerTypeHTTP:
                 // Default serializer. Do nothing.
                 break;
             case YTKResponseSerializerTypeJSON:
+                // 如果是 json 类型的, 则调用 json 序列化器进行对应的操作, 然后将数据返回
                 request.responseObject = [self.jsonResponseSerializer responseObjectForResponse:task.response data:request.responseData error:&serializationError];
                 request.responseJSONObject = request.responseObject;
                 break;
@@ -381,17 +418,21 @@
         succeed = NO;
         requestError = serializationError;
     } else {
+        // 验证返回的数据
         succeed = [self validateResult:request error:&validationError];
         requestError = validationError;
     }
 
     if (succeed) {
+        // 请求成功的处理
         [self requestDidSucceedWithRequest:request];
     } else {
+        // 这里就是请求失败的处理
         [self requestDidFailWithRequest:request error:requestError];
     }
 
     dispatch_async(dispatch_get_main_queue(), ^{
+        // 回调完成了之后, 要清除 agent 中记录的 请求, 然后 为了防止循环引用, 就清理对应的 block
         [self removeRequestFromRecord:request];
         [request clearCompletionBlock];
     });
@@ -400,30 +441,44 @@
 // 某次网络请求成功返回
 - (void)requestDidSucceedWithRequest:(YTKBaseRequest *)request {
     @autoreleasepool {
+        // 这里进行请求缓存的处理: 写入缓存
         [request requestCompletePreprocessor];
     }
+    // 这里是切换到主线程进行操作
     dispatch_async(dispatch_get_main_queue(), ^{
+        // 告诉监听器, 请求就要结束了
         [request toggleAccessoriesWillStopCallBack];
+        // 在真正的请求的回调之前做的处理, 这可以是用户自定义的操作
         [request requestCompleteFilter];
 
         if (request.delegate != nil) {
+            // 执行代理的方法, 即 请求结束
             [request.delegate requestFinished:request];
         }
         if (request.successCompletionBlock) {
+            // 执行对应的请求成功的回调
             request.successCompletionBlock(request);
         }
+        // 告诉监听者 请求回调处理结束了
+        // 比如在处理这个的部分 可以调用自己的组件, 显示或者隐藏 hud 等的操作.
         [request toggleAccessoriesDidStopCallBack];
     });
 }
 
+
+/**
+ 专门处理请求失败的情况
+
+ */
 - (void)requestDidFailWithRequest:(YTKBaseRequest *)request error:(NSError *)error {
     request.error = error;
     YTKLog(@"Request %@ failed, status code = %ld, error = %@",
            NSStringFromClass([request class]), (long)request.responseStatusCode, error.localizedDescription);
 
-    // Save incomplete download data.
+    // Save incomplete download data. 保存未完成的下载数据, 标志位 本地有 resumeDownloadFile 下载路径不为空.
     NSData *incompleteDownloadData = error.userInfo[NSURLSessionDownloadTaskResumeData];
     if (incompleteDownloadData) {
+        // 将下载的数据写入到文件中, 则下次看对应路径下是否有数据, 如果有数据 则为 下载操作,
         [incompleteDownloadData writeToURL:[self incompleteDownloadTempPathForDownloadPath:request.resumableDownloadPath] atomically:YES];
     }
 
@@ -486,6 +541,9 @@
 
 /**
  方法扩充, 兼容了POST 请求, 调用请求序列化对象中的方法创建对应的 request.这里调用 AFN 的方法. 还没有发起网络请求调用
+ 这里会调用 AFN 中的请求序列化器, 使用 afn 的请求序列化器实现创建request 的操作,
+ 
+ 返回 urlsessiondatatask 做缓存操作
  */
 - (NSURLSessionDataTask *)dataTaskWithHTTPMethod:(NSString *)method
                                requestSerializer:(AFHTTPRequestSerializer *)requestSerializer
@@ -498,19 +556,28 @@
     if (block) {
         request = [requestSerializer multipartFormRequestWithMethod:method URLString:URLString parameters:parameters constructingBodyWithBlock:block error:error];
     } else {
+        // 让请求序列化器 去做序列化操作 这个序列化器 就是 从 afn 中获取过来的
+        // 序列化器负责根据方法, url, 参数, 返回对应的request
+        // 调用 AFN 中的 HTTP 请求序列化器的方法, 创建对应的request,
         request = [requestSerializer requestWithMethod:method URLString:URLString parameters:parameters error:error];
     }
 
     __block NSURLSessionDataTask *dataTask = nil;
+    // 根据序列化好的 request*(此时 request 中的请求头, 请求体, 编码 都已经在 afn 中的 http 序列化器中完成设置)
+    // 根据 request 获取对应的 dataTask
+    // 调用的是 AFN 中的方法, 这里的 completionHandler 就是用来接收请求回调.
+    // httpsessionmanager 中添加 request 
     dataTask = [_manager dataTaskWithRequest:request
                            completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *_error) {
                                // 这里进行返回结果的处理, 处理完成之后 做什么事情
+                               // 响应的统一处理
+                               // 这里是真正将请求返回的数据 传递出去的地方
                                [self handleRequestResult:dataTask responseObject:responseObject error:_error];
                            }];
 
     return dataTask;
 }
-
+// 下载的处理
 - (NSURLSessionDownloadTask *)downloadTaskWithDownloadPath:(NSString *)downloadPath
                                          requestSerializer:(AFHTTPRequestSerializer *)requestSerializer
                                                  URLString:(NSString *)URLString

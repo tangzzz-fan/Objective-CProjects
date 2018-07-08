@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		8E11C77A20EA274800E8155F /* XXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E11C77920EA274800E8155F /* XXPerson.m */; };
 		8E250CD420E3725D000BF86E /* TestNSThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E250CD320E3725D000BF86E /* TestNSThread.m */; };
-		8ED8A34E20DBAF2600B5786E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A34D20DBAF2600B5786E /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8ED8A34E20DBAF2600B5786E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A34D20DBAF2600B5786E /* main.m */; };
 		8ED8A46320E2187A00B5786E /* TestBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A46220E2187A00B5786E /* TestBlock.m */; };
 		8ED8A46620E218FF00B5786E /* TestRunloop.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED8A46520E218FF00B5786E /* TestRunloop.m */; };
-		8EE2DDA520CA4D6400D476A9 /* XXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2DDA420CA4D6400D476A9 /* XXObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8EE2DDA520CA4D6400D476A9 /* XXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE2DDA420CA4D6400D476A9 /* XXObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */

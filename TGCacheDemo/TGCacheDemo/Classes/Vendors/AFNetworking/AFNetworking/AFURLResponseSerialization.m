@@ -232,6 +232,14 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
 
 #pragma mark - AFURLResponseSerialization
 
+/**
+ 使用 AFN 中的 JSONResponseSerializer 进行响应体的序列化操作.
+
+ @param response <#response description#>
+ @param data <#data description#>
+ @param error <#error description#>
+ @return <#return value description#>
+ */
 - (id)responseObjectForResponse:(NSURLResponse *)response
                            data:(NSData *)data
                           error:(NSError *__autoreleasing *)error

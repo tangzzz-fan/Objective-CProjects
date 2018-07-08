@@ -309,14 +309,17 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
     return [NSDictionary dictionaryWithDictionary:self.mutableHTTPRequestHeaders];
 }
 
+// 请求序列化器: 向请求头中添加自定义的设置
 - (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field {
 	[self.mutableHTTPRequestHeaders setValue:value forKey:field];
 }
 
+// 请求序列化器 获取请求头中的数据
 - (NSString *)valueForHTTPHeaderField:(NSString *)field {
     return [self.mutableHTTPRequestHeaders valueForKey:field];
 }
 
+// 设置认证信息
 - (void)setAuthorizationHeaderFieldWithUsername:(NSString *)username
                                        password:(NSString *)password
 {
@@ -350,6 +353,8 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
  *  所以, 通过执行 block 的方式, 动态的获取用户自定义的的内容
  *  使用的block AFHTTPRequestSerializerObservedKeyPaths() block 执行之后, 返回使用的参数数据.
  *  self.AFHTTPRequestSerializerObservedKeyPaths 用户自定义的请求序列化对象的参数.
+ *
+ *  请求序列化器根据请求方法, url, 参数 创建一个可变请求对象,
  */
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method
                                  URLString:(NSString *)URLString
@@ -367,6 +372,7 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
     mutableRequest.HTTPMethod = method;
 
     // 循环遍历 request 中的各种参数 通过 AFHTTPRequestSerializer 观察者对象获取用户定义的对象
+    // AFHTTPRequestSerializerObservedKeyPaths() 是一个c 语言函数, 就是一个函数数组, 一个函数执行完了, 就会返回一个对应的属性值.
     for (NSString *keyPath in AFHTTPRequestSerializerObservedKeyPaths()) {
         if ([self.mutableObservedChangedKeyPaths containsObject:keyPath]) {
             [mutableRequest setValue:[self valueForKeyPath:keyPath] forKey:keyPath];
@@ -475,6 +481,9 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
  *  1 从 self.headerValues 中拿到设置的参数, 重新赋值到 Request 中
  *  2 把网络请求的参数从容器类类型转换成字符串类型
  *  3 根据使用的请求方式, 设置参数 query 应该存放的位置
+ *  总结: 请求序列化器做了什么事?
+    1 设置请求头参数
+    2 根据用户设置的编解码方式进行对应的编解码操作.
  */
 - (NSURLRequest *)requestBySerializingRequest:(NSURLRequest *)request
                                withParameters:(id)parameters
@@ -535,6 +544,7 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
         [mutableRequest setHTTPBody:[query dataUsingEncoding:self.stringEncoding]];
     }
 
+    // 竟然是在请求序列化器中实现 对 request 的自定义操作
     return mutableRequest;
 }
 

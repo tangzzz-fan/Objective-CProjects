@@ -161,6 +161,7 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
             [self saveResponseDataToCacheFile:[super responseData]];
         });
     } else {
+        // 将请求的数据 按照 data 的方式写入到文件中.
         [self saveResponseDataToCacheFile:[super responseData]];
     }
 }
