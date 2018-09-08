@@ -47,8 +47,10 @@ static char TAG_ACTIVITY_SHOW;
                           progress:(nullable SDWebImageDownloaderProgressBlock)progressBlock
                          completed:(nullable SDExternalCompletionBlock)completedBlock
                            context:(nullable NSDictionary *)context {
+    // 根据operationKey 查找在 manager 中是否有下载操作的缓存
     NSString *validOperationKey = operationKey ?: NSStringFromClass([self class]);
-    
+    // 根据这个key 取消这个下载操作, 意思就是暂停这个 imageview 之前的下载任务, 然后重新设置一个下载任务给这个 imageView 
+
     [self sd_cancelImageLoadOperationWithKey:validOperationKey];
     
     objc_setAssociatedObject(self, &imageURLKey, url, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

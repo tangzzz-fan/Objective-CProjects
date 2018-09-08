@@ -7,7 +7,11 @@
 //
 
 #import "ViewController.h"
+
 #import "YTKNetwork.h"
+
+#import "UIImageView+WebCache.h"
+
 @interface ViewController ()
 
 @end
@@ -16,6 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    [imageV sd_setImageWithURL:[NSURL URLWithString:@""]];
+    [self.view addSubview:imageV];
     
 }
 - (IBAction)touchAction:(id)sender {
