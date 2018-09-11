@@ -31,6 +31,15 @@ DEPENDENCIES:
   - GYDataCenter (~> 0.1.1)
   - YYCache (~> 1.0.4)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - BaiduMapKit
+    - FDFullscreenPopGesture
+    - FMDB
+    - GYDataCenter
+    - YYCache
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BaiduMapKit: 6517f84bdca032170ee9da39985bb64eba8ed900
@@ -41,4 +50,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: b732464d638113056f3e5265b032165843d058b2
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.0.beta.1

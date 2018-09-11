@@ -10,6 +10,10 @@
 #import "JavaScript.h"
 @interface ViewController ()
 @property (nonatomic) dispatch_source_t timerSource;
+
+/** thread */
+@property (nonatomic, strong) NSThread *thread;
+
 @end
 
 @implementation ViewController
@@ -21,7 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self testGCD_semaphore];
+    [self testRunLoop];
+    
+//    [self testGCD_semaphore];
     
 //    [self testForObjectType];
     
@@ -44,6 +50,67 @@
 //    [self testDispatchIO];
 //    [self testDispatchSource];
 //    [self testANewDeadLock];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    // 创建子线程并开启
+    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(show) object:nil];
+    self.thread = thread;
+    [thread start];
+    
+}
+
+- (void)show {
+    NSLog(@"%s", __func__);
+    
+    // 这个 show 方法其实是子线程要执行的方法, 因此 此时就是开启了子线程的 runloop
+    [[NSRunLoop currentRunLoop] addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
+    // add a timer
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(testRunLoop) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+    
+    // create a observer
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        switch (activity) {
+            case kCFRunLoopEntry:
+                NSLog(@"RunLoop进入");
+                break;
+            case kCFRunLoopBeforeTimers:
+                NSLog(@"RunLoop要处理Timers了");
+                break;
+            case kCFRunLoopBeforeSources:
+                NSLog(@"RunLoop要处理Sources了");
+                break;
+            case kCFRunLoopBeforeWaiting:
+                NSLog(@"RunLoop要休息了");
+                break;
+            case kCFRunLoopAfterWaiting:
+                NSLog(@"RunLoop醒来了");
+                break;
+            case kCFRunLoopExit:
+                NSLog(@"RunLoop退出了");
+                break;
+                
+            default:
+                break;
+        }
+        
+    });
+    
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
+    //子线程开启 runloop
+    [[NSRunLoop currentRunLoop] run];
+    
+    CFRelease(observer);
+    
+}
+
+- (IBAction)test:(id)sender {
+    [self performSelector:@selector(testRunLoop) onThread:self.thread withObject:nil waitUntilDone:NO];
+}
+
+- (void)testRunLoop {
+    NSLog(@"%@", [NSThread currentThread]);
 }
 
 - (void)testGCD_semaphore {

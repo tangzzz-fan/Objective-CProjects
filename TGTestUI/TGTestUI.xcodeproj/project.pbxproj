@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0887F1FA9CBEF975696D4267 /* libPods-TGTestUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBCAF8A3B02D90E08516746 /* libPods-TGTestUI.a */; };
+		87550B8A2147B66300BA07F5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 87550B892147B66300BA07F5 /* Person.m */; };
 		877AFBD7200B7F9A00D1AF8C /* TGTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 877AFBD6200B7F9A00D1AF8C /* TGTestTableViewController.m */; };
 		877AFBDA200B7FF000D1AF8C /* TGTest1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 877AFBD9200B7FF000D1AF8C /* TGTest1TableViewCell.m */; };
 		877AFBDD200B811B00D1AF8C /* TGTest1View.m in Sources */ = {isa = PBXBuildFile; fileRef = 877AFBDC200B811B00D1AF8C /* TGTest1View.m */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		1BBCAF8A3B02D90E08516746 /* libPods-TGTestUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TGTestUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		473021A7DCA228D776476A52 /* Pods-TGTestUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGTestUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TGTestUI/Pods-TGTestUI.debug.xcconfig"; sourceTree = "<group>"; };
+		87550B882147B66300BA07F5 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		87550B892147B66300BA07F5 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		877AFBD5200B7F9A00D1AF8C /* TGTestTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTestTableViewController.h; sourceTree = "<group>"; };
 		877AFBD6200B7F9A00D1AF8C /* TGTestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGTestTableViewController.m; sourceTree = "<group>"; };
 		877AFBD8200B7FF000D1AF8C /* TGTest1TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGTest1TableViewCell.h; sourceTree = "<group>"; };
@@ -130,6 +133,16 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
+		};
+		87550B872147B65100BA07F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87550B882147B66300BA07F5 /* Person.h */,
+				87550B892147B66300BA07F5 /* Person.m */,
+			);
+			name = Model;
+			path = TGTestUI/Classes/Model;
+			sourceTree = SOURCE_ROOT;
 		};
 		8E4EBB4A1FF5E5EA00EA2540 /* Category */ = {
 			isa = PBXGroup;
@@ -228,6 +241,7 @@
 		8EE0C7B11FF4DC540066F95E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				87550B872147B65100BA07F5 /* Model */,
 				8E64984D20E4E58A009AE765 /* Vendor */,
 				8E4EBB4A1FF5E5EA00EA2540 /* Category */,
 				8EE0C7B21FF4DC540066F95E /* Other */,
@@ -301,7 +315,6 @@
 				8E63E2BB1FF25AD900C7E9AC /* Sources */,
 				8E63E2BC1FF25AD900C7E9AC /* Frameworks */,
 				8E63E2BD1FF25AD900C7E9AC /* Resources */,
-				0EEE732E0859D292C2A56342 /* [CP] Embed Pods Frameworks */,
 				8962C4161DE646560D83B1D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -364,21 +377,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0EEE732E0859D292C2A56342 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TGTestUI/Pods-TGTestUI-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		45DE3E8B78644B59A4DBB3D0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,7 +401,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TGTestUI/Pods-TGTestUI-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TGTestUI/Pods-TGTestUI-resources.sh",
 				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -412,7 +410,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TGTestUI/Pods-TGTestUI-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TGTestUI/Pods-TGTestUI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -424,6 +422,7 @@
 			files = (
 				8E64987A20E4E58A009AE765 /* SDWebImageDownloaderOperation.m in Sources */,
 				8E64987220E4E58A009AE765 /* SDWebImageDecoder.m in Sources */,
+				87550B8A2147B66300BA07F5 /* Person.m in Sources */,
 				8E64987C20E4E58A009AE765 /* UIImageView+WebCache.m in Sources */,
 				8E64987820E4E58A009AE765 /* SDWebImagePrefetcher.m in Sources */,
 				8E8EE3A41FF4FC380034EC14 /* TGPageViewController.m in Sources */,
