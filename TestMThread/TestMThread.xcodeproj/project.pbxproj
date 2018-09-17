@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87550B752147856B00BA07F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87550B742147856B00BA07F5 /* main.m */; };
-		87550B802147951E00BA07F5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 87550B7F2147951E00BA07F5 /* Person.m */; };
+		871A1D5A214B6074004FE35C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 871A1D59214B6074004FE35C /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		87550B6F2147856B00BA07F5 /* CopyFiles */ = {
+		871A1D54214B6074004FE35C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,26 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		87550B712147856B00BA07F5 /* TestBlock */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestBlock; sourceTree = BUILT_PRODUCTS_DIR; };
-		87550B742147856B00BA07F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		87550B7B214786FC00BA07F5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		87550B7C2147936400BA07F5 /* main01.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main01.cpp; sourceTree = "<group>"; };
-		87550B7D214794A600BA07F5 /* main02sanzhong.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main02sanzhong.cpp; sourceTree = "<group>"; };
-		87550B7E2147951E00BA07F5 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		87550B7F2147951E00BA07F5 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		87550B812147965400BA07F5 /* main03Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main03Object.cpp; sourceTree = "<group>"; };
-		87550B82214797F100BA07F5 /* main03Object1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main03Object1.cpp; sourceTree = "<group>"; };
-		87550B83214799C900BA07F5 /* main03Object2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main03Object2.cpp; sourceTree = "<group>"; };
-		87550B8421479AC900BA07F5 /* Person01.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Person01.cpp; sourceTree = "<group>"; };
-		87550B8521479D7200BA07F5 /* Person02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Person02.cpp; sourceTree = "<group>"; };
-		87550B8621479E4E00BA07F5 /* main04BlockClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main04BlockClass.cpp; sourceTree = "<group>"; };
-		87550B8B2147BF0100BA07F5 /* main05.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main05.cpp; sourceTree = "<group>"; };
-		87550B8C2147C41300BA07F5 /* main0502.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main0502.cpp; sourceTree = "<group>"; };
-		87550B8D2147C5D400BA07F5 /* main06.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main06.cpp; sourceTree = "<group>"; };
+		871A1D56214B6074004FE35C /* TestMThread */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestMThread; sourceTree = BUILT_PRODUCTS_DIR; };
+		871A1D59214B6074004FE35C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		87550B6E2147856B00BA07F5 /* Frameworks */ = {
+		871A1D53214B6074004FE35C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,109 +38,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		87550B682147856B00BA07F5 = {
+		871A1D4D214B6074004FE35C = {
 			isa = PBXGroup;
 			children = (
-				87550B732147856B00BA07F5 /* TestBlock */,
-				87550B722147856B00BA07F5 /* Products */,
+				871A1D58214B6074004FE35C /* TestMThread */,
+				871A1D57214B6074004FE35C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		87550B722147856B00BA07F5 /* Products */ = {
+		871A1D57214B6074004FE35C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87550B712147856B00BA07F5 /* TestBlock */,
+				871A1D56214B6074004FE35C /* TestMThread */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		87550B732147856B00BA07F5 /* TestBlock */ = {
+		871A1D58214B6074004FE35C /* TestMThread */ = {
 			isa = PBXGroup;
 			children = (
-				87550B742147856B00BA07F5 /* main.m */,
-				87550B7B214786FC00BA07F5 /* main.cpp */,
-				87550B7C2147936400BA07F5 /* main01.cpp */,
-				87550B7D214794A600BA07F5 /* main02sanzhong.cpp */,
-				87550B812147965400BA07F5 /* main03Object.cpp */,
-				87550B82214797F100BA07F5 /* main03Object1.cpp */,
-				87550B83214799C900BA07F5 /* main03Object2.cpp */,
-				87550B8621479E4E00BA07F5 /* main04BlockClass.cpp */,
-				87550B8B2147BF0100BA07F5 /* main05.cpp */,
-				87550B8C2147C41300BA07F5 /* main0502.cpp */,
-				87550B8D2147C5D400BA07F5 /* main06.cpp */,
-				87550B7E2147951E00BA07F5 /* Person.h */,
-				87550B7F2147951E00BA07F5 /* Person.m */,
-				87550B8421479AC900BA07F5 /* Person01.cpp */,
-				87550B8521479D7200BA07F5 /* Person02.cpp */,
+				871A1D59214B6074004FE35C /* main.m */,
 			);
-			path = TestBlock;
+			path = TestMThread;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		87550B702147856B00BA07F5 /* TestBlock */ = {
+		871A1D55214B6074004FE35C /* TestMThread */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87550B782147856B00BA07F5 /* Build configuration list for PBXNativeTarget "TestBlock" */;
+			buildConfigurationList = 871A1D5D214B6074004FE35C /* Build configuration list for PBXNativeTarget "TestMThread" */;
 			buildPhases = (
-				87550B6D2147856B00BA07F5 /* Sources */,
-				87550B6E2147856B00BA07F5 /* Frameworks */,
-				87550B6F2147856B00BA07F5 /* CopyFiles */,
+				871A1D52214B6074004FE35C /* Sources */,
+				871A1D53214B6074004FE35C /* Frameworks */,
+				871A1D54214B6074004FE35C /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TestBlock;
-			productName = TestBlock;
-			productReference = 87550B712147856B00BA07F5 /* TestBlock */;
+			name = TestMThread;
+			productName = TestMThread;
+			productReference = 871A1D56214B6074004FE35C /* TestMThread */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		87550B692147856B00BA07F5 /* Project object */ = {
+		871A1D4E214B6074004FE35C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Tango;
 				TargetAttributes = {
-					87550B702147856B00BA07F5 = {
+					871A1D55214B6074004FE35C = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 87550B6C2147856B00BA07F5 /* Build configuration list for PBXProject "TestBlock" */;
+			buildConfigurationList = 871A1D51214B6074004FE35C /* Build configuration list for PBXProject "TestMThread" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 87550B682147856B00BA07F5;
-			productRefGroup = 87550B722147856B00BA07F5 /* Products */;
+			mainGroup = 871A1D4D214B6074004FE35C;
+			productRefGroup = 871A1D57214B6074004FE35C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				87550B702147856B00BA07F5 /* TestBlock */,
+				871A1D55214B6074004FE35C /* TestMThread */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		87550B6D2147856B00BA07F5 /* Sources */ = {
+		871A1D52214B6074004FE35C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87550B802147951E00BA07F5 /* Person.m in Sources */,
-				87550B752147856B00BA07F5 /* main.m in Sources */,
+				871A1D5A214B6074004FE35C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		87550B762147856B00BA07F5 /* Debug */ = {
+		871A1D5B214B6074004FE35C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,7 +183,7 @@
 			};
 			name = Debug;
 		};
-		87550B772147856B00BA07F5 /* Release */ = {
+		871A1D5C214B6074004FE35C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,7 +234,7 @@
 			};
 			name = Release;
 		};
-		87550B792147856B00BA07F5 /* Debug */ = {
+		871A1D5E214B6074004FE35C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -273,7 +243,7 @@
 			};
 			name = Debug;
 		};
-		87550B7A2147856B00BA07F5 /* Release */ = {
+		871A1D5F214B6074004FE35C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -285,25 +255,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		87550B6C2147856B00BA07F5 /* Build configuration list for PBXProject "TestBlock" */ = {
+		871A1D51214B6074004FE35C /* Build configuration list for PBXProject "TestMThread" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87550B762147856B00BA07F5 /* Debug */,
-				87550B772147856B00BA07F5 /* Release */,
+				871A1D5B214B6074004FE35C /* Debug */,
+				871A1D5C214B6074004FE35C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87550B782147856B00BA07F5 /* Build configuration list for PBXNativeTarget "TestBlock" */ = {
+		871A1D5D214B6074004FE35C /* Build configuration list for PBXNativeTarget "TestMThread" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87550B792147856B00BA07F5 /* Debug */,
-				87550B7A2147856B00BA07F5 /* Release */,
+				871A1D5E214B6074004FE35C /* Debug */,
+				871A1D5F214B6074004FE35C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 87550B692147856B00BA07F5 /* Project object */;
+	rootObject = 871A1D4E214B6074004FE35C /* Project object */;
 }

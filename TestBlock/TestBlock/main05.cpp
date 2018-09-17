@@ -106,7 +106,7 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_d8687c_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%d",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_8bf0e0_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%d",2};
 
 
 
@@ -32185,16 +32185,16 @@ typedef void (*Block)(void);
 
 struct __Block_byref_age_0 {
   void *__isa;
-__Block_byref_age_0 *__forwarding;
+__Block_byref_age_0 *__forwarding; // 这个指向前面的指针 主要是用来找到保存的 age 结构体
  int __flags;
  int __size;
- int age;
+ int age; // 实际存储变量的地方
 };
 
 struct __main_block_impl_0 {
   struct __block_impl impl;
   struct __main_block_desc_0* Desc;
-  __Block_byref_age_0 *age; // by ref
+  __Block_byref_age_0 *age; // by ref 根据 age 生成一个结构体指针 _age->forwarding 指针指向 age
   __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, __Block_byref_age_0 *_age, int flags=0) : age(_age->__forwarding) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
@@ -32203,10 +32203,10 @@ struct __main_block_impl_0 {
   }
 };
 static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
-  __Block_byref_age_0 *age = __cself->age; // bound by ref
+  __Block_byref_age_0 *age = __cself->age; // bound by ref , 这里的意思是通过 self 找到 age 这个结构体, 赋值
 
              (age->__forwarding->age) = 20;
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_d8687c_mi_0,(age->__forwarding->age));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_8bf0e0_mi_0,(age->__forwarding->age));
         }
 static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->age, (void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);}
 
@@ -32219,8 +32219,17 @@ static struct __main_block_desc_0 {
   void (*dispose)(struct __main_block_impl_0*);
 } __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0), __main_block_copy_0, __main_block_dispose_0};
 int main(int argc, const char * argv[]) {
-    /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
-        __attribute__((__blocks__(byref))) __Block_byref_age_0 age = {(void*)0,(__Block_byref_age_0 *)&age, 0, sizeof(__Block_byref_age_0), 10};
+    /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool;
+        // (__Block_byref_age_0 *)&age 根据 age 的地址强转成一个结构体?,
+        // 这里先构建一个 age 的结构体
+        __attribute__((__blocks__(byref))) __Block_byref_age_0 age =
+                                        {   (void*)0,
+                                            (__Block_byref_age_0 *)&age,  // 这个地方使用 forwarding 指针指向, 即指向的是结构体自己的地址.
+                                            0,
+                                            sizeof(__Block_byref_age_0),
+                                            10
+                                        };
+        
         Block block = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, (__Block_byref_age_0 *)&age, 570425344));
         ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
     }

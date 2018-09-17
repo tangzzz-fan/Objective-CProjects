@@ -78,7 +78,45 @@ int main(int argc, const char * argv[]) {
 //    // 使用 __weak 修饰之后, 因为 block 使用弱引用引用实例对象, 不能增加对象的引用计数, 此时出了这个括号之后, person 就会被释放
 
 //    }
-    
+    @autoreleasepool {
+//        __block int age = 10;
+//        Block block = ^ {
+//             age = 20; // 无法修改
+//            NSLog(@"%d",age);
+//        };
+//        block();
+//        
+//        __block Person *person = [[Person alloc] init];
+//        NSLog(@"%@",person);
+//        Block block = ^{
+//            person = [[Person alloc] init];
+//            NSLog(@"%@",person);
+//        };
+//        block();
+        int number = 20;
+        __block int age = 10;
+        
+        NSObject *object = [[NSObject alloc] init];
+        __weak NSObject *weakObj = object;
+        
+        Person *p = [[Person alloc] init];
+        __block Person *person = p;
+        __block __weak Person *weakPerson = p;
+       __weak  __block Person *weakPerson2 = p;
+
+        Block block = ^ {
+            NSLog(@"%d",number); // 局部变量
+            NSLog(@"%d",age); // __block修饰的局部变量
+            NSLog(@"%p",object); // 对象类型的局部变量
+            NSLog(@"%p",weakObj); // __weak修饰的对象类型的局部变量
+            NSLog(@"%p",person); // __block修饰的对象类型的局部变量
+            NSLog(@"%p",weakPerson); // __block，__weak修饰的对象类型的局部变量
+            NSLog(@"%p",weakPerson2); // __block，__weak修饰的对象类型的局部变量
+
+        };
+        block();
+       
+    }
     return 0;
 }
 

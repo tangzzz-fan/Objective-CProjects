@@ -106,7 +106,19 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_d8687c_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%d",2};
+static void __Block_byref_id_object_copy_131(void *dst, void *src) {
+ _Block_object_assign((char*)dst + 40, *(void * *) ((char*)src + 40), 131);
+}
+static void __Block_byref_id_object_dispose_131(void *src) {
+ _Block_object_dispose(*(void * *) ((char*)src + 40), 131);
+}
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%d",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%d",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_5 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_6 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p",2};
 
 
 
@@ -32190,12 +32202,45 @@ __Block_byref_age_0 *__forwarding;
  int __size;
  int age;
 };
+struct __Block_byref_person_1 {
+  void *__isa;
+__Block_byref_person_1 *__forwarding;
+ int __flags;
+ int __size;
+ void (*__Block_byref_id_object_copy)(void*, void*);
+ void (*__Block_byref_id_object_dispose)(void*);
+ Person *__strong person;
+};
+struct __Block_byref_weakPerson_2 {
+  void *__isa;
+__Block_byref_weakPerson_2 *__forwarding;
+ int __flags;
+ int __size;
+ void (*__Block_byref_id_object_copy)(void*, void*);
+ void (*__Block_byref_id_object_dispose)(void*);
+ Person *__weak weakPerson;
+};
+struct __Block_byref_weakPerson2_3 {
+  void *__isa;
+__Block_byref_weakPerson2_3 *__forwarding;
+ int __flags;
+ int __size;
+ void (*__Block_byref_id_object_copy)(void*, void*);
+ void (*__Block_byref_id_object_dispose)(void*);
+ Person *__weak weakPerson2;
+};
 
 struct __main_block_impl_0 {
   struct __block_impl impl;
   struct __main_block_desc_0* Desc;
+  int number;
+  NSObject *__strong object;
+  NSObject *__weak weakObj;
   __Block_byref_age_0 *age; // by ref
-  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, __Block_byref_age_0 *_age, int flags=0) : age(_age->__forwarding) {
+  __Block_byref_person_1 *person; // by ref
+  __Block_byref_weakPerson_2 *weakPerson; // by ref
+  __Block_byref_weakPerson2_3 *weakPerson2; // by ref
+  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int _number, NSObject *__strong _object, NSObject *__weak _weakObj, __Block_byref_age_0 *_age, __Block_byref_person_1 *_person, __Block_byref_weakPerson_2 *_weakPerson, __Block_byref_weakPerson2_3 *_weakPerson2, int flags=0) : number(_number), object(_object), weakObj(_weakObj), age(_age->__forwarding), person(_person->__forwarding), weakPerson(_weakPerson->__forwarding), weakPerson2(_weakPerson2->__forwarding) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
@@ -32204,13 +32249,25 @@ struct __main_block_impl_0 {
 };
 static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
   __Block_byref_age_0 *age = __cself->age; // bound by ref
+  __Block_byref_person_1 *person = __cself->person; // bound by ref
+  __Block_byref_weakPerson_2 *weakPerson = __cself->weakPerson; // bound by ref
+  __Block_byref_weakPerson2_3 *weakPerson2 = __cself->weakPerson2; // bound by ref
+  int number = __cself->number; // bound by copy
+  NSObject *__strong object = __cself->object; // bound by copy
+  NSObject *__weak weakObj = __cself->weakObj; // bound by copy
 
-             (age->__forwarding->age) = 20;
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_d8687c_mi_0,(age->__forwarding->age));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_0,number);
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_1,(age->__forwarding->age));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_2,object);
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_3,weakObj);
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_4,(person->__forwarding->person));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_5,(weakPerson->__forwarding->weakPerson));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_94_byc83ngd3c158cmk2zp9j3yc0000gn_T_main_ca426e_mi_6,(weakPerson2->__forwarding->weakPerson2));
+
         }
-static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->age, (void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);}
+static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->age, (void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_assign((void*)&dst->object, (void*)src->object, 3/*BLOCK_FIELD_IS_OBJECT*/);_Block_object_assign((void*)&dst->weakObj, (void*)src->weakObj, 3/*BLOCK_FIELD_IS_OBJECT*/);_Block_object_assign((void*)&dst->person, (void*)src->person, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_assign((void*)&dst->weakPerson, (void*)src->weakPerson, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_assign((void*)&dst->weakPerson2, (void*)src->weakPerson2, 8/*BLOCK_FIELD_IS_BYREF*/);}
 
-static void __main_block_dispose_0(struct __main_block_impl_0*src) {_Block_object_dispose((void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);}
+static void __main_block_dispose_0(struct __main_block_impl_0*src) {_Block_object_dispose((void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_dispose((void*)src->object, 3/*BLOCK_FIELD_IS_OBJECT*/);_Block_object_dispose((void*)src->weakObj, 3/*BLOCK_FIELD_IS_OBJECT*/);_Block_object_dispose((void*)src->person, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_dispose((void*)src->weakPerson, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_dispose((void*)src->weakPerson2, 8/*BLOCK_FIELD_IS_BYREF*/);}
 
 static struct __main_block_desc_0 {
   size_t reserved;
@@ -32220,9 +32277,20 @@ static struct __main_block_desc_0 {
 } __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0), __main_block_copy_0, __main_block_dispose_0};
 int main(int argc, const char * argv[]) {
     /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
+        int number = 20;
         __attribute__((__blocks__(byref))) __Block_byref_age_0 age = {(void*)0,(__Block_byref_age_0 *)&age, 0, sizeof(__Block_byref_age_0), 10};
-        Block block = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, (__Block_byref_age_0 *)&age, 570425344));
+
+        NSObject *object = ((NSObject *(*)(id, SEL))(void *)objc_msgSend)((id)((NSObject *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSObject"), sel_registerName("alloc")), sel_registerName("init"));
+        __attribute__((objc_ownership(weak))) NSObject *weakObj = object;
+
+        Person *p = ((Person *(*)(id, SEL))(void *)objc_msgSend)((id)((Person *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("Person"), sel_registerName("alloc")), sel_registerName("init"));
+        __attribute__((__blocks__(byref))) __Block_byref_person_1 person = {(void*)0,(__Block_byref_person_1 *)&person, 33554432, sizeof(__Block_byref_person_1), __Block_byref_id_object_copy_131, __Block_byref_id_object_dispose_131, p};
+        __attribute__((__blocks__(byref))) __attribute__((objc_ownership(weak))) __Block_byref_weakPerson_2 weakPerson = {(void*)0,(__Block_byref_weakPerson_2 *)&weakPerson, 33554432, sizeof(__Block_byref_weakPerson_2), __Block_byref_id_object_copy_131, __Block_byref_id_object_dispose_131, p};
+       __attribute__((objc_ownership(weak))) __attribute__((__blocks__(byref))) __Block_byref_weakPerson2_3 weakPerson2 = {(void*)0,(__Block_byref_weakPerson2_3 *)&weakPerson2, 33554432, sizeof(__Block_byref_weakPerson2_3), __Block_byref_id_object_copy_131, __Block_byref_id_object_dispose_131, p};
+
+        Block block = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, number, object, weakObj, (__Block_byref_age_0 *)&age, (__Block_byref_person_1 *)&person, (__Block_byref_weakPerson_2 *)&weakPerson, (__Block_byref_weakPerson2_3 *)&weakPerson2, 570425344));
         ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
+
     }
     return 0;
 }
