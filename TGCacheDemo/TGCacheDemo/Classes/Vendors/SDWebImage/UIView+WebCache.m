@@ -49,6 +49,8 @@ static char TAG_ACTIVITY_SHOW;
                            context:(nullable NSDictionary *)context {
     // 根据operationKey 查找在 manager 中是否有下载操作的缓存
     NSString *validOperationKey = operationKey ?: NSStringFromClass([self class]);
+    
+    // 在这个 imageView(UIView) 上动态添加了一个属性, 确定这个 imageVIew 现在正在有下载的任务
     // 根据这个key 取消这个下载操作, 意思就是暂停这个 imageview 之前的下载任务, 然后重新设置一个下载任务给这个 imageView 
 
     [self sd_cancelImageLoadOperationWithKey:validOperationKey];
@@ -73,12 +75,15 @@ static char TAG_ACTIVITY_SHOW;
             __strong __typeof (wself) sself = wself;
             [sself sd_removeActivityIndicator];
             if (!sself) { return; }
+            // 是否应该执行完成 block
             BOOL shouldCallCompletedBlock = finished || (options & SDWebImageAvoidAutoSetImage);
             BOOL shouldNotSetImage = ((image && (options & SDWebImageAvoidAutoSetImage)) ||
                                       (!image && !(options & SDWebImageDelayPlaceholder)));
+            // 定义是否需要执行完成的 block
             SDWebImageNoParamsBlock callCompletedBlockClojure = ^{
                 if (!sself) { return; }
                 if (!shouldNotSetImage) {
+                    // 重新布局
                     [sself sd_setNeedsLayout];
                 }
                 if (completedBlock && shouldCallCompletedBlock) {
@@ -86,9 +91,10 @@ static char TAG_ACTIVITY_SHOW;
                 }
             };
             
-            // case 1a: we got an image, but the SDWebImageAvoidAutoSetImage flag is set
+            // case 1a: we got an image, but the SDWebImageAvoidAutoSetImage flag is set 获取到图片, 并且设置成避免自动设置图片
+            
             // OR
-            // case 1b: we got no image and the SDWebImageDelayPlaceholder is not set
+            // case 1b: we got no image and the SDWebImageDelayPlaceholder is not set 没有获取到图片, 没有设置占位图
             if (shouldNotSetImage) {
                 dispatch_main_async_safe(callCompletedBlockClojure);
                 return;

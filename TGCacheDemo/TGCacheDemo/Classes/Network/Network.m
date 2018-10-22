@@ -10,6 +10,7 @@
 
 @implementation Network
 - (void)test {
+    
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
     
     [manager GET:@"http://localhost" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

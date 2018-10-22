@@ -13,6 +13,13 @@ DEPENDENCIES:
   - MJExtension
   - YYCache (~> 1.0.4)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FMDB
+    - GYDataCenter
+    - MJExtension
+    - YYCache
+
 SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   GYDataCenter: 620dc2564589f50d2370a691303e0d7215f7c0af
@@ -21,4 +28,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cd7dde4d36341ddebd73b748d6db03bb84cede5e
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.0.beta.1

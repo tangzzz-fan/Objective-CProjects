@@ -536,7 +536,7 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     // 创建操作队列
     self.operationQueue = [[NSOperationQueue alloc] init];
 #warning
-    // 设置 queue 的并发线程数为1
+    // 设置 queue 的并发线程数为1, 就是设置 SessionManager 一次只使用一个线程去处理
     self.operationQueue.maxConcurrentOperationCount = 1;
 
     // 设置 session 的代理为 self, 但是实际操作中, 真正的代理会是使用的子类对象
