@@ -25,7 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self testRunLoop];
+    [self deadLockCase5];
+
+    
+//    [self testRunLoop];
     
 //    [self testGCD_semaphore];
     
@@ -526,9 +529,9 @@
     });
     NSLog(@"4");
     //死循环 主线程死循环,
-    while (1) {
-        //
-    }
+//    while (1) {
+//        //
+//    }
 }
 
 @end

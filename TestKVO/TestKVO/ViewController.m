@@ -18,6 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self testGCD];
+}
+
+- (void)testGCD {
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_async(mainQueue, ^{
+        NSLog(@"this is in mainQueue async");
+    });
+    NSLog(@"1111");
+}
+
+- (void)testKVO {
     Person *p1 = [[Person alloc] init];
     Person *p2 = [[Person alloc] init];
     
@@ -30,10 +42,10 @@
     // 通过methodForSelector找到方法实现的地址
     NSLog(@"添加KVO监听之前 - p1 = %p, p2 = %p", [p1 methodForSelector: @selector(setAge:)],[p2 methodForSelector: @selector(setAge:)]);
     
-
+    
     // 设置添加观察. 在p1 对象上添加观察的设置
     [p1 addObserver:self forKeyPath:@"age" options:options context:nil];
-
+    
     NSLog(@"添加KVO监听之后 - p1 = %p, p2 = %p", [p1 methodForSelector: @selector(setAge:)],[p2 methodForSelector: @selector(setAge:)]);
     p1.age = 30;
     [self printMthods: object_getClass(p1)];
@@ -42,6 +54,7 @@
     
     [p1 removeObserver:self forKeyPath:@"age"];
 }
+
 
 - (void)printMthods:(Class)cls {
     unsigned int count ;
